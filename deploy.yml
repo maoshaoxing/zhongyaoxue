@@ -1,7 +1,8 @@
+.github/workflows/deploy.yml
 name: Auto Deploy to GitHub Pages
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   deploy:
     runs-on: ubuntu-latest
