@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中药学备考神器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #6bbd8e, #4a9c70);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* 搜索区域 */
+        .search-section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #searchInput {
+            flex: 1;
+            min-width: 250px;
+            padding: 14px 20px;
+            border: 2px solid #e0e6ed;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #6bbd8e;
+            box-shadow: 0 0 0 3px rgba(107, 189, 142, 0.2);
+        }
+
+        .search-btn {
+            background-color: #6bbd8e;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #5aa87a;
+        }
+
+        /* 筛选区域 */
+        .filter-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 20px 0;
+        }
+
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background-color: #6bbd8e;
+            color: white;
+            border-color: #6bbd8e;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .filter-option {
+            padding: 8px 16px;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-option:hover {
+            background-color: #e2e8f0;
+        }
+
+        .filter-option.active {
+            background-color: #dbeafe;
+            border-color: #6bbd8e;
+            color: #6bbd8e;
+        }
+
+        /* 内容区域 */
+        .content-section {
+            margin-top: 25px;
+        }
+
+        .results-info {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .herb-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .herb-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eef2f7;
+        }
+
+        .herb-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #6bbd8e, #4a9c70);
+            padding: 20px;
+            color: white;
+        }
+
+        .herb-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .herb-level {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .herb-properties {
+            margin-bottom: 15px;
+            padding: 12px;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #6bbd8e;
+        }
+
+        .properties-title {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .herb-functions {
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .herb-functions p {
+            margin-bottom: 8px;
+        }
+
+        .herb-functions p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            #searchInput {
+                min-width: auto;
+            }
+            
+            .herb-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-options {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filter-tabs {
+                justify-content: center;
+            }
+            
+            .tab-button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>中药学备考神器</h1>
+            <p class="subtitle">专业、高效、便捷的中药学学习助手</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 搜索区域 -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder=" 🔍 搜索中药名称、功效或关键词...">
+                <button class="search-btn" onclick="performSearch()">搜索</button>
+            </div>
+        </section>
+
+        <!-- 筛选区域 -->
+        <section class="filter-section">
+            <div class="filter-tabs">
+                <div class="tab-button active" data-tab="category">分类筛选</div>
+                <div class="tab-button" data-tab="level">级别筛选</div>
+                <div class="tab-button" data-tab="meridian">归经筛选</div>
+            </div>
+
+            <div class="filter-options" id="categoryFilters">
+                <div class="filter-option active" onclick="filterBy('category', 'all')">全部</div>
+                <div class="filter-option" onclick="filterBy('category', '解表药')">解表药</div>
+                <div class="filter-option" onclick="filterBy('category', '清热药')">清热药</div>
+                <div class="filter-option" onclick="filterBy('category', '泻下药')">泻下药</div>
+                <div class="filter-option" onclick="filterBy('category', '祛风湿药')">祛风湿药</div>
+                <div class="filter-option" onclick="filterBy('category', '化湿药')">化湿药</div>
+                <div class="filter-option" onclick="filterBy('category', '利水渗湿药')">利水渗湿药</div>
+                <div class="filter-option" onclick="filterBy('category', '温里药')">温里药</div>
+                <div class="filter-option" onclick="filterBy('category', '理气药')">理气药</div>
+                <div class="filter-option" onclick="filterBy('category', '消食药')">消食药</div>
+                <div class="filter-option" onclick="filterBy('category', '驱虫药')">驱虫药</div>
+                <div class="filter-option" onclick="filterBy('category', '止血药')">止血药</div>
+                <div class="filter-option" onclick="filterBy('category', '活血化瘀药')">活血化瘀药</div>
+                <div class="filter-option" onclick="filterBy('category', '化痰止咳平喘药')">化痰止咳平喘药</div>
+                <div class="filter-option" onclick="filterBy('category', '安神药')">安神药</div>
+                <div class="filter-option" onclick="filterBy('category', '平肝息风药')">平肝息风药</div>
+                <div class="filter-option" onclick="filterBy('category', '开窍药')">开窍药</div>
+                <div class="filter-option" onclick="filterBy('category', '补虚药')">补虚药</div>
+                <div class="filter-option" onclick="filterBy('category', '收涩药')">收涩药</div>
+                <div class="filter-option" onclick="filterBy('category', '攻毒杀虫止痒药')">攻毒杀虫止痒药</div>
+                <div class="filter-option" onclick="filterBy('category', '拔毒化腐生肌药')">拔毒化腐生肌药</div>
+            </div>
+
+            <div class="filter-options" id="levelFilters" style="display: none;">
+                <div class="filter-option" onclick="filterBy('level', 'all')">全部</div>
+                <div class="filter-option" onclick="filterBy('level', '一级')">(一) 一级</div>
+                <div class="filter-option" onclick="filterBy('level', '二级')">(二) 二级</div>
+                <div class="filter-option" onclick="filterBy('level', '三级')">(三) 三级</div>
+            </div>
+
+            <div class="filter-options" id="meridianFilters" style="display: none;">
+                <div class="filter-option" onclick="filterBy('meridian', 'all')">全部归经</div>
+                <div class="filter-option" onclick="filterBy('meridian', '心')">(心) 心经</div>
+                <div class="filter-option" onclick="filterBy('meridian', '肝')">(肝) 肝经</div>
+                <div class="filter-option" onclick="filterBy('meridian', '脾')">(脾) 脾经</div>
+                <div class="filter-option" onclick="filterBy('meridian', '肺')">(肺) 肺经</div>
+                <div class="filter-option" onclick="filterBy('meridian', '肾')">(肾) 肾经</div>
+                <div class="filter-option" onclick="filterBy('meridian', '胃')">(胃) 胃经</div>
+            </div>
+        </section>
+
+        <!-- 结果统计 -->
+        <section class="content-section">
+            <div class="results-info" id="resultsInfo">
+                共找到 <span id="count">0</span> 种中药
+            </div>
+
+            <!-- 中药卡片网格 -->
+            <div class="herb-grid" id="herbGrid">
+                <!-- 中药卡片将通过JavaScript动态生成 -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 中药数据
+        const herbs = [
+            {
+                name: "麻黄",
+                category: "解表药",
+                level: "一级",
+                properties: "辛、微苦，温。",
+                functions: [
+                    "发汗解表：用于外感风寒表实证，恶寒发热，头身疼痛，无汗而喘。",
+                    "宣肺平喘：用于肺气壅遏之咳喘。",
+                    "利水消肿：用于水肿兼有表证者。"
+                ],
+                meridian: ["肺", "膀胱"]
+            },
+            {
+                name: "桂枝",
+                category: "解表药",
+                level: "一级",
+                properties: "辛、甘，温。",
+                functions: [
+                    "发汗解肌：用于外感风寒表虚有汗或表实无汗。",
+                    "温通经脉：用于寒凝血滞诸痛证。",
+                    "助阳化气：用于胸阳不振，痰饮蓄水证。"
+                ],
+                meridian: ["心", "肺", "膀胱"]
+            },
+            {
+                name: "紫苏叶",
+                category: "解表药",
+                level: "一级",
+                properties: "辛，温。",
+                functions: [
+                    "解表散寒：用于风寒感冒。",
+                    "行气宽中：用于脾胃气滞，胸闷呕吐。",
+                    "安胎：用于胎气上逆，胎动不安。",
+                    "解鱼蟹毒：用于进食鱼蟹中毒引起的腹痛吐泻。"
+                ],
+                meridian: ["肺", "脾"]
+            },
+            {
+                name: "生姜",
+                category: "解表药",
+                level: "一级",
+                properties: "辛，微温。",
+                functions: [
+                    "解表散寒：用于风寒感冒轻症。",
+                    "温中止呕：用于胃寒呕吐。",
+                    "温肺止咳：用于风寒咳嗽。",
+                    "解毒：解生半夏、生南星、鱼蟹之毒。"
+                ],
+                meridian: ["肺", "脾", "胃"]
+            },
+            {
+                name: "荆芥",
+                category: "解表药",
+                level: "一级",
+                properties: "辛，微温。",
+                functions: [
+                    "祛风解表：用于外感表证，风疹瘙痒。",
+                    "透疹：用于麻疹初起，透发不畅。",
+                    "消疮：用于疮疡初起兼有表证者。",
+                    "止血：用于衄血、便血、崩漏等出血证。"
+                ],
+                meridian: ["肺", "肝"]
+            },
+            {
+                name: "防风",
+                category: "解表药",
+                level: "一级",
+                properties: "辛、甘，微温。",
+                functions: [
+                    "祛风解表：用于外感表证，风疹瘙痒。",
+                    "胜湿止痛：用于风湿痹痛。",
+                    "止痉：用于破伤风、小儿惊风。"
+                ],
+                meridian: ["膀胱", "肝", "脾"]
+            },
+            {
+                name: "羌活",
+                category: "解表药",
+                level: "一级",
+                properties: "辛、苦，温。",
+                functions: [
+                    "解表散寒：用于外感风寒，恶寒发热，头痛身疼。",
+                    "祛风胜湿：用于风湿痹痛，肩臂疼痛。"
+                ],
+                meridian: ["膀胱", "肾"]
+            },
+            {
+                name: "白芷",
+                category: "解表药",
+                level: "一级",
+                properties: "辛，温。",
+                functions: [
+                    "解表散寒：用于风寒感冒。",
+                    "祛风止痛：用于头痛、牙痛、鼻渊。",
+                    "宣通鼻窍：用于鼻塞流涕。",
+                    "燥湿止带：用于妇女寒湿带下。",
+                    "消肿排脓：用于疮疡肿痛。"
+                ],
+                meridian: ["胃", "大肠", "肺"]
+            },
+            {
+                name: "细辛",
+                category: "解表药",
+                level: "一级",
+                properties: "辛，温，有小毒。",
+                functions: [
+                    "解表散寒：用于风寒感冒，头痛。",
+                    "祛风止痛：用于头痛、牙痛、风湿痹痛。",
+                    "通窍：用于鼻渊，鼻塞不通。",
+                    "温肺化饮：用于寒饮伏肺，气逆喘咳。"
+                ],
+                meridian: ["心", "肺", "肾"]
+            },
+            {
+                name: "藁本",
+                category: "解表药",
+                level: "二级",
+                properties: "辛，温。",
+                functions: [
+                    "祛风散寒：用于风寒感冒，巅顶头痛。",
+                    "胜湿止痛：用于风寒湿痹，关节疼痛。"
+                ],
+                meridian: ["膀胱"]
+            },
+            {
+                name: "苍耳子",
+                category: "解表药",
+                level: "二级",
+                properties: "辛、苦，温。有小毒。",
+                functions: [
+                    "发散风寒：用于风寒感冒。",
+                    "通鼻窍：用于鼻渊头痛，不闻香臭。",
+                    "祛风湿，止痛：用于风湿痹痛。"
+                ],
+                meridian: ["肺"]
+            },
+            {
+                name: "辛夷",
+                category: "解表药",
+                level: "二级",
+                properties: "辛，温。",
+                functions: [
+                    "散风寒：用于风寒感冒。",
+                    "通鼻窍：用于鼻渊头痛，鼻塞不通。"
+                ],
+                meridian: ["肺", "胃"]
+            },
+            {
+                name: "葱白",
+                category: "解表药",
+                level: "三级",
+                properties: "辛，温。",
+                functions: [
+                    "发汗解表：用于风寒感冒轻症。",
+                    "散寒通阳：用于阴盛格阳证，下痢噤口。"
+                ],
+                meridian: ["肺", "胃"]
+            },
+            {
+                name: "薄荷",
+                category: "解表药",
+                level: "一级",
+                properties: "辛，凉。",
+                functions: [
+                    "疏散风热：用于风热感冒，温病初起。",
+                    "清利头目：用于风热上攻，头痛目赤，咽喉肿痛。",
+                    "利咽透疹：用于麻疹初起，透发不畅；风疹瘙痒。",
+                    "疏肝行气：用于肝郁气滞，胸胁胀痛。"
+                ],
+                meridian: ["肺", "肝"]
+            },
+            {
+                name: "牛蒡子",
+                category: "解表药",
+                level: "一级",
+                properties: "辛、苦，寒。",
+                functions: [
+                    "疏散风热：用于风热感冒，温病初起。",
+                    "宣肺利咽：用于咽喉肿痛，痄腮丹毒。",
+                    "解毒透疹：用于麻疹不透，风疹瘙痒。",
+                    "消肿疗疮：用于痈肿疮毒。"
+                ],
+                meridian: ["肺", "胃"]
+            },
+            {
+                name: "蝉蜕",
+                category: "解表药",
+                level: "一级",
+                properties: "甘，寒。",
+                functions: [
+                    "疏散风热：用于风热感冒，温病初起。",
+                    "利咽开音：用于咽喉肿痛，声音嘶哑。",
+                    "透疹：用于麻疹不透，风疹瘙痒。",
+                    "明目退翳：用于目赤翳障。",
+                    "息风止痉：用于惊风抽搐，破伤风。"
+                ],
+                meridian: ["肺", "肝"]
+            },
+            {
+                name: "桑叶",
+                category: "解表药",
+                level: "一级",
+                properties: "甘、苦，寒。",
+                functions: [
+                    "疏散风热：用于风热感冒，温病初起。",
+                    "清肺润燥：用于肺热燥咳。",
+                    "清肝明目：用于肝火上炎，目赤肿痛。",
+                    "凉血止血：用于血热妄行之咯血、衄血。"
+                ],
+                meridian: ["肺", "肝"]
+            },
+            {
+                name: "菊花",
+                category: "解表药",
+                level: "一级",
+                properties: "甘、苦，微寒。",
+                functions: [
+                    "疏散风热：用于风热感冒，温病初起。",
+                    "平肝明目：用于肝阳上亢，目赤昏花。",
+                    "清热解毒：用于疔疮肿毒。"
+                ],
+                meridian: ["肺", "肝"]
+            },
+            {
+                name: "蔓荆子",
+                category: "解表药",
+                level: "二级",
+                properties: "辛、苦，微寒。",
+                functions: [
+                    "疏散风热：用于风热感冒，头痛头晕。",
+                    "清利头目：用于目赤多泪，目暗不明。"
+                ],
+                meridian: ["膀胱", "肝", "胃"]
+            },
+            {
+                name: "淡豆豉",
+                category: "解表药",
+                level: "三级",
+                properties: "苦、辛，凉。",
+                functions: [
+                    "解表除烦：用于感冒，胸中烦闷。"
+                ],
+                meridian: ["肺", "胃"]
+            },
+            {
+                name: "葛根",
+                category: "解表药",
+                level: "一级",
+                properties: "甘、辛，凉。",
+                functions: [
+                    "解肌退热：用于外感表证，项背强痛。",
+                    "透疹：用于麻疹不透。",
+                    "生津止渴：用于热病口渴，内热消渴。",
+                    "升阳止泻：用于脾虚泄泻。"
+                ],
+                meridian: ["脾", "胃"]
+            },
+            {
+                name: "柴胡",
+                category: "解表药",
+                level: "一级",
+                properties: "苦，微寒。",
+                functions: [
+                    "解表退热：用于感冒发热。",
+                    "疏肝解郁：用于肝郁气滞，月经不调。",
+                    "升举阳气：用于中气下陷，久泻脱肛。"
+                ],
+                meridian: ["肝", "胆"]
+            },
+            {
+                name: "升麻",
+                category: "解表药",
+                level: "一级",
+                properties: "辛、微甘，微寒。",
+                functions: [
+                    "发表透疹：用于麻疹不透，风疹瘙痒。",
+                    "清热解毒：用于热毒斑疹，牙龈肿痛。",
+                    "升举阳气：用于中气下陷，子宫脱垂。"
+                ],
+                meridian: ["肺", "脾", "胃", "大肠"]
+            },
+            {
+                name: "石膏",
+                category: "清热药",
+                level: "一级",
+                properties: "甘、辛，大寒。",
+                functions: [
+                    "清热泻火：用于气分实热证，肺热咳喘。",
+                    "除烦止渴：用于胃热呕哕，消渴。"
+                ],
+                meridian: ["肺", "胃"]
+            },
+            {
+                name: "知母",
+                category: "清热药",
+                level: "一级",
+                properties: "苦、甘，寒。",
+                functions: [
+                    "清热泻火：用于气分实热证，肺热燥咳。",
+                    "滋阴润燥：用于阴虚火旺，骨蒸潮热。"
+                ],
+                meridian: ["肺", "胃", "肾"]
+            },
+            {
+                name: "栀子",
+                category: "清热药",
+                level: "一级",
+                properties: "苦，寒。",
+                functions: [
+                    "泻火除烦：用于热病心烦，躁扰不宁。",
+                    "清热利湿：用于湿热黄疸，淋证尿血。",
+                    "凉血解毒：用于血热吐衄，火毒疮疡。"
+                ],
+                meridian: ["心", "肺", "三焦"]
+            },
+            {
+                name: "天花粉",
+                category: "清热药",
+                level: "一级",
+                properties: "甘、微苦，微寒。",
+                functions: [
+                    "清热生津：用于热病伤津，消渴。",
+                    "清肺润燥：用于肺热燥咳。",
+                    "消肿排脓：用于痈肿疮疡。"
+                ],
+                meridian: ["肺", "胃"]
+            },
+            {
+                name: "夏枯草",
+                category: "清热药",
+                level: "二级",
+                properties: "辛、苦，寒。",
+                functions: [
+                    "清肝火：用于肝火上炎，目赤肿痛。",
+                    "散结消肿：用于瘰疬痰核，瘿瘤。"
+                ],
+                meridian: ["肝", "胆"]
+            },
+            {
+                name: "决明子",
+                category: "清热药",
+                level: "二级",
+                properties: "甘、苦、咸，微寒。",
+                functions: [
+                    "清肝明目：用于目赤肿痛，羞明多泪。",
+                    "润肠通便：用于肠燥便秘。"
+                ],
+                meridian: ["肝", "大肠"]
+            },
+            {
+                name: "黄芩",
+                category: "清热药",
+                level: "一级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热燥湿：用于湿温暑湿，黄疸泻痢。",
+                    "泻火解毒：用于肺热咳嗽，高热烦渴。",
+                    "止血：用于血热吐衄。",
+                    "安胎：用于胎热不安。"
+                ],
+                meridian: ["肺", "胆", "脾", "大肠", "小肠"]
+            },
+            {
+                name: "黄连",
+                category: "清热药",
+                level: "一级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热燥湿：用于湿热痞满，黄疸泻痢。",
+                    "泻火解毒：用于心火亢盛，高热烦躁。",
+                    "止呕：用于胃热呕吐。"
+                ],
+                meridian: ["心", "脾", "胃", "肝", "胆", "大肠"]
+            },
+            {
+                name: "黄柏",
+                category: "清热药",
+                level: "一级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热燥湿：用于湿热带下，热淋泻痢。",
+                    "泻火解毒：用于疮疡肿毒。",
+                    "退虚热：用于阴虚发热，盗汗遗精。"
+                ],
+                meridian: ["肾", "膀胱", "大肠"]
+            },
+            {
+                name: "龙胆",
+                category: "清热药",
+                level: "一级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热燥湿：用于湿热下注，带下黄臭。",
+                    "泻肝胆火：用于肝胆实火，头痛目赤。"
+                ],
+                meridian: ["肝", "胆"]
+            },
+            {
+                name: "苦参",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热燥湿：用于湿热带下，热痢。",
+                    "杀虫：用于疥癣麻风。",
+                    "利尿：用于湿热水肿。"
+                ],
+                meridian: ["心", "肝", "胃", "大肠", "膀胱"]
+            },
+            {
+                name: "秦皮",
+                category: "清热药",
+                level: "二级",
+                properties: "苦、涩，寒。",
+                functions: [
+                    "清热燥湿：用于湿热泻痢，赤白带下。",
+                    "收涩止痢：用于久泻久痢。",
+                    "清肝明目：用于目赤肿痛，目生翳膜。"
+                ],
+                meridian: ["肝", "胆", "大肠"]
+            },
+            {
+                name: "白鲜皮",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热燥湿：用于湿热疮毒，湿疹疥癣。",
+                    "祛风解毒：用于风湿热痹。"
+                ],
+                meridian: ["脾", "胃", "膀胱"]
+            },
+            {
+                name: "金银花",
+                category: "清热药",
+                level: "一级",
+                properties: "甘，寒。",
+                functions: [
+                    "清热解毒：用于痈肿疔疮，喉痹丹毒。",
+                    "疏散风热：用于风热感冒，温病初起。"
+                ],
+                meridian: ["心", "肺", "胃"]
+            },
+            {
+                name: "连翘",
+                category: "清热药",
+                level: "一级",
+                properties: "苦，微寒。",
+                functions: [
+                    "清热解毒：用于痈肿疔疮，瘰疬痰核。",
+                    "疏散风热：用于风热感冒，温病初起。",
+                    "清心利尿：用于热淋涩痛。"
+                ],
+                meridian: ["肺", "心", "小肠"]
+            },
+            {
+                name: "蒲公英",
+                category: "清热药",
+                level: "二级",
+                properties: "苦、甘，寒。",
+                functions: [
+                    "清热解毒：用于痈肿疔毒，乳痈内痈。",
+                    "消痈散结：用于瘰疬痰核。",
+                    "利湿通淋：用于湿热黄疸，热淋涩痛。"
+                ],
+                meridian: ["肝", "胃"]
+            },
+            {
+                name: "紫花地丁",
+                category: "清热药",
+                level: "二级",
+                properties: "苦、辛，寒。",
+                functions: [
+                    "清热解毒：用于疔疮肿毒，痈疽发背。",
+                    "凉血消肿：用于丹毒痄腮，毒蛇咬伤。"
+                ],
+                meridian: ["心", "肝"]
+            },
+            {
+                name: "野菊花",
+                category: "清热药",
+                level: "二级",
+                properties: "苦、辛，微寒。",
+                functions: [
+                    "清热解毒：用于疔疮痈肿，咽喉肿痛。",
+                    "清肝明目：用于目赤肿痛，头痛眩晕。"
+                ],
+                meridian: ["心", "肝"]
+            },
+            {
+                name: "重楼",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，微寒。有小毒。",
+                functions: [
+                    "清热解毒：用于痈肿疔毒，咽喉肿痛。",
+                    "消肿止痛：用于跌打损伤。",
+                    "凉肝定惊：用于惊风抽搐，蛇虫咬伤。"
+                ],
+                meridian: ["肝"]
+            },
+            {
+                name: "穿心莲",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热解毒：用于热毒疮疡，咽喉肿痛。",
+                    "燥湿消肿：用于湿热泻痢，热淋涩痛。"
+                ],
+                meridian: ["心", "肺", "大肠", "小肠"]
+            },
+            {
+                name: "白头翁",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热解毒：用于热毒血痢，阿米巴痢疾。",
+                    "凉血止痢：用于久痢不止。"
+                ],
+                meridian: ["胃", "大肠"]
+            },
+            {
+                name: "马齿苋",
+                category: "清热药",
+                level: "二级",
+                properties: "酸，寒。",
+                functions: [
+                    "清热解毒：用于热毒血痢，痈肿疔疮。",
+                    "凉血止血：用于热毒血痢，崩漏下血。",
+                    "止痢：用于热痢腹痛。"
+                ],
+                meridian: ["肝", "大肠"]
+            },
+            {
+                name: "射干",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热解毒：用于热毒痰火瘰疬。",
+                    "利咽：用于咽喉肿痛，痰涎壅盛。"
+                ],
+                meridian: ["肺"]
+            },
+            {
+                name: "山豆根",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。有毒。",
+                functions: [
+                    "清热解毒：用于热毒蕴结，咽喉肿痛。",
+                    "消肿利咽：用于牙龈肿痛。"
+                ],
+                meridian: ["肺", "胃"]
+            },
+            {
+                name: "马勃",
+                category: "清热药",
+                level: "三级",
+                properties: "辛，平。",
+                functions: [
+                    "清热解毒：用于热毒咽痛。",
+                    "利咽止血：用于咽喉肿痛，咳嗽失音，吐血衄血。"
+                ],
+                meridian: ["肺"]
+            },
+            {
+                name: "青黛",
+                category: "清热药",
+                level: "二级",
+                properties: "咸，寒。",
+                functions: [
+                    "清热解毒：用于温毒发斑，痄腮丹毒。",
+                    "凉血消斑：用于血热吐衄。",
+                    "清肝泻火：用于肝火犯肺，痰中带血。",
+                    "定惊：用于惊痫抽搐。"
+                ],
+                meridian: ["肝", "肺", "胃"]
+            },
+            {
+                name: "白花蛇舌草",
+                category: "清热药",
+                level: "二级",
+                properties: "甘、淡，微寒。",
+                functions: [
+                    "清热解毒：用于痈肿疮毒，咽喉肿痛。",
+                    "利湿通淋：用于热淋涩痛。",
+                    "抗癌：用于多种癌症。"
+                ],
+                meridian: ["胃", "大肠", "小肠"]
+            },
+            {
+                name: "熊胆",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热解毒：用于热毒疮疡。",
+                    "清肝明目：用于肝热目赤肿痛。",
+                    "息风止痉：用于惊痫抽搐。"
+                ],
+                meridian: ["肝", "胆", "心"]
+            },
+            {
+                name: "大青叶",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，大寒。",
+                functions: [
+                    "清热解毒：用于热毒发斑，丹毒痄腮。",
+                    "凉血消斑：用于温病高热，神昏发斑。"
+                ],
+                meridian: ["心", "胃"]
+            },
+            {
+                name: "板蓝根",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热解毒：用于温病发热，咽喉肿痛。",
+                    "凉血利咽：用于痄腮丹毒，大头瘟疫。"
+                ],
+                meridian: ["心", "胃"]
+            },
+            {
+                name: "青叶",
+                category: "清热药",
+                level: "三级",
+                properties: "苦、微甘，寒。",
+                functions: [
+                    "清热解毒：用于热毒疮疡。",
+                    "凉血利咽：用于咽喉肿痛，口疮。",
+                    "杀虫：用于蛔虫蛲虫。"
+                ],
+                meridian: ["心", "胃"]
+            },
+            {
+                name: "贯众",
+                category: "清热药",
+                level: "三级",
+                properties: "苦，微寒。有小毒。",
+                functions: [
+                    "清热解毒：用于温毒发斑，痄腮。",
+                    "杀虫：用于钩虫、绦虫、蛲虫。",
+                    "止血：用于崩漏下血。"
+                ],
+                meridian: ["肝", "胃"]
+            },
+            {
+                name: "土茯苓",
+                category: "清热药",
+                level: "二级",
+                properties: "甘、淡，平。",
+                functions: [
+                    "解毒：用于梅毒，湿疹瘙痒。",
+                    "除湿：用于湿热淋浊，带下。",
+                    "通利关节：用于湿毒关节疼痛。"
+                ],
+                meridian: ["肝", "胃"]
+            },
+            {
+                name: "鱼腥草",
+                category: "清热药",
+                level: "二级",
+                properties: "辛，微寒。",
+                functions: [
+                    "清热解毒：用于肺痈吐脓，痰热喘咳。",
+                    "消痈排脓：用于疮疡肿毒。",
+                    "利尿通淋：用于热淋涩痛。"
+                ],
+                meridian: ["肺"]
+            },
+            {
+                name: "败酱草",
+                category: "清热药",
+                level: "二级",
+                properties: "辛、苦，微寒。",
+                functions: [
+                    "清热解毒：用于肠痈腹痛，肺痈吐脓。",
+                    "消痈排脓：用于疮疡肿毒。",
+                    "祛瘀止痛：用于产后瘀阻腹痛。"
+                ],
+                meridian: ["胃", "大肠", "肝"]
+            },
+            {
+                name: "射干",
+                category: "清热药",
+                level: "二级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热解毒：用于热毒痰火瘰疬。",
+                    "利咽：用于咽喉肿痛，痰涎壅盛。"
+                ],
+                meridian: ["肺"]
+            },
+            {
+                name: "红藤",
+                category: "清热药",
+                level: "三级",
+                properties: "苦，平。",
+                functions: [
+                    "清热解毒：用于肠痈腹痛。",
+                    "活血止痛：用于跌打损伤。"
+                ],
+                meridian: ["大肠", "肝"]
+            },
+            {
+                name: "鸦胆子",
+                category: "清热药",
+                level: "三级",
+                properties: "苦，寒。有小毒。",
+                functions: [
+                    "清热解毒：用于热毒血痢。",
+                    "截疟：用于疟疾。",
+                    "腐蚀赘疣：用于鸡眼赘疣。"
+                ],
+                meridian: ["大肠", "肝"]
+            },
+            {
+                name: "地锦草",
+                category: "清热药",
+                level: "三级",
+                properties: "辛、苦，平。",
+                functions: [
+                    "清热解毒：用于热毒泻痢，疮疡肿毒。",
+                    "凉血止血：用于血热出血。",
+                    "利湿退黄：用于湿热黄疸。"
+                ],
+                meridian: ["大肠", "肝"]
+            },
+            {
+                name: "半边莲",
+                category: "清热药",
+                level: "三级",
+                properties: "辛，平。",
+                functions: [
+                    "清热解毒：用于疔疮肿毒，蛇虫咬伤。",
+                    "利水消肿：用于水肿，臌胀。"
+                ],
+                meridian: ["心", "小肠", "肺", "肾"]
+            },
+            {
+                name: "白花蛇舌草",
+                category: "清热药",
+                level: "二级",
+                properties: "甘、淡，微寒。",
+                functions: [
+                    "清热解毒：用于痈肿疮毒，咽喉肿痛。",
+                    "利湿通淋：用于热淋涩痛。"
+                ],
+                meridian: ["胃", "大肠", "小肠"]
+            },
+            {
+                name: "山慈菇",
+                category: "清热药",
+                level: "三级",
+                properties: "苦、辛，微寒。有小毒。",
+                functions: [
+                    "清热解毒：用于痈肿疔毒，瘰疬痰核。",
+                    "化痰散结：用于痰核瘰疬。"
+                ],
+                meridian: ["胃", "肝"]
+            },
+            {
+                name: "千里光",
+                category: "清热药",
+                level: "三级",
+                properties: "苦，寒。",
+                functions: [
+                    "清热解毒：用于痈肿疮毒，湿疹。",
+                    "清肝明目：用于目赤肿痛，云翳遮睛。"
+                ],
+                meridian: ["肝", "肺"]
+            },
+            {
+                name: "金荞麦",
+                category: "清热药",
+                level: "三级",
+                properties: "微辛、涩，凉。",
+                functions: [
+                    "清热解毒：用于肺痈吐脓，肺热咳嗽。",
+                    "排脓祛瘀：用于瘰疬痰核。"
+                ],
+                meridian: ["肺"]
+            },
+            {
+                name: "四季青",
+                category: "清热药",
+                level: "三级",
+                properties: "苦、涩，寒。",
+                functions: [
+                    "清热解毒：用于水火烫伤，湿疹。",
+                    "凉血止血：用于外伤出血。",
+                    "敛疮：用于溃疡不敛。"
+                ],
+                meridian: ["肺", "大肠", "膀胱"]
+            },
+            {
+                name: "绿豆",
+                category: "清热药",
+                level: "三级",
+                properties: "甘，寒。",
+                functions: [
+                    "清热解毒：用于热毒疮疡。",
+                    "消暑：用于暑热烦渴。",
+                    "利水：用于水肿。"
+                ],
+                meridian: ["心", "胃"]
+            }
+        ];
+
+        // 当前筛选状态
+        let currentFilters = {
+            category: 'all',
+            level: 'all',
+            meridian: 'all',
+            searchTerm: ''
+        };
+
+        // 初始化页面
+        document.addEventListener('DOMContentLoaded', function() {
+            renderHerbs();
+            setupEventListeners();
+        });
+
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 标签切换
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabType = this.getAttribute('data-tab');
+                    
+                    // 更新按钮状态
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 切换筛选选项显示
+                    document.getElementById('categoryFilters').style.display = 'none';
+                    document.getElementById('levelFilters').style.display = 'none';
+                    document.getElementById('meridianFilters').style.display = 'none';
+                    
+                    if(tabType === 'category') {
+                        document.getElementById('categoryFilters').style.display = 'flex';
+                    } else if(tabType === 'level') {
+                        document.getElementById('levelFilters').style.display = 'flex';
+                    } else if(tabType === 'meridian') {
+                        document.getElementById('meridianFilters').style.display = 'flex';
+                    }
+                });
+            });
+
+            // 搜索输入实时过滤
+            document.getElementById('searchInput').addEventListener('input', function() {
+                currentFilters.searchTerm = this.value.trim().toLowerCase();
+                applyFilters();
+            });
+        }
+
+        // 渲染中药列表
+        function renderHerbs(filteredHerbs = herbs) {
+            const herbGrid = document.getElementById('herbGrid');
+            herbGrid.innerHTML = '';
+
+            filteredHerbs.forEach(herb => {
+                const card = createHerbCard(herb);
+                herbGrid.appendChild(card);
+            });
+
+            // 更新结果计数
+            document.getElementById('count').textContent = filteredHerbs.length;
+        }
+
+        // 创建中药卡片
+        function createHerbCard(herb) {
+            const card = document.createElement('div');
+            card.className = 'herb-card';
+
+            // 根据级别设置不同的颜色主题
+            let levelColor = '#6bbd8e'; // 默认绿色
+            if(herb.level.includes('一级')) levelColor = '#e74c3c'; // 红色
+            else if(herb.level.includes('二级')) levelColor = '#f39c12'; // 橙色
+            else if(herb.level.includes('三级')) levelColor = '#3498db'; // 蓝色
+
+            card.innerHTML = `
+                <div class="card-header" style="background: linear-gradient(135deg, ${levelColor}, ${darkenColor(levelColor, 20)});">
+                    <div class="herb-name">${herb.name}</div>
+                    <span class="herb-level">${herb.level}</span>
+                </div>
+                <div class="card-body">
+                    <div class="herb-properties">
+                        <div class="properties-title">性味归经</div>
+                        <div>${herb.properties} 归${herb.meridian.join('、')}经</div>
+                    </div>
+                    <div class="herb-functions">
+                        <div class="properties-title">功效主治</div>
+                        ${herb.functions.map(func => `<p>${func}</p>`).join('')}
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // 颜色加深函数
+        function darkenColor(color, percent) {
+            let R = parseInt(color.substring(1,3),16);
+            let G = parseInt(color.substring(3,5),16);
+            let B = parseInt(color.substring(5,7),16);
+
+            R = Math.floor(R * (100 - percent) / 100);
+            G = Math.floor(G * (100 - percent) / 100);
+            B = Math.floor(B * (100 - percent) / 100);
+
+            R = Math.min(Math.max(0, R), 255).toString(16).padStart(2, '0');
+            G = Math.min(Math.max(0, G), 255).toString(16).padStart(2, '0');
+            B = Math.min(Math.max(0, B), 255).toString(16).padStart(2, '0');
+
+            return `#${R}${G}${B}`;
+        }
+
+        // 筛选函数
+        function filterBy(type, value) {
+            currentFilters[type] = value;
+
+            // 更新筛选选项的活动状态
+            const options = document.querySelectorAll(`#${type}Filters .filter-option`);
+            options.forEach(option => {
+                option.classList.remove('active');
+                if(option.textContent.includes(value) || 
+                   (value === 'all' && option.textContent === '全部') ||
+                   (value === 'all' && option.textContent === '全部归经')) {
+                    option.classList.add('active');
+                }
+            });
+
+            applyFilters();
+        }
+
+        // 应用所有筛选条件
+        function applyFilters() {
+            let filteredHerbs = herbs.filter(herb => {
+                // 类别筛选
+                if(currentFilters.category !== 'all' && herb.category !== currentFilters.category) {
+                    return false;
+                }
+
+                // 级别筛选
+                if(currentFilters.level !== 'all' && !herb.level.includes(currentFilters.level.charAt(0))) {
+                    return false; // 取级别首字匹配
+                }
+
+                // 归经筛选
+                if(currentFilters.meridian !== 'all' && !herb.meridian.includes(currentFilters.meridian)) {
+                    return false;
+                }
+
+                // 搜索词筛选
+                if(currentFilters.searchTerm) {
+                    const searchTerm = currentFilters.searchTerm;
+                    if(!herb.name.toLowerCase().includes(searchTerm) &&
+                       !herb.properties.toLowerCase().includes(searchTerm) &&
+                       !herb.functions.some(func => func.toLowerCase().includes(searchTerm)) &&
+                       !herb.category.toLowerCase().includes(searchTerm)) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+
+            renderHerbs(filteredHerbs);
+        }
+
+        // 搜索函数
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            currentFilters.searchTerm = searchTerm;
+            applyFilters();
+        }
+    </script>
+</body>
+</html>
