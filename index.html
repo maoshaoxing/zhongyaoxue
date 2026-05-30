@@ -3,77 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中药学备考大全</title>
+    <title>中药学备考神器</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:"微软雅黑",sans-serif;}
-        body{background:#f5f7fa;padding:15px;max-width:1200px;margin:0 auto;}
-        h1{text-align:center;color:#2c3e50;margin-bottom:15px;}
-        .tabs{display:flex;gap:8px;margin-bottom:15px;flex-wrap:wrap;}
-        .tab{padding:8px 16px;border:none;border-radius:6px;background:#e8f4f8;color:#2c3e50;cursor:pointer;}
-        .tab.active{background:#3498db;color:#fff;}
-        .search-box{margin-bottom:15px;text-align:center;}
-        #search{width:100%;max-width:600px;padding:10px 15px;border:1px solid #ddd;border-radius:8px;font-size:16px;}
-        .filter-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:15px;justify-content:center;}
-        .filter-btn{padding:6px 12px;border:none;border-radius:6px;background:#e8f4f8;color:#2c3e50;cursor:pointer;}
-        .filter-btn.active{background:#3498db;color:#fff;}
-        .card-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;}
-        .card{background:#fff;border-radius:10px;padding:15px;box-shadow:0 2px 8px #00000015;cursor:pointer;transition:0.2s;}
-        .card:hover{transform:translateY(-3px);box-shadow:0 4px 12px #0000002;}
-        .card-title{font-size:18px;font-weight:bold;color:#2c3e50;margin-bottom:8px;display:flex;justify-content:space-between;}
-        .level-tag{font-size:12px;padding:2px 6px;border-radius:4px;}
-        .level-掌握{background:#ffebee;color:#c62828;}
-        .level-熟悉{background:#fff8e1;color:#f57f17;}
-        .level-了解{background:#e8f5e9;color:#2e7d32;}
-        .card-tags{margin:8px 0;display:flex;flex-wrap:wrap;gap:5px;}
-        .tag{font-size:12px;background:#f1f1f1;padding:2px 5px;border-radius:3px;}
-        .card-desc{font-size:14px;color:#555;line-height:1.6;}
-        .detail{margin-top:10px;padding-top:10px;border-top:1px solid #eee;display:none;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei","微软雅黑",sans-serif;}
+
+        body{background:#f8f9fa;color:#333;line-height:1.6;}
+
+        /* 顶部导航栏 */
+        header{
+            background:linear-gradient(135deg,#6bbd8e,#4a9c70);
+            color:white;
+            padding:18px 20px 0;
+            box-shadow:0 2px 10px rgba(0,0,0,0.12);
+            position:sticky;top:0;z-index:100;
+        }
+        header h1{font-size:1.8rem;letter-spacing:2px;margin-bottom:10px;text-align:center;}
+        header .subtitle{text-align:center;opacity:.9;font-size:.9rem;margin-bottom:10px;}
+        .tabs{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;}
+        .tab{
+            padding:8px 20px;border:none;border-radius:8px 8px 0 0;
+            background:rgba(255,255,255,0.2);color:white;cursor:pointer;
+            font-size:15px;transition:.2s;border-bottom:3px solid transparent;
+        }
+        .tab:hover{background:rgba(255,255,255,0.3);}
+        .tab.active{background:white;color:#4a9c70;border-bottom:3px solid white;}
+
+        /* 主体 */
+        .container{max-width:1200px;margin:0 auto;padding:20px 15px;}
+
+        /* 搜索框 */
+        .search-section{
+            background:white;padding:20px;border-radius:10px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);margin-bottom:16px;
+        }
+        .search-inner{display:flex;gap:10px;align-items:center;}
+        #search{
+            flex:1;padding:12px 18px;border:2px solid #e0e6ed;
+            border-radius:8px;font-size:16px;transition:.3s;
+        }
+        #search:focus{outline:none;border-color:#6bbd8e;box-shadow:0 0 0 3px rgba(107,189,142,.2);}
+        .search-btn{
+            background:#6bbd8e;color:white;border:none;
+            padding:12px 22px;border-radius:8px;cursor:pointer;
+            font-size:15px;transition:.2s;white-space:nowrap;
+        }
+        .search-btn:hover{background:#5aa87a;}
+
+        /* 筛选区域 */
+        .filter-section{
+            background:white;padding:15px 20px;border-radius:10px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.08);margin-bottom:16px;
+        }
+        .filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0;}
+        .filter-row+.filter-row{margin-top:10px;}
+        .filter-btn{
+            padding:6px 14px;border:1px solid #e2e8f0;border-radius:20px;
+            background:#f8fafc;color:#4a5568;cursor:pointer;transition:.2s;font-size:14px;
+        }
+        .filter-btn:hover{background:#e2e8f0;}
+        .filter-btn.active{background:#6bbd8e;color:white;border-color:#6bbd8e;}
+
+        /* 结果统计 */
+        .results-info{
+            margin-bottom:14px;padding:10px 16px;background:white;
+            border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);
+            color:#4a5568;font-size:14px;
+        }
+
+        /* 卡片网格 */
+        .card-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;}
+        .card{
+            background:white;border-radius:12px;overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            cursor:pointer;transition:.25s;border:1px solid #eef2f7;
+        }
+        .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,0.14);}
+
+        /* 卡片头部色条 */
+        .card-header-bar{
+            padding:14px 16px 10px;color:white;
+            background:linear-gradient(135deg,#6bbd8e,#4a9c70);
+        }
+        .card-title{
+            font-size:17px;font-weight:bold;margin-bottom:4px;
+            display:flex;justify-content:space-between;align-items:center;
+        }
+        .level-tag{font-size:11px;padding:2px 8px;border-radius:12px;background:rgba(255,255,255,.25);}
+
+        /* 卡片体 */
+        .card-body{padding:12px 16px 14px;}
+        .card-tags{margin:6px 0 8px;display:flex;flex-wrap:wrap;gap:5px;}
+        .tag{font-size:12px;background:#f0faf4;color:#4a9c70;border:1px solid #c6e8d4;padding:2px 7px;border-radius:12px;}
+        .card-desc{font-size:13px;color:#555;line-height:1.65;}
+
+        /* 详情展开 */
+        .detail{margin-top:10px;padding-top:10px;border-top:1px solid #eef2f7;display:none;}
         .detail.show{display:block;}
-        .section-title{font-size:20px;color:#2c3e50;margin:20px 0 10px;padding-bottom:5px;border-bottom:2px solid #eee;}
-        .quiz-area{background:#fff;border-radius:10px;padding:20px;margin-bottom:15px;box-shadow:0 2px 8px #00000015;display:none;}
+        .detail p{font-size:13px;color:#4a5568;margin-bottom:5px;line-height:1.6;}
+        .detail p:last-child{margin-bottom:0;}
+        .detail-label{font-weight:bold;color:#2d3748;margin-right:4px;}
+
+        /* 随机背诵 */
+        .quiz-area{
+            background:white;border-radius:10px;padding:24px;margin-bottom:16px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.08);display:none;
+        }
         .quiz-area.show{display:block;}
-        .quiz-btn{padding:8px 16px;border:none;border-radius:6px;background:#2ecc71;color:#fff;cursor:pointer;margin:5px;}
-        .quiz-btn:hover{background:#27ae60;}
+        .quiz-area h3{color:#4a9c70;margin-bottom:12px;font-size:1.1rem;}
+        #quizQues{font-size:16px;color:#2c3e50;min-height:28px;}
+        #quizAns{display:none;color:#4a9c70;margin-top:10px;font-size:15px;line-height:1.6;}
+        .quiz-btns{margin-top:16px;display:flex;gap:10px;}
+        .quiz-btn{
+            padding:8px 20px;border:none;border-radius:8px;
+            background:#6bbd8e;color:white;cursor:pointer;font-size:14px;transition:.2s;
+        }
+        .quiz-btn:hover{background:#5aa87a;}
+
+        /* 响应式 */
+        @media(max-width:640px){
+            header h1{font-size:1.4rem;}
+            .tab{padding:7px 14px;font-size:13px;}
+            .search-inner{flex-direction:column;}
+            #search{width:100%;}
+            .card-list{grid-template-columns:1fr;}
+        }
     </style>
 </head>
 <body>
-    <h1>中药学备考大全</h1>
+    <header>
+        <h1>🌿 中药学备考神器</h1>
+        <p class="subtitle">专业 · 高效 · 便捷的中药学学习助手</p>
+        <div class="tabs">
+            <button class="tab active" data-tab="herbs">中药大全</button>
+            <button class="tab" data-tab="alias">别名大全</button>
+            <button class="tab" data-tab="songs">分类歌诀</button>
+            <button class="tab" data-tab="quiz">随机背诵</button>
+        </div>
+    </header>
 
-    <div class="tabs">
-        <button class="tab active" data-tab="herbs">中药大全</button>
-        <button class="tab" data-tab="alias">别名大全</button>
-        <button class="tab" data-tab="songs">分类歌诀</button>
-        <button class="tab" data-tab="quiz">随机背诵</button>
-    </div>
+    <div class="container">
 
-    <div class="search-box">
-        <input type="text" id="search" placeholder="搜索药名、功效、别名、口诀...">
+    <div class="search-section">
+        <div class="search-inner">
+            <input type="text" id="search" placeholder="🔍 搜索药名、功效、别名、口诀...">
+            <button class="search-btn" onclick="render()">搜索</button>
+        </div>
     </div>
 
     <!-- 中药大全筛选 -->
-    <div class="filter-row" id="levelFilter">
-        <button class="filter-btn active" data-type="all">全部</button>
-        <button class="filter-btn" data-type="掌握">仅掌握</button>
-        <button class="filter-btn" data-type="熟悉">仅熟悉</button>
-        <button class="filter-btn" data-type="了解">仅了解</button>
+    <div class="filter-section" id="filterSection">
+        <div class="filter-row" id="levelFilter">
+            <button class="filter-btn active" data-type="all">全部</button>
+            <button class="filter-btn" data-type="掌握">⭐ 掌握</button>
+            <button class="filter-btn" data-type="熟悉">📖 熟悉</button>
+            <button class="filter-btn" data-type="了解">💡 了解</button>
+        </div>
+        <div class="filter-row" id="cateFilter"></div>
     </div>
-    <div class="filter-row" id="cateFilter"></div>
 
     <!-- 随机背诵区域 -->
     <div class="quiz-area" id="quizArea">
-        <h3>随机背诵模式</h3>
+        <h3>🎯 随机背诵模式</h3>
         <p id="quizQues">点击「下一题」开始</p>
-        <p id="quizAns" style="display:none;color:#3498db;margin-top:10px;"></p>
-        <div style="margin-top:15px;display:flex;gap:10px;">
+        <p id="quizAns"></p>
+        <div class="quiz-btns">
             <button class="quiz-btn" onclick="nextQuiz()">下一题</button>
             <button class="quiz-btn" onclick="showAns()">显示答案</button>
         </div>
+    </div>
+
+    <!-- 结果统计 -->
+    <div class="results-info" id="resultsInfo" style="display:none;">
+        共找到 <strong id="resultsCount">0</strong> 条结果
     </div>
 
     <!-- 内容容器 -->
     <div id="content">
         <div class="card-list" id="cardList"></div>
     </div>
+
+    </div><!-- /container -->
 
 <script>
 // 1. 你的原中药数据
@@ -3157,6 +3266,25 @@ function initCateFilter(){
     });
 }
 
+// 级别颜色映射
+const LEVEL_COLORS = {
+    '掌握': 'linear-gradient(135deg,#e74c3c,#c0392b)',
+    '熟悉': 'linear-gradient(135deg,#f39c12,#d68910)',
+    '了解': 'linear-gradient(135deg,#6bbd8e,#4a9c70)'
+};
+
+// 更新结果统计
+function updateResultsInfo(count, tab){
+    const info = document.getElementById('resultsInfo');
+    const cnt = document.getElementById('resultsCount');
+    if(tab === 'herbs'){
+        info.style.display = 'block';
+        cnt.textContent = count;
+    } else {
+        info.style.display = 'none';
+    }
+}
+
 // 渲染中药列表
 function renderHerbs(){
     const kw = document.getElementById('search').value.trim().toLowerCase();
@@ -3168,21 +3296,27 @@ function renderHerbs(){
     );
     const wrap = document.getElementById('cardList');
     wrap.innerHTML = '';
+    updateResultsInfo(arr.length, 'herbs');
     arr.forEach(item=>{
+        const bg = LEVEL_COLORS[item.level] || LEVEL_COLORS['了解'];
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <div class="card-title">
-                <span>${item.name}</span>
-                <span class="level-tag level-${item.level}">${item.level}</span>
+            <div class="card-header-bar" style="background:${bg};">
+                <div class="card-title">
+                    <span>${item.name}</span>
+                    <span class="level-tag">${item.level}</span>
+                </div>
             </div>
-            <div class="card-tags">
-                ${item.tags.map(t=>`<span class="tag">${t}</span>`).join('')}
-            </div>
-            <div class="card-desc">${item.summary}</div>
-            <div class="detail">
-                <p>四气：${item.siqi}</p>
-                <p>五味：${item.wuwei}</p>
+            <div class="card-body">
+                <div class="card-tags">
+                    ${item.tags.map(t=>`<span class="tag">${t}</span>`).join('')}
+                </div>
+                <div class="card-desc">${item.summary}</div>
+                <div class="detail">
+                    <p><span class="detail-label">四气：</span>${item.siqi}</p>
+                    <p><span class="detail-label">五味：</span>${item.wuwei}</p>
+                </div>
             </div>
         `;
         card.onclick = ()=>card.querySelector('.detail').classList.toggle('show');
@@ -3197,14 +3331,19 @@ function renderAlias(){
     if(kw) arr = arr.filter(x=>x.alias.includes(kw) || x.name.includes(kw) || x.func.includes(kw));
     const wrap = document.getElementById('cardList');
     wrap.innerHTML = '';
+    updateResultsInfo(0, 'alias');
     arr.forEach(item=>{
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <div class="card-title">${item.alias}</div>
-            <div class="card-desc">别名：${item.name}</div>
-            <div class="detail">
-                <p>功效：${item.func}</p>
+            <div class="card-header-bar">
+                <div class="card-title"><span>${item.alias}</span></div>
+            </div>
+            <div class="card-body">
+                <div class="card-desc">正名：<strong>${item.name}</strong></div>
+                <div class="detail">
+                    <p><span class="detail-label">功效：</span>${item.func}</p>
+                </div>
             </div>
         `;
         card.onclick = ()=>card.querySelector('.detail').classList.toggle('show');
@@ -3219,12 +3358,17 @@ function renderSongs(){
     if(kw) arr = arr.filter(x=>x.title.includes(kw) || x.content.includes(kw));
     const wrap = document.getElementById('cardList');
     wrap.innerHTML = '';
+    updateResultsInfo(0, 'songs');
     arr.forEach(item=>{
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <div class="card-title">${item.title}</div>
-            <div class="card-desc">${item.content.replace(/\n/g,'<br>')}</div>
+            <div class="card-header-bar">
+                <div class="card-title"><span>📜 ${item.title}</span></div>
+            </div>
+            <div class="card-body">
+                <div class="card-desc" style="white-space:pre-line;line-height:1.9;">${item.content}</div>
+            </div>
         `;
         wrap.appendChild(card);
     });
@@ -3239,13 +3383,14 @@ function renderQuiz(){
     document.getElementById('quizQues').textContent = '点击「下一题」开始';
     document.getElementById('quizAns').style.display = 'none';
     document.getElementById('cardList').innerHTML = '';
+    updateResultsInfo(0, 'quiz');
 }
 
 function nextQuiz(){
     if(currentQuizIndex >= quizList.length) currentQuizIndex = 0;
     const item = quizList[currentQuizIndex];
     document.getElementById('quizQues').textContent = `${item.name} 的功效是？`;
-    document.getElementById('quizAns').textContent = item.summary;
+    document.getElementById('quizAns').textContent = '答：' + item.summary;
     document.getElementById('quizAns').style.display = 'none';
     currentQuizIndex++;
 }
@@ -3269,8 +3414,8 @@ document.querySelectorAll('.tab').forEach(tab=>{
         document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
         tab.classList.add('active');
         currentTab = tab.dataset.tab;
-        document.getElementById('levelFilter').style.display = currentTab==='herbs'?'flex':'none';
-        document.getElementById('cateFilter').style.display = currentTab==='herbs'?'flex':'none';
+        const showFilters = currentTab==='herbs';
+        document.getElementById('filterSection').style.display = showFilters?'block':'none';
         render();
     }
 });
