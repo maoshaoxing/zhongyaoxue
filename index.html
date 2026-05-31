@@ -328,8 +328,8 @@
         <h1>🌿 中药学备考神器</h1>
         <div class="theme-toggle-wrap">
             <div class="theme-toggle">
-                <button id="theme-original" onclick="setTheme(\'original\')\">📖 原版</button>
-                <button id="theme-green" class="active" onclick="setTheme(\'green\')\">🌿 新版</button>
+                <button id="theme-original" onclick="setTheme('original')\">📖 原版</button>
+                <button id="theme-green" class="active" onclick="setTheme('green')\">🌿 新版</button>
             </div>
         </div>
         <p class="subtitle">专业 · 高效 · 便捷的中药学学习助手</p>
@@ -3926,14 +3926,14 @@ render();
 <script>
 // 双主题切换
 function setTheme(theme) {
-    document.body.classList.toggle('theme-green', theme === 'green');
-    document.getElementById('theme-original').classList.toggle('active', theme === 'original');
-    document.getElementById('theme-green').classList.toggle('active', theme === 'green');
-    localStorage.setItem('zhongyao-theme', theme);
+    document.body.classList.toggle("theme-green", theme === "green");
+    document.getElementById("theme-original").classList.toggle("active", theme === "original");
+    document.getElementById("theme-green").classList.toggle("active", theme === "green");
+    localStorage.setItem("zhongyao-theme", theme);
 }
 // 恢复上次主题
 (function(){
-    var saved = localStorage.getItem('zhongyao-theme');
+    var saved = localStorage.getItem("zhongyao-theme");
     if (saved) setTheme(saved);
 })();
 </script>
