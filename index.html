@@ -5,126 +5,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中药学备考神器</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei","微软雅黑",sans-serif;}
-
-        body{background:#f8f9fa;color:#333;line-height:1.6;}
-
-        /* 顶部导航栏 */
-        header{
-            background:linear-gradient(135deg,#6bbd8e,#4a9c70);
-            color:white;
-            padding:18px 20px 0;
-            box-shadow:0 2px 10px rgba(0,0,0,0.12);
-            position:sticky;top:0;z-index:100;
+        /* ======== CSS变量：原版模式（默认） ======== */
+        :root {
+            --bg: #f5f7fa;
+            --header-bg: #f5f7fa;
+            --header-gradient: #f5f7fa;
+            --header-text: #2c3e50;
+            --header-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --card-bg: #fff;
+            --card-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --card-hover-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            --card-border: none;
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --primary-light: #e8f4f8;
+            --tab-bg: #e8f4f8;
+            --tab-text: #2c3e50;
+            --tab-active-bg: #3498db;
+            --tab-active-text: #fff;
+            --filter-bg: #e8f4f8;
+            --filter-text: #2c3e50;
+            --filter-active-bg: #3498db;
+            --filter-active-text: #fff;
+            --btn-border: none;
+            --btn-radius: 6px;
+            --tag-bg: #f1f1f1;
+            --tag-color: #555;
+            --tag-border: none;
+            --search-border: #ddd;
+            --search-focus-shadow: rgba(52,152,219,.2);
+            --section-bg: #fff;
+            --section-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --results-bg: #fff;
+            --results-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            --text: #2c3e50;
+            --text-sec: #555;
+            --text-light: #718096;
+            --level-master: #c62828;
+            --level-familiar: #f57f17;
+            --level-learn: #2e7d32;
+            --level-master-bg: #ffebee;
+            --level-familiar-bg: #fff8e1;
+            --level-learn-bg: #e8f5e9;
+            --card-header-style: 'plain';
+            --header-position: static;
         }
-        header h1{font-size:1.8rem;letter-spacing:2px;margin-bottom:10px;text-align:center;}
-        header .subtitle{text-align:center;opacity:.9;font-size:.9rem;margin-bottom:10px;}
+        
+        /* ======== 新版模式（绿色系） ======== */
+        body.theme-green {
+            --bg: #f8f9fa;
+            --header-bg: linear-gradient(135deg,#6bbd8e,#4a9c70);
+            --header-gradient: linear-gradient(135deg,#6bbd8e,#4a9c70);
+            --header-text: #fff;
+            --header-shadow: 0 2px 10px rgba(0,0,0,0.12);
+            --card-bg: #fff;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --card-hover-shadow: 0 10px 24px rgba(0,0,0,0.14);
+            --card-border: 1px solid #eef2f7;
+            --primary: #6bbd8e;
+            --primary-dark: #4a9c70;
+            --primary-light: #f0faf4;
+            --tab-bg: rgba(255,255,255,0.2);
+            --tab-text: #fff;
+            --tab-active-bg: #fff;
+            --tab-active-text: #4a9c70;
+            --filter-bg: #f8fafc;
+            --filter-text: #4a5568;
+            --filter-active-bg: #6bbd8e;
+            --filter-active-text: #fff;
+            --btn-border: 1px solid #e2e8f0;
+            --btn-radius: 20px;
+            --tag-bg: #f0faf4;
+            --tag-color: #4a9c70;
+            --tag-border: 1px solid #c6e8d4;
+            --search-border: #e0e6ed;
+            --search-focus-shadow: rgba(107,189,142,.2);
+            --section-bg: #fff;
+            --section-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            --results-bg: #fff;
+            --results-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            --text: #333;
+            --text-sec: #555;
+            --text-light: #4a5568;
+            --level-master: #e74c3c;
+            --level-familiar: #f39c12;
+            --level-learn: #4a9c70;
+            --level-master-bg: rgba(255,255,255,.25);
+            --level-familiar-bg: rgba(255,255,255,.25);
+            --level-learn-bg: rgba(255,255,255,.25);
+            --card-header-style: 'gradient';
+            --header-position: sticky;
+        }
+
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei","微软雅黑",sans-serif;}
+        body{background:var(--bg);color:var(--text);line-height:1.6;}
+
+        /* ── Header ── */
+        header{
+            background:var(--header-gradient);
+            color:var(--header-text);
+            padding:18px 20px 10px;
+            box-shadow:var(--header-shadow);
+            position:var(--header-position);
+            top:0;z-index:100;
+        }
+        header h1{font-size:1.6rem;text-align:center;margin-bottom:4px;}
+        header .subtitle{text-align:center;opacity:.85;font-size:.85rem;margin-bottom:6px;}
+
+        /* ── 主题切换按钮 ── */
+        .theme-toggle-wrap{text-align:center;margin-bottom:10px;}
+        .theme-toggle{
+            display:inline-flex;gap:0;border-radius:20px;overflow:hidden;
+            border:2px solid var(--header-text);opacity:.85;
+        }
+        .theme-toggle button{
+            padding:4px 16px;border:none;cursor:pointer;font-size:13px;
+            background:transparent;color:var(--header-text);transition:.2s;
+        }
+        .theme-toggle button.active{background:var(--header-text);color:var(--primary-dark);}
+
+        /* ── Tabs ── */
         .tabs{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;}
         .tab{
             padding:8px 20px;border:none;border-radius:8px 8px 0 0;
-            background:rgba(255,255,255,0.2);color:white;cursor:pointer;
+            background:var(--tab-bg);color:var(--tab-text);cursor:pointer;
             font-size:15px;transition:.2s;border-bottom:3px solid transparent;
         }
-        .tab:hover{background:rgba(255,255,255,0.3);}
-        .tab.active{background:white;color:#4a9c70;border-bottom:3px solid white;}
+        .tab:hover{opacity:.85;}
+        .tab.active{background:var(--tab-active-bg);color:var(--tab-active-text);}
 
-        /* 主体 */
-        .container{max-width:1200px;margin:0 auto;padding:20px 15px;}
+        /* ── Container ── */
+        .container{max-width:1200px;margin:0 auto;padding:20px 15px 40px;}
 
-        /* 搜索框 */
+        /* ── 搜索 ── */
         .search-section{
-            background:white;padding:20px;border-radius:10px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.08);margin-bottom:16px;
+            background:var(--section-bg);padding:20px;border-radius:10px;
+            box-shadow:var(--section-shadow);margin-bottom:16px;
         }
         .search-inner{display:flex;gap:10px;align-items:center;}
         #search{
-            flex:1;padding:12px 18px;border:2px solid #e0e6ed;
-            border-radius:8px;font-size:16px;transition:.3s;
+            flex:1;padding:12px 18px;border:2px solid var(--search-border);
+            border-radius:8px;font-size:16px;transition:.3s;background:var(--section-bg);color:var(--text);
         }
-        #search:focus{outline:none;border-color:#6bbd8e;box-shadow:0 0 0 3px rgba(107,189,142,.2);}
+        #search:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--search-focus-shadow);}
         .search-btn{
-            background:#6bbd8e;color:white;border:none;
-            padding:12px 22px;border-radius:8px;cursor:pointer;
-            font-size:15px;transition:.2s;white-space:nowrap;
+            background:var(--primary);color:#fff;border:none;
+            padding:12px 22px;border-radius:8px;cursor:pointer;font-size:15px;transition:.2s;white-space:nowrap;
         }
-        .search-btn:hover{background:#5aa87a;}
+        .search-btn:hover{filter:brightness(.9);}
 
-        /* 筛选区域 */
+        /* ── 筛选 ── */
         .filter-section{
-            background:white;padding:15px 20px;border-radius:10px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.08);margin-bottom:16px;
+            background:var(--section-bg);padding:15px 20px;border-radius:10px;
+            box-shadow:var(--section-shadow);margin-bottom:16px;
         }
         .filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0;}
         .filter-row+.filter-row{margin-top:10px;}
         .filter-btn{
-            padding:6px 14px;border:1px solid #e2e8f0;border-radius:20px;
-            background:#f8fafc;color:#4a5568;cursor:pointer;transition:.2s;font-size:14px;
+            padding:6px 14px;border:var(--btn-border);border-radius:var(--btn-radius);
+            background:var(--filter-bg);color:var(--filter-text);cursor:pointer;
+            transition:.2s;font-size:14px;
         }
         .filter-btn:hover{background:#e2e8f0;}
-        .filter-btn.active{background:#6bbd8e;color:white;border-color:#6bbd8e;}
+        .filter-btn.active{background:var(--filter-active-bg);color:var(--filter-active-text);border-color:var(--filter-active-bg);}
 
-        /* 结果统计 */
+        /* ── 结果统计 ── */
         .results-info{
-            margin-bottom:14px;padding:10px 16px;background:white;
-            border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);
-            color:#4a5568;font-size:14px;
+            margin-bottom:14px;padding:10px 16px;background:var(--results-bg);
+            border-radius:8px;box-shadow:var(--results-shadow);
+            color:var(--text-light);font-size:14px;
         }
 
-        /* 卡片网格 */
+        /* ── 卡片 ── */
         .card-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px;}
         .card{
-            background:white;border-radius:12px;overflow:hidden;
-            box-shadow:0 4px 12px rgba(0,0,0,0.08);
-            cursor:pointer;transition:.25s;border:1px solid #eef2f7;
+            background:var(--card-bg);border-radius:12px;overflow:hidden;
+            box-shadow:var(--card-shadow);cursor:pointer;transition:.25s;border:var(--card-border);
         }
-        .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,0.14);}
+        .card:hover{transform:translateY(-4px);box-shadow:var(--card-hover-shadow);}
 
-        /* 卡片头部色条 */
+        /* 卡片头部 */
         .card-header-bar{
-            padding:14px 16px 10px;color:white;
-            background:linear-gradient(135deg,#6bbd8e,#4a9c70);
+            padding:14px 16px 10px;color:#fff;
+            background:linear-gradient(135deg,var(--primary),var(--primary-dark));
         }
+        body:not(.theme-green) .card-header-bar{background:var(--card-bg);color:var(--text);padding-bottom:4px;}
         .card-title{
             font-size:17px;font-weight:bold;margin-bottom:4px;
             display:flex;justify-content:space-between;align-items:center;
         }
-        .level-tag{font-size:11px;padding:2px 8px;border-radius:12px;background:rgba(255,255,255,.25);}
+        .level-tag{font-size:11px;padding:2px 8px;border-radius:12px;}
 
-        /* 卡片体 */
+        /* 卡片内容 */
         .card-body{padding:12px 16px 14px;}
         .card-tags{margin:6px 0 8px;display:flex;flex-wrap:wrap;gap:5px;}
-        .tag{font-size:12px;background:#f0faf4;color:#4a9c70;border:1px solid #c6e8d4;padding:2px 7px;border-radius:12px;}
-        .card-desc{font-size:13px;color:#555;line-height:1.65;}
+        .tag{
+            font-size:12px;background:var(--tag-bg);color:var(--tag-color);
+            border:var(--tag-border);padding:2px 7px;border-radius:12px;
+        }
+        .guijing-tag{
+            font-size:11px;background:#fef3e2;color:#b45309;
+            border:1px solid #fcd9a7;padding:2px 7px;border-radius:12px;
+        }
+        .card-desc{font-size:13px;color:var(--text-sec);line-height:1.65;}
 
-        /* 详情展开 */
+        /* 详情 */
         .detail{margin-top:10px;padding-top:10px;border-top:1px solid #eef2f7;display:none;}
         .detail.show{display:block;}
-        .detail p{font-size:13px;color:#4a5568;margin-bottom:5px;line-height:1.6;}
-        .detail p:last-child{margin-bottom:0;}
-        .detail-label{font-weight:bold;color:#2d3748;margin-right:4px;}
+        .detail p{font-size:13px;color:var(--text-light);margin-bottom:5px;line-height:1.6;}
 
-        /* 随机背诵 */
+        /* ── 随机背诵 ── */
         .quiz-area{
-            background:white;border-radius:10px;padding:24px;margin-bottom:16px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.08);display:none;
+            background:var(--section-bg);border-radius:10px;padding:24px;margin-bottom:16px;
+            box-shadow:var(--section-shadow);display:none;
         }
         .quiz-area.show{display:block;}
-        .quiz-area h3{color:#4a9c70;margin-bottom:12px;font-size:1.1rem;}
-        #quizQues{font-size:16px;color:#2c3e50;min-height:28px;}
-        #quizAns{display:none;color:#4a9c70;margin-top:10px;font-size:15px;line-height:1.6;}
+        .quiz-area h3{color:var(--primary-dark);margin-bottom:12px;font-size:1.1rem;}
+        #quizQues{font-size:16px;color:var(--text);min-height:28px;}
+        #quizAns{display:none;color:var(--primary-dark);margin-top:10px;font-size:15px;line-height:1.6;}
         .quiz-btns{margin-top:16px;display:flex;gap:10px;}
         .quiz-btn{
             padding:8px 20px;border:none;border-radius:8px;
-            background:#6bbd8e;color:white;cursor:pointer;font-size:14px;transition:.2s;
+            background:var(--primary);color:#fff;cursor:pointer;font-size:14px;transition:.2s;
         }
-        .quiz-btn:hover{background:#5aa87a;}
+        .quiz-btn:hover{filter:brightness(.9);}
 
-        /* 响应式 */
+        /* ── 原版模式特有 ── */
+        body:not(.theme-green) .tag{border-radius:3px;padding:2px 5px;}
+        body:not(.theme-green) .card-title{color:var(--text);}
+        body.theme-green .card-title{color:#fff;}
+        body.theme-green .level-tag{background:rgba(255,255,255,.25);}
+
         @media(max-width:640px){
-            header h1{font-size:1.4rem;}
-            .tab{padding:7px 14px;font-size:13px;}
-            .search-inner{flex-direction:column;}
-            #search{width:100%;}
+            header h1{font-size:1.3rem;}.tab{padding:7px 14px;font-size:13px;}
+            .search-inner{flex-direction:column;}#search{width:100%;}
             .card-list{grid-template-columns:1fr;}
         }
     </style>
@@ -132,6 +246,12 @@
 <body>
     <header>
         <h1>🌿 中药学备考神器</h1>
+        <div class="theme-toggle-wrap">
+            <div class="theme-toggle">
+                <button id="theme-original" onclick="setTheme(\'original\')\">📖 原版</button>
+                <button id="theme-green" class="active" onclick="setTheme(\'green\')\">🌿 新版</button>
+            </div>
+        </div>
         <p class="subtitle">专业 · 高效 · 便捷的中药学学习助手</p>
         <div class="tabs">
             <button class="tab active" data-tab="herbs">中药大全</button>
@@ -198,7 +318,8 @@ window.TCM_HERBS = [
       "解表",
       "发汗"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、膀胱经"
   },
   {
     "id": "guizhi",
@@ -211,7 +332,8 @@ window.TCM_HERBS = [
       "解表",
       "温通"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肺、膀胱经"
   },
   {
     "id": "zisuye",
@@ -224,7 +346,8 @@ window.TCM_HERBS = [
       "解表",
       "行气"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、脾经"
   },
   {
     "id": "zisugeng",
@@ -237,7 +360,8 @@ window.TCM_HERBS = [
       "解表",
       "理气"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、脾、胃经"
   },
   {
     "id": "jingjie",
@@ -250,7 +374,8 @@ window.TCM_HERBS = [
       "解表",
       "祛风"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、肝经"
   },
   {
     "id": "jingjietan",
@@ -263,7 +388,8 @@ window.TCM_HERBS = [
       "解表",
       "止血"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、肝经"
   },
   {
     "id": "qianghuo",
@@ -276,7 +402,8 @@ window.TCM_HERBS = [
       "解表",
       "止痛"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "膀胱、肾经"
   },
   {
     "id": "baizhi",
@@ -289,7 +416,8 @@ window.TCM_HERBS = [
       "解表",
       "止痛"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、胃、大肠经"
   },
   {
     "id": "xixin",
@@ -302,7 +430,8 @@ window.TCM_HERBS = [
       "解表",
       "温肺"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、肾、心经"
   },
   {
     "id": "bohe",
@@ -314,7 +443,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、肝经"
   },
   {
     "id": "niubangzi",
@@ -326,7 +456,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、胃经"
   },
   {
     "id": "sangye",
@@ -338,7 +469,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、肝经"
   },
   {
     "id": "juhua",
@@ -350,7 +482,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、肝经"
   },
   {
     "id": "gegen",
@@ -363,7 +496,8 @@ window.TCM_HERBS = [
       "辛凉解表",
       "生津"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃经"
   },
   {
     "id": "gehua",
@@ -375,7 +509,8 @@ window.TCM_HERBS = [
       "解表药",
       "解酒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃经"
   },
   {
     "id": "chaihu",
@@ -388,7 +523,8 @@ window.TCM_HERBS = [
       "辛凉解表",
       "疏肝"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胆经"
   },
   {
     "id": "shengjiang",
@@ -401,7 +537,8 @@ window.TCM_HERBS = [
       "解表",
       "止呕"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、脾、胃经"
   },
   {
     "id": "shengjiangpi",
@@ -413,7 +550,8 @@ window.TCM_HERBS = [
       "解表药",
       "利水"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾经"
   },
   {
     "id": "shengjiangzhi",
@@ -426,7 +564,8 @@ window.TCM_HERBS = [
       "止呕",
       "开窍"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、脾、胃经"
   },
   {
     "id": "xiangru",
@@ -439,7 +578,8 @@ window.TCM_HERBS = [
       "解表",
       "化湿"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、脾、胃经"
   },
   {
     "id": "fangfeng",
@@ -452,7 +592,8 @@ window.TCM_HERBS = [
       "解表",
       "祛风"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "膀胱、肝、脾经"
   },
   {
     "id": "xinyi",
@@ -465,7 +606,8 @@ window.TCM_HERBS = [
       "解表",
       "通窍"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃经"
   },
   {
     "id": "shengma",
@@ -477,7 +619,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、脾、胃、大肠经"
   },
   {
     "id": "chantui",
@@ -489,7 +632,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、肝经"
   },
   {
     "id": "manjingzi",
@@ -501,7 +645,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "膀胱、肝、胃经"
   },
   {
     "id": "gaoben",
@@ -514,7 +659,8 @@ window.TCM_HERBS = [
       "解表",
       "止痛"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "膀胱经"
   },
   {
     "id": "cangerzi",
@@ -527,7 +673,8 @@ window.TCM_HERBS = [
       "解表",
       "通窍"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肺经"
   },
   {
     "id": "cangercao",
@@ -539,7 +686,8 @@ window.TCM_HERBS = [
       "解表药",
       "解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肺经"
   },
   {
     "id": "dandouchi",
@@ -551,7 +699,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肺、胃经"
   },
   {
     "id": "dadouhuangjuan",
@@ -563,7 +712,8 @@ window.TCM_HERBS = [
       "解表药",
       "清热利湿"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "脾、胃经"
   },
   {
     "id": "shigao",
@@ -575,7 +725,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热泻火"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、胃经"
   },
   {
     "id": "zhimu",
@@ -588,7 +739,8 @@ window.TCM_HERBS = [
       "清热泻火",
       "滋阴"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、胃、肾经"
   },
   {
     "id": "zhizi",
@@ -600,7 +752,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热泻火"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肺、三焦经"
   },
   {
     "id": "huangqin",
@@ -612,7 +765,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、胆、脾、胃、大肠、小肠经"
   },
   {
     "id": "huanglian",
@@ -624,7 +778,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、脾、胃、胆、大肠经"
   },
   {
     "id": "huangbai",
@@ -636,7 +791,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肾、膀胱、大肠经"
   },
   {
     "id": "jinyinhua",
@@ -648,7 +804,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、心、胃经"
   },
   {
     "id": "lianqiao",
@@ -660,7 +817,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、心、小肠经"
   },
   {
     "id": "banlangen",
@@ -672,7 +830,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、胃经"
   },
   {
     "id": "shengdi",
@@ -684,7 +843,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热凉血"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肝、肾经"
   },
   {
     "id": "mudanpi",
@@ -697,7 +857,8 @@ window.TCM_HERBS = [
       "清热凉血",
       "活血"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肝、肾经"
   },
   {
     "id": "qinghao",
@@ -709,7 +870,8 @@ window.TCM_HERBS = [
       "清热药",
       "清虚热"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胆经"
   },
   {
     "id": "xiakucao",
@@ -721,7 +883,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热泻火"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胆经"
   },
   {
     "id": "lugen",
@@ -734,7 +897,8 @@ window.TCM_HERBS = [
       "清热泻火",
       "生津"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃经"
   },
   {
     "id": "tianhuafen",
@@ -746,7 +910,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热泻火"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃经"
   },
   {
     "id": "longdan",
@@ -758,7 +923,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胆经"
   },
   {
     "id": "kushen",
@@ -770,7 +936,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肝、胃、大肠、膀胱经"
   },
   {
     "id": "daqingye",
@@ -782,7 +949,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、胃经"
   },
   {
     "id": "pugongying",
@@ -794,7 +962,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胃经"
   },
   {
     "id": "zihuadiding",
@@ -806,7 +975,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肝经"
   },
   {
     "id": "yejuhua",
@@ -818,7 +988,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、心经"
   },
   {
     "id": "shegan",
@@ -830,7 +1001,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺经"
   },
   {
     "id": "xuanshen",
@@ -842,7 +1014,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热凉血"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃、肾经"
   },
   {
     "id": "chishao",
@@ -854,7 +1027,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热凉血"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝经"
   },
   {
     "id": "digupi",
@@ -866,7 +1040,8 @@ window.TCM_HERBS = [
       "清热药",
       "清虚热"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、肝、肾经"
   },
   {
     "id": "zhuye",
@@ -878,7 +1053,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热泻火"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、胃、小肠经"
   },
   {
     "id": "juemingzi",
@@ -890,7 +1066,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热泻火"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、大肠经"
   },
   {
     "id": "qinpi",
@@ -902,7 +1079,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、胆、大肠经"
   },
   {
     "id": "baixianpi",
@@ -914,7 +1092,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "脾、胃、膀胱经"
   },
   {
     "id": "qingdai",
@@ -926,7 +1105,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、肺经"
   },
   {
     "id": "zhonglou",
@@ -938,7 +1118,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝经"
   },
   {
     "id": "quanshen",
@@ -950,7 +1131,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肺、肝、大肠经"
   },
   {
     "id": "tufuling",
@@ -962,7 +1144,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、胃经"
   },
   {
     "id": "mabo",
@@ -974,7 +1157,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肺经"
   },
   {
     "id": "machixian",
@@ -986,7 +1170,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、大肠经"
   },
   {
     "id": "yadanzi",
@@ -998,7 +1183,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "大肠、肝经"
   },
   {
     "id": "hongteng",
@@ -1010,7 +1196,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "大肠、肝经"
   },
   {
     "id": "chuanxinlian",
@@ -1022,7 +1209,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、肺、大肠、膀胱经"
   },
   {
     "id": "xiongdangfen",
@@ -1034,7 +1222,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、胆、心经"
   },
   {
     "id": "shuinijiao",
@@ -1046,7 +1235,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热凉血"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、肝经"
   },
   {
     "id": "baiwei",
@@ -1058,7 +1248,8 @@ window.TCM_HERBS = [
       "清热药",
       "清虚热"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "胃、肝、肾经"
   },
   {
     "id": "huhuanglian",
@@ -1070,7 +1261,8 @@ window.TCM_HERBS = [
       "清热药",
       "清虚热"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、胃、大肠经"
   },
   {
     "id": "zicao",
@@ -1082,7 +1274,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热凉血"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、肝经"
   },
   {
     "id": "dahuang",
@@ -1094,7 +1287,8 @@ window.TCM_HERBS = [
       "泻下药",
       "攻下"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、大肠、肝、心包经"
   },
   {
     "id": "mangxiao",
@@ -1106,7 +1300,8 @@ window.TCM_HERBS = [
       "泻下药",
       "攻下"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "胃、大肠经"
   },
   {
     "id": "gansui",
@@ -1118,7 +1313,8 @@ window.TCM_HERBS = [
       "泻下药",
       "峻下逐水"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、肾、大肠经"
   },
   {
     "id": "badoushuang",
@@ -1130,7 +1326,8 @@ window.TCM_HERBS = [
       "泻下药",
       "峻下逐水"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "胃、大肠经"
   },
   {
     "id": "huomaren",
@@ -1142,7 +1339,8 @@ window.TCM_HERBS = [
       "泻下药",
       "润下"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、大肠经"
   },
   {
     "id": "yuliren",
@@ -1154,7 +1352,8 @@ window.TCM_HERBS = [
       "泻下药",
       "润下"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、大肠、小肠经"
   },
   {
     "id": "duhuo",
@@ -1166,7 +1365,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肾、膀胱经"
   },
   {
     "id": "muigua",
@@ -1178,7 +1378,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、脾经"
   },
   {
     "id": "weilingxian",
@@ -1190,7 +1391,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "膀胱经"
   },
   {
     "id": "qinjiao",
@@ -1202,7 +1404,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿清热"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "胃、肝、胆经"
   },
   {
     "id": "fangji",
@@ -1214,7 +1417,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿清热"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "膀胱、肺经"
   },
   {
     "id": "sangjisheng",
@@ -1226,7 +1430,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿强筋骨"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、肾经"
   },
   {
     "id": "chuanwu",
@@ -1238,7 +1443,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肝、肾、脾经"
   },
   {
     "id": "caowu",
@@ -1250,7 +1456,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肝、肾、脾经"
   },
   {
     "id": "qishe",
@@ -1262,7 +1469,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝经"
   },
   {
     "id": "jinqianbaihuashe",
@@ -1274,7 +1482,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝经"
   },
   {
     "id": "xuchangqing",
@@ -1286,7 +1495,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胃经"
   },
   {
     "id": "wujiapi",
@@ -1298,7 +1508,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿强筋骨"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、肾经"
   },
   {
     "id": "wushaoshe",
@@ -1310,7 +1521,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝经"
   },
   {
     "id": "shetui",
@@ -1322,7 +1534,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风定惊"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝经"
   },
   {
     "id": "cansha",
@@ -1334,7 +1547,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、脾、胃经"
   },
   {
     "id": "luoshiteng",
@@ -1346,7 +1560,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿清热"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、肝、肾经"
   },
   {
     "id": "sangzhi",
@@ -1358,7 +1573,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝经"
   },
   {
     "id": "xixiancao",
@@ -1370,7 +1586,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿清热"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、肾经"
   },
   {
     "id": "gouji",
@@ -1382,7 +1599,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿强筋骨"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、肾经"
   },
   {
     "id": "guanghuoxiang",
@@ -1393,7 +1611,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肺经"
   },
   {
     "id": "cangzhu",
@@ -1404,7 +1623,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肝经"
   },
   {
     "id": "houpu",
@@ -1415,7 +1635,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肺、大肠经"
   },
   {
     "id": "houpuahua",
@@ -1426,7 +1647,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃经"
   },
   {
     "id": "sharen",
@@ -1437,7 +1659,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、肾经"
   },
   {
     "id": "sharenke",
@@ -1448,7 +1671,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、肾经"
   },
   {
     "id": "doukou",
@@ -1459,7 +1683,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、脾、胃经"
   },
   {
     "id": "doukouke",
@@ -1470,7 +1695,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、脾、胃经"
   },
   {
     "id": "peilan",
@@ -1481,7 +1707,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "脾、胃、肺经"
   },
   {
     "id": "caoguo",
@@ -1492,7 +1719,8 @@ window.TCM_HERBS = [
     "tags": [
       "化湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "脾、胃经"
   },
   {
     "id": "shanzha",
@@ -1503,7 +1731,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肝经"
   },
   {
     "id": "shenqu",
@@ -1514,7 +1743,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃经"
   },
   {
     "id": "jianshenqu",
@@ -1525,7 +1755,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃经"
   },
   {
     "id": "maiya",
@@ -1536,7 +1767,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肝经"
   },
   {
     "id": "jineijin",
@@ -1547,7 +1779,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、小肠、膀胱经"
   },
   {
     "id": "laifuzi",
@@ -1558,7 +1791,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、脾、胃经"
   },
   {
     "id": "guya",
@@ -1569,7 +1803,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "脾、胃经"
   },
   {
     "id": "daoya",
@@ -1580,7 +1815,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "脾、胃经"
   },
   {
     "id": "fuling",
@@ -1591,7 +1827,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、脾、肾经"
   },
   {
     "id": "fulingpi",
@@ -1603,7 +1840,8 @@ window.TCM_HERBS = [
       "利水渗湿药",
       "利水"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、脾、肾经"
   },
   {
     "id": "fushen",
@@ -1615,7 +1853,8 @@ window.TCM_HERBS = [
       "利水渗湿药",
       "安神"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、脾经"
   },
   {
     "id": "zexie",
@@ -1626,7 +1865,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肾、膀胱经"
   },
   {
     "id": "yiyiren",
@@ -1637,7 +1877,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肺经"
   },
   {
     "id": "cheqianzi",
@@ -1648,7 +1889,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、肾、肺、小肠经"
   },
   {
     "id": "cheqiancao",
@@ -1659,7 +1901,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、肾、肺经"
   },
   {
     "id": "mutong",
@@ -1670,7 +1913,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、小肠、膀胱经"
   },
   {
     "id": "chuanmutong",
@@ -1681,7 +1925,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肺、小肠、膀胱经"
   },
   {
     "id": "yinchen",
@@ -1692,7 +1937,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肝、胆经"
   },
   {
     "id": "jinqiancao",
@@ -1703,7 +1949,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胆、肾、膀胱经"
   },
   {
     "id": "lianqiancao",
@@ -1714,7 +1961,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胆、肾、膀胱经"
   },
   {
     "id": "guangjinqiancao",
@@ -1725,7 +1973,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胆、肾、膀胱经"
   },
   {
     "id": "zhuling",
@@ -1736,7 +1985,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肾、膀胱经"
   },
   {
     "id": "shiwei",
@@ -1747,7 +1997,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、膀胱经"
   },
   {
     "id": "huashi",
@@ -1758,7 +2009,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "膀胱、肺、胃经"
   },
   {
     "id": "huzhang",
@@ -1769,7 +2021,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胆、肺经"
   },
   {
     "id": "xiangjiapi",
@@ -1780,7 +2033,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肝、肾、心经"
   },
   {
     "id": "tongcao",
@@ -1791,7 +2045,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肺、胃经"
   },
   {
     "id": "qumai",
@@ -1802,7 +2057,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、小肠经"
   },
   {
     "id": "haijinsha",
@@ -1813,7 +2069,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "膀胱、小肠经"
   },
   {
     "id": "haijinshateng",
@@ -1824,7 +2081,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "膀胱、小肠经"
   },
   {
     "id": "bianxu",
@@ -1835,7 +2093,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "膀胱经"
   },
   {
     "id": "difuzi",
@@ -1846,7 +2105,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肾、膀胱经"
   },
   {
     "id": "bixie",
@@ -1857,7 +2117,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肾、胃经"
   },
   {
     "id": "fuzi",
@@ -1868,7 +2129,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肾、脾经"
   },
   {
     "id": "ganjiang",
@@ -1879,7 +2141,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、肾、心、肺经"
   },
   {
     "id": "rougui",
@@ -1890,7 +2153,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肾、脾、心、肝经"
   },
   {
     "id": "wuzhuyu",
@@ -1901,7 +2165,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、脾、胃、肾经"
   },
   {
     "id": "huajiao",
@@ -1912,7 +2177,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、肾经"
   },
   {
     "id": "jiaomu",
@@ -1923,7 +2189,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、肾经"
   },
   {
     "id": "dingxiang",
@@ -1934,7 +2201,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、肺、肾经"
   },
   {
     "id": "mudingxiang",
@@ -1945,7 +2213,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、肺、肾经"
   },
   {
     "id": "xiaohuixiang",
@@ -1956,7 +2225,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、肾、脾、胃经"
   },
   {
     "id": "bajiaohuixiang",
@@ -1967,7 +2237,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、肾、脾、胃经"
   },
   {
     "id": "gaoliangjiang",
@@ -1978,7 +2249,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃经"
   },
   {
     "id": "hongdoukou",
@@ -1989,7 +2261,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃经"
   },
   {
     "id": "chenpi",
@@ -2000,7 +2273,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、肺经"
   },
   {
     "id": "juhong",
@@ -2011,7 +2285,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、脾经"
   },
   {
     "id": "juhe",
@@ -2022,7 +2297,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝经"
   },
   {
     "id": "juluo",
@@ -2033,7 +2309,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、肺经"
   },
   {
     "id": "juye",
@@ -2044,7 +2321,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝经"
   },
   {
     "id": "huajuhong",
@@ -2055,7 +2333,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、脾经"
   },
   {
     "id": "zhishi",
@@ -2066,7 +2345,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、大肠经"
   },
   {
     "id": "zhike",
@@ -2077,7 +2357,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、大肠经"
   },
   {
     "id": "muxiang",
@@ -2088,7 +2369,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、大肠、胆、三焦经"
   },
   {
     "id": "weimuxiang",
@@ -2099,7 +2381,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃、大肠经"
   },
   {
     "id": "xiangfu",
@@ -2110,7 +2393,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、脾、三焦经"
   },
   {
     "id": "qingpi",
@@ -2121,7 +2405,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胆、胃经"
   },
   {
     "id": "chuanlianzi",
@@ -2132,7 +2417,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胃、小肠、膀胱经"
   },
   {
     "id": "chenxiang",
@@ -2143,7 +2429,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、肾经"
   },
   {
     "id": "xiebai",
@@ -2154,7 +2441,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃、大肠经"
   },
   {
     "id": "foshou",
@@ -2165,7 +2453,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、脾、胃、肺经"
   },
   {
     "id": "sanqi",
@@ -2177,7 +2466,8 @@ window.TCM_HERBS = [
       "止血药",
       "化瘀止血"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胃经"
   },
   {
     "id": "xiaoji",
@@ -2189,7 +2479,8 @@ window.TCM_HERBS = [
       "止血药",
       "凉血止血"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肝经"
   },
   {
     "id": "diyu",
@@ -2201,7 +2492,8 @@ window.TCM_HERBS = [
       "止血药",
       "凉血止血"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、大肠经"
   },
   {
     "id": "huaimi",
@@ -2213,7 +2505,8 @@ window.TCM_HERBS = [
       "止血药",
       "凉血止血"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、大肠经"
   },
   {
     "id": "aiye",
@@ -2225,7 +2518,8 @@ window.TCM_HERBS = [
       "止血药",
       "温经止血"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、脾、肾经"
   },
   {
     "id": "chuanxiong",
@@ -2236,7 +2530,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胆、心包经"
   },
   {
     "id": "yanhusuo",
@@ -2247,7 +2542,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肝、脾经"
   },
   {
     "id": "danshen",
@@ -2258,7 +2554,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、心包、肝经"
   },
   {
     "id": "yujin",
@@ -2269,7 +2566,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、胆、心经"
   },
   {
     "id": "honghua",
@@ -2280,7 +2578,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肝经"
   },
   {
     "id": "taoren",
@@ -2291,7 +2590,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肝、大肠经"
   },
   {
     "id": "yimucao",
@@ -2302,7 +2602,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肝、膀胱经"
   },
   {
     "id": "niuxi",
@@ -2313,7 +2614,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、肾经"
   },
   {
     "id": "banxia",
@@ -2325,7 +2627,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "温化寒痰"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃经"
   },
   {
     "id": "nanxing",
@@ -2337,7 +2640,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "温化寒痰"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、肝、脾经"
   },
   {
     "id": "chuanbei",
@@ -2349,7 +2653,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "清化热痰"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、心经"
   },
   {
     "id": "zhebei",
@@ -2361,7 +2666,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "清化热痰"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、心经"
   },
   {
     "id": "gualou",
@@ -2373,7 +2679,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "清化热痰"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃、大肠经"
   },
   {
     "id": "xingren",
@@ -2385,7 +2692,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "止咳平喘"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、大肠经"
   },
   {
     "id": "suzizi",
@@ -2397,7 +2705,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "止咳平喘"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、大肠经"
   },
   {
     "id": "baibu",
@@ -2409,7 +2718,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "止咳平喘"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺经"
   },
   {
     "id": "sangbaipi",
@@ -2421,7 +2731,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "止咳平喘"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺经"
   },
   {
     "id": "pipaye",
@@ -2433,7 +2744,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "止咳平喘"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃经"
   },
   {
     "id": "suanzaoren",
@@ -2445,7 +2757,8 @@ window.TCM_HERBS = [
       "安神药",
       "养心安神"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肝、胆经"
   },
   {
     "id": "yuanzhi",
@@ -2457,7 +2770,8 @@ window.TCM_HERBS = [
       "安神药",
       "养心安神"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、肾、肺经"
   },
   {
     "id": "longgu",
@@ -2469,7 +2783,8 @@ window.TCM_HERBS = [
       "安神药",
       "重镇安神"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、肝、肾经"
   },
   {
     "id": "shijueming",
@@ -2481,7 +2796,8 @@ window.TCM_HERBS = [
       "平肝息风药",
       "平抑肝阳"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝经"
   },
   {
     "id": "muli",
@@ -2493,7 +2809,8 @@ window.TCM_HERBS = [
       "平肝息风药",
       "平抑肝阳"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、胆、肾经"
   },
   {
     "id": "tianma",
@@ -2505,7 +2822,8 @@ window.TCM_HERBS = [
       "平肝息风药",
       "息风止痉"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝经"
   },
   {
     "id": "gouteng",
@@ -2517,7 +2835,8 @@ window.TCM_HERBS = [
       "平肝息风药",
       "息风止痉"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、心包经"
   },
   {
     "id": "shexiang",
@@ -2528,7 +2847,8 @@ window.TCM_HERBS = [
     "tags": [
       "开窍药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "心、脾经"
   },
   {
     "id": "shichangpu",
@@ -2539,7 +2859,8 @@ window.TCM_HERBS = [
     "tags": [
       "开窍药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "心、胃经"
   },
   {
     "id": "renshen",
@@ -2551,7 +2872,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、脾、心经"
   },
   {
     "id": "huangqi",
@@ -2563,7 +2885,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、肺经"
   },
   {
     "id": "baishu",
@@ -2575,7 +2898,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、胃经"
   },
   {
     "id": "shanyao",
@@ -2587,7 +2911,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "脾、肺、肾经"
   },
   {
     "id": "gancao",
@@ -2599,7 +2924,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "心、肺、脾、胃经"
   },
   {
     "id": "danggui",
@@ -2611,7 +2937,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补血药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、心、脾经"
   },
   {
     "id": "shudi",
@@ -2623,7 +2950,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补血药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、肾经"
   },
   {
     "id": "baishao",
@@ -2635,7 +2963,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补血药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、脾经"
   },
   {
     "id": "ejiao",
@@ -2647,7 +2976,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补血药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、肝、肾经"
   },
   {
     "id": "maidong",
@@ -2659,7 +2989,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "胃、肺、心经"
   },
   {
     "id": "gouqi",
@@ -2671,7 +3002,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肝、肾经"
   },
   {
     "id": "xiyangshen",
@@ -2683,7 +3015,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、心、肾、脾经"
   },
   {
     "id": "dangshen",
@@ -2695,7 +3028,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、肺经"
   },
   {
     "id": "dazao",
@@ -2707,7 +3041,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、胃、心经"
   },
   {
     "id": "heshouwu",
@@ -2719,7 +3054,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补血药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、肾经"
   },
   {
     "id": "nanshashen",
@@ -2731,7 +3067,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、胃经"
   },
   {
     "id": "tiandong",
@@ -2743,7 +3080,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肺、肾、胃经"
   },
   {
     "id": "shihu",
@@ -2755,7 +3093,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "胃、肾经"
   },
   {
     "id": "guijia",
@@ -2767,7 +3106,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肾、肝、心经"
   },
   {
     "id": "lurong",
@@ -2779,7 +3119,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阳药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肾、肝经"
   },
   {
     "id": "duzhong",
@@ -2791,7 +3132,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阳药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、肾经"
   },
   {
     "id": "xuduan",
@@ -2803,7 +3145,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阳药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、肾经"
   },
   {
     "id": "tusizi",
@@ -2815,7 +3158,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阳药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肾、肝、脾经"
   },
   {
     "id": "dongchongxiacao",
@@ -2827,7 +3171,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阳药"
     ],
-    "level": "了解"
+    "level": "了解",
+      "guijing": "肾、肺经"
   },
   {
     "id": "wuweizi",
@@ -2838,7 +3183,8 @@ window.TCM_HERBS = [
     "tags": [
       "收涩药"
     ],
-    "level": "掌握"
+    "level": "掌握",
+      "guijing": "肺、心、肾经"
   },
   {
     "id": "wumei",
@@ -2849,7 +3195,8 @@ window.TCM_HERBS = [
     "tags": [
       "收涩药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、脾、肺、大肠经"
   },
   {
     "id": "shanzhuyu",
@@ -2860,7 +3207,8 @@ window.TCM_HERBS = [
     "tags": [
       "收涩药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "肝、肾经"
   },
   {
     "id": "lianzi",
@@ -2871,7 +3219,8 @@ window.TCM_HERBS = [
     "tags": [
       "收涩药"
     ],
-    "level": "熟悉"
+    "level": "熟悉",
+      "guijing": "脾、肾、心经"
   }
 ];
 
@@ -2880,272 +3229,326 @@ window.ALIAS_DATA = [
   {
     "alias": "土元",
     "name": "地鳖虫",
-    "func": "破血逐瘀"
+    "func": "破血逐瘀",
+      "guijing": "肝经"
   },
   {
     "alias": "坤草",
     "name": "益母草",
-    "func": "调经利水"
+    "func": "调经利水",
+      "guijing": "心、肝、膀胱经"
   },
   {
     "alias": "国老",
     "name": "甘草",
-    "func": "调和诸药"
+    "func": "调和诸药",
+      "guijing": "心、肺、脾、胃经"
   },
   {
     "alias": "大力子",
     "name": "牛蒡子",
-    "func": "疏风利咽"
+    "func": "疏风利咽",
+      "guijing": "肺、胃经"
   },
   {
     "alias": "金铃子",
     "name": "川楝子",
-    "func": "行气止痛"
+    "func": "行气止痛",
+      "guijing": "肝、胃、小肠、膀胱经"
   },
   {
     "alias": "破故纸",
     "name": "补骨脂",
-    "func": "温肾纳气"
+    "func": "温肾纳气",
+      "guijing": "肾、脾经"
   },
   {
     "alias": "仙灵脾",
     "name": "淫羊藿",
-    "func": "补肾壮阳"
+    "func": "补肾壮阳",
+      "guijing": "肾、肝经"
   },
   {
     "alias": "将军",
     "name": "大黄",
-    "func": "泻下攻积"
+    "func": "泻下攻积",
+      "guijing": "脾、胃、大肠、肝、心包经"
   },
   {
     "alias": "二丑",
     "name": "牵牛子",
-    "func": "逐水消肿"
+    "func": "逐水消肿",
+      "guijing": "肺、肾、大肠经"
   },
   {
     "alias": "玉蝴蝶",
     "name": "木蝴蝶",
-    "func": "清肺利咽"
+    "func": "清肺利咽",
+      "guijing": "肺、肝、胃经"
   },
   {
     "alias": "忍冬花",
     "name": "金银花",
-    "func": "清热解毒"
+    "func": "清热解毒",
+      "guijing": "肺、心、胃经"
   },
   {
     "alias": "双花",
     "name": "金银花",
-    "func": "清热解毒"
+    "func": "清热解毒",
+      "guijing": "肺、心、胃经"
   },
   {
     "alias": "川贝",
     "name": "川贝母",
-    "func": "清热润肺，化痰止咳"
+    "func": "清热润肺，化痰止咳",
+      "guijing": "肺、心经"
   },
   {
     "alias": "浙贝",
     "name": "浙贝母",
-    "func": "清热化痰，散结消肿"
+    "func": "清热化痰，散结消肿",
+      "guijing": "肺、心经"
   },
   {
     "alias": "象贝",
     "name": "浙贝母",
-    "func": "清热化痰，散结消肿"
+    "func": "清热化痰，散结消肿",
+      "guijing": "肺、心经"
   },
   {
     "alias": "杭菊花",
     "name": "菊花",
-    "func": "疏散风热，平肝明目"
+    "func": "疏散风热，平肝明目",
+      "guijing": "肺、肝经"
   },
   {
     "alias": "滁菊花",
     "name": "菊花",
-    "func": "平肝明目力胜"
+    "func": "平肝明目力胜",
+      "guijing": "肺、肝经"
   },
   {
     "alias": "怀牛膝",
     "name": "牛膝",
-    "func": "逐瘀通经，补肝肾"
+    "func": "逐瘀通经，补肝肾",
+      "guijing": "肝、肾经"
   },
   {
     "alias": "川牛膝",
     "name": "牛膝",
-    "func": "逐瘀通经，引血下行"
+    "func": "逐瘀通经，引血下行",
+      "guijing": "肝、肾经"
   },
   {
     "alias": "杭白芍",
     "name": "白芍",
-    "func": "养血调经，敛阴止汗"
+    "func": "养血调经，敛阴止汗",
+      "guijing": "肝、脾经"
   },
   {
     "alias": "云茯苓",
     "name": "茯苓",
-    "func": "利水渗湿，健脾宁心"
+    "func": "利水渗湿，健脾宁心",
+      "guijing": "心、脾、肾经"
   },
   {
     "alias": "赤茯苓",
     "name": "茯苓",
-    "func": "利水渗湿，兼能清热"
+    "func": "利水渗湿，兼能清热",
+      "guijing": "心、脾、肾经"
   },
   {
     "alias": "建泽泻",
     "name": "泽泻",
-    "func": "利水渗湿，泄热"
+    "func": "利水渗湿，泄热",
+      "guijing": "肾、膀胱经"
   },
   {
     "alias": "粉葛根",
     "name": "葛根",
-    "func": "解肌退热，生津止渴"
+    "func": "解肌退热，生津止渴",
+      "guijing": "脾、胃经"
   },
   {
     "alias": "天花粉",
     "name": "瓜蒌根",
-    "func": "清热泻火，生津止渴"
+    "func": "清热泻火，生津止渴",
+      "guijing": "肺、胃经"
   },
   {
     "alias": "栝楼根",
     "name": "瓜蒌根",
-    "func": "清热泻火，消肿排脓"
+    "func": "清热泻火，消肿排脓",
+      "guijing": "肺、胃经"
   },
   {
     "alias": "北沙参",
     "name": "沙参",
-    "func": "养阴清肺，益胃生津"
+    "func": "养阴清肺，益胃生津",
+      "guijing": "肺、胃经"
   },
   {
     "alias": "辽沙参",
     "name": "沙参",
-    "func": "养阴清肺，祛痰止咳"
+    "func": "养阴清肺，祛痰止咳",
+      "guijing": "肺、胃经"
   },
   {
     "alias": "南沙参",
     "name": "沙参",
-    "func": "养阴清肺，益气化痰"
+    "func": "养阴清肺，益气化痰",
+      "guijing": "肺、胃经"
   },
   {
     "alias": "杭麦冬",
     "name": "麦冬",
-    "func": "养阴生津，润肺清心"
+    "func": "养阴生津，润肺清心",
+      "guijing": "胃、肺、心经"
   },
   {
     "alias": "寸冬",
     "name": "麦冬",
-    "func": "养阴生津，清心除烦"
+    "func": "养阴生津，清心除烦",
+      "guijing": "胃、肺、心经"
   },
   {
     "alias": "明天冬",
     "name": "天冬",
-    "func": "养阴润燥，滋肾阴力强"
+    "func": "养阴润燥，滋肾阴力强",
+      "guijing": "肺、肾、胃经"
   },
   {
     "alias": "全蝎",
     "name": "全虫",
-    "func": "息风镇痉，通络止痛"
+    "func": "息风镇痉，通络止痛",
+      "guijing": "肝经"
   },
   {
     "alias": "全虫",
     "name": "全蝎",
-    "func": "攻毒散结，通络止痛"
+    "func": "攻毒散结，通络止痛",
+      "guijing": "肝经"
   },
   {
     "alias": "僵蚕",
     "name": "白僵蚕",
-    "func": "息风止痉，祛风止痛"
+    "func": "息风止痉，祛风止痛",
+      "guijing": "肝、肺、胃经"
   },
   {
     "alias": "姜蚕",
     "name": "白僵蚕",
-    "func": "化痰散结，祛风止痒"
+    "func": "化痰散结，祛风止痒",
+      "guijing": "肝、肺、胃经"
   },
   {
     "alias": "乌梢蛇",
     "name": "乌蛇",
-    "func": "祛风，通络，止痉"
+    "func": "祛风，通络，止痉",
+      "guijing": "肝经"
   },
   {
     "alias": "蕲蛇",
     "name": "白花蛇",
-    "func": "祛风，通络，止痉"
+    "func": "祛风，通络，止痉",
+      "guijing": "肝经"
   },
   {
     "alias": "地龙",
     "name": "蚯蚓",
-    "func": "清热定惊，通络，平喘"
+    "func": "清热定惊，通络，平喘",
+      "guijing": "肝、脾、膀胱经"
   },
   {
     "alias": "石决明",
     "name": "鲍鱼壳",
-    "func": "平肝潜阳，清肝明目"
+    "func": "平肝潜阳，清肝明目",
+      "guijing": "肝经"
   },
   {
     "alias": "九孔石决明",
     "name": "鲍鱼壳",
-    "func": "平肝潜阳，明目退翳"
+    "func": "平肝潜阳，明目退翳",
+      "guijing": "肝经"
   },
   {
     "alias": "珍珠母",
     "name": "珠母",
-    "func": "平肝潜阳，安神定惊"
+    "func": "平肝潜阳，安神定惊",
+      "guijing": "肝、心经"
   },
   {
     "alias": "生龙齿",
     "name": "龙骨",
-    "func": "镇惊安神，平肝潜阳"
+    "func": "镇惊安神，平肝潜阳",
+      "guijing": "心、肝、肾经"
   },
   {
     "alias": "煅龙齿",
     "name": "龙骨",
-    "func": "收敛固涩，收湿敛疮"
+    "func": "收敛固涩，收湿敛疮",
+      "guijing": "心、肝、肾经"
   },
   {
     "alias": "龟板",
     "name": "龟甲",
-    "func": "滋阴潜阳，益肾健骨"
+    "func": "滋阴潜阳，益肾健骨",
+      "guijing": "肾、肝、心经"
   },
   {
     "alias": "龟甲",
     "name": "龟板",
-    "func": "养血补心，固经止崩"
+    "func": "养血补心，固经止崩",
+      "guijing": "肾、肝、心经"
   },
   {
     "alias": "鳖甲",
     "name": "团鱼甲",
-    "func": "滋阴潜阳，退热除蒸"
+    "func": "滋阴潜阳，退热除蒸",
+      "guijing": "肝、肾经"
   },
   {
     "alias": "鸡内金",
     "name": "鸡肫皮",
-    "func": "消食健胃，涩精止遗"
+    "func": "消食健胃，涩精止遗",
+      "guijing": "脾、胃、小肠、膀胱经"
   },
   {
     "alias": "三七",
     "name": "田七",
-    "func": "散瘀止血，消肿定痛"
+    "func": "散瘀止血，消肿定痛",
+      "guijing": "肝、胃经"
   },
   {
     "alias": "元胡",
     "name": "延胡索",
-    "func": "活血行气止痛"
+    "func": "活血行气止痛",
+      "guijing": "心、肝、脾经"
   },
   {
     "alias": "姜黄",
     "name": "片姜黄",
-    "func": "破血行气"
+    "func": "破血行气",
+      "guijing": "肝、脾经"
   },
   {
     "alias": "茵陈蒿",
     "name": "茵陈",
-    "func": "清热利湿退黄"
+    "func": "清热利湿退黄",
+      "guijing": "脾、胃、肝、胆经"
   },
   {
     "alias": "制附子",
     "name": "附子",
-    "func": "回阳救逆，补火助阳"
+    "func": "回阳救逆，补火助阳",
+      "guijing": "心、肾、脾经"
   },
   {
     "alias": "白僵蚕",
     "name": "僵蚕",
-    "func": "息风止痉，化痰散结"
+    "func": "息风止痉，化痰散结",
+      "guijing": "肝、肺、胃经"
   }
 ];
 
@@ -3301,6 +3704,7 @@ function renderHerbs(){
         const bg = LEVEL_COLORS[item.level] || LEVEL_COLORS['了解'];
         const card = document.createElement('div');
         card.className = 'card';
+        let gjHtml = item.guijing ? `<span class="guijing-tag">归经：${item.guijing}</span>` : '';
         card.innerHTML = `
             <div class="card-header-bar" style="background:${bg};">
                 <div class="card-title">
@@ -3310,6 +3714,7 @@ function renderHerbs(){
             </div>
             <div class="card-body">
                 <div class="card-tags">
+                    ${gjHtml}
                     ${item.tags.map(t=>`<span class="tag">${t}</span>`).join('')}
                 </div>
                 <div class="card-desc">${item.summary}</div>
@@ -3437,5 +3842,21 @@ document.getElementById('search').oninput = render;
 initCateFilter();
 render();
 </script>
+
+<script>
+// 双主题切换
+function setTheme(theme) {
+    document.body.classList.toggle('theme-green', theme === 'green');
+    document.getElementById('theme-original').classList.toggle('active', theme === 'original');
+    document.getElementById('theme-green').classList.toggle('active', theme === 'green');
+    localStorage.setItem('zhongyao-theme', theme);
+}
+// 恢复上次主题
+(function(){
+    var saved = localStorage.getItem('zhongyao-theme');
+    if (saved) setTheme(saved);
+})();
+</script>
+
 </body>
 </html>
