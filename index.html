@@ -2,6 +2,12 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#4a9c70">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="中药备考">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中药学备考神器</title>
     <style>
@@ -241,9 +247,83 @@
             .search-inner{flex-direction:column;}#search{width:100%;}
             .card-list{grid-template-columns:1fr;}
         }
+
+        /* ── 免责弹窗 ── */
+        .popup-overlay{position:fixed;top:0;left:0;width:100%;height:100%;
+            background:rgba(0,0,0,0.55);z-index:9999;display:flex;
+            align-items:center;justify-content:center;animation:fadeIn .3s;}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        .popup-box{
+            background:#fff;border-radius:16px;padding:28px 24px 20px;
+            max-width:340px;width:90%;text-align:center;
+            box-shadow:0 12px 40px rgba(0,0,0,0.2);animation:slideUp .35s;
+        }
+        @keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+        .popup-box .popup-icon{font-size:48px;margin-bottom:12px;}
+        .popup-box h3{font-size:18px;color:#2d3748;margin-bottom:8px;}
+        .popup-box .popup-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0;}
+        .popup-tag{
+            padding:4px 14px;border-radius:16px;font-size:13px;font-weight:600;
+            background:#f0faf4;color:#4a9c70;border:1px solid #c6e8d4;
+        }
+        .popup-box .popup-desc{font-size:14px;color:#718096;line-height:1.7;margin:10px 0 16px;}
+        .popup-btn{
+            padding:12px 0;width:100%;border:none;border-radius:10px;
+            background:linear-gradient(135deg,#6bbd8e,#4a9c70);color:#fff;
+            font-size:16px;font-weight:600;cursor:pointer;transition:.2s;
+        }
+        .popup-btn:hover{filter:brightness(.9);}
+        /* ── 安装提示条 ── */
+        .install-banner{
+            display:none;position:fixed;bottom:0;left:0;right:0;
+            background:linear-gradient(135deg,#1a7fa8,#126082);color:#fff;
+            padding:12px 16px;z-index:9998;align-items:center;
+            justify-content:space-between;gap:10px;
+        }
+        .install-banner.show{display:flex;}
+        .install-banner span{font-size:14px;flex:1;}
+        .install-banner button{
+            padding:7px 16px;border:none;border-radius:16px;
+            background:#fff;color:#126082;font-weight:600;font-size:13px;cursor:pointer;
+        }
+        .install-banner .ib-close{
+            background:transparent;color:#fff;font-size:18px;padding:4px 8px;
+            border:1px solid rgba(255,255,255,.3);border-radius:50%;
+        }
+
     </style>
 </head>
 <body>
+
+<!-- 免责声明弹窗 -->
+<div class="popup-overlay" id="disclaimerPopup">
+    <div class="popup-box">
+        <div class="popup-icon">🌿</div>
+        <h3>中药学备考神器</h3>
+        <div class="popup-tags">
+            <span class="popup-tag">🌱 纯绿色</span>
+            <span class="popup-tag">🚫 无广告</span>
+            <span class="popup-tag">❤️ 纯公益</span>
+        </div>
+        <p class="popup-desc">
+            本软件为学习辅助工具，<br>
+            所有内容仅供学习参考。<br>
+            不涉及任何商业行为，<br>
+            无需联网，无任何收费。
+        </p>
+        <button class="popup-btn" onclick="closeDisclaimer()">
+            我知道了，开始学习 📚
+        </button>
+    </div>
+</div>
+
+<!-- 安装提示条 -->
+<div class="install-banner" id="installBanner">
+    <span>📱 添加到手机桌面，使用更方便</span>
+    <button onclick="installApp()">立即添加</button>
+    <button class="ib-close" onclick="closeInstallBanner()">&times;</button>
+</div>
+
     <header>
         <h1>🌿 中药学备考神器</h1>
         <div class="theme-toggle-wrap">
@@ -3856,6 +3936,66 @@ function setTheme(theme) {
     var saved = localStorage.getItem('zhongyao-theme');
     if (saved) setTheme(saved);
 })();
+</script>
+
+
+<script>
+// ── 免责弹窗 ──
+function closeDisclaimer() {
+    document.getElementById('disclaimerPopup').style.display = 'none';
+    localStorage.setItem('zhongyao-disclaimer', '1');
+}
+if (!localStorage.getItem('zhongyao-disclaimer')) {
+    document.getElementById('disclaimerPopup').style.display = 'flex';
+} else {
+    document.getElementById('disclaimerPopup').style.display = 'none';
+}
+
+// ── PWA 安装 ──
+var deferredPrompt = null;
+var installBanner = document.getElementById('installBanner');
+
+window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!localStorage.getItem('zhongyao-install-dismissed')) {
+        installBanner.classList.add('show');
+    }
+});
+
+function installApp() {
+    if (!deferredPrompt) {
+        alert('请在浏览器菜单中选择「添加到主屏幕」');
+        return;
+    }
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function(result) {
+        installBanner.classList.remove('show');
+        deferredPrompt = null;
+    });
+}
+
+function closeInstallBanner() {
+    installBanner.classList.remove('show');
+    localStorage.setItem('zhongyao-install-dismissed', '1');
+}
+
+// 已安装状态下隐藏
+window.addEventListener('appinstalled', function() {
+    installBanner.classList.remove('show');
+    console.log('PWA installed!');
+});
+
+// ── Service Worker ──
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(reg) {
+            console.log('SW registered:', reg.scope);
+        }).catch(function(err) {
+            console.log('SW registration failed:', err);
+        });
+    });
+}
 </script>
 
 </body>
