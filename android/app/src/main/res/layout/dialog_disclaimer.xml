@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌿"
+        android:textSize="48sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中药备考神器"
+        android:textSize="20sp"
+        android:textColor="#2d3748"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="14dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌱 纯绿色"
+            android:textSize="13sp"
+            android:textColor="#4a9c70"
+            android:padding="4dp 12dp"
+            android:background="@drawable/tag_bg"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚫 无广告"
+            android:textSize="13sp"
+            android:textColor="#4a9c70"
+            android:padding="4dp 12dp"
+            android:background="@drawable/tag_bg"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❤️ 纯公益"
+            android:textSize="13sp"
+            android:textColor="#4a9c70"
+            android:padding="4dp 12dp"
+            android:background="@drawable/tag_bg" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本软件为学习辅助工具，\n所有内容仅供学习参考。\n不涉及任何商业行为，\n无需联网，无任何收费。"
+        android:textSize="14sp"
+        android:textColor="#718096"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="我知道了，开始学习 📚"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg" />
+
+</LinearLayout>

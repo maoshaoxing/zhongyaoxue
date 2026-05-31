@@ -1,0 +1,12 @@
+# Android build outputs
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+*.apk
+*.keystore
+app.keystore
+
+# Python build scripts
+*.py
+guijing_data.json
