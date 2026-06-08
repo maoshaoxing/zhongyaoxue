@@ -1,9 +1,12 @@
-// 中药学备考神器 - Service Worker
-const CACHE_NAME = 'zhongyaoxue-v3-20260531';
+// 中药学备考全书 - Service Worker v4
+const CACHE_NAME = 'zhongyaoxue-v4-20260608';
 
 const PRECACHE_URLS = [
   '/zhongyaoxue/',
   '/zhongyaoxue/index.html',
+  '/zhongyaoxue/style.css',
+  '/zhongyaoxue/app.js',
+  '/zhongyaoxue/data.js',
   '/zhongyaoxue/manifest.json',
   '/zhongyaoxue/icons/icon-72x72.png',
   '/zhongyaoxue/icons/icon-96x96.png',
