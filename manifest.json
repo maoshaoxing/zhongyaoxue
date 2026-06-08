@@ -1,13 +1,13 @@
 {
-  "name": "中药学备考神器",
+  "name": "中药学备考全书",
   "short_name": "中药备考",
-  "description": "专业高效便捷的中药学学习助手 - 纯绿色、无广告、纯公益",
+  "description": "基于第十版教材的中药学学习工具 - 283味中药查询、分类背诵、智能记忆",
   "start_url": "/zhongyaoxue/",
   "scope": "/zhongyaoxue/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#f8f9fa",
-  "theme_color": "#4a9c70",
+  "background_color": "#F5F0E8",
+  "theme_color": "#2C5F4D",
   "lang": "zh-CN",
   "categories": ["education", "medical", "health"],
   "icons": [
