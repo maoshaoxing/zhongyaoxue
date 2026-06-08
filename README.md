@@ -1,10 +1,18 @@
 # 中药学备考全书
 
+<div align="center">
+
+### 🚀 立即使用
+
+**[🌿 中药学备考全书 - 在线版](https://maoshaoxing.github.io/zhongyaoxue/)**
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-%E5%9C%A8%E7%BA%BF%E4%BD%BF%E7%94%A8-brightgreen?style=for-the-badge&logo=github)](https://maoshaoxing.github.io/zhongyaoxue/)
+
+基于第十版教材 · 283味中药 · 经典背诵歌诀
+
+</div>
+
 基于第十版教材的中药学学习工具，支持 283 味中药的查询、分类筛选、别名对照、分类歌诀背诵和智能记忆。
-
-## 在线访问
-
-👉 [点击进入中药学备考全书](https://maoshaoxing.github.io/zhongyaoxue/)
 
 ## 功能特色
 
