@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>临床中药学 实战参考</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Noto Serif SC', serif; background: #f5f0e8; color: #2c2420; line-height:1.8; }
+.header { background: linear-gradient(135deg, #2C5F4D, #1A3D30); color: white; padding: 30px; text-align: center; }
+.header h1 { font-size: 28px; }
+.header p { opacity: 0.8; margin-top: 8px; font-size: 14px; }
+.toc { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.toc h2 { font-size: 18px; color: #2C5F4D; margin-bottom: 12px; }
+.toc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.toc-item { display: block; padding: 8px 12px; background: #f5f0e8; border-radius: 6px; text-decoration: none; color: #2c2420; font-size: 14px; transition: all 0.2s; }
+.toc-item:hover { background: #2C5F4D; color: white; }
+.chapter { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.chapter h2 { font-size: 20px; color: #2C5F4D; border-bottom: 2px solid #e5ddd0; padding-bottom: 8px; margin-bottom: 16px; }
+.note { padding: 12px 16px; margin: 8px 0; background: #faf7f0; border-left: 3px solid #C23B22; border-radius: 4px; font-size: 14px; }
+.note-num { color: #C23B22; font-weight: 700; margin-right: 8px; }
+.footer { text-align: center; padding: 30px; color: #888780; font-size: 12px; }
+@media (max-width: 600px) { .toc-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>临床中药学 实战参考手册</h1>
+  <p>李煦照老师授课 · 临床应用要点汇编 · 考试不考当医生要用</p>
+</div>
+<div class="toc">
+  <h2>📑 目录</h2>
+  <div class="toc-grid">
+    <a class="toc-item" href="#总论">总论 (0条)</a>
+    <a class="toc-item" href="#总论-中药应用">总论-中药应用 (21条)</a>
+    <a class="toc-item" href="#总论-中药性能">总论-中药性能 (50条)</a>
+    <a class="toc-item" href="#总论-绪论">总论-绪论 (4条)</a>
+    <a class="toc-item" href="#第10章-利水渗湿药">第10章 利水渗湿药 (48条)</a>
+    <a class="toc-item" href="#第11章-温里药">第11章 温里药 (69条)</a>
+    <a class="toc-item" href="#第12章-理气药">第12章 理气药 (35条)</a>
+    <a class="toc-item" href="#第13章-消食药">第13章 消食药 (105条)</a>
+    <a class="toc-item" href="#第14章-驱虫药">第14章 驱虫药 (4条)</a>
+    <a class="toc-item" href="#第15章-止血药">第15章 止血药 (27条)</a>
+    <a class="toc-item" href="#第16章-活血化瘀药">第16章 活血化瘀药 (56条)</a>
+    <a class="toc-item" href="#第17章-化痰药">第17章 化痰药 (48条)</a>
+    <a class="toc-item" href="#第18章-止咳平喘药">第18章 止咳平喘药 (115条)</a>
+    <a class="toc-item" href="#第19章-安神药">第19章 安神药 (52条)</a>
+    <a class="toc-item" href="#第20章-平肝潜阳药">第20章 平肝潜阳药 (22条)</a>
+    <a class="toc-item" href="#第21章-息风止痉药">第21章 息风止痉药 (36条)</a>
+    <a class="toc-item" href="#第22章-开窍药">第22章 开窍药 (4条)</a>
+    <a class="toc-item" href="#第23章-补虚药">第23章 补虚药 (121条)</a>
+    <a class="toc-item" href="#第24章-收涩药">第24章 收涩药 (75条)</a>
+    <a class="toc-item" href="#第5章-解表药">第5章 解表药 (7条)</a>
+    <a class="toc-item" href="#第6章-清热药">第6章 清热药 (7条)</a>
+    <a class="toc-item" href="#第7章-泻下药">第7章 泻下药 (42条)</a>
+    <a class="toc-item" href="#第8章-祛风湿药">第8章 祛风湿药 (37条)</a>
+    <a class="toc-item" href="#第9章-化湿药">第9章 化湿药 (20条)</a>
+  </div>
+</div>
+<div class="chapter" id="总论">
+  <h2>总论</h2>
+</div>
+<div class="chapter" id="总论-中药应用">
+  <h2>总论-中药应用</h2>
+  <div class="note"><span class="note-num">P13</span>成书于东汉末年，作者不详，载药365味，以上、 | 中、下三品分类，后世称为“三品分类法”。</div>
+  <div class="note"><span class="note-num">P14</span>1.我国现存最早的本草学专著。 | 2.系统总结了药物的四气五味、有毒无毒、配伍 | 法度、服药方法、剂型选择等基本原则,初步奠定了中</div>
+  <div class="note"><span class="note-num">P15</span>三国、两晋、南北朝时期 | 载药物730味，首先使用自然属性分类。</div>
+  <div class="note"><span class="note-num">P16</span>三国、两晋、南北朝时期 | 1.首创自然属性分类法。 | 2.初步确定了综合性本草著作的编写模式。</div>
+  <div class="note"><span class="note-num">P17</span>唐代苏敬等编撰，成书于公元659年。共54卷，载药 | 844味。附有药图25卷、图经7卷。</div>
+  <div class="note"><span class="note-num">P18</span>1.我国历史上第一部药典性官修本草。 | 2.开创了本草编写图文对照的先例。</div>
+  <div class="note"><span class="note-num">P19</span>宋代唐慎微著，定稿于1082。全书共31卷，载药 | 1746味，附方3000余首。</div>
+  <div class="note"><span class="note-num">P20</span>1.研究整理了大量宋以前各代名医对本草的真知灼见。 | 2.附方三千余首，开创了本草著作中大量附方的先河。</div>
+  <div class="note"><span class="note-num">P21</span>明代李时珍著。全书共52卷，约200万字，载药 | 1892味，绘药图1109幅，附方11096首。</div>
+  <div class="note"><span class="note-num">P22</span>1.纲目分明，按照自然属性来进行分类。 | 2.内容丰富、翔实，集16世纪以前药学大成。</div>
+  <div class="note"><span class="note-num">P23</span>以法典的形式确定了中药在当代医药卫生事业中的 | 地位，对中药材及中药制剂质量具有最高的法律效力， | 和最低法定标准。每5年修订出版。</div>
+  <div class="note"><span class="note-num">P37</span>四时之气：春温、夏热、秋凉、冬寒 | 六气(六种气候变化要素) | ---------------------------------------------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P38</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P39</span>确定依据：从药物作用于机体所发生的反 | 应概括出来的，主要是与所治疾病的寒热性质 | ---------------------------------------------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P40</span>1、祛除寒热病邪，或消除寒热症状和体征 | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P41</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P106</span>1.掌握中药配伍的目的，药物“七情”以及配伍关 | 系的含义，不同配伍方法的临床意义。 | 2.掌握配伍禁忌中的“十八反”、“十九畏”的含</div>
+  <div class="note"><span class="note-num">P108</span>一、中药的配伍含义：是将两种或两种以上 | 1、通过配伍，能增强药物的疗效。 | 麻黄、桂枝同用，能明显增强发汗解表的作用。</div>
+  <div class="note"><span class="note-num">P109</span>2、通过配伍，能减轻或消除药物的毒副作 | 半夏配生姜：生姜减轻或消除半夏之毒。 | 大黄配甘草：甘草可缓和大黄泻下的作用。</div>
+  <div class="note"><span class="note-num">P110</span>七情的含义：指单行、相须、相使、相恶、 | 相畏、相杀、相反7中配伍用药情况的总称。</div>
+  <div class="note"><span class="note-num">P112</span>相须：将性能功效相类似的药物配合应 | 用，可以增强原有疗效。</div>
+</div>
+<div class="chapter" id="总论-中药性能">
+  <h2>总论-中药性能</h2>
+  <div class="note"><span class="note-num">P2</span>《临床中药学》教材内容主要分为两个 | (1)总论：中药的基本知识 | (2)各论：超过500味中药（掌握91</div>
+  <div class="note"><span class="note-num">P3</span>本门课程为考试课，共72学时（含有6学时实践 | +8学时自主学习）。平时成绩占总成绩的40％，包括考 | 勤、提问、作业和小测验。期末考试占总成绩的60％。</div>
+  <div class="note"><span class="note-num">P24</span>----------------------------------------------- | --------------------------------------------</div>
+  <div class="note"><span class="note-num">P25</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P26</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P27</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P28</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P29</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P30</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P31</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P32</span>四性是中药性能当中最重要的一 | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P33</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P34</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P35</span>早在《神农本草经》序录中就有：“药 | 有酸咸甘苦辛五味，又有寒热温凉四气。” | 四气、五味等最早记载于何书？</div>
+  <div class="note"><span class="note-num">P36</span>气是构成人体和维持人体生命活动的最 | 基本物质。（？气的生成、运动、功能） | ---------------------------------------------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P45</span>中药性能当中的五味，可 | 以说是最早形成的最古老的一 | ---------------------------------------------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P46</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P47</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P54</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P55</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P56</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P58</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P59</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P64</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P65</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P66</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P68</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P69</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P70</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P71</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P72</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P73</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P74</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P75</span>----------------------------------------------- | --------------------------------------------</div>
+  <div class="note"><span class="note-num">P77</span>1.了解中药功效的概念，界定功 | 2.了解中药功效的分类、功效与</div>
+  <div class="note"><span class="note-num">P78</span>1、药物对人体能产生什么样的作用？ | 2、世界上有没有绝对安全的药物， | 一点不良反应都不会产生的吗？</div>
+  <div class="note"><span class="note-num">P79</span>中药功效：中药的治疗作用 | 1、注意功效与给药途径的关系 | 2、注意功效中直接作用与间接作用的关系</div>
+  <div class="note"><span class="note-num">P82</span>总论第四章影响中药作用的要素 | 1.掌握中药炮制的目的，水飞、炒、煅、煨、 | 炙、燀（chǎn ）、淬等主要炮制方法的含义。</div>
+  <div class="note"><span class="note-num">P85</span>了解重要的道地药材品种 | 贵州三宝：天麻、杜仲、灵芝</div>
+  <div class="note"><span class="note-num">P87</span>多在植物生长旺盛期，有效成分含量高，枝 | 叶茂盛的花前期或初见花时采收。</div>
+  <div class="note"><span class="note-num">P88</span>一般在花蕾将放或正盛开的时候采收 | 桑叶：当在经霜后采集。</div>
+  <div class="note"><span class="note-num">P92</span>一般在春、夏时节植物生长旺盛，营养丰富， | 质量好，且树皮易于剥离的时节采收。</div>
+  <div class="note"><span class="note-num">P93</span>炮制：多数中药材在应用和制成剂型以前， | 常根据临床用药目的，药材自身特点以及贮存、 | 配方和制剂的要求，对药材进行加工处理的方法。</div>
+  <div class="note"><span class="note-num">P94</span>1．增强药物某种功效的作用，提高临床疗效。 | 2．降低或消除药物的毒副作用，保证用药安全。 | 3．改变原有的性能和功效，扩大适应范围。</div>
+  <div class="note"><span class="note-num">P98</span>4．改变药材的某些性状，便于运输、贮存和制剂。 | 5．纯净药材，保证药材品质和称量准确。 | 6．矫臭、矫味，便于服用。</div>
+  <div class="note"><span class="note-num">P99</span>一、修治：净制、粉碎、切制 | 三、火制：炒、炙、煅、煨、 | 五、其他制法：制霜、发酵、发芽</div>
+  <div class="note"><span class="note-num">P100</span>水飞：将不溶于水的矿物或贝壳类药材置于水中 | ，反复研磨而制取极细粉末的加工方法。</div>
+  <div class="note"><span class="note-num">P101</span>炒：①不加任何辅料的清炒 | ②药物与固体辅料拌炒（辅料炒） | 炙：药物与液体辅料拌炒</div>
+  <div class="note"><span class="note-num">P102</span>煅：①直接将药物置于无烟炉火上煅烧（明煅） | ②将药物置于高温的密闭容器中放在火上煅烧（焖</div>
+  <div class="note"><span class="note-num">P105</span>淬：将药物煅烧红后，迅速投入冷水或醋等液体中，使 | 之受冷而松脆的炮制方法。</div>
+</div>
+<div class="chapter" id="总论-绪论">
+  <h2>总论-绪论</h2>
+  <div class="note"><span class="note-num">P4</span>1.掌握中药、中药学的概念。了解中药的起源 | 2.熟悉《神农本草经》、《本草经集注》、 | 《新修本草》、《证类本草》、《本草纲目》</div>
+  <div class="note"><span class="note-num">P5</span>使用者：中医使用的药物 | 天然药物：相对于化学合成药物而言</div>
+  <div class="note"><span class="note-num">P8</span>天然药物：相对于化学合成药物而言 | 中药并不全是天然药物。</div>
+  <div class="note"><span class="note-num">P9</span>中药是指在中医药理论指导下 | ，用以预防、诊断和治疗疾病及康 | 复保健的部分天然物质。</div>
+</div>
+<div class="chapter" id="第10章-利水渗湿药">
+  <h2>第10章 利水渗湿药</h2>
+  <div class="note"><span class="note-num">P53</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P640</span>掌握：1.利水渗湿药在功效、主治、性能特点、 | 配伍应用及使用注意等。 | 2.相似药物功效、应用的异同点。</div>
+  <div class="note"><span class="note-num">P641</span>掌握：茯苓、薏苡仁、车前子、茵陈、金钱草的分 | 类、药性特点、功效、主治、配伍及某些特 | 殊用法；熟悉某些特殊炮制的意义，用量、</div>
+  <div class="note"><span class="note-num">P642</span>熟悉：猪苓、泽泻、滑石、川木通分类、 | 功效和适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P644</span>以通利水道、渗泄水湿为主要功效，常用以 | 治疗水湿内停病证的药物，称为利水渗湿药或利 | 水渗湿药。因服用本类药物后，大多能使小便畅</div>
+  <div class="note"><span class="note-num">P645</span>如说空气是潮湿的，看不 | 见摸不着，但能够感觉得 | 上有积水，一眼就能看见</div>
+  <div class="note"><span class="note-num">P646</span>本章药物均有利湿的功效，主要用治疗水湿内停的病证。 | 水湿泛于肌肤间的水肿、小便不利</div>
+  <div class="note"><span class="note-num">P648</span>利水渗湿：用淡味的渗湿利水药是湿邪从小便排除的治 | 利水通淋：治疗下焦湿热所致淋证的方法。 | 利湿退黄：通过清肝胆湿热达到治疗黄疸作用。</div>
+  <div class="note"><span class="note-num">P650</span>1、药性：兼有清热作用的药物以平或寒凉为主。 | 利尿通淋药与利湿退黄药一般为寒性。 | 2、药味：多味甘淡，部分药物兼有苦味。</div>
+  <div class="note"><span class="note-num">P651</span>根据“气行则水行，气滞则水停”，故常配伍行气 | 针对兼有其他证者，当选用相应的治疗药物配伍。 | 1、因证选药：水肿、淋证、湿热黄疸。</div>
+  <div class="note"><span class="note-num">P653</span>本类药物大多味甘淡，性平或微寒，服药后 | 能使小便通畅，尿量增多，故具有利尿消肿作用 | 用于水湿内停之水肿、小便不利，以及泄泻</div>
+  <div class="note"><span class="note-num">P654</span>Poria cocos (Schw) | Wolf 的干燥菌核。多寄 | 、四川等地。于7～9月</div>
+  <div class="note"><span class="note-num">P656</span>茯苓皮（菌核的黑色外皮） | 茯神（菌核抱有松根的部分）</div>
+  <div class="note"><span class="note-num">P658</span>1、水肿、小便不利（为利水消肿之要药） | 水湿内停之水肿、小便不利 | 水热互结，热伤阴津致小便不利</div>
+  <div class="note"><span class="note-num">P659</span>+人参、白术（补脾气） | （补脾气、除湿、止泻） | +人参、当归、远志（补气养血安神）</div>
+  <div class="note"><span class="note-num">P661</span>为禾本科多年生草本植物薏苡 | Coix lacryma-jobi L. var. ma-yuen(Roman.) | Stapf 的干燥成熟种仁。我国大部地区均产，主</div>
+  <div class="note"><span class="note-num">P664</span>1、水肿、小便不利，脚气 | 脾虚湿盛之水肿、小便不利</div>
+  <div class="note"><span class="note-num">P665</span>+独活、防风（祛风湿、通络） | +防己、滑石（清热利湿） | +芦根、桃仁（清肺消痈排脓）</div>
+  <div class="note"><span class="note-num">P666</span>煎服。9～30g。清利湿热宜生用，健脾止泻 | 本品力缓，用量宜大。除入汤剂、丸散外，亦可 | 作粥食用，为食疗佳品。</div>
+  <div class="note"><span class="note-num">P667</span>草本植物泽泻Alisma | orientalis (Sam.) | Juzep.的干燥块茎。主产</div>
+  <div class="note"><span class="note-num">P669</span>水湿停滞的水肿、小便不利 | +木通、车前子（清热通淋） | +龙胆、黄柏（清热燥湿）</div>
+  <div class="note"><span class="note-num">P670</span>麸炒减其寒性，生用泄热力强，盐水炙专于泄下 | 性寒通利之品，肾虚滑精及无湿热者忌用。</div>
+  <div class="note"><span class="note-num">P671</span>umbellatus (Pers) | Fries 的干燥菌核。寄</div>
+  <div class="note"><span class="note-num">P673</span>+茯苓、泽泻（利水渗湿） | +茯苓、阿胶（清热滋阴利水） | +茯苓、泽泻、白术（利水渗湿）</div>
+  <div class="note"><span class="note-num">P674</span>+滑石、木通（清热通淋） | +车前子、黄柏（清热利湿）</div>
+  <div class="note"><span class="note-num">P676</span>本类药物性味多甘淡或苦，药性寒凉，能清 | 利下焦湿热，以利水通淋为主要功效。 | 多用治小便短赤，热淋、血淋、石淋及膏淋</div>
+  <div class="note"><span class="note-num">P677</span>为车前科多年生草本植物车前Plantago | asiatica L.或平车前Plantago depressa Willd | 的干燥成熟种子。前者分布全国各地，后者分布</div>
+  <div class="note"><span class="note-num">P680</span>1、淋证、水肿（治湿热淋证、小便淋沥涩痛之要药） | +木通、滑石（清热利水通淋） | +猪苓、茯苓、泽泻（利水消肿）</div>
+  <div class="note"><span class="note-num">P681</span>3、目赤肿痛、目暗昏花 | +菊花、决明子（清肝明目） | +熟地、菟丝子（补益肝肾）</div>
+  <div class="note"><span class="note-num">P682</span>煎服，9～15g。包煎。 | 生用利尿通淋、清热力强；盐水炙用润下，以增 | 本品为性寒通利之品，肾虚滑精无湿热者忌用</div>
+  <div class="note"><span class="note-num">P683</span>[Mg3·(Si4O10)·(OH)2]。产于 | 山东、江西、江苏、陕西、山 | 西等地。采挖后，去净泥土、</div>
+  <div class="note"><span class="note-num">P685</span>1、淋证（治湿热淋证常用药） | +木通、车前子（清热利尿通淋） | +石韦、海金沙（利尿通淋排石）</div>
+  <div class="note"><span class="note-num">P686</span>+木通、车前子（清热利尿通淋） | +石韦、海金沙（利尿通淋排石） | 4、湿疮，湿疹，痱子（外用）</div>
+  <div class="note"><span class="note-num">P688</span>Akebia quinate (Thunb.) | Decne、三叶木通Akebia | trifoliatea (Thunb.)</div>
+  <div class="note"><span class="note-num">P690</span>+滑石、车前子（清热利尿通淋） | +生地、淡竹叶（清心火）</div>
+  <div class="note"><span class="note-num">P691</span>+红花、牛膝（活血通经） | 穿山甲与王不留,妇人服之乳长流</div>
+  <div class="note"><span class="note-num">P695</span>• 1. 用于膏淋、白浊。 | • 2. 用于风湿痹痛。</div>
+  <div class="note"><span class="note-num">P696</span>为水龙骨科多年生常绿草本植 | 物庐山石韦Pyrrosia | sheareri (Bak.)Ching和石韦</div>
+  <div class="note"><span class="note-num">P697</span>【性味归经】甘、苦，微寒。归肺、膀胱经。 | 【功效】利尿通淋，凉血止血，清肺止咳。 | 1.用于湿热淋证，水肿。为清热利尿通淋常</div>
+  <div class="note"><span class="note-num">P699</span>• 用于石淋、热淋、血淋、膏淋。 | • 尤善止尿道疼痛，为治诸淋涩痛要药。 | 甘、咸，寒。归膀胱、小肠经。</div>
+  <div class="note"><span class="note-num">P701</span>本类药物多甘淡寒或苦寒，入肝胆经。苦 | 泄寒清而利湿、利胆退黄。 | 主要用于湿热黄疸证（阳黄）。</div>
+  <div class="note"><span class="note-num">P702</span>为菊科多年生草本植物滨蒿A. scoparia | Waldst. et Kit. 或茵陈蒿Artemisia | capillaris Thunb.的干燥地上部分。我国大部</div>
+  <div class="note"><span class="note-num">P705</span>1、黄疸（治黄疸要药） | +栀子、大黄（清热利湿退黄） | +附子、干姜（温里散寒）</div>
+  <div class="note"><span class="note-num">P707</span>金钱草《本草纲目拾遗》 | christinae Hance的干</div>
+  <div class="note"><span class="note-num">P708</span>归肝、胆、肾、膀胱经。 | 金钱草《本草纲目拾遗》</div>
+  <div class="note"><span class="note-num">P709</span>+茵陈、栀子（清热利湿退黄） | 2、石淋、热淋（治石淋、热淋、小便涩痛之要药）</div>
+  <div class="note"><span class="note-num">P710</span>煎服，15-30g，大剂量30-60g。鲜品加倍。 | 金钱草《本草纲目拾遗》</div>
+  <div class="note"><span class="note-num">P711</span>• 1、试述利水渗湿药的含义、功效、适应范围 | • 2、试比较下列各组药物的功用异同点： | • 3、试述茯苓、泽泻、薏苡仁、车前子、金钱</div>
+</div>
+<div class="chapter" id="第11章-温里药">
+  <h2>第11章 温里药</h2>
+  <div class="note"><span class="note-num">P42</span>3、寒热药合用可以治疗寒热错杂之证，或纠正 | 药性之偏，或利用反佐防止格拒。 | ---------------------------------------------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P43</span>3、寒热药合用可以治疗寒热错杂之证，或纠正 | 药性之偏，或利用反佐防止格拒。 | ---------------------------------------------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P44</span>3、寒热药合用可以治疗寒热错杂之证，或纠正 | 药性之偏，或利用反佐防止格拒。 | ---------------------------------------------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P713</span>掌握：1.温里药在功效、主治、性能特点、配伍应用 | 2.相似药物功效、应用的异同点。 | 熟悉：1.散寒止痛、回阳救逆等功效的含义。</div>
+  <div class="note"><span class="note-num">P714</span>掌握：附子、干姜、肉桂、吴茱萸的分类、药性特 | 点、功效、主治、配伍及某些特殊用法；熟 | 悉某些特殊炮制的意义，用量、用法及使用</div>
+  <div class="note"><span class="note-num">P715</span>熟悉：小茴香、丁香、花椒分类、功效和适应 | 证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P717</span>以温里散寒为主要功效，常用以治疗里寒证 | 的药物，称温里药，又称祛寒药。 | 温，温振、温散之意。指这类药的药性和作用。</div>
+  <div class="note"><span class="note-num">P719</span>1、药性：均为温热之性。 | 2、药味：皆为辛味，兼有补阳作用的药物有甘味。 | 3、归经：均归脾、胃经。兼入肝、肾、心经。</div>
+  <div class="note"><span class="note-num">P721</span>1、因证选药：虚实证、亡阳证、脏腑寒证。 | 2、证候禁忌：实热证、阴虚火旺、津血亏虚者忌用， | 3、其他：有毒药物，应注意炮制、剂量及用法，避免</div>
+  <div class="note"><span class="note-num">P722</span>为毛茛科多年生草本植物乌头Aconitum | carmichaeli Debx子根的加工品。以四川为著名 | 道地产区。6月下旬到8月上旬采挖。加工炮制为</div>
+  <div class="note"><span class="note-num">P725</span>1、亡阳证（回阳救逆第一品药） | （寒邪内犯或元阳暴伤） | +干姜（“附子无姜不热”）</div>
+  <div class="note"><span class="note-num">P726</span>3、寒凝诸痛（治寒凝诸痛之要药） | +羌活、白术（祛风湿、散寒） | +川芎、白芷（散寒、止头痛）</div>
+  <div class="note"><span class="note-num">P727</span>姜Zingiber officinale | Rose的干燥根茎。主产</div>
+  <div class="note"><span class="note-num">P729</span>1、脾胃寒证（实寒证、虚寒证均可以使用） | +人参、白术（补脾益气） | +附子（“附子无姜不热”）</div>
+  <div class="note"><span class="note-num">P730</span>（温肺化饮、止咳平喘） | 本品辛热燥烈，故阴虚内热、血热妄行者忌用。</div>
+  <div class="note"><span class="note-num">P731</span>Cinnamomum cassia | Presl的干燥树皮。主产 | 于广西、广东、海南等地</div>
+  <div class="note"><span class="note-num">P733</span>+鹿角胶、附子（温肾补阳） | （补火消阴、引火归元） | +人参、附子（温补脾肾）</div>
+  <div class="note"><span class="note-num">P734</span>妇人产后瘀滞、恶露不尽 | +当归、赤芍（活血调经） | +益母草、当归（活血祛瘀）</div>
+  <div class="note"><span class="note-num">P735</span>为芸香科落叶灌木或乔木吴茱萸Evodia | rutaecarpa (JUSS．) Benth.、石虎E. | rutaecarpa (JUSS．) Benth．var. bodinieri</div>
+  <div class="note"><span class="note-num">P738</span>（温经散寒、行气止痛） | （温补脾胃、降逆止呕） | 肝郁化火，胃气上逆的呕吐吞酸</div>
+  <div class="note"><span class="note-num">P739</span>+补骨脂、肉豆蔻、五味子 | +木瓜、苏叶、槟榔（祛湿宣通） | 此外，本品外用有燥湿止痒作用。治湿疹、湿疮。煎汤洗或干</div>
+  <div class="note"><span class="note-num">P740</span>煎服，2～5g。外用适量，煎汤洗或调敷。生用性 | 燥有毒，制用毒减，燥性得缓。 | 本品辛热燥烈，易耗气动火，阴虚有热者忌用</div>
+  <div class="note"><span class="note-num">P741</span>小乔木青椒Zanthoxylum | schinifolium Sieb.et | Zanthoxylum bungeanum</div>
+  <div class="note"><span class="note-num">P743</span>+生姜、白豆蔻（温中散寒止呕） | 阴痒难忍，非以热汤泡洗不能已者</div>
+  <div class="note"><span class="note-num">P744</span>煎服，3～6g。外用适量，煎汤含漱、熏洗， | 本品辛热有小毒，能伤助火阴，故热证及阴虚 | 火旺者忌用，孕妇慎用。</div>
+  <div class="note"><span class="note-num">P745</span>为桃金娘科植物丁香Eugenia caryophyllata Thunb | ．的干燥花蕾，习称公丁香。主产于坦桑尼亚、马来西亚 | 、印度尼西亚；中国主产于广东、海南等地</div>
+  <div class="note"><span class="note-num">P748</span>1、胃寒呕吐、呃逆（为胃寒呃逆之要药） | +人参、生姜（补气、降逆止呕） | +半夏、生姜（温中降逆止呕）</div>
+  <div class="note"><span class="note-num">P749</span>+附子、淫羊藿（补肾助阳） | 煎服，1～3g。外用适量。 | 本品辛香温散，能伤阴助火，故热证及阴虚</div>
+  <div class="note"><span class="note-num">P750</span>本植物茴香Foeniculum | vulgare Mill.的干燥成</div>
+  <div class="note"><span class="note-num">P752</span>肝郁气滞，睾丸偏坠胀痛 | （温经活血、行气止痛） | 脾胃虚寒，呕吐食少+白术、生姜（补脾温中止呕）</div>
+  <div class="note"><span class="note-num">P753</span>煎服，3～6g。外用适量。 | 本品辛香温燥，能伤阴助火，故阴虚火旺者慎</div>
+  <div class="note"><span class="note-num">P1412</span>1．本类药均具有补阳的功效。 | ┌补肾阳---纠正肾阳虚 | 补阳┼补脾阳---纠正脾阳虚┐</div>
+  <div class="note"><span class="note-num">P1413</span>气化失常，水液代谢障碍---水肿、小便不利。 | 肾不纳气---呼吸无力，呼多吸少，短气喘咳。 | ┌小儿发育不良：行迟、齿迟、囟门迟合；</div>
+  <div class="note"><span class="note-num">P1414</span>其中，能祛风湿者，可有辛味。 | 都能补助肾阳，均归肾经。 | 其中，能温肺者可归肺经；</div>
+  <div class="note"><span class="note-num">P1415</span>阳虚---阴寒，里寒较盛者，+温里祛寒药； | 筋骨不健，腰膝酸软，步履乏力者，+强筋骨药； | 精关不固---遗精、滑精、早泄者，+固精药；</div>
+  <div class="note"><span class="note-num">P1418</span>为脊椎动物鹿科梅花鹿Cervus nippon Temminck或 | 马鹿C. elaphus Linnaeus的雄鹿头上未骨化密生绒毛的 | 幼角。用时燎去毛，刮净，横切薄片，或劈成块，研细粉用。</div>
+  <div class="note"><span class="note-num">P1420</span>甘、咸，温。归肾、肝经。 | 本品甘咸温润，主入肝肾，大补肾 | 阳，兼益精血，强健筋骨，为肾阳不</div>
+  <div class="note"><span class="note-num">P1421</span>1．用于肾阳虚衰，精血亏虚证。 | 本品味咸归肾，为温肾壮阳，添益精血的要药。 | 2．用于肝肾不足，筋骨不健证。</div>
+  <div class="note"><span class="note-num">P1422</span>内服：研细末冲服，1～2g。 | 服用本品，宜从小剂量开始，缓缓增至治 | 疗需要量，不可骤用大剂量，以免阳生动风而</div>
+  <div class="note"><span class="note-num">P1424</span>为小檗科多年生直立草本植物淫羊藿Epimedium brevicornum | Maxim.、箭叶淫羊藿E. sagittatum (Sieb.et Zucc.) Maxim.、 | 柔毛淫羊藿E. pubescens Maxim.、巫山淫羊藿E. wushanense</div>
+  <div class="note"><span class="note-num">P1425</span>【主要性能】辛、甘，温。归肝、肾经。 | 补肾阳，强筋骨，祛风湿。 | 能强筋骨，辛温又能祛风</div>
+  <div class="note"><span class="note-num">P1426</span>本品辛甘性温燥烈，长于补肾壮阳。能壮阳起 | 萎，还能改善因肾阳虚所致精子衰弱或畸形，主要用于 | 肾阳虚之男子阳痿不育。其次，本品有助于暖宫助孕，</div>
+  <div class="note"><span class="note-num">P1428</span>为列当科多年生肉质寄生草本植物肉苁蓉Cistanche | deserticola Y.C.Ma或管花肉苁蓉C. tubulosa （ | Schrenk）Wight干燥带鳞叶的肉质茎。切厚片，生用或</div>
+  <div class="note"><span class="note-num">P1429</span>本品甘咸温润，主入肾、肝和大肠经，其 | 突出特点是既能补阳，又益精血，温润不燥， | 作用缓和，从容而补，适于久服滋补。此外，</div>
+  <div class="note"><span class="note-num">P1431</span>为杜仲科落叶乔木植物杜仲Ｅucommia | ulmoides Oliv.的干燥树皮。</div>
+  <div class="note"><span class="note-num">P1432</span>本品甘温助阳，能补肾安胎，强筋健骨，适 | 于肾虚腰疼及胎动不安等证。</div>
+  <div class="note"><span class="note-num">P1433</span>1．肝肾不足证的筋骨不健。 | 因本品善补肝肾、强筋骨，为治疗肾虚腰痛、筋骨痿软的 | 要药。其他腰痛用之，均有扶正固本之效。</div>
+  <div class="note"><span class="note-num">P1434</span>炒用破坏其胶质有利于有效成分煎出 | 本品为温补之品，阴虚火旺者慎用。</div>
+  <div class="note"><span class="note-num">P1436</span>为川续断科多年生草本植物川续断Dipsacus | aspercides C.Y.Cheng et T.M.Ai的干燥根。</div>
+  <div class="note"><span class="note-num">P1437</span>本品甘温补肾安胎，辛温行 | 血疗伤，补而不滞，作用缓和，</div>
+  <div class="note"><span class="note-num">P1438</span>1．肝肾不足，筋骨不健证 | 本品与杜仲相似，功能温肾助阳，尤其长于补肝肾 | ，强筋骨。故常用治肝肾不足所致腰膝酸痛、下肢痿软</div>
+  <div class="note"><span class="note-num">P1439</span>3．胎动不安、胎漏、滑胎。 | 本品补益肝肾，调理冲任，有固本安胎之功。可 | 用于肝肾不足，崩漏不血，胎动不安等症。</div>
+  <div class="note"><span class="note-num">P1441</span>为豆科一年生草本植物补骨脂Psoralea corylifolia | L.的干燥成熟果实。生用，炒或盐水炙用。本品又名“</div>
+  <div class="note"><span class="note-num">P1442</span>辛、苦，温。归肾、脾经。 | 本品大温，补火助阳，守中 | 下二焦，暖脾肾之阳，兼有收</div>
+  <div class="note"><span class="note-num">P1443</span>1．肾阳不足，肾气不固证。 | 本品善壮阳助火，补肾强要，兼有固精缩尿之效 | ，是能补能涩，标本兼治之品。</div>
+  <div class="note"><span class="note-num">P1444</span>为姜科植物益智Alpinia oxyphylla | Miq．的成熟果实。砂炒后去壳取仁，生用 | 或盐水微炒用。用时捣碎。</div>
+  <div class="note"><span class="note-num">P1446</span>为脊椎动物壁虎科动物蛤蚧Ｇckko gecko L.除去内 | 用时去头（有小毒）、足和鳞片，切成小块，黄酒 | 浸润后烘干用，或炒酥研末。</div>
+  <div class="note"><span class="note-num">P1447</span>【性味归经】咸，平。归肺、肾经。 | 本品补益肺肾，助阳益精， | 纳气平喘，主治男子阳痿及肾</div>
+  <div class="note"><span class="note-num">P1449</span>为旋花科一年生寄生缠绕草本植物菟丝子 | Cuscuta chinensis Lam. 的干燥成熟种子。 | 我国大部分地区均有分布。主产于山东、河</div>
+  <div class="note"><span class="note-num">P1450</span>辛、甘，平。归肝、肾、脾经。 | 益精，不燥不腻，平补之 | 中又具收涩之性，为肝肾</div>
+  <div class="note"><span class="note-num">P1451</span>1．用于肾阳虚衰，肾气不固证。 | 本品味甘微温，补而不峻，温而不燥，既能补助 | 肾阳，又能补益肾精，可随配伍广泛用于肾阳不足，</div>
+  <div class="note"><span class="note-num">P1452</span>3．脾肾阳虚，便溏泄泻。 | 本品温补兼有涩性，如脾肾二经，故能补肾益脾 | 4．用于肾虚胎动不安。</div>
+  <div class="note"><span class="note-num">P1454</span>为茜草科多年生藤本植物巴戟天Morinda | officinalis How 的干燥根。晒干，再经蒸透 | ，除去木心者，称“巴戟肉”。切段，干燥。</div>
+  <div class="note"><span class="note-num">P1455</span>甘、辛，微温。归肾、肝经。 | 补肾阳，强筋骨，祛风湿。 | 本品甘温助阳，辛温除湿，</div>
+  <div class="note"><span class="note-num">P1456</span>1．肾阳虚弱，精血不足证。 | 本品甘温质润，能补肾助阳，且力量温和，温而不燥， | 可“补其火而不烁其水”，且又能益精血。可用于肾阳虚弱，精</div>
+  <div class="note"><span class="note-num">P1457</span>『来源』本品为水龙骨科植物槲蕨Drynaria | fortunei (Kunze) J.Sm. 的干燥根茎。生用或</div>
+  <div class="note"><span class="note-num">P1459</span>煎服，3～9g。外用适量。 | 【使用注意】阴虚火旺，血虚风燥慎用。</div>
+  <div class="note"><span class="note-num">P1461</span>为麦角菌科真菌冬虫夏草菌Cordyceps sinensis (Berk.) Sacc. 寄生在 | 蝙蝠蛾科昆虫幼虫上的子座及幼虫虫体的干燥复合体。生用。 | 【性味归经】甘，平。归肺、肾经。</div>
+  <div class="note"><span class="note-num">P1462</span>为豆科多年生草本植物扁茎黄芪Astragalus complanatus R. | Br.的干燥成熟种子。生用或盐水炒用。</div>
+</div>
+<div class="chapter" id="第12章-理气药">
+  <h2>第12章 理气药</h2>
+  <div class="note"><span class="note-num">P755</span>掌握：1.理气药在功效、主治、性能特点、配伍应用 | 2.相似药物功效、应用的异同点。 | 熟悉：1.有关行气功效的含义。</div>
+  <div class="note"><span class="note-num">P756</span>掌握：陈皮、枳实、木香、香附的分类、药性特 | 点、功效、主治、配伍及某些特殊用法；熟 | 悉某些特殊炮制的意义，用量、用法及使用</div>
+  <div class="note"><span class="note-num">P757</span>熟悉：青皮、乌药、川楝子、薤白分类、功效和 | 适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P760</span>脾胃气滞：脘腹胀满、痞闷、纳差 | 大肠气滞：泻痢不爽、后重坠胀 | 肝郁气滞：情志不畅、胁肋胀满</div>
+  <div class="note"><span class="note-num">P762</span>1、药性：多为温热之性。 | 2、药味：多为辛味，能降气、燥湿者兼有苦味。 | 3、归经：均归脾、胃经。兼能疏肝者入肝经。</div>
+  <div class="note"><span class="note-num">P763</span>理气药的使用应根据病证的部位和病机的不同，选择和 | 1、脾胃气滞因于饮食积滞者，宜配伍？ | 2、因于湿热阻滞者，宜配伍？</div>
+  <div class="note"><span class="note-num">P765</span>1、因证选药：使用理气药时，应根据病位、症状特点 | 与病情的轻重，选择适宜的药物。 | 2、证候禁忌：本类药物大多辛香温燥，易耗气伤阴，</div>
+  <div class="note"><span class="note-num">P766</span>木橘Citrus reticulata | Blanco及其栽培变种的</div>
+  <div class="note"><span class="note-num">P768</span>1、脾胃气滞证（治脾胃气滞之要药+兼寒者尤宜） | 中焦气滞、胃失和降之恶心呕吐 | +木香（理气宽中之痛）</div>
+  <div class="note"><span class="note-num">P769</span>2、湿阻中焦（寒湿困脾证常用） | +苍术、厚朴（化湿、行气）</div>
+  <div class="note"><span class="note-num">P771</span>Citrus reticulata | Blanco及其栽培变种的干 | 燥幼果或未成熟果实的果</div>
+  <div class="note"><span class="note-num">P773</span>1、肝郁气滞证（治疗肝气郁结之要药） | +柴胡、香附（疏肝行气） | +柴胡、橘叶（行气散结）</div>
+  <div class="note"><span class="note-num">P774</span>2、气滞腹痛、食积腹痛 | +陈皮、肉桂（散寒行气） | +大黄、槟榔（攻下导滞）</div>
+  <div class="note"><span class="note-num">P775</span>煎服，3～10g。醋炙疏肝止痛力强 | 本品苦泄辛温性烈，口服能耗气伤阴，故气</div>
+  <div class="note"><span class="note-num">P776</span>酸橙Citrus aurantium | L.及其栽培变种或甜橙 | C. sinensis Osbeck的</div>
+  <div class="note"><span class="note-num">P778</span>1、胃肠气滞证（治疗脾胃大肠气滞之要药） | 气滞兼湿热食积、大便不通 | +大黄、芒硝（清热泻下）</div>
+  <div class="note"><span class="note-num">P779</span>2、胸痹、胸膈胀痛、胸痞咳嗽 | 痰浊痹阻、胸阳不振、气结在胸 | 痰热所致的胸膈胀满疼痛</div>
+  <div class="note"><span class="note-num">P780</span>煎服，3～10g，大剂量可用至30g。炒后较平 | 本品为破气之品，故孕妇及脾胃虚弱者慎用。</div>
+  <div class="note"><span class="note-num">P781</span>物木香Aucklandia lappa | Decne的干燥根。以云南为</div>
+  <div class="note"><span class="note-num">P783</span>1、脾胃气滞证（治疗脾胃气滞、脘腹胀痛之要药） | +陈皮、枳壳（行气和中） | +人参、白术（补气健脾）</div>
+  <div class="note"><span class="note-num">P784</span>3、肝胆气滞证（治疗肝胆气滞常用药） | （清热燥湿、疏肝理气） | 煎服，3～6g。生用行气力强，煨用行气力缓而多用于泄</div>
+  <div class="note"><span class="note-num">P787</span>+柴胡、枳壳（疏肝行气） | +小茴香、吴茱萸、乌药 | （温里散寒、行气止痛）</div>
+  <div class="note"><span class="note-num">P788</span>2、月经不调、痛经、乳房胀痛（妇科调经止痛之要药） | +当归、川芎（活血调经） | +艾叶、肉桂（温经散寒）</div>
+  <div class="note"><span class="note-num">P789</span>煎服，6～10g。醋炙止痛力增强。 | 本品辛香微苦，能耗气伤阴，故气虚无滞、阴</div>
+  <div class="note"><span class="note-num">P790</span>(Lour.) 及白木香A. | Gilg.含有树脂的干燥木</div>
+  <div class="note"><span class="note-num">P793</span>Melia toosendan Sieb． | Et Zucc．的干燥成熟果 | 实。以四川为著名道地产</div>
+  <div class="note"><span class="note-num">P795</span>肝胃气滞，胸胁脘腹胀痛 | +三棱、莪术（活血化瘀） | 2、疝气痛，睾丸偏坠痛（“治疝专药” ）</div>
+  <div class="note"><span class="note-num">P796</span>煎服，5～10g。外用适量。驱虫生用，炒用寒凉性得 | 本品苦寒，脾胃虚寒者不宜使用。。</div>
+  <div class="note"><span class="note-num">P797</span>本植物小根蒜Allium | macrostemon</div>
+  <div class="note"><span class="note-num">P799</span>1、胸痹疼痛（治胸痹疼痛要药） | +瓜蒌、川芎（化痰、活血）</div>
+  <div class="note"><span class="note-num">P800</span>大肠虚寒气滞之泻痢后重 | 湿热、胃肠气滞之泻痢后重 | 本品辛苦性温，能伤阴助火，故阴虚及内热者慎服。</div>
+  <div class="note"><span class="note-num">P801</span>Lindera aggregata | (Sims )Kosterm．的干</div>
+  <div class="note"><span class="note-num">P803</span>1、寒凝气滞胸腹诸痛证 | +薤白、郁金（散寒止痛、宽胸利气） | +木香、陈皮（行气除胀）</div>
+  <div class="note"><span class="note-num">P804</span>2、膀胱虚寒证（治疗肾阳不足、膀胱虚寒之要药） | （温经通脉、利水渗湿）</div>
+  <div class="note"><span class="note-num">P805</span>本品辛香温散，能耗气伤阴助火，故气虚血 | 亏无滞、阴虚火旺及内有火者慎服。</div>
+</div>
+<div class="chapter" id="第13章-消食药">
+  <h2>第13章 消食药</h2>
+  <div class="note"><span class="note-num">P290</span>凡以清泄脏腑气分热邪为主要功效，常用于 | 治疗温病气分实热证以及各种内伤杂证脏腑实热 | 证的药物，称为清热泻火药。</div>
+  <div class="note"><span class="note-num">P291</span>(CaSO4·2H2O)纤维状结晶聚合 | 体的矿石。主产于湖北、甘 | 肃、四川等地。随时可采挖。</div>
+  <div class="note"><span class="note-num">P292</span>(清气分实热，清肺胃实热) | ③收湿敛疮（煅后外用）、 | ④生肌止血（煅后外用）。</div>
+  <div class="note"><span class="note-num">P296</span>4、疮疡不敛、或湿疹浸淫及水火烫伤者 | 煎服，15-60g, 打碎先煎（CaSO4 微溶）。 | 内服宜生用；外用多火煅研末。</div>
+  <div class="note"><span class="note-num">P297</span>【来源】为百合科多年生 | 草本植物知母Anemarrhena | asphodeloides Bge. 的干</div>
+  <div class="note"><span class="note-num">P301</span>主要介绍知母的化学成分、抗 | 糖尿病药理作用与临床应用</div>
+  <div class="note"><span class="note-num">P302</span>4、肾阴不足，虚火亢旺证 | 虚寒证不宜，脾虚便溏忌用。</div>
+  <div class="note"><span class="note-num">P303</span>石膏与知母功效主治异同 | 石膏煅用能收湿、生肌、敛疮、止血，外治用于溃 | 疡不敛、湿疹瘙痒、水火烫伤、外伤出血等；</div>
+  <div class="note"><span class="note-num">P304</span>【来源】为葫芦科多年生 | Trichosanthes kirilowii | Maxim. 或日本栝蒌</div>
+  <div class="note"><span class="note-num">P310</span>芦根与天花粉功效主治异同 | 芦根能清胃止呕，治疗胃热呕逆，能清热 | 利尿，治疗水肿热淋。这些都是天花粉所不具</div>
+  <div class="note"><span class="note-num">P317</span>煎服，6～10g。外用适量。 | 因其苦寒性较强，易伤脾胃，</div>
+  <div class="note"><span class="note-num">P318</span>植物夏枯草Prunella | vulgaris L. 的干燥果穗。 | 各地均产。夏季果穗半枯</div>
+  <div class="note"><span class="note-num">P323</span>【来源】为禾本科多年生草 | 本植物芦苇Phragmites | communis (L.) Trin. 的新鲜</div>
+  <div class="note"><span class="note-num">P329</span>4、湿热淋证，湿热水肿 | 煎服，15～30g。鲜品为佳、倍量30g～60g，</div>
+  <div class="note"><span class="note-num">P330</span>为禾本科多年生草本植物 | 淡竹叶Lophatherum | gracile Brongn. 的干燥</div>
+  <div class="note"><span class="note-num">P332</span>【来源】为豆科一年生草本植物决明Cassia | obtusifolia L.、小决明C.tora L. 的干燥成熟 | 种子。各地均有栽种。秋季果实成熟时采收。晒</div>
+  <div class="note"><span class="note-num">P334</span>夏枯草、决明子皆性寒凉，都能清肝明目、降血压。 | 1．肝火上炎的目赤肿痛、羞明多泪，为眼科常用药； | 2．高血压病属于肝热阳亢、头痛眩晕者。</div>
+  <div class="note"><span class="note-num">P336</span>以清热燥湿为主要功效，常用于治疗湿热病 | 证的药物，称为清热燥湿药或苦寒燥湿药。 | 性味：苦（能燥），寒（清热）。</div>
+  <div class="note"><span class="note-num">P337</span>1、一般用量不宜过大; | 脾胃虚寒，津伤阴亏者当慎用; | 2、常于利湿化湿、行气、清热泻火、清热</div>
+  <div class="note"><span class="note-num">P338</span>【来源】为唇形科多年生草本植物黄芩Scutellaria | baicalensis Georgi 的干燥根。主产于河北、山西、内蒙古 | 等地。春秋二季采挖。晒干，蒸软或开水淋、润后切片，</div>
+  <div class="note"><span class="note-num">P341</span>2、肺热咳嗽，少阳证气分热证等 | 肺、胃、胆等脏腑的实热证 | 配伍柴胡清半表半里之邪</div>
+  <div class="note"><span class="note-num">P342</span>3、痈肿疮毒，咽喉肿痛等热毒证 | 出血证（吐血、尿血等） | （+凉血止血药：地榆、槐花）</div>
+  <div class="note"><span class="note-num">P344</span>【来源】为毛茛科多年生草本植物黄连Coptis | chinensis Franch.、三角叶黄连C. deltoidea | C.Y.Cheng et Hsiao 或云连C. teeta Wall. 的根茎。</div>
+  <div class="note"><span class="note-num">P346</span>1、湿热病证（治湿热痢疾要药） | +行气药（木香、槟榔） | +活血药（当归、赤芍）</div>
+  <div class="note"><span class="note-num">P347</span>+清胃之品（石膏、升麻） | +养胃阴药（生地、天花粉） | 黄连通过改善糖代谢、脂质代谢、胰</div>
+  <div class="note"><span class="note-num">P348</span>痈疽证见局部肿胀、焮热、疼痛及 | 病机：邪热壅聚、气血凝滞所致 | 治则：清热解毒、活血化瘀</div>
+  <div class="note"><span class="note-num">P349</span>疔：初起如粟，根深形小，状如针， | 顶白而痛，因邪毒侵袭、气血凝滞 | 治则：清热解毒、活血化瘀</div>
+  <div class="note"><span class="note-num">P350</span>生用清热力强，炒用能减苦寒之性。 | 姜汁炙用多用于清胃止呕（姜助止呕）， | 酒炙可用于上焦热证（酒性升散、引药上行），</div>
+  <div class="note"><span class="note-num">P351</span>虚寒证忌用。脾胃虚弱者 | 或津液亏虚者不宜使用。</div>
+  <div class="note"><span class="note-num">P352</span>【来源】为芸香科乔木植物黄檗 | Phellodendron | amurense Rupr. 或黄皮树P.chinense Schneid. 除去</div>
+  <div class="note"><span class="note-num">P357</span>煎服，3～12g。治湿热、热毒及脏腑实热证 | 多生用（清热燥湿，解毒，泻火力强），治肾阴虚 | 火旺多盐水炙用（可降低苦燥之性，且更易入肾经）。</div>
+  <div class="note"><span class="note-num">P358</span>三者皆为苦寒之品，都能清热燥湿、泻火解毒。凡 | 湿热、火毒所致的病证，均可配伍使用。 | 注：三者皆为苦寒之品，容易损伤脾胃，若脾胃虚</div>
+  <div class="note"><span class="note-num">P360</span>为龙胆科多年生草本植物龙胆 | Gentiana scabra Bge.、三 | 花龙胆G. triflora Pall.</div>
+  <div class="note"><span class="note-num">P364</span>3、热毒痈肿，咽喉肿痛 | +黄连、升麻（清热解毒） | 通过肝损伤细胞模型筛选</div>
+  <div class="note"><span class="note-num">P365</span>龙胆、夏枯草二者皆性寒，均能清肝火。皆可 | 用治肝火头痛、目赤等证。 | 除了泻肝胆实火，龙胆还能清肝胆湿热，清下焦</div>
+  <div class="note"><span class="note-num">P366</span>【来源】为豆科亚灌木植物苦参Sophora | flavescens Ait.的干燥根。各地均产。春秋二季 | 采挖。切片，晒干，生用。</div>
+  <div class="note"><span class="note-num">P370</span>凡以清热凉血为主要功效，常用以治疗营分、 | 血分热证的药物，称为清热凉血药。 | 性味：多为苦咸寒之品，少数兼有甘、辛味。</div>
+  <div class="note"><span class="note-num">P371</span>【来源】为玄参科多年生草本植物地黄 | Rehmannia glutinosa Libosch. 的干燥块根。主 | 产于河南，全国大部分地区有栽培。秋季采挖。</div>
+  <div class="note"><span class="note-num">P373</span>1、温热病热入营血证（清热凉血要药） | 热病后期，余热未清，阴分已伤 | +玄参、金银花（清营透热）</div>
+  <div class="note"><span class="note-num">P374</span>+沙参、麦冬（养阴生津） | +葛根、黄芪（益气清热生津）</div>
+  <div class="note"><span class="note-num">P375</span>煎服，10~15 g。 | 鲜品加倍，捣汁亦可，凉血生津</div>
+  <div class="note"><span class="note-num">P376</span>Scrophularia | ningpoensis Hemsl. 的干 | 季采挖。晒或烘至半干，</div>
+  <div class="note"><span class="note-num">P378</span>2、咽喉肿痛、瘰疬、疮痈 | +连翘、板蓝根（清热解毒利咽）</div>
+  <div class="note"><span class="note-num">P379</span>3、劳嗽咳血，阴虚发热，消渴便秘 | +知母、地骨皮（清虚热、退骨蒸）</div>
+  <div class="note"><span class="note-num">P381</span>生地黄与玄参二者皆味甘苦性寒，均能清热凉血，养阴生津。 | 2.热病伤阴，以及阴虚消渴（内热消渴）。 | 3.阴虚发热，骨蒸潮热。</div>
+  <div class="note"><span class="note-num">P382</span>【来源】为毛茛科小灌木植物牡丹Paeonia | suffruticosa Andr. 的干燥根皮。主产于安徽、 | 山东等地。栽培3～5年后，于10～11月采挖根部，</div>
+  <div class="note"><span class="note-num">P384</span>1、温热病热入血分（常用药），血热吐衄证 | +侧柏叶、茜草（凉血止血） | +栀子、白芍、柴胡（清肝、柔肝、疏肝）</div>
+  <div class="note"><span class="note-num">P385</span>温病后期，余热未尽、阴液已伤 | +金银花、蒲公英（清热解毒）</div>
+  <div class="note"><span class="note-num">P387</span>为毛茛科草本植物芍药Paeonia lactiflora | Pall.或川赤芍P. veitchii Lynch 的干燥根。 | 芍药主产于内蒙古、河北和东北等地；川赤芍主</div>
+  <div class="note"><span class="note-num">P389</span>1、温热病热入血分，血热吐衄证 | 温热病热入血分和气血两燔证 | +地黄、白茅根（凉血止血）</div>
+  <div class="note"><span class="note-num">P391</span>牡丹皮与赤芍二者皆味苦性微寒，归肝经，均能清 | 热凉血，活血祛瘀，都有凉血不留瘀、活血不妄行 | 的特点。血热、血瘀所致的病证均可使用，尤宜于</div>
+  <div class="note"><span class="note-num">P392</span>Arnebia euchroma | (Royle) Johnst.或内蒙 | 紫草A. guitata Bunge.</div>
+  <div class="note"><span class="note-num">P396</span>水牛角与紫草二者均性寒，皆能清热凉血解毒， | 都可用治血热毒盛之斑疹紫黑、色不红活，以 | 及麻疹紫黯、疹出不透等证。</div>
+  <div class="note"><span class="note-num">P398</span>凡以清解热毒或火毒为主要功效，常用 | 于治疗各种热毒证的药物，称为清热解毒药。 | 性味：苦，寒为主，少数辛、甘、酸味。</div>
+  <div class="note"><span class="note-num">P399</span>【来源】为忍冬科木质藤本植物忍冬Lonicera | japonica Thunb. 的干燥花蕾或带初开的花。主产 | 于山东、河南为主等地。夏初当花蕾含苞未放时</div>
+  <div class="note"><span class="note-num">P406</span>对肺炎链球菌、铜绿假单胞菌抑制率强 | 对金黄色葡萄球菌、大肠埃希菌、无乳链球 | 菌、化脓链球菌、痢疾志贺菌抑制率中等</div>
+  <div class="note"><span class="note-num">P407</span>为木犀科灌木植物连翘Forsythia suspensa | (Thunb.) Vahl. 的干燥果实。主产于山西、陕西、河南 | 等地。秋季采摘初熟的果实，加工为“青翘”，质较佳；</div>
+  <div class="note"><span class="note-num">P409</span>1、痈肿疮毒，咽喉肿痛（疮家圣药） | 金银花-连翘配伍有助于 | 金银花与连翘配伍在解热、抗</div>
+  <div class="note"><span class="note-num">P411</span>2、风热表证，温热病（类似于金银花） | 热邪内陷心包（高热、神昏）</div>
+  <div class="note"><span class="note-num">P412</span>金银花、连翘皆性寒凉，均能清热解毒、 | 疏散风热（透表解热），为清热解毒的 | 通用药，为治疗阳性疮疡的要药。</div>
+  <div class="note"><span class="note-num">P413</span>为菊科多年生草本植物蒲公 | 英Taraxacum mongolicum | Hand. Mazz. 、碱地蒲公英T.</div>
+  <div class="note"><span class="note-num">P415</span>1、热毒疮痈（治乳痈要药） | +金银花、野菊花（清热解毒） | +鱼腥草、芦根（清肺排脓）</div>
+  <div class="note"><span class="note-num">P416</span>煎服，10-15g。鲜品加倍。外用适量，鲜品 | 捣敷、或煎汤熏洗患处。</div>
+  <div class="note"><span class="note-num">P418</span>indigotica Fort. 的干 | 二季采摘。晒干，生用，</div>
+  <div class="note"><span class="note-num">P421</span>性蛋白激酶(CDK)、 | Src激酶的活性抗肿瘤</div>
+  <div class="note"><span class="note-num">P423</span>Lsatis indigotica | Fort. 的干燥根。主产</div>
+  <div class="note"><span class="note-num">P426</span>1、温热病，风热表证（类似于大青叶） | +黄芩、生地（清热凉血） | 2、咽喉肿痛、大头瘟疫、丹毒、痄腮</div>
+  <div class="note"><span class="note-num">P428</span>【来源】为菘蓝、马蓝、蓼蓝等植物叶中的 | 色素。夏秋季割取茂盛的茎叶，经浸泡至叶烂皮 | 叶脱落时，加入石灰乳等加工过程，制得的深兰</div>
+  <div class="note"><span class="note-num">P429</span>于一对青年夫妇的施舍， | 衣蓝如宝；穿得花花烂， | 颜色依然好。” 二仙告</div>
+  <div class="note"><span class="note-num">P431</span>大青叶、板蓝根与青黛三者同出一物，均性寒，都 | 能清热解毒，凉血消斑， | 其中大青叶、板蓝根二者苦寒，又善于清解心胃经</div>
+  <div class="note"><span class="note-num">P432</span>为三白草科多年生草本植物蕺菜Houttuynia | cordata Thunb. 的干燥地上部分，主产于长江 | 以南各地。夏秋二季采挖。晒干，切段，生用；</div>
+  <div class="note"><span class="note-num">P434</span>1、肺痈，肺热咳嗽（治肺痈要药） | +桔梗、芦根（清热排脓） | +桑白皮、黄芩（清热化痰）</div>
+  <div class="note"><span class="note-num">P436</span>煎服，15-25g。鲜品60-100g。外用 | 本品含挥发油，不宜久煎。</div>
+  <div class="note"><span class="note-num">P437</span>为鸢尾科多年生草本植物射干Belamcanda chinensis | (L.) DC. 的干燥根茎。主产于湖北、河南、江苏等地。 | 全年均可采挖，以秋季为佳。晒干，切片，生用。</div>
+  <div class="note"><span class="note-num">P439</span>1、咽喉肿痛（治热毒或肺热咽喉肿痛常用药） | +升麻、马勃（解毒利咽） | +牛蒡子、蝉蜕（散风热、利咽）</div>
+  <div class="note"><span class="note-num">P441</span>为毛茛科多年生草本植物白头翁Pulsatilla | chinensis (Bge.) Regel 的干燥根。主产于东北、 | 华北等地。春秋二季采挖。保留根头白绒毛，晒干，切</div>
+  <div class="note"><span class="note-num">P443</span>1、热毒血痢（治痢之良药） | +干姜、赤石脂（散寒止痢）</div>
+  <div class="note"><span class="note-num">P445</span>为败酱科多年生草本植物 | 黄花败酱Patrinia | scabiosaefolia Fisch ex</div>
+  <div class="note"><span class="note-num">P447</span>Sargentodoxa cuneata | (Oliv.) Rehd. et Wils. 的 | 干燥藤茎。主产于江西、</div>
+  <div class="note"><span class="note-num">P449</span>【来源】为百合科多年生攀缘藤本植物光叶菝 | 葜Smilax glabra Roxb. 的干燥块茎。主产于 | 广东、湖南、湖北等地。全年可采挖，以秋末冬</div>
+  <div class="note"><span class="note-num">P451</span>为豆科小灌木植物越南槐(广豆根) Sophora tonkinensis | Gapnep. 的干燥根及根茎。主产于广西、江西、四川等地。 | 全年均可采挖，以秋季为最佳。晒干，切片，生用。</div>
+  <div class="note"><span class="note-num">P453</span>为马齿苋科一年生肉质草本植物马齿苋Portulaca | oleracea L. 的干燥地上部分。我国各地均产。夏 | 季采收，略蒸或焯后晒干，切段入药或用鲜品。</div>
+  <div class="note"><span class="note-num">P456</span>Chrysanthemum | indicum L. 的干燥</div>
+  <div class="note"><span class="note-num">P458</span>【来源】为灰包科真菌脱皮马勃Lasiosphaera | Reich.、大马勃Calvatia gigantea (Batsch | ex Pers.) Lloyd或紫色马勃C. lilacina (Mont. et</div>
+  <div class="note"><span class="note-num">P460</span>射干、山豆根与马勃三者皆能清热解毒， | 而长于清利咽喉（利咽），主治咽喉肿 | 射干苦寒泄降，又能祛痰，兼能散血消肿，尤宜</div>
+  <div class="note"><span class="note-num">P461</span>为茜草科一年生草本植物白花蛇舌草Oldenlandia | diffusa (Willd.) Roxb. 的干燥全草。主产于长江以 | 南各省区。夏秋二季采集。晒干，切段，生用。</div>
+  <div class="note"><span class="note-num">P462</span>青岛崂山矿泉水有限公司20世纪六十年代初为满足国外消费者的健 | 康需求精心研制的碱性饮品。 | 原柬埔寨亲王西哈努克在华期间，天天饮用崂山白花蛇草水。2000</div>
+  <div class="note"><span class="note-num">P465</span>凡以清虚热、退骨蒸为主要功效，常用 | 于治疗阴虚内热证的药物，称为清虚热药， | 性味归经：多味苦寒或甘寒。主归肝、肾经。</div>
+  <div class="note"><span class="note-num">P466</span>Artemisia annua L. 的 | 采收。阴干，切段生用；</div>
+  <div class="note"><span class="note-num">P467</span>呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。 | 吹笙鼓簧，承筐是将。人之好我，示我周行。 | 呦呦鹿鸣，食野之蒿。我有嘉宾，德音孔昭。</div>
+  <div class="note"><span class="note-num">P469</span>肝肾阴虚，虚火内扰所致骨蒸潮热、五心烦热 | 热病后期，余热未清，邪伏阴分 | +连翘、滑石（辛凉解表）</div>
+  <div class="note"><span class="note-num">P470</span>3、疟疾寒热（治疟疾寒热要药） | 不宜久煎；或鲜品加倍，绞汁服。</div>
+  <div class="note"><span class="note-num">P473</span>1、阴虚发热，骨蒸盗汗 | 阴虚发热，骨蒸潮热，心烦盗汗 | 血热妄行的吐血、衄血等</div>
+  <div class="note"><span class="note-num">P475</span>牡丹皮与地骨皮均能凉血退蒸，作用相似，前人虽 | 有“丹皮治无汗骨蒸，地骨皮治有汗骨蒸”之说， | 但现代临床并不严格区分，凡阴虚发热，无论有汗</div>
+  <div class="note"><span class="note-num">P476</span>【来源】为萝藦科多年生草本植 | 物白薇Cynanchum atratum Bge. | 和蔓生白薇Cynanchum</div>
+  <div class="note"><span class="note-num">P478</span>青蒿与白薇皆能清虚热，除骨蒸，均具有清中兼透的特点。 | 1．温热病后期，余热未清，夜热早凉、热退无汗，或热病 | 后低热不退，常配伍鳖甲、知母、生地等；</div>
+  <div class="note"><span class="note-num">P479</span>【来源】为玄参科多年生草本植物胡黄连 | Picrorhiza scrophulariiflora Pennell 的干燥根茎。 | 主产于云南、西藏等地。秋季采挖。晒干，切片，</div>
+  <div class="note"><span class="note-num">P481</span>为石竹科多年生草本植物银柴胡Stellaria | dichotoma L. var. lanceolata Bge. 的干燥根。主产 | 于陕西、甘肃、内蒙古等地。秋后采挖。晒干，</div>
+  <div class="note"><span class="note-num">P483</span>• 地骨皮、银柴胡与胡黄连三者均能清虚热，退骨 | 蒸，皆可用治阴虚发热，骨蒸潮热，盗汗心烦等 | 症。其中地骨皮、银柴胡尤为退虚热、除骨蒸之</div>
+  <div class="note"><span class="note-num">P484</span>1．要点提示：清解里热，里热证。 | 里热证的种类以及药物分类，各种里 | 热证的特点，清热药的选用、配伍、</div>
+  <div class="note"><span class="note-num">P485</span>1.清热药分为几类？各主治何证？ | 2. 试比较下列各组药物的功效及主治证：石 | 膏与知母，黄芩、黄连与黄柏，金银花与</div>
+  <div class="note"><span class="note-num">P808</span>掌握：1.消食药在功效、主治、性能、配伍及使用注 | 2.相似药物功效、应用的异同点。 | 了解：1.消食药的含义。</div>
+  <div class="note"><span class="note-num">P809</span>掌握：山楂的分类、药性特点、功效、主治、配伍 | 及某些特殊用法；熟悉某些特殊炮制的意义， | 用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P810</span>熟悉：鸡内金、莱菔子分类、功效和适应证、某 | 些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P812</span>1、何谓消食药？其作用特点是什么？ | 2、试述山楂、鸡内金、莱菔子的功效及主治证？ | 4、山楂与麦芽各擅长消除哪种饮食积滞？</div>
+</div>
+<div class="chapter" id="第14章-驱虫药">
+  <h2>第14章 驱虫药</h2>
+  <div class="note"><span class="note-num">P813</span>掌握：1.驱虫药在功效、主治、性能、配伍及使用注 | 2.相似药物功效、应用的异同点。 | 了解：1.驱虫药的含义、性能特点。</div>
+  <div class="note"><span class="note-num">P814</span>掌握：槟榔的分类、药性特点、功效、主治、配伍 | 及某些特殊用法；熟悉某些特殊炮制的意义， | 用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P815</span>熟悉：使君子分类、功效和适应证、某 | 些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P817</span>1、在驱虫药中，能驱蛔虫、绦虫的药有哪些? | 使用驱虫药有哪些使用注意？ | 2、简述槟榔的功效与主治？为什么雷丸用以驱虫</div>
+</div>
+<div class="chapter" id="第15章-止血药">
+  <h2>第15章 止血药</h2>
+  <div class="note"><span class="note-num">P819</span>掌握：1.止血药功效、主治、性能特点、配伍应用原 | 2.相似药物功效、应用的异同点。 | 熟悉：1.止血药的分类及凉血止血、化瘀止血、收敛</div>
+  <div class="note"><span class="note-num">P820</span>掌握：小蓟、地榆、三七、茜草、白及、艾叶的分 | 类、药性特点、功效、主治、配伍及某些特 | 殊用法；熟悉某些特殊炮制的意义，用量、</div>
+  <div class="note"><span class="note-num">P821</span>熟悉：侧柏叶、蒲黄分类、功效和 | 适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P822</span>了解：大蓟、槐花、白茅根、苎麻根、五灵脂、 | 仙鹤草、棕榈炭、血余炭、炮姜的分类、</div>
+  <div class="note"><span class="note-num">P825</span>①兼有功效------凉血、解毒、泻火、化瘀、止 | ②兼有主治------热毒疮痈、瘀血阻滞、小便不</div>
+  <div class="note"><span class="note-num">P826</span>1、药性：多为寒、温、平之性。 | 2、药味：多为苦、涩味。 | 3、归经：主归心、肝、脾经。</div>
+  <div class="note"><span class="note-num">P827</span>1、其一，选用药性功能相宜的止血药； | 2、其二，根据出血证的不同原因和病情，适当 | 3、此外，前人在治疗出血证，使用止血药时，</div>
+  <div class="note"><span class="note-num">P829</span>为菊科多年生草本植物刺儿菜 | Cirsium setosum (Willd.) | MB．的干燥地上部分。全国大</div>
+  <div class="note"><span class="note-num">P832</span>煎服，5～12g，鲜品可用30～60g； | 因本品寒凉易伤脾胃之阳气，故脾胃虚寒者慎用。</div>
+  <div class="note"><span class="note-num">P833</span>为菊科多年生草本植物蓟 | Cirsium japonicum DC． | 的干燥地上部分或根。全</div>
+  <div class="note"><span class="note-num">P836</span>Sanguisorba officinalis | officinalis L. var． | 1ongifolia (Bert．) Yu</div>
+  <div class="note"><span class="note-num">P838</span>1、血热出血证（尤其适用于下焦血热出血证） | +生地、丹皮（凉血调经） | 2、烫伤、湿疹、疮疡痈肿（治水火烫伤之要药）</div>
+  <div class="note"><span class="note-num">P839</span>煎服，9～15g，大剂量可用至30g；或入丸、散。外用适 | 量。止血多炒炭用，解毒敛疮多生用。 | 本品性寒、苦涩，凡虚寒性出血或有瘀者慎用；</div>
+  <div class="note"><span class="note-num">P842</span>为柏科植物侧柏Platycladus orientalis | (L．) Franco的干燥枝梢及叶。主产于江苏、广 | 东、河北等。多在夏、秋季节采收，生用或炒炭</div>
+  <div class="note"><span class="note-num">P844</span>1、血热出血证（治各种出血证之要药） | +生地、荷叶（清热凉血） | +蒲黄、小蓟（止血利尿）</div>
+  <div class="note"><span class="note-num">P845</span>煎服，6～12g。外用适量。止血多炒炭 | 久服或多服，易导致胃脘不适或食欲不</div>
+  <div class="note"><span class="note-num">P847</span>Panax notoginseng | (Burk.)F.H.Chen的干燥</div>
+  <div class="note"><span class="note-num">P849</span>有止血不留瘀，化瘀不伤正的特点，对 | 人体内外各种出血，无论有无瘀滞，均可应用， | 尤以有瘀滞者为宜。可配伍凉血止血或收敛止血</div>
+  <div class="note"><span class="note-num">P850</span>多研末吞服，1～3g； | 煎服，3～9g，亦入丸、散。 | 外用适量，研末外掺或调敷。</div>
+  <div class="note"><span class="note-num">P853</span>1、出血证（尤其适用于血热夹瘀的各种出血证） | 2、瘀血证（多用于妇科） | +桃仁、红花（活血通经）</div>
+  <div class="note"><span class="note-num">P854</span>煎服，6～10g；大剂量可用至30g； | 止血炒炭用，活血通经生用或酒炒用。</div>
+  <div class="note"><span class="note-num">P855</span>为香蒲科水生草本植物水烛香蒲、东方香蒲的干燥花粉 | 。主产于江苏等地。夏季采收蒲棒上部黄色雄花序。 | 晒干后辗轧，筛取细粉，生用或炒用。</div>
+  <div class="note"><span class="note-num">P859</span>物白及的干燥块茎。主产 | 于贵州、四川等地。8～ | 11月采挖。置沸水中煮至</div>
+  <div class="note"><span class="note-num">P861</span>1、出血证（为收敛止血之要药） | +乌贼骨（收敛止血、制酸止痛） | 2、痈肿疮疡、水火烫伤、手足皲裂、肛裂</div>
+  <div class="note"><span class="note-num">P862</span>煎服，6～15g；大剂量可用至30g；亦 | 可入丸、散，入散剂，每次用2～5g； | 研末吞服，每次3～6g；外用适量。</div>
+  <div class="note"><span class="note-num">P864</span>为菊科多年生灌木状草本 | 植物艾Artemisia argyi | Levl.et Vant.的干燥叶。</div>
+  <div class="note"><span class="note-num">P866</span>本品气香味辛，温可散寒，能暖气血而温经脉 | ，为温经止血之要药，适用于虚寒性出血病证 | • 2.月经不调、痛经。</div>
+</div>
+<div class="chapter" id="第16章-活血化瘀药">
+  <h2>第16章 活血化瘀药</h2>
+  <div class="note"><span class="note-num">P48</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P121</span>妇女妊娠期间，除为了中断妊娠或引产外， | 禁忌使用某些药物，称为妊娠用药禁忌。 | ①禁用药（绝对不能使用）：剧毒药、堕胎作用较强的</div>
+  <div class="note"><span class="note-num">P122</span>选药组方时，应当避免合用的药物，称为 | ①乌头反半夏、瓜蒌、贝母、白蔹、白及 | ②甘草反甘遂、芫花、大戟、海藻。</div>
+  <div class="note"><span class="note-num">P123</span>选药组方时，应当避免合用的药物，称为 | 硫黄畏朴硝，水银畏砒霜，狼毒畏密陀僧， | 巴豆畏牵牛子，丁香畏郁金，牙硝畏三棱，</div>
+  <div class="note"><span class="note-num">P126</span>指干燥饮片在汤剂中成人一天内的服用量。 | 鲜品、或药物在丸、散剂中的剂量另有不同。 | 中药的剂量对普通药物而言，以成人内</div>
+  <div class="note"><span class="note-num">P127</span>①药物方面：（1）质量优劣、（2） | 质地轻重、（3）药性和毒性。 | ②应用方面：（1）单用与复方（2）</div>
+  <div class="note"><span class="note-num">P129</span>(1)器具：最好用陶瓷器皿中的砂锅、砂罐。 | (2)水：洁净澄清，无污染。 | 水量：视煎药时间、药材吸水性而定。</div>
+  <div class="note"><span class="note-num">P130</span>(3)火候：一般宜先武火煮开，后文火。 | (4)趁热滤汁，避免药渣回吸药液。 | (5)煎药次数：一般2～3次，可以取不同煎液混</div>
+  <div class="note"><span class="note-num">P131</span>(1)先煎：有效成分不容易煎出的药物 | (2)后下：有效成分久煎容易挥发或被破坏的药物 | (3)包煎：药材有毛状物、或呈粉末状，或煎煮易浑浊</div>
+  <div class="note"><span class="note-num">P132</span>口服药物为中医临床主要给药方式。 | (1)服药时间，依据病情需要、药物性质和胃肠状况而 | 定。有空腹服、饭前服、饭后服、睡前服、定时服和不</div>
+  <div class="note"><span class="note-num">P133</span>1、配伍的目的是什么？ | 2、中药七情包括哪些内容，具体含义是什么？ | 3、相须与相使有什么区别？相畏与相杀有什么区</div>
+  <div class="note"><span class="note-num">P285</span>部分兼有生津、养阴、活血。 | 3、归经：没有明显的归属性，因所治病证的脏腑而异 | 4、升降浮沉：均以沉降为主。</div>
+  <div class="note"><span class="note-num">P552</span>瘀血证、热毒疮疡、水肿、皮肤瘙痒、破伤风 | 部分药物兼有活血、清热解毒、利水、祛风止痒、止痉等功效 | 祛风湿：祛除留滞于经络、肌肉、筋骨及关节的风寒湿邪或风湿</div>
+  <div class="note"><span class="note-num">P720</span>1、若外寒已入里，表寒仍未解者，当与发散风寒药配伍 | 2、寒凝气滞者，常与行气药配伍，以温通气机； | 3、寒凝血瘀者，宜与活血化瘀药配伍，以温通血脉；</div>
+  <div class="note"><span class="note-num">P764</span>6、因于肝血不足者，应与养血柔肝药配伍； | 7、肝郁气滞而月经不调者，应与活血调经药配伍。 | 8、肺气壅滞因于外寒客肺者，当配伍？</div>
+  <div class="note"><span class="note-num">P823</span>凡以制止体内外出血为主要功效，常用于治 | 疗各种出血病证的药物，称为止血药。</div>
+  <div class="note"><span class="note-num">P869</span>掌握：1.活血化瘀药的功效、主治、性能特点、配伍 | 2.相似药物功效、应用的异同点。 | 熟悉：1.活血化瘀药的分类以及活血化瘀、活血止痛、</div>
+  <div class="note"><span class="note-num">P870</span>掌握：川芎、郁金、丹参、益母草、牛膝的分类、 | 药性特点、功效、主治、配伍及某些特 | 殊用法；熟悉某些特殊炮制的意义，用量、</div>
+  <div class="note"><span class="note-num">P871</span>熟悉：延胡索、乳香、红花、桃仁、土鳖虫、 | 虎杖、骨碎补、莪术分类、功效 | 和适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P872</span>了解：姜黄、没药、鸡血藤、自然铜、苏木、 | 血竭、三棱、水蛭的分类、功效。</div>
+  <div class="note"><span class="note-num">P873</span>以通畅血行、消散瘀血为主要功效,常用于治疗瘀血 | 证的药物，称活血化瘀药，或称为活血祛瘀药，简称活血 | 药或化瘀药。其中活血作用较强者，又称破血药或逐瘀药</div>
+  <div class="note"><span class="note-num">P874</span>分类：按药性特点和临床应用功效主治 | 的不同，活血化瘀药分为：</div>
+  <div class="note"><span class="note-num">P876</span>药性：多数药物偏温性；部分药性偏寒凉。 | 药味：多为辛味；部分药味苦或咸。 | 归经：入心、肝两经。</div>
+  <div class="note"><span class="note-num">P877</span>1、应针对病情，并根据药性，随证选药； | 2、针对血瘀病因，适当配伍，以标本兼顾。</div>
+  <div class="note"><span class="note-num">P879</span>2、药性：味辛，辛散善行，既入血分，又入气 | 分，活血多兼行气，有良好的止痛作用。 | 3、功效主治：主治气血瘀滞所致的各种痛证。</div>
+  <div class="note"><span class="note-num">P881</span>辛，温。归肝、胆、心包经。 | 辛行走窜，上行头目，下行血海，中开郁结， | 旁通经络。其辛味既能行血又能行气，为血中气药</div>
+  <div class="note"><span class="note-num">P882</span>2.头痛，风湿痹痛。本品为治头痛要药。 | 煎服，3～10g。酒炙可增强川芎温通升散之 | 力，适宜用于治疗瘀血偏寒的病证</div>
+  <div class="note"><span class="note-num">P883</span>yanhusuo W. T. | Wang 的干燥块茎。</div>
+  <div class="note"><span class="note-num">P885</span>本品辛散温通，为活血行气止痛之良药，前 | 人谓其能“行血中之气滞，气中血滞，故能专 | 治一身上下诸痛”。为常用的止痛药，无论何</div>
+  <div class="note"><span class="note-num">P886</span>为姜科多年生草本植物温 | 郁金Curcuma wenyujin Y.H. | Chen et C. Ling、姜黄C .</div>
+  <div class="note"><span class="note-num">P888</span>1.气滞血瘀之胸、胁、腹痛。 | 2.痰热蒙闭心窍之证。 | 4.湿热黄疸、胆石症。</div>
+  <div class="note"><span class="note-num">P889</span>煎服，3～10g；研末服，2～5g。 | 临床生用居多，醋制后疏肝止痛力增强。 | 本品活血化瘀，对子宫有兴奋作用，故孕妇</div>
+  <div class="note"><span class="note-num">P892</span>2．跌打损伤、疮疡痈肿。 | 煎服，3～5g，宜炒去油用。外用适量，生 | 胃弱者慎用；孕妇及无瘀滞者忌用。</div>
+  <div class="note"><span class="note-num">P893</span>[乳香与没药功效鉴别] | ┌─→辛散温通，善于活血伸筋，并能行气 | ├共同点：均能活血止痛，消肿生肌</div>
+  <div class="note"><span class="note-num">P895</span>• 凡以调畅血脉，通经止痛为主要功效的药物，称 | • 多辛散苦泄，主归肝经血分，具有活血散瘀之功 | ，尤善通畅血脉而调经水。</div>
+  <div class="note"><span class="note-num">P896</span>为唇形科多年生草本植物丹参Salvia | miltiorrhiza Bge.的干燥根与根皮。</div>
+  <div class="note"><span class="note-num">P899</span>酒炙后能增强活血祛瘀调经之力。 | 不宜与藜芦配伍(十八反)。</div>
+  <div class="note"><span class="note-num">P900</span>益母草Leonurus | heterophyllus | Sweet 的干燥地上</div>
+  <div class="note"><span class="note-num">P902</span>1．血滞经闭、痛经、经行不畅、产后恶露不尽 | 【用法用量】煎服，9～30g；或熬膏，入丸剂。 | 外用适量捣敷或煎汤外洗。</div>
+  <div class="note"><span class="note-num">P903</span>Prunus persica (L.) | Batsch或山桃P. | davidiana (Carr.) Fra</div>
+  <div class="note"><span class="note-num">P905</span>3．咳嗽气喘兼见肠燥便秘者。 | 【用法用量】煎服，5～10g，捣碎用；桃仁霜 | 【使用注意】孕妇忌用。便溏者慎用。本品有</div>
+  <div class="note"><span class="note-num">P908</span>1. 血滞经闭、痛经、产后瘀滞腹痛。 | 2. 癥瘕积聚，心腹瘀痛、跌打损伤及</div>
+  <div class="note"><span class="note-num">P909</span>煎服，3～10g。外用适量。 | 孕妇忌用。有出血倾向者慎用。</div>
+  <div class="note"><span class="note-num">P910</span>为苋科多年生草本植物牛膝Achyranthes bidentata | Bl.干燥根。生用或酒炙用。</div>
+  <div class="note"><span class="note-num">P912</span>1．血滞经闭、痛经、产后腹痛及跌 | 3．肝阳上亢证，胃火上炎证及气火上</div>
+  <div class="note"><span class="note-num">P913</span>煎服，5～12g。活血祛瘀、利水通淋、 | 引火（血）下行宜生用；补肝肾、强筋骨 | 以盐炙，酒炙增强活血作用。</div>
+  <div class="note"><span class="note-num">P915</span>1、含义：凡以活血疗伤，治疗伤科疾患为主的药物 | 2、药性：味多辛、苦、咸，主归肝、肾经，功善活 | 血化瘀，消肿止痛，续筋接骨，止血生肌敛疮。</div>
+  <div class="note"><span class="note-num">P916</span>为蓼科多年生草本植物虎杖Polygonum | cuspidatum Sieb. et. Zucc.的干燥根茎和根。 | 我国大部分地区均产。主产于江苏、江西、山东</div>
+  <div class="note"><span class="note-num">P919</span>1、湿热黄疸、淋浊、带下 | +木通、车前子（清热利尿通淋） | 2、水火烫伤、痈肿疮毒、虫蛇咬伤</div>
+  <div class="note"><span class="note-num">P920</span>+川芎、红花（活血通经） | +莪术、三棱（活血消癥） | +乳香、没药（活血消肿）</div>
+  <div class="note"><span class="note-num">P922</span>土鳖虫（蟅虫）《神农本草经》 | Eupolyphaga sinensis | Walker.和冀地鳖</div>
+  <div class="note"><span class="note-num">P924</span>1. 跌打损伤，筋伤骨折，瘀肿疼痛。 | 2. 血瘀经闭，产后瘀滞腹痛，癥瘕积聚痞块 | 【用法用量】煎服，3～10g；研末服，1～</div>
+  <div class="note"><span class="note-num">P926</span>一、含义：凡药性峻猛，以破血逐瘀为主要功 | 效的药物称破血逐瘀药。 | 1、味多辛苦，虫类药居多，兼有咸味，</div>
+  <div class="note"><span class="note-num">P927</span>4、配伍：应用本类药物时，常配伍行气 | 药以加强其破血消癥之效；或配伍攻下 | 药以增强其攻逐瘀血之力。</div>
+  <div class="note"><span class="note-num">P928</span>Curcuma phaeocaulis Val.、广 | 西莪术C. kwangsiensis S．G． | Lee et C．F．Liang或温郁金C.</div>
+  <div class="note"><span class="note-num">P930</span>1．气滞血瘀所致癥瘕积聚、经闭及心腹瘀 | 【用法用量】煎服，6～9g。醋制后可加 | 强祛瘀止痛作用。生用行气消积力强。</div>
+</div>
+<div class="chapter" id="第17章-化痰药">
+  <h2>第17章 化痰药</h2>
+  <div class="note"><span class="note-num">P932</span>掌握：1.化痰药（燥湿化痰药、清化热痰药）的功效、 | 主治、性能、配伍及使用注意。 | 2.相似药物功效、应用的异同点。</div>
+  <div class="note"><span class="note-num">P933</span>掌握：半夏、川贝母、浙贝母、瓜蒌、桔梗的分类、 | 药性特点、功效、主治、配伍及某些特 | 殊用法；熟悉某些特殊炮制的意义，用量、</div>
+  <div class="note"><span class="note-num">P934</span>熟悉：天南星、旋覆花、竹茹分类、功效和 | 适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P935</span>了解：白附子、芥子、白前、竹沥、天竺黄、 | 前胡、蛤壳、海藻、昆布的分类、功效。</div>
+  <div class="note"><span class="note-num">P936</span>凡以化痰或祛痰为主要功效，主要用以治疗 | 痰证的药物，称为化痰药。 | 药性温燥------主治寒痰、湿痰---燥湿化痰药</div>
+  <div class="note"><span class="note-num">P937</span>二、化痰药的功效主治： | 化痰药均具有化痰功效------主治痰证 | 痰证：痰阻于肺以及病机上与</div>
+  <div class="note"><span class="note-num">P939</span>以其化痰之功------兼能止咳、平喘- | -----尤其宜于治疗痰湿壅肺之咳嗽、喘息； | 部分温化寒痰药兼有外用消肿止痛功</div>
+  <div class="note"><span class="note-num">P940</span>3．主要功效术语的含义： | 化痰：是指祛除或消散痰浊，以缓解或消除痰证 | 祛痰：是指祛除阻于肺窍之痰，以减轻或消除痰</div>
+  <div class="note"><span class="note-num">P941</span>药性：温化寒痰药---药性偏温 | 清化热痰药---药性偏寒 | 药味：药物的某些作用＋实际滋味</div>
+  <div class="note"><span class="note-num">P942</span>归经：“肺为贮痰之器”，“脾为生 | 痰之源”，故本章药物主归肺、脾二经；部 | 分药物因可主治心、肝之证，则可兼归以上</div>
+  <div class="note"><span class="note-num">P943</span>配伍原则：首先应分清痰证之不同而针对 | 性地选择用药，其次还应根据成痰之因，审因论 | “脾为生痰之源”，脾虚不能运化水湿</div>
+  <div class="note"><span class="note-num">P944</span>火热与痰互结所致热痰诸证，当配伍清热泻火药； | 或痰阻肺窍易发咳喘，而咳喘每多夹痰，宜与止咳 | 阴虚肺燥之人，宜配伍养阴润肺之品；</div>
+  <div class="note"><span class="note-num">P945</span>1．因证选药：依痰证之寒热不同而选择适宜 | 寒痰证------宜选用温化寒痰药； | 热痰证------宜选用清热化痰药。</div>
+  <div class="note"><span class="note-num">P947</span>寒性收引凝滞，湿邪重浊黏腻，温化寒痰药能 | 化解或降泄黏腻、凝滞，故药味多辛、苦。</div>
+  <div class="note"><span class="note-num">P949</span>为天南星科多年生草本植物半夏Pinellia | ternata (Thunb.) Breit.的干燥块茎。主产于四川、湖 | 北、江苏等地。除去外皮及须根，晒干，为生半夏。</div>
+  <div class="note"><span class="note-num">P951</span>1、用于湿痰、寒痰证。 | 本品味辛----能化、能散性温而燥---能温、能燥 | 故善燥湿而化痰浊，为燥湿化痰之要药，</div>
+  <div class="note"><span class="note-num">P952</span>半夏具有良好的止呕之效，为止呕要药。 | 适当配伍可用于各种呕吐病证 | 又因其性温燥，入胃经而能温散寒邪，</div>
+  <div class="note"><span class="note-num">P953</span>3、用于心下痞，结胸，梅核气 | 心下痞------寒热互结于心下， | 结胸------水（痰）热互结于胸中，</div>
+  <div class="note"><span class="note-num">P954</span>4、用于瘿瘤痰核，痈疽肿毒等。 | 本品外用能攻毒消肿止痛</div>
+  <div class="note"><span class="note-num">P955</span>内服宜炮制后用。制半夏有姜半夏 | 、法半夏之分，其中姜半夏长于止呕；法 | 不宜与乌头配伍(十八反)。</div>
+  <div class="note"><span class="note-num">P957</span>为天南星科多年生草本植物天南星Arisaema | erubescens (Wall.) Schott、异叶天南星Arisaema. | heterophyllum Bl. 或东北天南星Arisaema. amurense</div>
+  <div class="note"><span class="note-num">P959</span>1、用于湿痰、寒痰证。 | 天南星功似半夏，而祛痰、止咳之力稍逊于 | 半夏。而辛燥毒烈之性强于半夏，故治疗湿痰、</div>
+  <div class="note"><span class="note-num">P960</span>制南星煎服，3～9g。 | 生品多外用，以醋或酒调敷患处。 | 阴虚燥痰咳嗽及孕妇忌用。</div>
+  <div class="note"><span class="note-num">P962</span>为菊科多年生草本植物旋覆花Inula | japonicaThunb.或欧亚旋覆花I. britannica | L.的干燥头状花序。生用或蜜炙用。</div>
+  <div class="note"><span class="note-num">P964</span>1、咳喘痰多，痰饮蓄结，胸膈痞满。 | 本品苦降辛开，化痰下气。能降气化痰而平 | 喘咳，化痰消痞利水而除痞满。常用之治疗痰饮</div>
+  <div class="note"><span class="note-num">P965</span>煎服，3～9g；布包煎。 | 刺激咽喉作痒而致呛咳、</div>
+  <div class="note"><span class="note-num">P969</span>为桔梗科多年生草本植物桔梗Platycodon | grandiflorum (Jaoq.) A. DC. 的干燥根。切片</div>
+  <div class="note"><span class="note-num">P971</span>1、用于咳嗽痰多之证。 | 本品又能开宣肺气---畅利胸膈 | 具有良好的祛痰和止咳之效</div>
+  <div class="note"><span class="note-num">P972</span>而开音之效，若外感风热之 | 咽痛、失音，可与牛蒡子、 | 蝉蜕等疏散风热利咽之品同</div>
+  <div class="note"><span class="note-num">P973</span>本品既能祛痰，又可解毒排脓。肺痈咳吐脓 | 血，痰黄腥臭，发热胸痛者，常须与鱼腥草、黄 | 芩、薏苡仁等清热解毒、泻火排脓之品配伍以增</div>
+  <div class="note"><span class="note-num">P975</span>为葫芦科多年生草质藤本植物栝楼 | Trichosanthes kirilowii Maxim. 或双边栝楼 | Trichosanthes rosthornii Harms 的干燥成熟果实。</div>
+  <div class="note"><span class="note-num">P977</span>1、用于热痰咳喘，燥热痰咳之证。 | 故可用治热痰阻肺，肺气上逆之咳喘痰稠，胸膈 | 满闷、大便不畅者；亦可用治燥热痰咳。</div>
+  <div class="note"><span class="note-num">P978</span>2、用于胸痹，痰热互结之结胸证。 | 本品既能清肺热、化痰浊，瓜萎壳尚可畅 | 利胸中气机而有宽胸散结的作用。故瓜蒌可通胸</div>
+  <div class="note"><span class="note-num">P979</span>瓜蒌仁富含较多油脂而有润肠通便作 | 用，常与郁李仁、火麻仁等润肠通便药配 | 此外，本品还有消痈散结之效，常配</div>
+  <div class="note"><span class="note-num">P980</span>本品甘寒滑利，故脾虚便溏，湿痰、 | 不宜与乌头配伍(十八反)。</div>
+  <div class="note"><span class="note-num">P982</span>为百合科多年生草本植物川贝母Fritillaria | cirrhosa D. Don、暗紫贝母F. unibracteata Hsiao et | K.C. Hsia、甘肃贝母F. przewalskii Maxim. 或梭砂贝</div>
+  <div class="note"><span class="note-num">P985</span>1、用于阴虚久咳，肺热燥咳等。 | 常与沙参、麦冬、知母等养阴润肺药 | 或与天花粉、瓜蒌等清肺润燥化痰之品配伍。</div>
+  <div class="note"><span class="note-num">P986</span>2、用于瘰疬，瘿瘤及乳痈，肺痈等。 | 本品性寒，既能清热，又兼有消痰以 | 散结消肿之功。故亦常用于治疗痰火郁结所致</div>
+  <div class="note"><span class="note-num">P987</span>研末冲服，1～2g/次。 | 不宜与乌头配伍(十八反)。 | 注：“十八反”将贝母、半夏、瓜</div>
+  <div class="note"><span class="note-num">P989</span>为百合科多年生草本植物浙贝母 | Fritillaria thunbergii Miq. 的干燥鳞茎。原 | 产浙江象山县，故称“象贝”。生用。</div>
+  <div class="note"><span class="note-num">P991</span>本品功效虽与川贝母类似，但因 | 其药性苦寒较重而无甘润之性，故长于开 | 泄而清化热痰，主要表现为清热祛痰止咳</div>
+  <div class="note"><span class="note-num">P992</span>2、用于瘰疬，瘿瘤及疮痈，肺痈等。 | 浙贝母在清热消痰、散结消肿方面 | 力量更胜于川贝母，故治瘰疬、瘿瘤、疮痈</div>
+  <div class="note"><span class="note-num">P994</span>二者都为常用的清热化痰药，皆药性 | 寒凉，均能清热润燥化痰，同可用治 | 热痰咳嗽、痰黄质稠，燥痰咳嗽、干咳</div>
+  <div class="note"><span class="note-num">P996</span>【来源】为禾本科乔木或灌木植物青杆竹Bambusa | tuldoides Munro、大头典竹Sinocalamus beecheyanus | (Munro) McClure var. pubescens P.F.Li 或淡竹</div>
+  <div class="note"><span class="note-num">P998</span>1、用于肺热痰壅之咳嗽。 | 本品药性偏寒，且清中有润，善于入肺经清 | 化热痰而之痰热咳嗽。故可用治热痰阻肺，咳嗽</div>
+  <div class="note"><span class="note-num">P999</span>本品能清胃热，止呕吐。可用治多种胃热呕 | 吐。治胃热呕吐脘闷，常与黄连、半夏等清胃热 | ，降逆止呕药物配伍。若胃虚有热之呕吐者，宜</div>
+  <div class="note"><span class="note-num">P1007</span>若久病体虚，肺阴亏耗者 | ，以干咳、声哑、消瘦乏力、 | 潮热盗汗等为特征；肺肾气虚</div>
+  <div class="note"><span class="note-num">P1008</span>有的止咳平喘药兼有化痰之功---又常用于 | 治疗痰湿壅肺所致之咳嗽、喘息。 | 止咳：是指药物具有缓解或制止咳嗽病证</div>
+</div>
+<div class="chapter" id="第18章-止咳平喘药">
+  <h2>第18章 止咳平喘药</h2>
+  <div class="note"><span class="note-num">P50</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P114</span>金银花与连翘均为清热解毒药 | 麻黄为解表药，杏仁为止咳平喘药</div>
+  <div class="note"><span class="note-num">P115</span>相畏：一种药物的毒害效应被另一种药削弱或 | 相杀：两药合用，一药能削弱或消除另一药的</div>
+  <div class="note"><span class="note-num">P116</span>相恶：一药或两药某方面或某几方面的治疗效 | 应削弱、甚至丧失的配伍关系</div>
+  <div class="note"><span class="note-num">P118</span>六个配伍方面的内容，可以归纳为四种配伍原则。 | 一、增强原有疗效的应充分利用； | 二、减轻或消除毒性或副作用的也要尽量利用；</div>
+  <div class="note"><span class="note-num">P139</span>解表药章概述（第五章） | 2、主要兼有功效主治： | 止痒、通鼻窍---风邪郁闭之瘙痒、鼻塞不通；</div>
+  <div class="note"><span class="note-num">P142</span>解表药章概述（第五章） | 四、解表药的配伍应用： | 根据兼有邪气的偏盛配伍：</div>
+  <div class="note"><span class="note-num">P145</span>多味辛性温，辛以发散，温可祛寒， | 1、发散肌表风寒为主要功效---外感风寒表证。 | 2、分别兼有止咳、平喘功效---咳喘；</div>
+  <div class="note"><span class="note-num">P147</span>为麻黄科小灌木植物中麻黄Ephedra intermedia | Schrenk et C.A. Mey.、草麻黄Ephedra sinica Stapf | 、木贼麻黄Ephedra equisetina Bunge的干燥草质茎。</div>
+  <div class="note"><span class="note-num">P152</span>本品生用发汗解表力强，宜用于外有风寒无 | 汗之证；蜜炙麻黄长于平喘，宜用于喘咳证； | 麻黄绒作用较为和缓，宜用于老人、小儿及体弱</div>
+  <div class="note"><span class="note-num">P155</span>为樟科乔木植物肉桂Cinnamomum cassia Presl 的 | 嫩枝。3～7月割下嫩枝。切片或切段，阴干。生用。</div>
+  <div class="note"><span class="note-num">P160</span>煎服，3～10g。外用适量。 | 本品易助热，伤阴，动血。温热病，阴虚火 | 旺、血热妄行者忌用；孕妇慎用。</div>
+  <div class="note"><span class="note-num">P161</span>二者都是常用的辛温解表药，均味辛性温、 | 归肺膀胱经，皆能发汗解表，同可用治外感 | 风寒，恶寒、发热、头身疼痛、无汗、脉浮</div>
+  <div class="note"><span class="note-num">P163</span>为唇形科一年生草本植物紫苏Perilla frutescens | (L.) Britt.的叶（或嫩枝）。叶称紫苏叶(或苏叶)，茎 | 称紫苏梗(或苏梗)。切段。生用。</div>
+  <div class="note"><span class="note-num">P167</span>本品归脾胃经，能行气以宽中除胀，和胃止呕 | ，并具有一定的理气安胎之效。本品行气之力， | 尚可用于七情郁结、痰凝气滞所致梅核气。</div>
+  <div class="note"><span class="note-num">P170</span>为姜科多年生草本植物姜Zingiber officinale | Rosc.的新鲜根茎。切片生用、煨用或捣汁用。</div>
+  <div class="note"><span class="note-num">P175</span>此外，生姜对生半夏、生南星等药物之毒，以 | 及鱼蟹等食物中毒，均有一定的解毒作用。可以 | 用姜汤或姜汁灌服；以姜汁滴鼻，亦可用于急救</div>
+  <div class="note"><span class="note-num">P176</span>煎服，3～10g，急救昏厥捣汁服，用量可至10 | ～20g。生姜汁长于止呕和急救昏厥，宜用于呕吐 | 重证及昏厥者，冲服或鼻饲，每次3～10滴。煨姜</div>
+  <div class="note"><span class="note-num">P177</span>[生姜与紫苏功效鉴别] | 均味辛性温，归肺、脾经，皆能发 | 散风寒、解鱼蟹毒，同可用治外感</div>
+  <div class="note"><span class="note-num">P179</span>为唇形科一年生草本植物荆芥Schizonepeta | tenuifolia Briq.的地上部分。生用或炒炭用。</div>
+  <div class="note"><span class="note-num">P183</span>荆芥炒炭，其性味已由辛温而变为味涩性平 | 之品，并主归肝经，可以用于吐血、衄血、便血 | 、崩漏等失血证，但宜辨别证型的寒热虚实，作</div>
+  <div class="note"><span class="note-num">P184</span>4、常用于风邪上扰清窍所致的头昏头痛、目赤 | 本品善祛上焦风邪，对于风邪上扰清窍所致 | 的以上诸症，本品的祛风之功，还有良好的清爽</div>
+  <div class="note"><span class="note-num">P185</span>①煎服，5～10g，不宜久煎。 | ②祛风解表透疹消疮宜生用；</div>
+  <div class="note"><span class="note-num">P187</span>为伞形科多年生草本植物防风Saposhnikovia | divaricata (Turez.) Schischk.的根。切片，生用或 | Saposhnikovia</div>
+  <div class="note"><span class="note-num">P190</span>本品具有祛风除湿止痒之功，可用于多种皮 | 肤疾病，其中尤以治疗风邪郁闭肌表所致皮肤瘙 | 本品长于祛风、胜湿止痛，治风湿痹证，宜</div>
+  <div class="note"><span class="note-num">P193</span>为伞形科多年生草本植物羌活Notopterygium incisum | Ting ex H.T. Chang及宽叶羌活N.forbesii Boiss.的干 | 燥根茎和根。切片。生用。</div>
+  <div class="note"><span class="note-num">P195</span>常会配伍解表散寒、除湿止痛药 | 1、风寒表证，项后头痛</div>
+  <div class="note"><span class="note-num">P197</span>【用法用量】煎服，3～10g。 | 本品辛香温燥之性较烈，故阴血亏虚者应慎 | 用量过多，易致呕吐，脾胃虚弱者不宜服。</div>
+  <div class="note"><span class="note-num">P199</span>为马兜铃科植物北细辛Asarum heterotroidees Fr. | var. mandshuricum (Maxim.) kitag、汉城细辛Asarum | sieboldii Miq. var. seoulense Nakai或华细辛</div>
+  <div class="note"><span class="note-num">P202</span>2、头痛、牙痛、风湿痹痛 | 风寒性头痛、牙痛及痹痛 | 3、鼻塞不通，鼻渊头痛</div>
+  <div class="note"><span class="note-num">P204</span>煎服，1～3g（细辛不过钱）； | 散剂每次服0.5～1g。 | 阴虚阳亢头痛，肺燥伤阴干咳者忌用。</div>
+  <div class="note"><span class="note-num">P206</span>为伞形科多年生草本植物白芷Angelica dahurica (Fisch. | ex Hoffm.) Benth. et Hook.f.或杭白芷A.dahuriea (Fisch. | ex Hoffm.) Benth.et Hook.f.var.formosana (Boiss) Shan et</div>
+  <div class="note"><span class="note-num">P208</span>2、头痛、牙痛、痹痛等疼痛证。 | 前额、眉棱骨间痛及牙龈肿痛</div>
+  <div class="note"><span class="note-num">P210</span>煎服，3～10g。外用适量。 | 本品辛香温燥，阴虚血热者忌服。</div>
+  <div class="note"><span class="note-num">P212</span>为唇形科植物石香薷Mosla chinensis Maxim. 及 | 江香薷Mosla chinensis Maxim.cv.jiangxiangru的干 | 燥地上部分。切段，生用。</div>
+  <div class="note"><span class="note-num">P215</span>为伞形科多年生草本植物藁本Ligusticum sinense | Oliv和辽藁本Ligusticum jeholense Nakai et Kitag.</div>
+  <div class="note"><span class="note-num">P216</span>辛，温。归膀胱、肝经。 | 发散风寒，祛风胜湿，止痛。 | 1.用于风寒表证、巅顶头痛。</div>
+  <div class="note"><span class="note-num">P218</span>为菊科植物苍耳Xanthium sibiricum Patr. | 的带总苞的干燥成熟果实。炒去硬刺用。</div>
+  <div class="note"><span class="note-num">P221</span>为木兰科植物望春花Magnolia biondii Pamp. | 、玉兰Magnolia denudata Desr.或武当玉兰 | Magnolia sprengeri Pamp.的干燥花蕾。生用。</div>
+  <div class="note"><span class="note-num">P224</span>以发散风热为主要功效，常用以治疗风热表 | 证或温热病卫分证的药物，称为发散风热药，又 | 多味辛而多苦，性偏于寒凉，辛以祛风，苦</div>
+  <div class="note"><span class="note-num">P225</span>1、以发散风热为主要功效------外感风 | 热表证及温热病初起邪在卫分证。 | 2、多兼有利咽、清头目、止痒等功效---</div>
+  <div class="note"><span class="note-num">P227</span>为唇形科植物薄荷Mentha haplocalyx | Briq.的干燥地上部分。切段，生用。</div>
+  <div class="note"><span class="note-num">P231</span>2、风热头痛，目赤多泪，咽喉肿痛 | 3、麻疹不透，皮肤瘙痒</div>
+  <div class="note"><span class="note-num">P232</span>4、肝郁气滞，胸闷胁痛。 | 本品略具疏肝行气之效，能疏解肝经郁滞，故 | 可配伍用于肝气郁滞、胁肋胀痛、月经不调诸证</div>
+  <div class="note"><span class="note-num">P234</span>为菊科植物牛蒡Arctium lappa L.的干燥成熟 | 果实。生用或炒用，用时捣碎。别名“大力子” | Arctium lappa</div>
+  <div class="note"><span class="note-num">P237</span>为蝉科昆虫黑蚱Cryptotympana pustulata | Fabr. icius的若虫羽化时脱落的皮壳。生用。</div>
+  <div class="note"><span class="note-num">P239</span>1、风热表证，温病卫分证初起，咽痛音哑 | 2、麻疹不透，皮肤瘙痒</div>
+  <div class="note"><span class="note-num">P241</span>煎服，3～6g，或单味研末冲服。 | 《名医别录》有“主妇人生子不下”的记载，</div>
+  <div class="note"><span class="note-num">P242</span>三药皆能疏散风热，均可用于外感风热或温病初起 | ，发热、微恶风寒、头痛、口渴、舌尖红、苔薄黄、脉浮 | 均能透疹，均能治疗麻疹初起，透发不畅；风疹瘙</div>
+  <div class="note"><span class="note-num">P244</span>为桑科植物桑Morus alba L.的干燥叶。生用 | 或蜜炙用。果实为桑葚。</div>
+  <div class="note"><span class="note-num">P246</span>温病卫分证（邪在卫分为表邪） | 1、风热表证，温病卫分证 | 2、肺热咳嗽，燥热咳嗽</div>
+  <div class="note"><span class="note-num">P247</span>3、用于目赤涩痛及目暗不明。 | 本品性寒，归肝经，可以清肝明目。故诸般 | 目疾，无论风热上攻抑或肝火上炎，以及肝肾不</div>
+  <div class="note"><span class="note-num">P248</span>煎服，5～10g；或入丸散。 | 桑叶蜜制能增强润肺止咳的作用，故肺燥咳</div>
+  <div class="note"><span class="note-num">P250</span>为菊科(Compositae)植物菊Chrysanthemum | morifolium Ramat.的干燥头状花序。生用。</div>
+  <div class="note"><span class="note-num">P252</span>温病卫分证（邪在卫分为表邪） | 1、风热表证，温病卫分证 | 2、用于肝阳上亢与肝热上攻证。</div>
+  <div class="note"><span class="note-num">P253</span>3、用于目赤肿痛，目暗不明。 | 【用法用量】煎服，5～10g。疏散风热宜用黄 | 菊花（杭菊花）；平肝、清肝明目宜用白菊花（</div>
+  <div class="note"><span class="note-num">P254</span>【菊花与桑叶功效鉴别】 | 二者皆味甘苦、性寒凉，归肺肝经，都能疏 | 散风热，平抑肝阳，清肝明目，同可用治</div>
+  <div class="note"><span class="note-num">P256</span>为豆科植物野葛Pueraria lobata (Wild.)Ohwi的 | 切片，晒干。生用或煨用。</div>
+  <div class="note"><span class="note-num">P259</span>3、热病口渴，消渴证（≈糖尿病） | 葛根通过降低游离脂肪酸 | 及肿瘤坏死因子的表达来</div>
+  <div class="note"><span class="note-num">P260</span>本品能升阳止泻，鼓舞脾胃清阳之气上升而 | 收止泻之效，故尤其宜于治疗脾虚泄泻。 | 5、用于痢疾初起而有发热者。</div>
+  <div class="note"><span class="note-num">P261</span>煎服，10～15g。 | 解肌退热、透疹、生津宜生用；</div>
+  <div class="note"><span class="note-num">P263</span>为伞形科植物柴胡Bupleurum chinense DC.或狭叶柴 | 胡Bupleurum scorzonerifolium Willd. 的干燥根。按 | 性状不同，分别习称“北柴胡”和“南柴胡”。一般认</div>
+  <div class="note"><span class="note-num">P266</span>本品辛散气滞，善于疏散肝经气郁，历代常将 | 本品作为舒肝解郁的要药使用。常配伍香附（疏 | 肝理气）、白芍（敛阴柔肝止痛）</div>
+  <div class="note"><span class="note-num">P267</span>解表退热宜生用，且用量宜稍重； | 疏肝解郁宜醋炙，升阳可生用或酒炙，其用 | 阴虚阳亢，肝风内动，阴虚火旺及气机上逆者忌</div>
+  <div class="note"><span class="note-num">P269</span>为毛茛科植物大三叶升麻Cimicifuga heraceifolia | Kom.、兴安升麻C.dahurica(Turcz)Maxim.或升麻 | C.foetida L.的干燥根茎。切片，生用或蜜炙用。</div>
+  <div class="note"><span class="note-num">P270</span>大三叶升麻的药材称为关升麻； | 兴安升麻药材称为北升麻；</div>
+  <div class="note"><span class="note-num">P272</span>3、齿痛口疮，咽喉肿痛，温毒发斑 | 牙龈肿痛、口舌生疮、咽喉肿痛</div>
+  <div class="note"><span class="note-num">P273</span>本品升阳之效功似柴胡，能引脾胃清阳之气上 | 升，故多与柴胡相须为用以增强作用。本品的升 | 阳功效须与黄芪等补气健脾摄血药配伍，共收补</div>
+  <div class="note"><span class="note-num">P274</span>【柴胡、葛根与升麻功效鉴别】 | 三者皆为辛凉之品，都能发表、升阳，均可用治 | 风热感冒，发热、头痛等证。</div>
+  <div class="note"><span class="note-num">P276</span>为马鞭草科灌木植物单叶蔓荆Vitex trifolia | L.var. simplicifolia Cham.或蔓荆V. trifolia L. 的 | 果实。生用或微炒用。用时打碎。</div>
+  <div class="note"><span class="note-num">P1001</span>掌握：1.止咳平喘药的功效、主治、性能、配伍应 | 2.相似药物功效、应用的异同点。 | 了解：1.止咳平喘药的含义。</div>
+  <div class="note"><span class="note-num">P1002</span>掌握：苦杏仁、葶苈子的分类、药性特点、功效、 | 主治、配伍及某些特殊用法；熟悉某些特殊 | 炮制的意义，用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P1003</span>熟悉：紫苏子、百部、款冬花、桑白皮分类、 | 功效和适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P1005</span>以缓解或制止咳嗽和喘息为主要功效 | ，常用以治咳嗽、喘证的药物，分别称为 | 止咳平喘药有的偏于止咳，有的</div>
+  <div class="note"><span class="note-num">P1006</span>喘息证以呼吸困难、短促急迫，甚者张口抬肩 | 、鼻翼煽动等为主要表现，其病证有虚有实，可 | 因外邪、痰浊阻遏于肺，亦可由肺肾气虚所致。</div>
+  <div class="note"><span class="note-num">P1009</span>长于治疗肺寒咳喘的药物---药性偏温； | 长于治疗肺热咳喘的药物---药性偏寒凉； | 制止咳嗽、喘息---“苦能泄”---多苦味。</div>
+  <div class="note"><span class="note-num">P1010</span>1、审证求因，辨明虚实，随证选药，适当配伍 | 2、痰多易发咳嗽，根据刘河间“治咳嗽者，治 | 痰为先，治痰者，下气为上”的原则，故常与化</div>
+  <div class="note"><span class="note-num">P1011</span>肺寒咳喘------选温肺止咳平喘药 | 肺热咳喘------选清肺止咳平喘药 | 2、证候禁忌：本章药为治标之品，咳喘而邪气</div>
+  <div class="note"><span class="note-num">P1013</span>为蔷薇科乔木植物山杏Prunus armeniaca L.var. | ansu Maxim.、西伯利亚杏Prunus sibirica L.、东北杏 | Prunus mandshurica (Maxim.) Koehne或杏Prunus</div>
+  <div class="note"><span class="note-num">P1017</span>1、用于多种咳嗽气喘证。 | 特点：具有良好的止咳平喘之效，为治咳喘之 | 要药。无论外感内伤、寒热新久等诸种咳、喘</div>
+  <div class="note"><span class="note-num">P1018</span>本品含大量脂肪油---能润滑肠道而通便 | 本品味苦而能下气---如大肠经则能通便 | 治津枯肠燥便秘，常与柏子仁</div>
+  <div class="note"><span class="note-num">P1019</span>煎服，宜打碎，5～10g。生品入 | 本品有小毒，用量不宜过大；婴</div>
+  <div class="note"><span class="note-num">P1020</span>本品苦温润降为其主要药性特 | 点，主入肺经，苦降下行，长于降 | 肺气，止咳喘，兼可温散肺经风寒</div>
+  <div class="note"><span class="note-num">P1022</span>唇形科一年生草本植物紫苏Perilla frutescens | (L.) Britt.的成熟果实。晒干，生用。</div>
+  <div class="note"><span class="note-num">P1024</span>本品润降下气，辛温消痰，善降肺 | 气而除痰止咳喘，为消痰平喘咳之要 | 药，临床可用治外感、内伤所致痰壅</div>
+  <div class="note"><span class="note-num">P1025</span>本品虽性味辛温而质润不燥，善于止咳平喘 | ，又可化痰，故多用于痰浊阻肺而见咳喘气急者 | 本品亦富含油脂，能润滑肠道而通便，其润</div>
+  <div class="note"><span class="note-num">P1027</span>【苦杏仁与苏子功效鉴别】 | 的力量强，随证配伍，用 | 于多种咳嗽证，为止咳平</div>
+  <div class="note"><span class="note-num">P1029</span>为百部科多年生草本植物直立百部Stemona | sessilifolia (Miq.)、蔓生百部Stemona japonca | (BL.) Miq. 或对叶百部Stemona tuberosa Lour. 的</div>
+  <div class="note"><span class="note-num">P1032</span>本品甘平质润，苦降下行， | 功善润肺下气，止咳平喘，且 | 作用和缓，凡咳喘之证，不论</div>
+  <div class="note"><span class="note-num">P1033</span>1、用于新久咳嗽，百日咳，肺痨咳嗽 | 本品性平味甘而润，蜜炙后，甘润之性更强 | ，味苦又能降利肺气，故具有较好的止咳作用，</div>
+  <div class="note"><span class="note-num">P1034</span>2、用于蛲虫，阴道滴虫，头虱体虱。 | 本品外用有一定杀虫、灭虱作用，单用或配 | 伍外用可治蛲虫病、阴道滴虫、头虱、体虱、阴</div>
+  <div class="note"><span class="note-num">P1037</span>利，上能泻肺火、泻肺中 | 水气而平喘，下能通利水 | 道以消肿，适于热喘及皮</div>
+  <div class="note"><span class="note-num">P1038</span>1、用于肺热喘咳等证。 | 本品以清泻肺火兼泻肺中水气而定 | 嗽平喘为专长，凡肺中火热或水气为患所</div>
+  <div class="note"><span class="note-num">P1039</span>2、用于水肿，小便不利。 | 本品入肺与膀胱经，可在上泻降肺 | 气、在下通调水道，有利水消肿之功，</div>
+  <div class="note"><span class="note-num">P1042</span>为十字花科草本植物独行菜（葶苈）Lepidium | apetalum Willd. 或播娘蒿Descurainia sophia (L.) | Wibb ex prantl 的成熟种子。前者称“北葶苈”；后者</div>
+  <div class="note"><span class="note-num">P1043</span>本品辛散苦泄，沉降下行， | 主入肺经，上泻肺实以平喘， | 下通水道以消肿，苦寒降泻之</div>
+  <div class="note"><span class="note-num">P1044</span>1、用于痰浊阻肺之喘咳实证。 | 本品苦寒之性较强，苦降辛散，降泄之 | 力强于桑白皮，长于泻肺中水饮而消痰浊，</div>
+  <div class="note"><span class="note-num">P1045</span>2、用于胸水，腹水，全身浮肿、小便 | 本品能泻肺气之壅闭以利水消肿，其泻水之 | 力强于桑白皮。常用治胸、腹水见水肿、小便不</div>
+  <div class="note"><span class="note-num">P1046</span>桑白皮与葶苈子皆性寒，均能泻肺平喘，利水 | 消肿，都可用治咳嗽气喘之实证，以及水肿、 | 小便不利之实证，二者皆为泻肺行水之品。</div>
+  <div class="note"><span class="note-num">P1048</span>为菊科多年生草本植物紫菀Aster tataricus | L.f.的根及根茎。生用，或蜜炙用。 | 紫菀Aster tataricus</div>
+  <div class="note"><span class="note-num">P1050</span>用于多种咳嗽有痰之证。 | 本品炙用，甘润苦泄，有较好的祛痰 | 作用（长于祛痰而止咳喘），兼能止咳，</div>
+  <div class="note"><span class="note-num">P1052</span>为菊科多年生草本植物款冬Tussilago farfara L. | 的花蕾。生用，或蜜炙用。</div>
+  <div class="note"><span class="note-num">P1053</span>性与紫菀相似，但长于止 | 咳，且本品辛温，故尤宜</div>
+  <div class="note"><span class="note-num">P1054</span>本品蜜炙味甘而润，苦降肺之逆气， | 性温而不燥，功类紫菀而更长于止咳，又 | 兼能祛痰，应用亦广泛。临证常将本品与</div>
+  <div class="note"><span class="note-num">P1055</span>【百部、紫菀与款冬花功效鉴别】 | 无论是新久，外感内伤， | 用，以增强疗效。同时，</div>
+  <div class="note"><span class="note-num">P1058</span>为蔷薇科小乔木植物枇杷Eriobotrya | japonica (Thunb.) Lindl. 的叶。晒干，刮去毛</div>
+  <div class="note"><span class="note-num">P1060</span>本品既清肃肺热，又可化痰，并有较 | 好止咳平喘之效，适当配伍，可用于多种 | 咳喘证，尤宜于肺热咳喘而有痰之证。</div>
+  <div class="note"><span class="note-num">P1061</span>止呕宜生用或姜汁炙用。 | 亦可熬膏，或入丸散剂。</div>
+  <div class="note"><span class="note-num">P1063</span>为马兜铃科多年生藤本植物北马兜铃Aristolochia | contorta Bge.或马兜铃Aristolochia debilis Sieb. | et zucc.的成熟果实。晒干生用，或蜜炙用。</div>
+  <div class="note"><span class="note-num">P1065</span>热。长于清肺热，降肺气 | 而化痰止咳，兼如大肠经 | 而有清泄大肠热邪的作用。</div>
+  <div class="note"><span class="note-num">P1066</span>本品善清泄肺热，长于清肺肃降肺气而 | 平喘、止咳，兼能祛痰，其祛痰之力相对较 | 弱，较宜于肺热喘咳有痰者。</div>
+  <div class="note"><span class="note-num">P1067</span>煎服，3～9g。多蜜炙用。（注：马兜 | 铃蜜炙后，能缓解其苦寒之性，可降低致呕 | 吐副作用，并能增强润肺止咳作用。故临床</div>
+  <div class="note"><span class="note-num">P1070</span>为银杏科乔木植物银杏Ginkgo biloba L.的 | 成熟种子。生用或炒用。</div>
+  <div class="note"><span class="note-num">P1072</span>1、用于哮喘、咳嗽等证。 | 本品有一定祛痰作用，又可止咳平喘， | 并略兼收敛之性，且药性较为平和，故无论</div>
+  <div class="note"><span class="note-num">P1073</span>3、遗精，尿频，遗尿等。 | 本品能固精关，缩小便，既可单用亦可 | 配伍用治肾气不固所致之梦遗滑精，或小便</div>
+</div>
+<div class="chapter" id="第19章-安神药">
+  <h2>第19章 安神药</h2>
+  <div class="note"><span class="note-num">P60</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P61</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P63</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P1075</span>掌握：1.安神药在功效、主治、性能、配伍应用及使 | 2.相似药物功效、应用的异同点。 | 熟悉：1.安神功效的含义。</div>
+  <div class="note"><span class="note-num">P1076</span>掌握：酸枣仁、远志的分类、药性特点、功效、 | 主治、配伍及某些特殊用法；熟悉某些特殊 | 炮制的意义，用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P1079</span>以宁心安神为主要功效，常用以治心 | 神不宁之证的药物，称为安神药。 | --失眠多梦、健忘、</div>
+  <div class="note"><span class="note-num">P1080</span>安神药均有宁心安神功效---主治心 | 其中味甘质润者，以养心（阴血）安 | 神为共有功效，主要用于阴血不足，心失</div>
+  <div class="note"><span class="note-num">P1081</span>2、主要兼有功效与主治： | 有的药物又兼有平肝潜阳之功效 | 肝阳上亢之头昏目眩、头痛、面红耳赤、</div>
+  <div class="note"><span class="note-num">P1082</span>个别药因兼有清热之功，而标寒性。 | 甘味------滋阴补血、养心安神 | ┣━主归心、肝二经。</div>
+  <div class="note"><span class="note-num">P1083</span>4、升降浮沉：（惊者平之） | 本章药因其能宁心安神，故多具沉降之性。 | 5、毒性：本类药除朱砂外，余药在常用剂量内</div>
+  <div class="note"><span class="note-num">P1084</span>心阳虚者，须配温助心阳之品。 | 若心火亢盛或热邪内扰所致者，当与清心 | 痰浊内扰者，宜配伍化痰药；</div>
+  <div class="note"><span class="note-num">P1085</span>1、因证选药：按心神不宁证的不同的病因 | 病机选用适宜的安神药。 | 2、证侯禁忌：本章药中部分矿物药入丸散</div>
+  <div class="note"><span class="note-num">P1087</span>为三方晶系硫化物类矿物辰砂族辰砂，主含硫化汞 | （HgS）。研细水飞，晒干装瓶备用。</div>
+  <div class="note"><span class="note-num">P1090</span>本品有镇惊安神之功，为重镇安神要药。 | 尤宜用于心火亢盛、内扰神明之惊痫诸症。</div>
+  <div class="note"><span class="note-num">P1091</span>2、用于治疗疮疡肿毒，咽喉肿痛，口 | 本品性寒，有较强的清热解毒作用，无论内 | 服、外用均效。但因其有毒，内服并不长于解毒</div>
+  <div class="note"><span class="note-num">P1092</span>本品只宜入丸散或研末冲服，每次0.1～0.5g | 本品有毒，内服不可过量或持续服用，以防 | 入药只宜生用，切忌火煅，火煅则析出水银</div>
+  <div class="note"><span class="note-num">P1094</span>为等轴晶系氧化物类矿物尖晶石族磁铁矿Magnetite | 的矿石，主含四氧化三铁（Fe3O4）。其中吸铁能力强者 | ，习称“活磁石”或“灵磁石”，入药较佳。生用或醋</div>
+  <div class="note"><span class="note-num">P1097</span>1、用于心神不宁，癫狂等证。 | 本品适用于肾阴亏虚、肝阳亢旺---扰动心神；或 | 惊恐气乱、神不守舍所致之心神不宁，烦躁不安、惊悸</div>
+  <div class="note"><span class="note-num">P1098</span>适用于肝阳上亢见头昏目眩、急躁易怒 | 并伴见心神不宁之心悸失眠者。</div>
+  <div class="note"><span class="note-num">P1099</span>3、用于耳聋，目暗不明。 | 特点：适用于治肝肾亏虚之耳鸣、耳聋，以及 | 肝肾亏虚所致之目暗不明，视物模糊者。</div>
+  <div class="note"><span class="note-num">P1100</span>煎服，9～30g，宜打碎先煎。 | 入丸散，每次1～3g。 | 镇惊安神、平肝潜阳宜生用；</div>
+  <div class="note"><span class="note-num">P1103</span>为古代多种大型哺乳动物，如三趾马、犀类、鹿类 | 、牛类、象类等的骨骼的化石。以吸湿力强，呈淡黄白 | 色、夹有蓝灰色及红棕色花纹、质脆、分层的“五花龙</div>
+  <div class="note"><span class="note-num">P1106</span>本品质重，入肝，有较强的平肝潜阳作用。 | 适用于肝阳上亢所致之眩晕、烦躁易怒等病症。 | 本品味涩能敛，煅用更增收敛固涩功效。凡</div>
+  <div class="note"><span class="note-num">P1107</span>煎服，15～30g，宜打碎先煎； | 入丸、散剂，每次1～3g。 | 收敛固涩多煅用，其他生用。</div>
+  <div class="note"><span class="note-num">P1108</span>【附药】------龙齿 | 『来源』为古代多种大型哺乳动物 | 如象类、犀牛类、三趾马等牙齿的</div>
+  <div class="note"><span class="note-num">P1110</span>为古代松科植物，如枫树、松树的树脂埋藏 | 于地下，经年久凝结转化而成的化石样物质。 | 其中与煤层伴生者称“煤珀”。研细粉用。</div>
+  <div class="note"><span class="note-num">P1113</span>本品有宁心安神之效，适用于心神所伤，神 | 不守舍之心神不宁、惊悸失眠、健忘等病症；亦 | 可治疗小儿惊风及癫痫发作者。</div>
+  <div class="note"><span class="note-num">P1114</span>本品既能利尿通淋，又具有化瘀作用，适用于淋 | 证、小便淋漓涩痛及癃闭小便不利兼有瘀滞之证 | 研末冲服，或入丸散，每次1.5～3g。不入煎剂</div>
+  <div class="note"><span class="note-num">P1116</span>〖来源〗为鼠李科落叶灌木或小乔木酸枣 | Ziziphus jujuba Mill. var. spinosa (Bunge) | Hu ex H. F.Chou. 的干燥成熟种子，生用或炒</div>
+  <div class="note"><span class="note-num">P1119</span>故适宜用于治疗体虚自汗、盗汗， | 每与五味子、山茱萸、黄芪等同用。</div>
+  <div class="note"><span class="note-num">P1120</span>研末吞服，每次1.5～2g。 | 本品炒用质脆易碎，便于煎出有</div>
+  <div class="note"><span class="note-num">P1122</span>植物远志Polygala | tenuifolia Willd.或 | 卵叶远志Polygala</div>
+  <div class="note"><span class="note-num">P1123</span>燥，长于交通心肾而安神， | 又能散郁消痰以开窍。故 | 心肾不交，痰阻心窍之证，</div>
+  <div class="note"><span class="note-num">P1124</span>特点：为交通心肾，安定神志之佳品。 | 宜用于心肾不交所致心神不宁、心悸怔忡、失 | 眠健忘等病证。常配伍补益心肾、宁兴安神药</div>
+  <div class="note"><span class="note-num">P1125</span>故宜用于治疗痰阻心窍所致之癫痫抽 | 搐及痰迷心窍癫狂发作、神志恍惚者。 | 常配伍息风止痉或开窍药</div>
+  <div class="note"><span class="note-num">P1126</span>应用特点------无论是寒热虚实之痰多 | 粘稠，咳吐不爽者，皆可配伍使用。</div>
+  <div class="note"><span class="note-num">P1127</span>4、用于气血壅滞所致之痈肿疮疽 | 苦泄┣疏通气血之壅滞━消痈散肿 | 可治一切痈疽，不问寒热虚实，单用研</div>
+  <div class="note"><span class="note-num">P1128</span>煎服，3～10g。外用适量。 | 过量可致恶心、呕吐。胃炎及消化性溃 | 《雷公炮制论》载：“凡使远志，先须</div>
+  <div class="note"><span class="note-num">P1130</span>Platycladus | orientalis（L.</div>
+  <div class="note"><span class="note-num">P1131</span>柏子仁甘平润养，主入心 | 经，以养心安神为其主要功 | 能，入大肠兼可润肠通便。</div>
+  <div class="note"><span class="note-num">P1132</span>柏子仁甘润---有养心安神之效 | （但其安神与滋养之力均不及酸枣仁） | 亦多用于阴血不足，心神失养以及心肾不交</div>
+  <div class="note"><span class="note-num">P1133</span>常与火麻仁、郁李仁等润下药配伍， | 治疗老年人、虚人肠燥便秘，如五仁丸。</div>
+  <div class="note"><span class="note-num">P1134</span>煎服，3～10g。便溏者宜用柏子 | 本品甘润多脂，易助湿滑肠，故 | 便溏及素体多痰者慎用。</div>
+  <div class="note"><span class="note-num">P1135</span>质润多脂，又能润肠通便，也常用治肠 | 酸枣仁、柏子仁均为常用的养心安神 | 药，善于养心安神，皆可用治心气虚</div>
+  <div class="note"><span class="note-num">P1137</span>为蓼科多年生蔓生草本植物何首乌Polygonum | multiflorum Thunb.的干燥藤茎。切段，生用。 | 何首乌Polygonum multiflorum</div>
+  <div class="note"><span class="note-num">P1139</span>本品有一定滋养作用，与酸枣仁、柏子仁类 | 似，能宁心安神，又可补阴血，均宜于阴血不足 | 所致之失眠、健忘等症。单用其力薄弱，常须配</div>
+  <div class="note"><span class="note-num">P1140</span>本品能入络祛风而收止痒之效，既可单用， | 也可配伍蛇床子、地肤子、防风等药以增效。 | 煎服，9～15g。外用适量。</div>
+  <div class="note"><span class="note-num">P1142</span>为豆科乔木植物合欢Albizia julibrissin | Durazz.干燥树皮。切段生用。</div>
+  <div class="note"><span class="note-num">P1143</span>心肝，功善疏肝郁、安心 | 神，最适于忧郁忿怒之烦 | 躁不眠，入血分又有活血</div>
+  <div class="note"><span class="note-num">P1144</span>1、用于忿怒忧郁，烦躁失眠。 | 特点：本品宜用于情志不遂、忿怒、忧伤、 | 郁闷所致烦躁不宁，失眠多梦等症。</div>
+  <div class="note"><span class="note-num">P1145</span>2、用于跌打骨折，血瘀肿痛。 | 本品入血分，有一定活血化瘀、消肿止痛 | 作用，通过与桃仁、红花、乳香、麝香等活血</div>
+  <div class="note"><span class="note-num">P1147</span>远志与合欢皮均为常用的养心安神药，皆可 | 用治心气虚、心血虚所致的惊悸怔忡、失眠 | 多梦、健忘等心神不宁的虚证。</div>
+</div>
+<div class="chapter" id="第20章-平肝潜阳药">
+  <h2>第20章 平肝潜阳药</h2>
+  <div class="note"><span class="note-num">P1149</span>掌握：1.平肝潜阳药的功效、主治、性能、配伍及使 | 2.相似药物功效、应用的异同点。 | 熟悉：1.平肝潜阳功效的含义。</div>
+  <div class="note"><span class="note-num">P1150</span>掌握：石决明、赭石的分类、药性特点、功效、主 | 治、配伍及某些特殊用法；熟悉某些特殊炮 | 制的意义，用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P1153</span>一、平肝潜阳药的含义： | 以平肝潜阳为主要功效，常用以治疗 | 肝阳上亢证的药物，称为平肝潜阳药。</div>
+  <div class="note"><span class="note-num">P1154</span>二、平肝潜阳药的功效与主治： | 1、共有功效主治：均具有平肝潜阳(或平抑肝阳)功效 | 2、主要兼有功效与主治：</div>
+  <div class="note"><span class="note-num">P1155</span>四、平肝潜阳药的性能特点： | 1、药性：大部分药性寒凉； | 2、药味：多具苦、咸味，</div>
+  <div class="note"><span class="note-num">P1156</span>六、平肝潜阳药的使用注意： | ①本类药大部分来源于动物的贝壳及 | 矿石类，具有寒凉质重的特点，内服易伤</div>
+  <div class="note"><span class="note-num">P1158</span>【来源】为鲍科动物杂色鲍(光底石决明)Haliotis diversicolor | Reeve、皱纹盘鲍(毛底石决明)Haliotis discus hannai Ino、羊 | 鲍Haliotis ovina Gmelin、澳洲鲍Haliotis ruber (Leach)、耳</div>
+  <div class="note"><span class="note-num">P1159</span>皱纹盘鲍(毛底石决明)Haliotis discus hannai Ino | 羊鲍Haliotis ovina Gmelin</div>
+  <div class="note"><span class="note-num">P1160</span>澳洲鲍Haliotis ruber 95mm | 耳鲍Haliotis asinina Linnaeus | 白鲍Haliotis laevigata (Donovar)</div>
+  <div class="note"><span class="note-num">P1162</span>本品生用长于平肝潜阳，又可清肝热，为平肝凉肝 | 之要药，兼之本品又能滋养肝阴，故可用于肝阳上亢兼 | 有肝热之头痛，眩晕，烦躁易怒，目赤等阳亢热盛之证</div>
+  <div class="note"><span class="note-num">P1164</span>【来源】为牡蛎科动物长牡蛎Ostrea gigas Thunberg | 、大连湾牡蛎Ostrea talienwhanensis Grosse 或近江 | 牡蛎Ostrea rivularis Gould 等的贝壳。主产于广东</div>
+  <div class="note"><span class="note-num">P1166</span>本品能平肝潜阳，并稍具益阴之功，与龙骨 | 相似且多同用，宜于治疗水不涵木，阴虚阳亢之 | 本品功能敛阴潜阳，故亦可用于热病日久灼</div>
+  <div class="note"><span class="note-num">P1167</span>3、用于痰核、瘰疬、瘿瘤、癥瘕积聚等。 | 本品有一定软坚散结作用，并常配伍用以治疗痰火 | 郁结所致瘰疬、瘿瘤、痰核及气滞血瘀所致癥瘕积聚。</div>
+  <div class="note"><span class="note-num">P1169</span>【来源】为三方晶系氧化物类矿物赤铁矿的矿 | 石。主产于山西、山东、河南等地。从矿床或 | 岩石中掘出，去泥土、杂石。打碎生用或醋淬</div>
+  <div class="note"><span class="note-num">P1171</span>本品既可平肝潜阳，又略兼清肝热之效。善治肝 | 阳上亢兼肝火亢盛之头晕目眩，头痛面赤，烦躁易怒 | 2、用于呕吐、呃逆，嗳气等证。</div>
+  <div class="note"><span class="note-num">P1172</span>4、用于多种血热出血证。 | 本品有一定的凉血止血之效，兼之本品镇可降气、 | 降火。故宜用于气火上逆，血热迫血妄行所致出血证。</div>
+  <div class="note"><span class="note-num">P1174</span>为蚌科动物三角帆蚌Hyriopsis cuningii (Lea) 和褶纹 | 冠蚌Cristaria plicata (Leach) 或珍珠贝科动物马氏珍珠 | 贝Pteria martensii (Dunker) 等贝类动物贝壳。生用或煅</div>
+  <div class="note"><span class="note-num">P1175</span>【性味归经】咸，寒。归肝、心经。 | 【功效】平肝潜阳，清肝明目，镇心安神， | 本品性能、平肝潜阳及清肝热功效均与石决</div>
+  <div class="note"><span class="note-num">P1176</span>3、用于心神不宁及癫狂，痫证等。 | 本品尚具镇心安神之效。适用于心神不宁证 | 4、此外，本品研细末外用，有燥湿敛疮之效，可</div>
+  <div class="note"><span class="note-num">P1177</span>【石决明与珍珠母功效鉴别】 | 二者均为贝壳类药物，皆味咸性寒，归肝经 | 。二者作用相似，都能平肝潜阳，清肝明目</div>
+  <div class="note"><span class="note-num">P1179</span>为蒺藜科一年生或多年生草本植物蒺藜 | Tribulus terrestris L.的干燥成熟果实。秋季 | 果实成熟时采收。打下果实，炒黄或盐炙用。</div>
+  <div class="note"><span class="note-num">P1180</span>辛、苦，微温。归肝经。 | 【用法用量】煎服，6～10g。 | 【使用注意】孕妇慎用。</div>
+</div>
+<div class="chapter" id="第21章-息风止痉药">
+  <h2>第21章 息风止痉药</h2>
+  <div class="note"><span class="note-num">P1182</span>掌握：1.息风止痉药的功效、主治、性能、配伍及使 | 2.相似药物功效、应用的异同点。 | 熟悉：1.息风止痉功效含义。</div>
+  <div class="note"><span class="note-num">P1183</span>掌握：牛黄、钩藤、天麻、全蝎的分类、 | 药性特点、功效、主治、配伍及某些特 | 殊用法；熟悉某些特殊炮制的意义，用量、</div>
+  <div class="note"><span class="note-num">P1184</span>熟悉：羚羊角、地龙、蜈蚣分类、功效和 | 适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P1186</span>凡以平息肝风，制止痉挛抽搐为主要 | 功效，常用以治疗肝风内动证的药物，称</div>
+  <div class="note"><span class="note-num">P1187</span>①功效------息风止痉 | ②主治------适用于肝风内动证。 | “诸暴强直，皆属于风”。</div>
+  <div class="note"><span class="note-num">P1188</span>①平肝潜阳----治肝阳上亢头晕目眩； | 清泻肝火----治肝火上攻之头痛目赤。 | ②兼有清热解毒---适宜火毒炽盛之疮毒咽肿、热毒发</div>
+  <div class="note"><span class="note-num">P1189</span>1．药性：肝风内动证---主要属于热盛动 | 风者多见，故息风止痉药的药性以寒凉者 | ①因可缓和肝脉拘急而多味甘者；</div>
+  <div class="note"><span class="note-num">P1190</span>3．归经：“诸风掉眩，皆属于肝”，故本 | 升动之肝风---病势上浮 | 息风止痉药---故其作用趋向于沉降。</div>
+  <div class="note"><span class="note-num">P1191</span>1．肝阳化风证：配伍平肝潜阳药； | 2．热极生风证：配伍清热泻火、解毒药 | 3．阴虚动风证：配伍滋阴药；</div>
+  <div class="note"><span class="note-num">P1192</span>本类药物具有性偏寒凉或性偏温燥之不 | ①若脾虚慢惊者，不宜用寒凉之品； | ②而阴虚血亏生风者，当忌温燥之品。</div>
+  <div class="note"><span class="note-num">P1194</span>【药物基原】为脊椎动物牛科赛加羚羊Saiga | tatarica Linnaeus的角。我国产于新疆、青海 | 等地。全年均可捕捉，以秋季捕者为佳，猎取</div>
+  <div class="note"><span class="note-num">P1196</span>羊┤        ├有良好的清肝热、息肝风作用 | 特点：为治疗肝风内动，惊痫抽搐之要药。最 | 宜于热极生风所致者，常与清热泻火、解毒等药</div>
+  <div class="note"><span class="note-num">P1197</span>3．肝火上炎，目赤头痛。 | 本品善清泻肝火而明目，故宜治疗肝火上炎 | 之头痛、头晕、目赤肿痛、羞明流泪等症。</div>
+  <div class="note"><span class="note-num">P1198</span>单煎2小时以上，取汁服。 | 磨汁或研粉服，每次0.3～0.6g。</div>
+  <div class="note"><span class="note-num">P1199</span>为牛科动物青羊Naemorhedus goral Hardwicke的角 | [性味归经]咸寒，归肝经。 | 治]用于肝阳上亢、头痛眩晕，肝火上炎</div>
+  <div class="note"><span class="note-num">P1201</span>【药物基原】为牛科动物黄牛Bos taurus domesticus | Gmelin. 或水牛Bubalus bubalis Linnaeas的胆囊结石 | (少数为胆管中结石)，称天然牛黄。我国西北、东北及</div>
+  <div class="note"><span class="note-num">P1203</span>牛黄┤          ├可清心、凉肝 | 用于温热病及小儿惊风之壮热神昏，惊</div>
+  <div class="note"><span class="note-num">P1204</span>┌性凉入心经─能清心热┐ | 本品┤                    ├┐ | └芳香苦开泄─化痰开窍┘</div>
+  <div class="note"><span class="note-num">P1205</span>入丸散，每次0.15～0.35g。 | 孕妇慎用，非实热证忌用。</div>
+  <div class="note"><span class="note-num">P1207</span>【药物基原】为茜草科常绿木质藤本植物钩藤Uncaria | rhynchophylla (Miq.)Jacks、大叶钩藤U.macrophylla | Wall. 毛钩藤U. hirsute Havil.、华钩藤U.sinensis</div>
+  <div class="note"><span class="note-num">P1209</span>钩藤甘而微寒，入肝经，有和缓的息风止痉作 | 用，为治疗肝风内动，惊痫抽搐之常用药，尤宜 | 于热极生风，四肢抽搐以及小儿高热惊风证。</div>
+  <div class="note"><span class="note-num">P1210</span>②入煎剂宜后下，其有效成分钩藤碱加 | 热后易被破坏，故不宜久煎，一般不超过</div>
+  <div class="note"><span class="note-num">P1212</span>为兰科多年生寄生草本植物天麻Gastrodia elata | Bl.的干燥块茎。主产于贵州、四川、云南等地。冬春 | 二季采挖，冬季茎枯时采挖者名“冬麻”，质量优良；</div>
+  <div class="note"><span class="note-num">P1214</span>1.用于多种肝风内动证。 | 本品有良好的息风止痉之效，且性味甘 | 平，作用平和不烈，故不论寒热虚实之惊</div>
+  <div class="note"><span class="note-num">P1215</span>3.用于中风瘫痪，风湿痹证。 | 天麻还有祛外风，通经络，止痛的作用 | 。故可配伍用于中风偏瘫、手足不遂、肢</div>
+  <div class="note"><span class="note-num">P1217</span>天麻---甘润不烈，作用平和，对于肝风内动，惊痫 | 抽搐，不论寒热虚实，皆可配伍应用。此外，本品 | 又能祛外风，通经络，也可用治风中经络，手足不</div>
+  <div class="note"><span class="note-num">P1219</span>为钳蝎科动物东亚钳蝎Buthus martensii Karsch | 的干燥虫体。主产于河南、山东、湖北、安徽、江苏 | 等地。野生蝎春末至秋初均可捕捉，清明至谷雨前后</div>
+  <div class="note"><span class="note-num">P1221</span>1．用于多种肝风内动证。 | 本品药性平，虽性燥而有毒，但具有较强的息 | 风止痉之效，故常与蜈蚣配伍用于各种原因所致</div>
+  <div class="note"><span class="note-num">P1222</span>3．用于风湿顽痹，顽固性偏正头痛，口眼喎斜等 | 本品尚有通经络及止痛之效。可治风寒湿痹， | 久治不愈，筋脉拘挛，甚则关节变形之顽痹，常</div>
+  <div class="note"><span class="note-num">P1223</span>煎服，3～6g；研末吞服，每次0.6～1g | 。外用适量。含盐多者当洗去其盐后入药 | 本品有毒，用量不宜过大。孕妇慎用。</div>
+  <div class="note"><span class="note-num">P1225</span>为蜈蚣科动物少棘巨蜈蚣Scolopendra | subspinipes mutilans L. Koch. 的干燥体。全 | 国各地均产。春夏二季捕捉，用竹片插入头尾绷</div>
+  <div class="note"><span class="note-num">P1227</span>蜈蚣辛温，性善走窜，通达内外，有比全蝎更强的 | 息内风及搜风通络作用，二者常相须为用。 | 2．用于疮疡肿毒瘰疬结核。</div>
+  <div class="note"><span class="note-num">P1228</span>煎服，1～3g。研末吞服，每次0.6～1g。外 | 本品有毒，用量不宜过大，孕妇忌服。</div>
+  <div class="note"><span class="note-num">P1230</span>为钜蚓科环节动物叁环毛蚓Pheretima aspergillum | ( E.Perrier)、通俗环毛蚓、威廉环毛蚓或栉盲环毛蚓 | 的干燥体。前一种主产广东、广西、福建等地，习称“</div>
+  <div class="note"><span class="note-num">P1232</span>1．用于热盛所致的肝风内动证。 | 本品具有良好的清热、息风止痉之效，尤宜 | 于热盛所致动风者，历代多以单用为主，亦常配</div>
+  <div class="note"><span class="note-num">P1233</span>③研末吞服，每次1～2g。 | 本品咸寒清热，质滑通利，性 | 擅走窜，既清肺、肝之热而平喘、</div>
+</div>
+<div class="chapter" id="第22章-开窍药">
+  <h2>第22章 开窍药</h2>
+  <div class="note"><span class="note-num">P759</span>以疏畅气机、消散气滞为主要功效，常用以 | 治疗气滞诸证的药物，称理气药，行气力强者，</div>
+  <div class="note"><span class="note-num">P1235</span>掌握：1.窍药的功效、主治、性能、配伍应用及使用 | 2.相似药物功效、应用的异同点。 | 熟悉：1.开窍醒神功效的含义。</div>
+  <div class="note"><span class="note-num">P1236</span>掌握：麝香的分类、药性特点、功效、主治、配伍 | 及某些特殊用法；熟悉某些特殊炮制的意义， | 用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P1237</span>熟悉：冰片、石菖蒲分类、功效和适应证、 | 某些特殊用法及使用注意。</div>
+</div>
+<div class="chapter" id="第23章-补虚药">
+  <h2>第23章 补虚药</h2>
+  <div class="note"><span class="note-num">P49</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P1240</span>掌握：1.补气、补血、补阴、补阳四类药物的性能特 | 点、功效、主治病证，补虚药相互配伍的方 | 2.相似药物功效、应用的异同点。</div>
+  <div class="note"><span class="note-num">P1241</span>掌握：人参、党参、黄芪、白术、甘草、鹿茸、 | 淫羊藿、杜仲、当归、熟地黄、白芍、 | 阿胶、北沙参、麦冬、龟甲的分类、药性特</div>
+  <div class="note"><span class="note-num">P1242</span>熟悉：西洋参、山药、巴戟天、骨碎补、补骨脂、 | 菟丝子、续断、何首乌、枸杞子、百合、 | 天冬、石斛、鳖甲分类、功效和适应证、</div>
+  <div class="note"><span class="note-num">P1243</span>了解：太子参、大枣、蜂蜜、肉苁蓉、益智、 | 沙苑子、蛤蚧、冬虫夏草、南沙参、 | 玉竹、黄精、墨旱莲、女贞子的分类、</div>
+  <div class="note"><span class="note-num">P1244</span>功效：以补虚扶弱，纠正人体气血阴 | 阳虚衰的病理偏向为主要功效， | 治疗病证：常用以治疗虚证的药物，</div>
+  <div class="note"><span class="note-num">P1246</span>A、共有功效：补虚药的共同功效为补虚扶弱， | 分别能纠正人体气血阴阳虚衰的病理偏向。 | 收涩作用------滑脱之证可达标本兼顾</div>
+  <div class="note"><span class="note-num">P1247</span>补阳药及大部分补气药、补血药可用 | 于治疗虚寒证，药性偏温； | 补阴药及部分补气、补血药适用于虚</div>
+  <div class="note"><span class="note-num">P1248</span>补气药------主归脾肺经； | 补阳药------主归肾经； | 补血药------主归心肝经；</div>
+  <div class="note"><span class="note-num">P1249</span>2．配伍使用两类或两类以上的补虚药； | 3．补虚药与祛邪药物配伍以扶正祛邪； | 4．与易伤正气的药物配伍应用以保护正</div>
+  <div class="note"><span class="note-num">P1251</span>[补虚药与其他章节药物配伍示例讲解] | ├补阳药尤其常与温里药同用； | ├补阴药尤其常与清热药同用。</div>
+  <div class="note"><span class="note-num">P1252</span>分别气血阴阳，辨明脏腑寒热； | 邪实而正不虚，防止不当补而误补； | 防止不正当的依赖补虚药强身健体。</div>
+  <div class="note"><span class="note-num">P1253</span>4．正确处理祛邪与扶正的关系 | 补虚药用于扶正祛邪，要分清主次，使祛邪而不伤正，补虚 | 5．补虚药如作汤剂宜久煎，多入丸、膏剂</div>
+  <div class="note"><span class="note-num">P1255</span>以补益脏气，纠正脏气虚衰的病理偏向 | 为主要功效，常用以治疗气虚证的药物， | 纠正脏气虚衰的病理偏向</div>
+  <div class="note"><span class="note-num">P1256</span>2．补气药主要功效术语的含义： | 补虚：即补虚扶弱以纠正人体气血阴阳虚衰的病 | 理偏向的治疗作用；又称补养、补益等。</div>
+  <div class="note"><span class="note-num">P1257</span>脾气虚。症见：食少，腹胀，便溏，体倦神疲， | 面色萎黄或晄白，消瘦或一身虚浮，甚或脏器下垂，血 | 失统摄，造血功能低下等。</div>
+  <div class="note"><span class="note-num">P1258</span>4．补气药的性能特点： | 性味：本类药的性味以甘温或甘平为 | 主。其中，能清火、燥湿者，可有苦味。</div>
+  <div class="note"><span class="note-num">P1259</span>5．补气药的应用配伍规律： | 使用本类药物治疗各种气虚证时，除应结合其 | 补脾气药脾虚证，＋消食药；＋除湿；＋</div>
+  <div class="note"><span class="note-num">P1260</span>5．补气药的应用配伍规律： | 补益肾气药肾虚尿频、遗尿、小便不禁证 | 肾虚遗精、滑精证，＋固精药同用；</div>
+  <div class="note"><span class="note-num">P1261</span>6．补气药的使用注意： | 本类药中部分味甘壅中，碍气助湿之 | 品，对湿盛中满者应慎用，必要时应辅</div>
+  <div class="note"><span class="note-num">P1263</span>为五加科植物人参Panax ginseng C.A.Mey. | [产地]主产于吉林、辽宁、 | 以吉林抚松县产量最大，</div>
+  <div class="note"><span class="note-num">P1269</span>人参味甘微苦，性平偏温，其 | 功重在大补正元之气，以壮生命之 | 本，进而固脱、益损、止渴、</div>
+  <div class="note"><span class="note-num">P1270</span>本品能大补元气，适用于因大汗、大吐、 | 大泻、大失血或大病、久病所致元气虚极欲脱 | ，气短神疲，脉微欲绝的重危证候，为拯危救</div>
+  <div class="note"><span class="note-num">P1271</span>3．气虚津伤口渴及消渴证。 | 本品既能补气，又能生津。 | 4．此外，本品还常与解表药、攻下药等祛邪</div>
+  <div class="note"><span class="note-num">P1272</span>挽救虚脱可用15～30g。 | 宜文火另煎分次兑服。 | 研末吞服，每次2，日服1～2次。</div>
+  <div class="note"><span class="note-num">P1274</span>Panax quinquefolia - American Ginseng | 为五加科多年生草本植物西洋参Panax | quinquefolium L.的干燥根。</div>
+  <div class="note"><span class="note-num">P1275</span>微苦而甘。以根条均匀、 | 质硬、体轻、表面横纹紧 | 密、断面淡黄白色者为佳</div>
+  <div class="note"><span class="note-num">P1278</span>本品甘润补气养阴，苦寒清热降火，善治气阴 | 两虚而实火内盛者及肺肾阴虚火旺者。</div>
+  <div class="note"><span class="note-num">P1279</span>本品亦能补益元气，有类似于人参的益 | 气固脱之功，但作用弱于人参； | 性味苦寒，兼能清火养阴生津。</div>
+  <div class="note"><span class="note-num">P1280</span>本品能补肺气，兼能养肺阴、清肺热； | 能补益心气，兼能养心阴； | 又能补肾气，兼能益肾阴；</div>
+  <div class="note"><span class="note-num">P1282</span>[人参与西洋参相鉴别] | 同属常用名贵中药，均为五加科多年生草本 | 植物的根，皆能补气生津，都可用治热伤气</div>
+  <div class="note"><span class="note-num">P1284</span>为桔梗科多年生草本植物党参Codonopsis | pilosula (Franch.) Nannf.、素花党参C.pilosula | Nannf. var. modesta (Nannf.) L.T.Shen 或川党参</div>
+  <div class="note"><span class="note-num">P1286</span>本品药性平和，不燥不腻，善补 | 脾肺之气而养血生津，为脾肺气虚 | 、血少、津伤常用之品。</div>
+  <div class="note"><span class="note-num">P1287</span>本品有类似人参而药力弱于人参的补脾益 | 性味甘平，主归脾肺二经，以补脾肺之气 | 用于中气不足的体虚倦怠，食少便溏等症，常与补气健脾</div>
+  <div class="note"><span class="note-num">P1288</span>本品对热伤气津之气短口渴，亦有类似于 | 人参而弱于人参的补气生津作用，适用于气津两 | 本品既能补气，又能补血，常用于气虚不</div>
+  <div class="note"><span class="note-num">P1289</span>此外，本品亦常与解表药、攻下药等祛邪 | 药配伍，用于气虚外感或里实热结而气血亏虚 | 等邪实正虚之证，以扶正祛邪，使攻邪而正气</div>
+  <div class="note"><span class="note-num">P1290</span>【人参与党参鉴别用药】 | 均具有补脾气、补肺气、益气生津、益气生血 | 及扶正祛邪之功，均可用于脾气虚、肺气虚、</div>
+  <div class="note"><span class="note-num">P1292</span>蒙古黄芪Astragalus | membranaceus (Fisch.) | Bge. var. mongholicus</div>
+  <div class="note"><span class="note-num">P1294</span>黄芪甘温，主补脾肺之气而升举中阳，脾肺 | 气充，则肌表固密、水湿得运、生肌托疮，且气 | 旺又利于生血、统血、行血。脾肺气虚及中气下</div>
+  <div class="note"><span class="note-num">P1295</span>本品甘温，善入脾胃，有较好的补益脾气作 | 因其兼能升阳举陷，历代将其作为补脾升阳 | 举陷之要药，故长于治疗脾虚中气下陷之久泻脱</div>
+  <div class="note"><span class="note-num">P1296</span>2．表虚自汗证及肺虚咳喘证。 | 本品能补脾肺之气，尤其长于益卫固表以止 | 本品入肺故能补肺气，用治肺虚咳喘。</div>
+  <div class="note"><span class="note-num">P1297</span>4．此外，本品具有益气活血之功，故尚可用于 | 治疗风寒痹证、胸痹、中风后遗症等气虚而致 | 煎服，9～30g。大剂量可用至30 ～60g。</div>
+  <div class="note"><span class="note-num">P1298</span>补气之力不及人参，而升阳的作用好，为补气升阳的 | 要药，用于中气下陷。并能益卫固表，利水消肿，托 | 疮生肌，常用治表虚自汗，气虚水湿失运的浮肿、小</div>
+  <div class="note"><span class="note-num">P1300</span>为菊科多年生草本植物白术Atractylodes | macrocephala Koidz.的干燥根茎。主产于浙 | 江、湖北、湖南等地。以浙江于潜产者最佳</div>
+  <div class="note"><span class="note-num">P1302</span>白术甘温益气，苦温除湿，主入脾胃， | 功专益脾气，除脾湿，进而有固表、止泻 | 、利水、消痰之功。凡脾虚湿盛所致诸证</div>
+  <div class="note"><span class="note-num">P1303</span>本品既长于补气以健脾，又能燥湿、利水，有标 | 本兼顾之效，故前人誉之为“脾脏补气健脾第一要药” | 本品对于脾气虚弱，卫气不固，表虚自汗者，能</div>
+  <div class="note"><span class="note-num">P1304</span>生白术含挥发油量较高，故其燥性较强， | 其燥湿、止汗、利尿力较强； | 土炒白术其挥发油含量减少，其健脾止泻</div>
+  <div class="note"><span class="note-num">P1305</span>│燥湿健脾│湿浊困脾。兼能祛风 | │        │湿、解表、明目，用于 | │        │风湿痹证、风寒表证及</div>
+  <div class="note"><span class="note-num">P1307</span>为薯蓣科多年生蔓生草本植物薯蓣Dioscorea | opposita Thunb. 的干燥根茎。 | 主产于河南省，湖南、江西等省亦产。习惯认为河南</div>
+  <div class="note"><span class="note-num">P1309</span>本品味甘性平，不燥不腻，功能益气养 | 阴，补脾肺肾，善补上中下三焦气阴而兼 | 具收涩之性，为肺脾肾气阴不足，下元不</div>
+  <div class="note"><span class="note-num">P1310</span>本品性味甘平，是具有营养作用的补脾益 | 气药，兼能滋养脾阴。唯其亦食亦药，“气轻 | 性缓，非堪专任”，对气虚重证，常嫌力量不</div>
+  <div class="note"><span class="note-num">P1311</span>本品能补肺气，兼能滋肺阴。其补肺之力虽 | 较和缓，但对肺脾气阴俱虚者，补土亦有助于生 | 本品还能补肾气，兼能滋养肾阴，虽补肾力</div>
+  <div class="note"><span class="note-num">P1312</span>煎服，15～30g。 | 生山药补阴之力较强； | 麸炒、米炒山药其健脾益气之力</div>
+  <div class="note"><span class="note-num">P1314</span>为豆科植物甘草Glycyrrhiza uralensis | Fisch.、胀果甘草G.inflata Bat.或光果甘草 | G.glabra L.的干燥根及根茎。</div>
+  <div class="note"><span class="note-num">P1315</span>主产于内蒙古、新疆、甘肃 | 春、秋采挖，以秋采者为佳 | 本品气微，味甜而特殊。以</div>
+  <div class="note"><span class="note-num">P1317</span>甘草以甘为用，能入十二经，具有 | 补气、缓急、解毒、和药等多种功能， | 炙补生泻，应用颇广，故有“国老”</div>
+  <div class="note"><span class="note-num">P1318</span>1．用于心气不足的脉结代，心动悸。 | 本品以补益心气，益气复脉见长，主要用 | 于心气不足所致脉结代，心动悸。</div>
+  <div class="note"><span class="note-num">P1319</span>本品能止咳，兼能祛痰，还略具平喘作用 | 。单用有效。可随配伍用于寒热虚实多种咳喘 | 4．用于脘腹、四肢挛急疼痛。</div>
+  <div class="note"><span class="note-num">P1320</span>5．用于热毒疮疡、咽喉肿痛及药物、食物 | 本品还长于解毒，临床应用十分广泛。生品 | 性微寒，可清解热毒。亦可与部分毒性药配伍或</div>
+  <div class="note"><span class="note-num">P1321</span>本品在许多方剂中都可发挥调和药性的作用 | 通过解毒，可降低方中某些药（如附子）的毒性； | 通过缓急止痛，可缓解方中某些药（如大黄）刺激</div>
+  <div class="note"><span class="note-num">P1323</span>为石竹科多年生草本植物异叶假繁缕 | Pseudostellaria heterophylla (Miq.) Pax ex | Pax et Hoffm. 的干燥块根。生用。</div>
+  <div class="note"><span class="note-num">P1325</span>【西洋参与太子参鉴别用药】 | 均为气阴双补之品，均具有益脾肺之 | 气，补脾肺之阴，生津止渴之功。</div>
+  <div class="note"><span class="note-num">P1326</span>参┐补气：┌ 大补元气---脱证必用。 | 参│生津：│ 偏补中气---宜用一般气虚证， | │            养血：血虚（津伤）</div>
+  <div class="note"><span class="note-num">P1328</span>为鼠李科落叶灌木或小乔木植物枣Ziziphus | jujuba Mall.的干燥成熟果实。 | 主产于河北、河南、山东等地。秋季果实成</div>
+  <div class="note"><span class="note-num">P1331</span>为蜜蜂科昆虫中华蜜蜂Apis cerana | Fabricius 或意大利蜜蜂A. mellifera Linnaeus | 所酿成的蜜。全国大部分地区均产。春至秋季采</div>
+  <div class="note"><span class="note-num">P1333</span>蜂蜜质润，又能润肠通便，也可用治津枯肠燥便秘。 | 此外，许多滋补丸剂、膏剂常用以赋形，以及有某些 | 中药之采用蜜炙，不仅取其矫味及粘性，还主要取其</div>
+  <div class="note"><span class="note-num">P1335</span>凡以滋养营血，纠正营血亏虚为主要功效，常用于 | 治疗血虚证为主的药物，称为补血药。 | 兼有滋肾、润肺、补脾等功效。</div>
+  <div class="note"><span class="note-num">P1336</span>1．性味------甘温、甘平为主；个别药物药性偏寒。 | 能活血祛瘀者------具有辛味； | 能敛汗者------具有酸味；</div>
+  <div class="note"><span class="note-num">P1338</span>为伞形科植物当归Angelica sinensis(Oliv) | Diels.的干燥根。 | 产于甘肃省岷县（秦州），</div>
+  <div class="note"><span class="note-num">P1339</span>【性味归经】甘、辛，温。归肝、心、脾经。 | 当归甘温质润以补血，辛温气 | 香以行血，补中有动，行中有益，</div>
+  <div class="note"><span class="note-num">P1340</span>本品甘温质润，长于补血，为补血之圣药。兼能活血 | ，故尤宜于血虚伴有血滞之证。 | 本品又为活血化瘀要药，因其兼能止痛，且可补血，</div>
+  <div class="note"><span class="note-num">P1342</span>为玄参科多年生草本植物地黄Rehmannia | glutinosa Libosch.的根茎，经加黄酒拌蒸至内 | 外色黑、油润，或直接蒸至黑润而成。炮制品切</div>
+  <div class="note"><span class="note-num">P1343</span>甘，微温。归肝、肾经。 | 熟地微温甘润，质地滋腻， | 既补心肝之血，又滋肝肾之</div>
+  <div class="note"><span class="note-num">P1344</span>本品甘温质润，补阴益精以生血，亦为养血补虚 | 之要药。常配伍当归、白芍等补血药。 | 本品为补阴要药，长于滋肾养肝，为治疗肝肾阴虚</div>
+  <div class="note"><span class="note-num">P1345</span>【用法用量】煎服，9～15g。 | 本品性质粘腻，较生地黄更甚，有碍消化，凡脾胃 | 虚弱、气滞痰多、中满便溏者慎服。</div>
+  <div class="note"><span class="note-num">P1347</span>为马科动物驴Equus asinus L. 的皮去毛后熬制而 | 成的黑色固体胶块。以山东东阿县所产最著名，因而得 | 名“阿胶”。捣成碎块直接烊化或以蛤粉烫炒成珠用。</div>
+  <div class="note"><span class="note-num">P1348</span>本品甘平质润，性粘收敛，既 | 能补血止血，又能滋阴润肺，凡 | 血虚、出血及肺肾阴虚燥热之证</div>
+  <div class="note"><span class="note-num">P1349</span>本品亦为补血要药，适用于血虚诸证；因其又长于 | 止血，故多用于失血所致血虚证；且阿胶兼能滋阴，对 | 阴血俱虚者有兼顾之效。</div>
+  <div class="note"><span class="note-num">P1350</span>本品又长于止血，适用于多种出血证；因其 | 还长于补血、滋阴，故尤宜于失血而有血虚、阴虚表 | 现者。单用或与止血药配伍。</div>
+  <div class="note"><span class="note-num">P1352</span>为蓼科多年生草本植物何首乌Polygonum | multiflorum Thunb.的干燥块根。 | 晒干或微烘干，称生首乌；若用黑豆汁拌匀</div>
+  <div class="note"><span class="note-num">P1354</span>制首乌有一定补血作用，故可用于补血方剂 | 制首乌既能补血，又功善补肝肾，性质温 | 和，不燥不腻，临床可用于肝肾精血亏虚所致早</div>
+  <div class="note"><span class="note-num">P1355</span>4．痈疽及皮肤瘙痒证。 | 生首乌具有解毒以消痈疽之效，故可用于痈 | 生首乌尚能止痒，可用于治疗瘙痒证。常用</div>
+  <div class="note"><span class="note-num">P1358</span>白芍酸寒而润，主入肝经， | 既能养血敛阴以补肝体之不足， | 又能平肝柔肝以泻肝用之有余。</div>
+  <div class="note"><span class="note-num">P1359</span>本品补血之功虽不及当归、熟地黄，当经过配伍后 | 亦可用于治疗血虚心肝失养诸证。 | 本品味酸，兼能收敛肝阴以养肝血，又能平抑肝阳</div>
+  <div class="note"><span class="note-num">P1360</span>本品有一定敛阴止汗之功。适用于虚汗证。 | 赤芍则长于清热凉血，活血散瘀，清泄肝火。在应用方面，赤芍主治血热 | 、血瘀、肝火所致诸证。在止痛方面。而赤芍则长于活血祛瘀止痛，主治</div>
+  <div class="note"><span class="note-num">P1362</span>凡以补阴滋液，生津润燥为主要功效，常用于治 | 疗阴虚证的药物，称为补阴药。 | 二、补阴药的功效及主治证</div>
+  <div class="note"><span class="note-num">P1363</span>性味：本类药的性味以甘寒（凉）质润多汁为主，少数药物 | 性味甘平。其中能清热者，可有苦味；能收敛止血者，可有酸味 | ；能软坚散结者，可有咸味。</div>
+  <div class="note"><span class="note-num">P1365</span>【功效】养阴清肺，祛痰，益气。 | 本品能补肺阴，兼能清肺热，适用于阴虚 | 肺燥有热之干咳痰少、咳血或咽干音哑等证。</div>
+  <div class="note"><span class="note-num">P1367</span>【来源】为伞形科多年生草本植物珊瑚菜 | Glehnia littoralis Fr.Schmidt ex Miq.的干</div>
+  <div class="note"><span class="note-num">P1368</span>沙参甘凉清润，如入肺胃，善清肺胃 | 之热而生津润燥，凡肺胃阴虚燥热，劳 | 嗽、干渴之证，本品均为常用。南北沙</div>
+  <div class="note"><span class="note-num">P1369</span>本品能补肺阴，兼能清肺中燥热，适用于肺阴不 | 足或燥热伤肺之干咳少痰、痨嗽咳血或咽干音哑等证。 | 本品能养胃阴，兼能清胃热、生津液，故可用于治</div>
+  <div class="note"><span class="note-num">P1371</span>为百合科植物百合Lilium brownii F.E. Brown var. | Viridulium Baker、卷丹L. lancifolium Thunb.或细 | 叶百合L. Pumilum DC.的干燥肉质鳞叶。生用或蜜炙</div>
+  <div class="note"><span class="note-num">P1372</span>【性味归经】甘，微寒。归心、肺经。 | 本品甘凉清润，主入肺心， | 长于清肺润燥止咳，清心安</div>
+  <div class="note"><span class="note-num">P1373</span>本品甘、微寒，功能养阴润肺，兼能止咳化痰、清 | 肺热，且本品作用平和。润肺清肺之力虽不及北沙参 | 、麦冬等药，但因兼有一定的止咳祛痰作用。故可用于</div>
+  <div class="note"><span class="note-num">P1375</span>为百合科多年生草本植物麦冬Ophiopogon | japonicus (Thunb.) Ker-Gawl.的干燥块根。生用。</div>
+  <div class="note"><span class="note-num">P1376</span>甘、微苦，微寒。归心、肺、胃经。 | 润肺养阴，益胃生津，清心除烦，润肠通便。 | 心之阴、清肺心之热而润</div>
+  <div class="note"><span class="note-num">P1377</span>本品甘寒入肺能养肺阴，润肺燥；苦寒入肺又能清 | 肺热。故可用于阴虚肺燥有热证及燥热伤及肺阴诸证。 | 本品功擅滋养胃阴，生津止渴，兼长于清胃热、润</div>
+  <div class="note"><span class="note-num">P1379</span>为百合科多年生攀援草本植物天冬Asparagus | cochinchinensis (Lour.) Merr. 的干燥块根。</div>
+  <div class="note"><span class="note-num">P1380</span>【性味归经】甘、苦，寒。归肺、肾经。 | 【功效】滋肾降火，清肺润燥，润肠通便。 | 本品甘寒能养阴润肺，苦寒兼能清泄</div>
+  <div class="note"><span class="note-num">P1382</span>为兰科多年生草本植物金钗石斛D. nobile | Lindl.、鼓槌石斛D. chrysotoxum Lindl或流苏石 | 斛D.drobium fimbriatum Hook.的茎。主产于四川</div>
+  <div class="note"><span class="note-num">P1383</span>铁皮石斛D. officinale | 金钗石斛D. nobile</div>
+  <div class="note"><span class="note-num">P1384</span>【性味归经】甘，微寒。归胃、肾经。 | 3、目暗不明，筋骨痿软 | 【用法用量】煎服，6～12g。鲜</div>
+  <div class="note"><span class="note-num">P1386</span>为百合科多年生草本植物黄精Polygonatum sibiricum Red.、滇 | 黄精P. kingianum Coll.et Hemsl. 或多花黄精P. cyrtonema Hua 的根 | 黄精主产于河北、内蒙古、陕西；</div>
+  <div class="note"><span class="note-num">P1387</span>1、用于肺阴虚或肺肾阴虚证。 | 本品不仅能补益肺肾之阴，而且能补益脾 | 气脾阴，有补土生金、补后天以养先天之效。</div>
+  <div class="note"><span class="note-num">P1389</span>为茄科落叶灌木植物宁夏枸杞Lycium barbarum | L. 的干燥成熟果实。晾至皮皱后，再晒至外皮干</div>
+  <div class="note"><span class="note-num">P1390</span>【性味归经】甘，平。归肝、肾经。 | 本品甘平质润，主入肝肾， | 既能补肾益精，又能养肝明</div>
+  <div class="note"><span class="note-num">P1391</span>1、用于肝肾不足及精血亏虚证。 | 本品既能入肝养血，又能入肾益精，为治疗肾精不 | 足及精血亏虚之良药。适用于精亏血虚所致早衰诸证。</div>
+  <div class="note"><span class="note-num">P1393</span>为龟科动物乌龟Chinemys reevesii (Gray) 的 | 生用，或以砂炒后醋淬用。</div>
+  <div class="note"><span class="note-num">P1395</span>1、用于肝肾阴虚内热证、阴虚阳亢证、阴虚风 | 本品长于滋补肾阴，兼能滋养肝阴，既可滋阴而 | 退内热，又能潜降肝阳而熄内风，故适用于肝肾阴虚</div>
+  <div class="note"><span class="note-num">P1396</span>本品滋阴补血，又能益肾健骨，故多用于肝肾阴 | 虚所致筋骨痿弱、腰膝酸软、及小儿鸡胸、龟背、囟门 | 3、用于阴虚血热，冲任不固的崩漏、月经过多</div>
+  <div class="note"><span class="note-num">P1397</span>4、用于阴血亏虚所致心神不安证。 | 本品为血肉有情之品，有养血补心安神之效，故 | 适用于阴血不足，心失所养之惊悸、失眠、健忘。</div>
+  <div class="note"><span class="note-num">P1399</span>为鳖科动物中华鳖Trionyx sinensis Wiegmann的 | 背甲。生用或以砂炒后醋淬用。</div>
+  <div class="note"><span class="note-num">P1400</span>咸，微寒。归肝、肾经。 | 滋阴潜阳功近龟甲，尤以 | 软坚散结见长，又为癥瘕</div>
+  <div class="note"><span class="note-num">P1401</span>1、用于阴虚内热证、阴虚阳亢证、阴虚风动证。 | 本品咸寒，既能滋养肝肾之阴，又能潜阳、清退虚 | 热，且本品清退虚热之效强于龟甲，为治疗阴虚发热之</div>
+  <div class="note"><span class="note-num">P1402</span>2.用于癥瘕积聚、疟母。 | 本品味咸，长于软坚散结，适用于肝脾肿大等癥 | 治疗癥瘕积聚，常与活血化瘀消癥药配伍，如《太平圣惠</div>
+  <div class="note"><span class="note-num">P1403</span>【龟甲与鳖甲鉴别用药】 | 均能滋养肝肾之阴、平肝潜阳。均宜用于 | 肾阴不足，虚火亢旺之骨蒸潮热、盗汗、</div>
+  <div class="note"><span class="note-num">P1405</span>物玉竹Polygonatum odoratum | (Mill) Druce 的干燥根茎。 | 柔软后，反复揉搓，晾晒至</div>
+  <div class="note"><span class="note-num">P1406</span>本品能养阴润肺而治燥咳。 | 本品甘凉入胃，体润多汁，故 | 能养胃阴，生津止渴，兼清胃热，</div>
+  <div class="note"><span class="note-num">P1408</span>【来源】为菊科一年生草本植物鳢肠Eclipta prostrata L.的干 | 燥地上部分。主产于江苏、江西、浙江等地。花开时采割。晒干 | 甘、酸，寒。归肾、肝经。</div>
+  <div class="note"><span class="note-num">P1409</span>本品滋味酸甘能化生阴液而补益肝肾之阴，适用 | 于肝肾阴虚所致须发早白、头晕目眩、失眠多梦、腰 | 膝酸软、遗精耳鸣诸证。</div>
+  <div class="note"><span class="note-num">P1411</span>凡以补助人体阳气，纠正阳气虚衰 | 的病理偏向为主要作用，常用以治疗 | 阳虚证的药物，称为补阳药。</div>
+</div>
+<div class="chapter" id="第24章-收涩药">
+  <h2>第24章 收涩药</h2>
+  <div class="note"><span class="note-num">P51</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P1464</span>掌握：1.收涩药的性能特点、功效、主治，常与补虚 | 药配伍的意义及使用注意。 | 2.相似药物功效、应用的异同点。</div>
+  <div class="note"><span class="note-num">P1465</span>掌握：五味子、乌梅、山茱萸的分类、药性特 | 点、功效、主治、配伍及某些特殊用法；熟 | 悉某些特殊炮制的意义，用量、用法及使用</div>
+  <div class="note"><span class="note-num">P1466</span>熟悉：诃子、肉豆蔻、桑螵蛸、海螵蛸分类、功 | 效和适应证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P1467</span>了解：麻黄根、浮小麦、石榴皮、赤石脂、 | 覆盆子、金樱子、莲子、芡实的分类、</div>
+  <div class="note"><span class="note-num">P1469</span>主治因久病体虚、正气耗散、脏腑功能衰退所致 | 之自汗、盗汗、久泻、久痢、遗精、滑精、遗尿、尿 | 频、带下等滑脱不禁证。</div>
+  <div class="note"><span class="note-num">P1470</span>虚汗证（包括气虚自汗、 | 大肠或脾肾虚寒所致之久 | 肾虚不固之遗精、滑精、</div>
+  <div class="note"><span class="note-num">P1472</span>收涩：即酸、涩的药物，能敛其耗散，固其滑脱 | ，约束控制机体无节制地向外排除物质，以治疗各种 | 遗泄滑脱病证的治疗作用。也称收敛固涩。</div>
+  <div class="note"><span class="note-num">P1473</span>1、药性：或偏于寒凉，或偏于温热。 | 固表止汗药：主归肺、心二经 | 涩肠止泻药：主归大肠及脾、肾二经。</div>
+  <div class="note"><span class="note-num">P1475</span>1、因证选药：对证选取合适种类的收涩药物 | 自汗、盗汗者------首选固表止汗药； | 久泻、久痢者------首选涩肠止泻药；</div>
+  <div class="note"><span class="note-num">P1477</span>一、含义：以固密肌表、制止汗出为主要功效，常用以治疗虚汗 | 证的药物，称为止汗药。 | 二、性味归经：涩凉为主，个别药物具平性。主要归肺经。具益</div>
+  <div class="note"><span class="note-num">P1479</span>为麻黄科多年生草本植物草麻黄Ephedra sinica | Stapf或中麻黄E. intermedia Schrenk et C.A.Mey. | 的干燥根及根茎。干燥切段。生用。</div>
+  <div class="note"><span class="note-num">P1484</span>为禾本科一年生草本植物小麦Triticum | aestivum L.干燥未成熟的颖果（干瘪果实）。生</div>
+  <div class="note"><span class="note-num">P1486</span>作用特点：为养心敛液，固表止汗之佳品。 | 多入复方使用，治疗气虚自汗及阴虚盗汗。</div>
+  <div class="note"><span class="note-num">P1488</span>皆为常用的固表止汗药，均能收敛止汗， | 都可用治气虚自汗，阴虚盗汗等证，常配 | 麻黄根──甘平，作用单纯而药力较强，为</div>
+  <div class="note"><span class="note-num">P1490</span>一、含义：以涩肠止泻为主要功效，常用以治疗滑脱不禁之久 | 泻、久痢的药物，称为涩肠止泻药。 | 二、功效与主治：涩肠止泻------旨在涩肠止泻以治标。</div>
+  <div class="note"><span class="note-num">P1492</span>为木兰科多年生落叶木质藤本植物五味子Schisandra | chinensis (Turcz.) Baill.或华中五味子S. sphenanthera | Rehd. et Wils.的干燥成熟果实。</div>
+  <div class="note"><span class="note-num">P1496</span>用治脾肾虚寒之久泻不止 | 如《内科摘要》之四神丸</div>
+  <div class="note"><span class="note-num">P1497</span>本品还能补肾涩精止遗，适用于肾虚精关不 | 本品善养肺、心元气，固表收敛止汗。为治</div>
+  <div class="note"><span class="note-num">P1498</span>5、用于津伤口渴及消渴。 | 本品味酸能生津止渴，甘补又可益气以利阴 | 津化生，适用于津伤口渴。</div>
+  <div class="note"><span class="note-num">P1499</span>煎服，2～6g；研末服，每次1～3g。 | 捣破入煎，核内有效成分才易煎出。 | 外有表邪，内有实热，咳嗽初起，麻疹</div>
+  <div class="note"><span class="note-num">P1501</span>为蔷薇科落叶乔木植物梅Prunus mume (Sieb.) Sieb | et Zucc.的干燥近成熟果实(青梅)。 | 生用或炒炭用，去核用肉者称“乌梅肉”。</div>
+  <div class="note"><span class="note-num">P1503</span>本品酸涩收敛，且药性平和，功善上敛肺气、 | 下涩大肠、入胃又能生津，凡肺虚久咳、阴虚燥 | 咳，久泻久痢者均为常用之品。</div>
+  <div class="note"><span class="note-num">P1504</span>故本品为治疗久泻、久痢之常用药。 | 可单用或与其他温中涩肠药同用以增效； | 对于湿热邪毒未尽，久痢便血者，本品兼能止血。常</div>
+  <div class="note"><span class="note-num">P1505</span>蛔虫得酸则静，本品滋味极酸，具有安蛔止 | 痛功效，使得蛔虫“得酸则静” 为安蛔良药。</div>
+  <div class="note"><span class="note-num">P1506</span>4、用于暑热口渴及虚热消渴。 | 本品味酸，能刺激唾液分泌以生津止渴。 | 单用有效。可用治暑热作渴或虚热消渴。</div>
+  <div class="note"><span class="note-num">P1507</span>煎服，6～12g，大剂量可用至30g。 | 外用适量，捣烂或炒炭研末外敷。 | 止血、止泻、平胬肉可去核炒炭存性用。</div>
+  <div class="note"><span class="note-num">P1510</span>为硅酸盐类矿物多水高岭石族多水高岭石 | Halloysite。 | 主含含水硅酸铝[Al4（Si4O10）（OH）8·4H2O]。</div>
+  <div class="note"><span class="note-num">P1513</span>本品甘温、味涩，入胃肠，涩肠止泻力强 | ，属治标之药，只可暂用，不宜久服，过用可 | 导致大便困难，腹胀。单味应用对泻痢而湿热</div>
+  <div class="note"><span class="note-num">P1514</span>2、用于便血、崩漏及外伤出血。 | 本品内服外用均能收敛止血。以其具涩肠作 | 用而不宜用于中焦有热者，临床主要用于虚寒性</div>
+  <div class="note"><span class="note-num">P1515</span>4、用于疮疡久溃、烧烫伤及黄水疮。 | 本品外用有收湿敛疮之效，可用之疮疡久溃 | 不敛、湿疹、湿疮、烧烫伤及黄水疮等。</div>
+  <div class="note"><span class="note-num">P1517</span>chebula Retz.或绒 | 毛诃子Terminalia | chebula Retz.</div>
+  <div class="note"><span class="note-num">P1518</span>敛，上能敛肺，下涩大肠； | 生用清火开音。适于久咳、</div>
+  <div class="note"><span class="note-num">P1519</span>治疗脾胃虚寒性久泻、久痢者， | 宜与罂粟壳、干姜、肉豆蔻等温 | 中健脾、涩肠止泻之品同用。</div>
+  <div class="note"><span class="note-num">P1520</span>味苦酸涩入肺经而能敛肺下气止咳 | 生品偏凉入肺经又能清肺利咽开音</div>
+  <div class="note"><span class="note-num">P1521</span>敛肺清热、开音利咽宜生用。 | 凡外有表邪，内有湿热郁滞者慎用。</div>
+  <div class="note"><span class="note-num">P1523</span>为肉豆蔻科乔木植物肉豆蔻Myristica fragrans | Houtt的干燥种仁。煨制去油用或生用。</div>
+  <div class="note"><span class="note-num">P1524</span>辛，温。归脾、胃、大肠经。 | 煨用涩肠止泻；温中行气。</div>
+  <div class="note"><span class="note-num">P1528</span>入丸散服，每次1.5～3g。 | 涩肠止泻须煨熟去油用。 | 肉豆蔻油有麻醉性能，故用量不能过</div>
+  <div class="note"><span class="note-num">P1529</span>肉豆蔻---为肉豆蔻科高大乔木植物肉 | 豆蔻的成熟种仁，固涩之力较强，长于涩 | 肠止泻，常用治脾胃虚寒、久泻不止，脾</div>
+  <div class="note"><span class="note-num">P1531</span>为石榴科落叶灌木或小乔木石榴Punica | granatum L.的干燥果皮。生用或炒炭用。 | Punica granatum</div>
+  <div class="note"><span class="note-num">P1532</span>酸、涩，温。归大肠经。 | 涩肠止泻，止血,杀虫。</div>
+  <div class="note"><span class="note-num">P1533</span>1、用于久泻，久痢，脱肛。 | 能涩肠道，止泻痢、固脱。 | 为临床治疗久泻、久痢及脱肛病证的常用药物</div>
+  <div class="note"><span class="note-num">P1534</span>2、用于便血、崩漏、遗精等。 | 本品能收敛止血，兼能涩精、止带，可用 | 于治疗便血、崩漏、遗精、带下等。</div>
+  <div class="note"><span class="note-num">P1537</span>酸涩收敛---固精、缩尿、止带 | 归肾、膀胱经---主治肾虚不固所致的男子 | 遗精、滑精；遗尿、尿频</div>
+  <div class="note"><span class="note-num">P1539</span>为山茱萸科落叶灌木或小乔木植物山茱萸Cornus | officinalis Sieb. et Zucc.的干燥成熟果肉。晒干</div>
+  <div class="note"><span class="note-num">P1540</span>酸、涩，微温。归肝、肾经。 | 收敛固涩（固精、敛汗、止血）。</div>
+  <div class="note"><span class="note-num">P1541</span>本品甘酸温润，主入肝肾，既 | 能益精补肝肾，又可助肾阳，且在 | 补益之中长于固涩下焦、固肾涩精，</div>
+  <div class="note"><span class="note-num">P1542</span>本品酸温质润，主入肝肾二经，既长于益精 | 而能滋养肝肾之阴，又能温助补益肾阳，温而不 | 燥，补而不峻，为平补阴阳之要药。</div>
+  <div class="note"><span class="note-num">P1543</span>2、用于遗精、滑精，遗尿尿频。 | 本品既可补益肝肾，又酸敛固涩，还能固精 | 缩尿止遗；对肾虚遗滑之证，有标本兼治之妙，</div>
+  <div class="note"><span class="note-num">P1544</span>4、用于大汗不止，体虚欲脱。 | 本品酸涩性温，有较强的收敛止汗作用， | 为敛汗固脱之常用药物之一。临证本品大剂量</div>
+  <div class="note"><span class="note-num">P1545</span>急救固脱，20～30g。 | 素有湿热而导致小便淋涩者，不宜</div>
+  <div class="note"><span class="note-num">P1547</span>为螳螂科昆虫大刀螂Tenodera sinensis Saussure、 | 小刀螂Statilia maculata (Thunberg)或巨斧螳螂 | Hierodula patellifera (Serville)的卵鞘。晒干用。</div>
+  <div class="note"><span class="note-num">P1549</span>桑螵蛸甘涩性平，既补益 | 又收涩，为补肾助阳、固精缩 | 尿之良药。凡肾虚阳衰、精气</div>
+  <div class="note"><span class="note-num">P1551</span>本品有补肾助阳之力，用于肾虚阳痿有一定 | 助阳起痿之效。但作用有限，故此其在补肾壮阳 | 的复方中多居辅助地位。宜与鹿茸、人参等品同</div>
+  <div class="note"><span class="note-num">P1553</span>maindroni de | Rochebrune或</div>
+  <div class="note"><span class="note-num">P1554</span>本品味涩性平，主入肝肾，长 | 于收敛止血、固涩下焦，适于多 | 种出血及下元虚损不固之证。</div>
+  <div class="note"><span class="note-num">P1555</span>治肾虚不固之遗精，宜与 | 补骨脂、菟丝子等补肾、</div>
+  <div class="note"><span class="note-num">P1556</span>2、用于吐衄、便血、崩漏及外伤出血 | 本品内服外用均有收敛止血作用，可用于多 | 种出血证。为止血要药。单用或与止血药等配伍</div>
+  <div class="note"><span class="note-num">P1557</span>4、用于湿疹、湿疮及溃疡不敛。 | 本品外用，有收湿敛疮之效。可单用，或与 | 清热解毒燥湿药或生肌敛疮药配伍。</div>
+  <div class="note"><span class="note-num">P1558</span>桑螵蛸与海螵蛸皆以螵蛸命名，同归肝肾 | 经，均能固精缩尿止带，都可用治遗精滑 | 精，遗尿尿频，白带过多等证。但二者来</div>
+  <div class="note"><span class="note-num">P1560</span>为睡莲科多年生水生植物莲Nelumbo nucifera | Gaertn.的干燥成熟种子。生用。</div>
+  <div class="note"><span class="note-num">P1562</span>本品甘平益心脾，味涩固精止泻，用治 | 脾肾虚损不固之泻痢、遗精滑精、带下等 | 证均为常用药物，功近芡实。兼有养心安</div>
+  <div class="note"><span class="note-num">P1563</span>1、用于脾虚泻痢及噤口痢（下痢饮食不入）。 | 故适用于脾虚食少、久泻及噤口痢。</div>
+  <div class="note"><span class="note-num">P1564</span>2、用于肾虚遗精、滑精。 | 本品既能补益肾气，又能固精，故可用于肾 | 虚精关不固之遗精滑精。病轻者单用有效；病重</div>
+  <div class="note"><span class="note-num">P1565</span>4、用于心虚不寐，心悸失眠。 | 本品甘平，入心、脾、肾三经，能补脾养 | 心益肾，还能宁心安神；莲子心又有清心除烦</div>
+  <div class="note"><span class="note-num">P1567</span>为睡莲科一年生水生草本植物芡Euryale ferox | Salisb.的干燥成熟种仁。捣碎生用或炒用。</div>
+  <div class="note"><span class="note-num">P1569</span>本品甘涩收敛，善益肾固精。适用于肾虚 | 不固之腰膝酸软、遗精滑精者，常与补肾涩精 | 药金樱子相须为用。亦可予补肾、收涩制品同</div>
+  <div class="note"><span class="note-num">P1570</span>本品既能补气健脾、除湿，又能涩肠止泻 | ，故适用于脾虚失运湿盛之久泻。 | 本品亦富含营养成分，可作食品服食，亦</div>
+  <div class="note"><span class="note-num">P1571</span>本品既能益肾健脾除湿，又能固涩止带， | 其除湿之功为莲子所不具备。为治疗带下病证 | 之佳品。适用于脾虚湿浊下注或脾肾两虚，精</div>
+  <div class="note"><span class="note-num">P1572</span>皆为睡莲科水生草本植物的成熟种子或种仁 | 入药。二者均味甘涩性平，归脾肾经，都能益 | 肾固精，补脾止泻，止带。同可用治肾虚不固</div>
+  <div class="note"><span class="note-num">P1573</span>│补脾止泻：脾虚泄泻│又养心安神： | │                  │治疗心悸失眠。 | │固肾涩精：遗精滑泄│</div>
+  <div class="note"><span class="note-num">P1574</span>了解：1.涌吐药的适应范围，使用注意。 | 了解：常山、瓜地、胆矾的分类、功效。</div>
+  <div class="note"><span class="note-num">P1575</span>掌握：1.攻毒杀虫去腐敛疮药的功效、主治、性能、 | 配伍应用及使用注意方面的共性。 | 2.相似药物功效、应用的异同点。</div>
+  <div class="note"><span class="note-num">P1577</span>了解：蛇床子、土荆皮、砒石、升药、轻粉、 | 铅丹、白矾、炉甘石、硼砂的分类、</div>
+</div>
+<div class="chapter" id="第5章-解表药">
+  <h2>第5章 解表药</h2>
+  <div class="note"><span class="note-num">P135</span>掌握：1. 解表药在功效、主治、性能、配伍应 | 用和使用注意方面的共性。 | 2.通过解表药功效确定其性能、主治和</div>
+  <div class="note"><span class="note-num">P136</span>掌握：麻黄、桂枝、羌活、薄荷、菊花、柴胡、 | 熟悉：防风、荆芥、紫苏叶、生姜、细辛、白芷、 | 了解：藁本、香薷、苍耳子、辛夷、牛蒡子、</div>
+  <div class="note"><span class="note-num">P137</span>凡以发散表邪、解除表证为主要功效，常用 | 以治疗表证的药物，称解表药，又叫发表药。 | 表证乃外感六淫之邪，侵袭人体肌表、肺卫</div>
+  <div class="note"><span class="note-num">P138</span>解表药章概述（第五章） | 1、共有功效主治：解表---治疗外感表证 | 发散风寒药：发散风寒---主治外感风寒表证</div>
+  <div class="note"><span class="note-num">P140</span>解表：是辛散的药物，外散表邪以解除表证的治疗作 | 用；又称发表、疏表等。 | 发散风寒：是辛散性温而能驱散寒邪，主要用于治疗</div>
+  <div class="note"><span class="note-num">P141</span>发散风热药因能清泄，又多兼苦味。 | 经络辨证：太阳经或膀胱经 | 4、升降浮沉：其作用趋向为升浮。</div>
+  <div class="note"><span class="note-num">P143</span>解表药章概述（第五章） | 因证选药：区分表证寒热，四时气候变化及患者体 | 质不同，选择相宜的解表药。</div>
+</div>
+<div class="chapter" id="第6章-清热药">
+  <h2>第6章 清热药</h2>
+  <div class="note"><span class="note-num">P279</span>掌握：1.清热药在功效、主治、性能、配伍应用和使 | 2.相似药物功效、应用的异同点。 | 熟悉：1.清热药的分类及清热、清热泻火、清热燥湿、</div>
+  <div class="note"><span class="note-num">P280</span>掌握：石膏、知母、栀子、夏枯草、黄芩、黄连、 | 黄柏、地黄、牡丹皮、金银花、连翘、鱼 | 腥草、青蒿的分类、药性特点、功效、</div>
+  <div class="note"><span class="note-num">P281</span>熟悉：芦根、天花粉、龙胆、玄参、赤芍、 | 大青叶、板蓝根、蒲公英、射干、 | 白头翁、地骨皮分类、功效和适应证、</div>
+  <div class="note"><span class="note-num">P282</span>了解：淡竹叶、决明子、谷精草、穿心莲、 | 苦参、秦皮、水牛角、紫草、青黛、野 | 菊花、贯众、紫花地丁、败酱草、大血</div>
+  <div class="note"><span class="note-num">P283</span>凡以清泄里热为主要功效，常用以治疗里热证 | 疏散风热（疏散风热药）</div>
+  <div class="note"><span class="note-num">P284</span>1、共有功效主治：清泄里热----治疗里热证 | 清热泻火药：清气分实热、清脏腑实热----主治温病 | 清热燥湿药：清热燥湿----主治湿+热病证。</div>
+  <div class="note"><span class="note-num">P288</span>1．因证选药，根据不同热证病因、类型选择药物。 | 2．证候禁忌，阴盛格阳，真寒假热者禁忌使用； | 寒凉易伤脾胃，脾胃气虚者慎用；热证伤阴，苦</div>
+</div>
+<div class="chapter" id="第7章-泻下药">
+  <h2>第7章 泻下药</h2>
+  <div class="note"><span class="note-num">P52</span>--------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------</div>
+  <div class="note"><span class="note-num">P287</span>(4)里热积滞肠道引起便秘、或火热上炎致面赤、 | 头痛、口舌生疮等，配泻下药； | (5)热极生风，症见高热惊厥、痉挛抽搐等，配息</div>
+  <div class="note"><span class="note-num">P487</span>掌握：1.泻下药及各类泻下药在功效、主治、性能特 | 点、配伍应用与使用注意。 | 2.相似药物功效、应用的异同点。</div>
+  <div class="note"><span class="note-num">P488</span>掌握：大黄、芒硝的分类、药性特点、功效、 | 主治、配伍及某些特殊用法；熟悉某些特 | 殊炮制的意义，用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P490</span>了解：番泻叶、芦荟、火麻仁、郁李仁、京大 | 戟、牵牛子的分类、功效。</div>
+  <div class="note"><span class="note-num">P491</span>凡以泻下通便为主要功效，常用以治疗便秘 | 及其他胃肠积滞、水饮内停等里实积滞证的药物</div>
+  <div class="note"><span class="note-num">P493</span>泻下：能引起腹泻，或滑利大肠，以促进排便，治疗 | 便秘及其他胃肠积滞或水饮内停等里实证的作 | 攻下：泻下力强，治疗胃肠积滞、大便秘结的作用。</div>
+  <div class="note"><span class="note-num">P494</span>1、药性：攻下药均为寒性（实热积滞及里热证）， | 峻下药多为寒性，少数为温性或热性。 | 2、药味：一般为苦味。润下药多为甘味。</div>
+  <div class="note"><span class="note-num">P495</span>4、升降浮沉：本类药物以泻下通便为主要功效，能使体 | 内有形的实邪或无形的热邪从大便排出， | 故其作用趋向以沉降为主。</div>
+  <div class="note"><span class="note-num">P497</span>1.因证选药：积滞便秘、肠燥便秘、水饮内停而形证俱实 | 2、证候禁忌：攻下药与峻下药容易损伤正气或脾胃，故 | 小儿、老人及体虚或脾虚患者慎用，必要时应攻补兼施。</div>
+  <div class="note"><span class="note-num">P499</span>泻下作用较强，能攻下通便，荡涤积滞，以 | 治疗便秘及胃肠积滞证为主的药物，称为攻下导 | 滞药。又叫泻下攻积药，简称攻下药。</div>
+  <div class="note"><span class="note-num">P500</span>4、孕妇及体虚而无积滞者忌用。 | ①便秘、食积等胃肠积滞证 | ②热结便秘，实热积滞之证</div>
+  <div class="note"><span class="note-num">P501</span>为蓼科多年生草本植物掌叶大黄Rheum | palmatum L.、唐古特大黄R.tanguticum Maxim ex | Balf.，或药用大黄R. officinale Baill.的干燥根和</div>
+  <div class="note"><span class="note-num">P504</span>归大肠、脾、胃、心、肝经。 | 【功效】泻下攻积，清热泻火 | 《药品化义》：“大黄气味重浊，直降下行，走而不守，有斩关</div>
+  <div class="note"><span class="note-num">P505</span>1、胃肠积滞，大便秘结（为泻下攻积之要药） | +麻子仁、杏仁（润肠通便）</div>
+  <div class="note"><span class="note-num">P507</span>2、热毒证（无论有无便秘皆宜） | +金银花、连翘（清热解毒）</div>
+  <div class="note"><span class="note-num">P508</span>3、血证（多用大黄炭） | +黄芩、黄连（清热凉血） | 4、瘀血证（治疗瘀血证的常用药）</div>
+  <div class="note"><span class="note-num">P509</span>煎服，3～15g。外用适量。生大黄泻下力较 | 强，欲攻下者宜生用；入汤剂应后下，或用开水 | 泡服，久煎则泻下力减弱。酒制大黄泻下力较弱</div>
+  <div class="note"><span class="note-num">P510</span>为硫酸盐类矿物芒硝族芒硝经加工精制而成的结 | 晶体。产于河北、河南、山东、江苏、安徽等省 | 的碱土地区。因加工不同，有皮硝、芒硝、元明</div>
+  <div class="note"><span class="note-num">P513</span>1、实热积滞，大便燥结（治里热燥结之要药） | 2、咽痛、口疮、目赤及疮疡肿痛（外用） | 豆腐化水，玄明粉制滴眼液</div>
+  <div class="note"><span class="note-num">P514</span>6～12g，冲入药汁内或用开水溶化后服，不 | 孕妇慎用。不宜与硫磺、三棱同用。</div>
+  <div class="note"><span class="note-num">P516</span>本品为百合科多年生常绿植物库拉索芦荟 | Aloe barbadensis Miller叶的液汁经浓缩的干燥物。</div>
+  <div class="note"><span class="note-num">P518</span>为豆科草本状小灌木植物狭叶番泻Cassia | angustifolia Vahl和尖叶番泻C. acutifolia | Delile的干燥小叶。前者主产于印度，埃及和苏</div>
+  <div class="note"><span class="note-num">P520</span>【性味归经】甘、苦，寒。归大肠经。 | 【功效】泻热通便，消积健胃。 | 【应用】热结便秘，腹水肿胀。</div>
+  <div class="note"><span class="note-num">P522</span>1、含义：凡泻下作用缓和，或能润滑大肠，促进排便， | 以治疗肠燥便秘为主的药物，称润肠通便药，简称润下药 | 2、性能：本类药物多为植物的种仁或果仁，质地滋润，</div>
+  <div class="note"><span class="note-num">P523</span>为桑科一年生草本植物大麻Cannabis | sativa L.的干燥果实。全国各地均有栽培。秋季 | 果实成熟时采收，除去杂质，晒干。生用打碎。</div>
+  <div class="note"><span class="note-num">P524</span>甘，平。归大肠、脾、胃经。 | 煎服，10～15g，打碎入煎。</div>
+  <div class="note"><span class="note-num">P525</span>Prunus humilis Bge.、郁李 | Prunus japonica Thunb或长 | 柄扁桃P. pedunculata Maxim</div>
+  <div class="note"><span class="note-num">P526</span>【性味归经】辛、苦、甘，平。归脾、大肠、小肠经。 | 【功效】润肠通便，下气利水。 | 【用法用量】煎服，6～10g。</div>
+  <div class="note"><span class="note-num">P528</span>凡泻下作用骏猛，能引起剧烈腹泻，以排除体内水湿 | ，治疗水肿，鼓胀，饮证等形证俱实之证为主的药物，成 | 为泻水逐饮药、攻逐水饮药，简称峻下药。</div>
+  <div class="note"><span class="note-num">P529</span>1．本类药物有毒而力峻，攻伐力强，易伤正气 | ，临床应用当中病则止，不可久服。 | 2．体虚者慎用，孕妇忌用。</div>
+  <div class="note"><span class="note-num">P530</span>为大戟科多年生草本植物甘遂Euphorbia kansui | T.N.Liou ex T.P.Wang的干燥块根。主产于河北 | 、山西、陕西等地。春季开花前或秋末茎叶枯萎</div>
+  <div class="note"><span class="note-num">P532</span>+大戟、芫花（相须为用） | +清热解毒药、消痈散结药</div>
+  <div class="note"><span class="note-num">P533</span>入丸散，每次0.5-1g。本品有效成分难溶于 | 水，故不入煎剂。内服醋制用，以减低毒性。 | 虚弱者及孕妇忌用。反甘草。</div>
+  <div class="note"><span class="note-num">P534</span>为大戟科多年生草本植物大戟Euphorbia | pekinensis Rupr.的干燥根。主产于江西、四川 | 、广西等地。秋冬二季采挖。</div>
+  <div class="note"><span class="note-num">P535</span>煎服，1.5-3g。入丸散服，每次1g。内服醋制用，以减低毒性。 | 虚弱者及孕妇忌用。反甘草。</div>
+  <div class="note"><span class="note-num">P536</span>为旋花科一年生攀援草本植物裂叶牵牛 | Pharbitis nil (L.)Choisy或圆叶牵牛 | P.purpurea(L.)Choisy的干燥成熟种子。全国大</div>
+  <div class="note"><span class="note-num">P538</span>泻下，逐水，去积，杀虫。 | 煎服，3～6g。入丸散服，每次1.5～3g。本品炒用药性减缓。 | 孕妇忌用。不宜与巴豆、巴豆霜同用。</div>
+  <div class="note"><span class="note-num">P539</span>为大戟科乔木植物巴豆Croton tiglium L.的干 | 燥成熟种子。主产于四川、广西、云南、贵州等 | 。秋季果实成熟，果实尚未开裂时采摘，取出种</div>
+  <div class="note"><span class="note-num">P542</span>+大黄、干姜（泻下、温里药） | ①巴豆去皮，线穿纳入喉中</div>
+  <div class="note"><span class="note-num">P543</span>入丸散服，每次0.1～0.3g。大多制成巴豆 | 霜用，以减低毒性。外用适量。 | 孕妇及体弱者忌用。不宜与牵牛子同用。</div>
+  <div class="note"><span class="note-num">P544</span>• 1、泻下药分几类？简述每类的功效、主治，有哪些常 | • 2、简述大黄在泻热通肠方面的适应证、用量用法及使 | 3、甘遂、巴豆、京大戟各有何功效？主要用于哪些病</div>
+</div>
+<div class="chapter" id="第8章-祛风湿药">
+  <h2>第8章 祛风湿药</h2>
+  <div class="note"><span class="note-num">P546</span>掌握：1.祛风湿药及各类祛风湿药在功效、主治、性 | 能特点、配伍应用与使用注意。 | 2.相似药物功效、应用的异同点。</div>
+  <div class="note"><span class="note-num">P547</span>掌握：独活、防己、秦艽、木瓜、五加皮、 | 桑寄生的分类、药性特点、功效、主治、配 | 伍及某些特殊用法；熟悉某些特殊炮制的意</div>
+  <div class="note"><span class="note-num">P548</span>熟悉：威灵仙、川乌、蕲蛇分类、功效和适应 | 证、某些特殊用法及使用注意。</div>
+  <div class="note"><span class="note-num">P549</span>了解：香加皮、豨莶草、臭梧桐、络石藤、 | 乌梢蛇、狗脊的分类、功效。</div>
+  <div class="note"><span class="note-num">P551</span>祛风湿、补肝肾、强筋骨 | 筋脉挛急、屈伸不利的痹证 | 痹证日久累及肝肾、腰膝酸软</div>
+  <div class="note"><span class="note-num">P553</span>1、药性：长于治寒痹者为温性或热性 | 长于治热痹者为凉性或寒性， | 本章药物多为温性（治疗寒痹居多）。</div>
+  <div class="note"><span class="note-num">P554</span>4、升降浮沉：祛风湿药的作用趋势不明显，略偏于升浮 | 5、毒性：川乌、草乌为有毒之品。</div>
+  <div class="note"><span class="note-num">P556</span>1.因证选药：行痹以祛风为主，着痹以祛湿为主， | 痛痹以温性药为主，热痹以寒凉药为主。 | 2、证候禁忌：辛温性燥的祛风湿药，易伤阴耗血，阴血</div>
+  <div class="note"><span class="note-num">P558</span>1、功效及适应证：既能祛风、除湿、止痛功效 | ，主要适用于风湿痹痛。 | 2、本类药物味多辛苦，性温，多入肝、肾经。</div>
+  <div class="note"><span class="note-num">P559</span>为伞形科多年生草本植物 | 重齿毛当归Angelica | pubescens Maxim. f.</div>
+  <div class="note"><span class="note-num">P561</span>1、痹证（为治风湿痹痛之要药） | 尤善治疗下部之风湿痹痛 | 痹证日久，肝肾亏虚，气血不足</div>
+  <div class="note"><span class="note-num">P563</span>相同点：祛风解表，胜湿止痛 | 不同点：独活解表力缓，善治下半 | 羌活解表力强，善治上半</div>
+  <div class="note"><span class="note-num">P564</span>为毛茛科多年生攀援性灌 | 木植物威灵仙Clematis | chinensis Osbeck、棉团铁线</div>
+  <div class="note"><span class="note-num">P566</span>1、痹证（为治风湿痹痛之要药） | +独活、羌活（祛风湿） | 本品单用；或加入砂糖、醋，煎汤，慢慢咽</div>
+  <div class="note"><span class="note-num">P568</span>本植物粉防己（汉防己） | Stephania tetrandra S. | Moore 的干燥根。汉防己</div>
+  <div class="note"><span class="note-num">P570</span>1、痹证（为治疗风湿痹痛常用药） | +滑石、薏苡仁（清热祛湿） | +乌头、肉桂（温性祛风湿药</div>
+  <div class="note"><span class="note-num">P572</span>物乌头Aconitum | carmichaeli Debx.的干 | 燥母根。主产于四川、云</div>
+  <div class="note"><span class="note-num">P574</span>1、痹证（治疗痛痹常用药） | +附子、肉桂（散寒止痛） | +附子、干姜（散寒止痛）</div>
+  <div class="note"><span class="note-num">P575</span>煎服，1.5～3g；宜先煎30分钟至1小时（或 | 以口尝无麻辣感为度），以减低其毒性。一般制 | 后服用，生品内服宜慎。</div>
+  <div class="note"><span class="note-num">P576</span>为毛莨科野生植物北乌头Aconitum | kusnezoffii Reichb.的干燥块根。主产于四川 | 其性能、功效、主治、用量用法及使用注意与川</div>
+  <div class="note"><span class="note-num">P579</span>1、性味：本节药物的味多辛、苦，性温或寒。 | 2、功用主治：祛风湿、舒筋活络 | 治风湿痹证，筋脉挛急、屈伸不利</div>
+  <div class="note"><span class="note-num">P580</span>为龙胆科多年生草本植物 | 秦艽Gentiana macrophylla | Pall.、麻花秦艽G.</div>
+  <div class="note"><span class="note-num">P582</span>1、痹证（素有“风药中之润剂”之称） | +防己、络石藤（清热祛风湿） | +羌活、附子（温性祛风湿药</div>
+  <div class="note"><span class="note-num">P583</span>3、骨蒸潮热，疳积发热 | 肝肾阴虚内热、骨蒸潮热 | +鳖甲、生地（补阴药）</div>
+  <div class="note"><span class="note-num">P585</span>为蔷薇科灌木植物贴梗海棠 | Chaenomeles speciosa | (Sweet) Nakai 的干燥近成</div>
+  <div class="note"><span class="note-num">P587</span>1、痹证（治疗痹证、筋脉拘挛，关节屈伸不利要药） | +独活、川乌（祛风湿散寒） | +秦艽、防己（祛风湿清热）</div>
+  <div class="note"><span class="note-num">P588</span>3、吐泻转筋（治疗吐泻转筋之要药） | 湿阻中焦、吐泻不止、脚腓转筋、挛急疼痛 | +吴茱萸、小茴香（温中燥湿）</div>
+  <div class="note"><span class="note-num">P590</span>Agkistrodon acutus | (Guenther) 除去内脏的干 | 燥全体。主产于湖北、江西</div>
+  <div class="note"><span class="note-num">P592</span>1、痹证，中风半身不遂（祛风通络之常用药） | +白僵蚕、天南星（祛风止痉）</div>
+  <div class="note"><span class="note-num">P593</span>煎服，3～9g ；研末服，每次1～1.5g。 | 本品性偏温燥，阴虚及热盛者慎用。</div>
+  <div class="note"><span class="note-num">P594</span>Zaocys dhumnades （ | Cantor）除去内脏的干</div>
+  <div class="note"><span class="note-num">P597</span>1、性味归经：本节药物的性味多为辛、甘、苦， | 2、功效主治：补肝肾，强筋骨之效，宜用于风湿 | 寒痹日久未愈，肝肾虚损，痹痛不止而兼筋骨不</div>
+  <div class="note"><span class="note-num">P598</span>木植物桑寄生Taxillus | chinensis (DC.)Danser | 的干燥带叶茎枝。主产于福</div>
+  <div class="note"><span class="note-num">P600</span>1、痹证，腰膝酸软，筋骨无力 | 痹证日久，肝肾不足，腰膝酸软，筋骨无力 | +独活、人参、当归（祛风湿、益气血）</div>
+  <div class="note"><span class="note-num">P602</span>柱五加Acanthopanax | gracilistylus W. W. | Smith的干燥根皮，习称南</div>
+  <div class="note"><span class="note-num">P604</span>1、痹证，筋骨痿软，小儿行迟 | 肝肾不足，筋骨痿软，小儿行迟 | +独活、牛膝（祛风湿、补肝肾）</div>
+  <div class="note"><span class="note-num">P606</span>• 1、试述祛风湿药的含义、功效、适应范围 | • 2、试比较下列药物的功用异同点：</div>
+</div>
+<div class="chapter" id="第9章-化湿药">
+  <h2>第9章 化湿药</h2>
+  <div class="note"><span class="note-num">P608</span>掌握：1.化湿药在功效、主治、性能特点、配伍应用 | 2.相似药物功效、应用的异同点。 | 熟悉：1.化湿、燥湿等功效的含义。</div>
+  <div class="note"><span class="note-num">P609</span>掌握：广藿香、苍术、厚朴的分类、药性特点、功 | 效、主治、配伍及某些特殊用法；熟悉某些 | 特殊炮制的意义，用量、用法及使用注意。</div>
+  <div class="note"><span class="note-num">P612</span>以化湿运脾为主要功效，常用以治疗湿阻中 | 焦的药物，称为化湿药。因本类药物一般多具有 | 芳香气味，故又称为芳香化湿药。</div>
+  <div class="note"><span class="note-num">P613</span>1、共有功效主治：具有化湿运脾的功效。主 | 要适用于湿阻中焦之证(又称湿困脾胃、湿浊 | 2、兼有功效主治：本类药还分别兼有解表、</div>
+  <div class="note"><span class="note-num">P614</span>1、药性：湿邪为阴邪，当以温药除之 | 湿阻中焦以寒湿多见，本类药物多味温性。 | 2、药味：多味辛，部分药物兼有苦味。</div>
+  <div class="note"><span class="note-num">P615</span>使用化湿药应根据湿浊内阻的不同情况及兼证而进 | 行适当的配伍。湿为阴邪，其性粘腻，易阻遏气机，出 | 现脘腹胀满，故常与行气药配伍，既可增强化湿之效，</div>
+  <div class="note"><span class="note-num">P616</span>为菊科多年生草本植物茅苍术Atractylodes | lancea(Thunb.) DC.或北苍术A.chinensis(DC.) | Koidz.的干燥根茎。前者主产于江苏、湖北、河南等地</div>
+  <div class="note"><span class="note-num">P619</span>1、湿阻中焦证（为苦温燥湿的代表药） | 主治湿阻中焦，脾失健运</div>
+  <div class="note"><span class="note-num">P621</span>为木兰科落叶乔木厚朴Magnolia officinalis | Rehd.et Wils.或凹叶厚朴M.officinalis Rehd et | Wils.var blioba Rehd. et Wils.的干燥干皮、根皮及</div>
+  <div class="note"><span class="note-num">P625</span>+桂枝、杏仁（解表、平喘） | 【使用注意】气虚津亏者及孕妇慎用。</div>
+  <div class="note"><span class="note-num">P626</span>植物广藿香Pogostemon | cablin (Blanco)Benth. | 的干燥地上部分。主产于</div>
+  <div class="note"><span class="note-num">P628</span>1、湿阻中焦证（为芳香化湿之要药） | 寒湿困脾所致脘腹痞满、少食作呕、神疲体倦等 | +苍术、厚朴、陈皮（燥湿、行气）</div>
+  <div class="note"><span class="note-num">P629</span>暑月外感风寒，内伤生冷 | +厚朴、紫苏（化湿、解表） | 煎服，3～10g。鲜品加倍。</div>
+  <div class="note"><span class="note-num">P630</span>阳春砂Amomum villosum | Lour.、绿壳砂A. villosum | Lour. Var. xanthioides</div>
+  <div class="note"><span class="note-num">P632</span>1、湿阻气滞证（为治湿阻中焦、脾胃气滞证要药） | +厚朴、陈皮（燥湿、行气）</div>
+  <div class="note"><span class="note-num">P633</span>3、妊娠恶阻，胎动不安 | +苏梗、白术（行气安胎） | +人参、熟地（益气养血）</div>
+  <div class="note"><span class="note-num">P634</span>白豆蔻Amomum kravanh | Pirre ex Gagnep.或爪哇 | 白豆蔻A. compactum</div>
+  <div class="note"><span class="note-num">P636</span>脾虚湿阻气滞之胸腹虚胀 | +藿香、陈皮（化湿、行气） | +砂仁、木香（行气开胃）</div>
+  <div class="note"><span class="note-num">P637</span>尤善于胃寒湿阻气滞之呕吐 | +藿香、半夏（化湿温中止呕） | +砂仁、甘草（温中止呕）</div>
+  <div class="note"><span class="note-num">P638</span>• 1、试述化湿药的含义、功效、适应范围。 | • 2、试比较下列各组药物的功用异同点：</div>
+</div>
+<div class="footer">基于贵州中医药大学药学院 李煦照老师《临床中药学》课件整理 | 仅供学习参考</div>
+</body>
+</html>
