@@ -505,8 +505,406 @@ function render() {
       ls.classList.add('show');
       renderDashboard();
     }
+  } else if (currentTab === 'plan') {
+    renderStudyPlan();
   }
 }
+
+// ═══════════════════════════════════════
+// 14天冲刺计划
+// ═══════════════════════════════════════
+
+const PLAN_START = '2026-06-23';
+let planMode = 'chapter';
+let planRandomList = [];
+let planRandomIdx = 0;
+let planQuizList = [];
+let planQuizIdx = 0;
+let planQuizCorrect = 0;
+let planQuizWrong = 0;
+
+// Chapter definitions — herbs grouped by tags[0]
+const CHAPTER_ORDER = [
+  '解表药','清热药','泻下药','祛风湿药','化湿药','利水渗湿药',
+  '温里药','理气药','消食药','驱虫药','止血药','活血化瘀药',
+  '化痰止咳平喘药','安神药','平肝息风药','开窍药','补虚药','收涩药'
+];
+
+// 14 day plan: each day has [chapter, count] pairs
+const DAY_PLAN = [
+  { day: 1, label: '解表药 + 清热药(上)', chapters: { '解表药': 30, '清热药': 20 } },
+  { day: 2, label: '清热药(下) + 泻下药 + 祛风湿药', chapters: { '清热药': 23, '泻下药': 9, '祛风湿药': 12 } },
+  { day: 3, label: '化湿药 + 利水渗湿药 + 温里药', chapters: { '化湿药': 9, '利水渗湿药': 18, '温里药': 11 } },
+  { day: 4, label: '理气药 + 消食药 + 驱虫药 + 止血药', chapters: { '理气药': 16, '消食药': 6, '驱虫药': 6, '止血药': 16 } },
+  { day: 5, label: '活血化瘀药 + 化痰止咳平喘药', chapters: { '活血化瘀药': 22, '化痰止咳平喘药': 23 } },
+  { day: 6, label: '安神药 + 平肝息风药 + 开窍药 + 补虚药(上)', chapters: { '安神药': 9, '平肝息风药': 13, '开窍药': 6, '补虚药': 15 } },
+  { day: 7, label: '补虚药(下) + 收涩药 + 全复习', chapters: { '补虚药': 28, '收涩药': 15 } },
+  { day: 8, label: '解表药 + 清热药 复习', chapters: { '解表药': 30, '清热药': 43 } },
+  { day: 9, label: '泻下药→温里药 复习', chapters: { '泻下药': 9, '祛风湿药': 12, '化湿药': 9, '利水渗湿药': 18, '温里药': 11 } },
+  { day: 10, label: '理气药→活血化瘀药 复习', chapters: { '理气药': 16, '消食药': 6, '驱虫药': 6, '止血药': 16, '活血化瘀药': 22 } },
+  { day: 11, label: '化痰止咳→补虚(上半) 复习', chapters: { '化痰止咳平喘药': 23, '安神药': 9, '平肝息风药': 13, '补虚药': 25 } },
+  { day: 12, label: '补虚(下半)+收涩 复习', chapters: { '补虚药': 18, '收涩药': 15, '开窍药': 6 } },
+  { day: 13, label: '弱点攻坚(错题重点)', chapters: {} },
+  { day: 14, label: '全量扫尾(350味快速过)', chapters: {} }
+];
+
+function getPlanProgress() {
+  let p = localStorage.getItem('zhongyao-plan');
+  return p ? JSON.parse(p) : {};
+}
+function savePlanProgress(p) { localStorage.setItem('zhongyao-plan', JSON.stringify(p)); }
+
+function getPlanDay() {
+  let today = new Date().toISOString().slice(0, 10);
+  let start = new Date(PLAN_START);
+  let now = new Date(today);
+  let diff = Math.floor((now - start) / 86400000);
+  return Math.min(Math.max(diff + 1, 1), 14);
+}
+
+function renderStudyPlan() {
+  document.getElementById('filterSection').style.display = 'none';
+  document.getElementById('cardList').innerHTML = '';
+  document.getElementById('learnStatsSection').classList.remove('show');
+  document.getElementById('studyPlanSection').style.display = 'block';
+
+  let curDay = getPlanDay();
+  let daysLeft = 14 - curDay + 1;
+  let planInfo = DAY_PLAN[curDay - 1];
+  let progress = getPlanProgress();
+  let todayKey = 'day' + curDay;
+
+  // Countdown
+  document.getElementById('planCountdown').innerHTML = `
+    <div class="countdown-badge">📅 第 ${curDay}/14 天</div>
+    <div class="countdown-days">距考试还有 <strong>${daysLeft}</strong> 天</div>
+    <div class="countdown-label">${planInfo.label}</div>
+    <div class="countdown-progress">
+      <div class="countdown-bar" style="width:${(curDay/14*100)}%"></div>
+    </div>
+  `;
+
+  renderDaySelector(curDay);
+  renderChapterGrid(curDay, progress, todayKey);
+}
+
+function renderDaySelector(curDay) {
+  let el = document.getElementById('planDaySelector');
+  el.innerHTML = DAY_PLAN.map((d, i) => {
+    let cls = (i + 1) === curDay ? 'plan-day-btn today' : (i + 1) < curDay ? 'plan-day-btn done' : 'plan-day-btn';
+    return `<button class="${cls}" onclick="switchPlanDay(${i+1})">D${i+1}</button>`;
+  }).join('');
+}
+
+function switchPlanDay(day) {
+  let el = document.getElementById('planDaySelector');
+  el.querySelectorAll('.plan-day-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderChapterGridForDay(day);
+}
+
+function renderChapterGrid(curDay, progress, todayKey) {
+  renderChapterGridForDay(curDay);
+}
+
+function renderChapterGridForDay(day) {
+  let planInfo = DAY_PLAN[day - 1];
+  let progress = getPlanProgress();
+  let todayKey = 'day' + day;
+  let dayProgress = progress[todayKey] || {};
+  let grid = document.getElementById('planChapterGrid');
+
+  // Day 13-14 special: use all herbs
+  let herbsToShow = [];
+  if (day === 13) {
+    // Weakness day - show herbs marked wrong in quiz
+    let wrong = JSON.parse(localStorage.getItem('zhongyao-plan-wrong') || '[]');
+    herbsToShow = TCM_HERBS.filter(h => wrong.includes(h.name));
+    if (herbsToShow.length === 0) herbsToShow = TCM_HERBS;
+  } else if (day === 14) {
+    herbsToShow = TCM_HERBS;
+  }
+
+  let html = '';
+  let totalDone = 0;
+  let totalAll = 0;
+
+  if (day >= 13) {
+    // Day 13-14: all herbs flat list
+    let allHerbs = day === 13 ? herbsToShow : TCM_HERBS;
+    html += `<div class="plan-chapter-block"><h4 class="plan-chapter-name">${day===13?'弱点攻坚(错题重点)':'全量扫尾'}</h4><div class="plan-herb-list">`;
+    allHerbs.forEach(h => {
+      let done = dayProgress[h.id] ? 'done' : '';
+      if (dayProgress[h.id]) totalDone++;
+      totalAll++;
+      let levelTag = h.level === '掌握' ? '<span class="plan-herb-lv lv-master">掌</span>' :
+                     h.level === '熟悉' ? '<span class="plan-herb-lv lv-familiar">熟</span>' :
+                     '<span class="plan-herb-lv lv-understand">了</span>';
+      html += `<span class="plan-herb-tag ${done}" onclick="togglePlanHerb('day${day}','${h.id}')">${levelTag}${h.name}</span>`;
+    });
+    html += '</div></div><div class="plan-chapter-progress">已背 <strong id="planDoneCount">${totalDone}</strong> / ${totalAll}</div>';
+  } else {
+    // Day 1-12: grouped by chapter
+    let chs = planInfo.chapters;
+    for (let [chName, target] of Object.entries(chs)) {
+      let herbs = TCM_HERBS.filter(h => h.tags[0].includes(chName.replace('药','')) || h.tags[0] === chName);
+      let done = herbs.filter(h => dayProgress[h.id]).length;
+      totalDone += done;
+      totalAll += herbs.length;
+
+      html += `<div class="plan-chapter-block">
+        <h4 class="plan-chapter-name">${chName} <span class="plan-chapter-stat">${done}/${herbs.length}</span>
+          <span class="plan-chapter-bar-wrap"><span class="plan-chapter-bar" style="width:${herbs.length?done/herbs.length*100:0}%"></span></span>
+        </h4>
+        <div class="plan-herb-list">`;
+
+      herbs.forEach(h => {
+        let doneCls = dayProgress[h.id] ? 'done' : '';
+        let levelTag = h.level === '掌握' ? '<span class="plan-herb-lv lv-master">掌</span>' :
+                       h.level === '熟悉' ? '<span class="plan-herb-lv lv-familiar">熟</span>' :
+                       '<span class="plan-herb-lv lv-understand">了</span>';
+        html += `<span class="plan-herb-tag ${doneCls}" onclick="togglePlanHerb('day${day}','${h.id}')">${levelTag}${h.name}</span>`;
+      });
+
+      html += '</div></div>';
+    }
+    html += `<div class="plan-chapter-progress">今日已背 <strong id="planDoneCount">${totalDone}</strong> / ${totalAll}</div>`;
+  }
+
+  grid.innerHTML = html;
+}
+
+function togglePlanHerb(dayKey, herbId) {
+  let p = getPlanProgress();
+  if (!p[dayKey]) p[dayKey] = {};
+  if (p[dayKey][herbId]) {
+    delete p[dayKey][herbId];
+  } else {
+    p[dayKey][herbId] = true;
+  }
+  savePlanProgress(p);
+
+  // Update visual
+  let el = event.target;
+  el.classList.toggle('done');
+
+  // Update count
+  let cnt = document.getElementById('planDoneCount');
+  if (cnt) {
+    let cur = parseInt(cnt.textContent);
+    cnt.textContent = p[dayKey][herbId] ? (cur + 1) : (cur - 1);
+  }
+}
+
+function switchPlanMode(mode) {
+  planMode = mode;
+  document.querySelectorAll('.plan-mode-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('planChapterMode').style.display = mode === 'chapter' ? 'block' : 'none';
+  document.getElementById('planRandomMode').style.display = mode === 'random' ? 'block' : 'none';
+  if (mode === 'random') startRandomStudy();
+}
+
+function startRandomStudy() {
+  let level = document.getElementById('planRandomLevel').value;
+  let herbs = level === 'all' ? [...TCM_HERBS] : TCM_HERBS.filter(h => h.level === level);
+  // Shuffle
+  for (let i = herbs.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [herbs[i], herbs[j]] = [herbs[j], herbs[i]];
+  }
+  planRandomList = herbs;
+  planRandomIdx = 0;
+  document.getElementById('planRandomCount').textContent = `0/${herbs.length}`;
+  renderRandomCard();
+}
+
+function renderRandomCard() {
+  let cards = document.getElementById('planRandomCards');
+  if (planRandomIdx >= planRandomList.length) {
+    cards.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🎉</div><div class="empty-state-text">本轮背诵完成！点击换一批继续</div></div>';
+    document.getElementById('planRandomCount').textContent = planRandomList.length + '/' + planRandomList.length;
+    return;
+  }
+
+  let h = planRandomList[planRandomIdx];
+  let progress = getPlanProgress();
+  let curDay = getPlanDay();
+  let dayProgress = progress['day' + curDay] || {};
+  let isDone = dayProgress[h.id];
+  let levelColor = { '掌握': 'var(--cinnabar-600)', '熟悉': 'var(--familiar)', '了解': 'var(--herb-green-600)' };
+  let levelStyle = levelColor[h.level] || '';
+
+  cards.innerHTML = `
+    <div class="random-card">
+      <div class="random-card-header" style="background:${levelStyle};">
+        <span class="random-card-name">${h.name}</span>
+        <span class="random-card-level">${h.level}级</span>
+        ${isDone ? '<span class="random-card-done">✅</span>' : ''}
+      </div>
+      <div class="random-card-body">
+        <div class="random-card-section">
+          <span class="random-card-label">功效</span>
+          <span class="random-card-value">${h.summary}</span>
+        </div>
+        <div class="random-card-section">
+          <span class="random-card-label">性味</span>
+          <span class="random-card-value">${h.siqi} · ${h.wuwei}</span>
+        </div>
+        <div class="random-card-section">
+          <span class="random-card-label">归经</span>
+          <span class="random-card-value">${h.guijing || '—'}</span>
+        </div>
+        <div class="random-card-section">
+          <span class="random-card-label">分类</span>
+          <span class="random-card-value">${h.tags.join(' · ')}</span>
+        </div>
+      </div>
+      <div class="random-card-actions">
+        <button class="random-btn random-btn-pass" onclick="randomMarkDone('${h.id}')">✅ 会了</button>
+        <button class="random-btn random-btn-next" onclick="randomNext()">➡️ 看过了</button>
+        <button class="random-btn random-btn-again" onclick="randomAgain('${h.id}')">🔁 再背一次</button>
+      </div>
+    </div>
+    <div class="random-progress">
+      <div class="random-progress-bar" style="width:${(planRandomIdx+1)/planRandomList.length*100}%"></div>
+      <span>${planRandomIdx + 1} / ${planRandomList.length}</span>
+    </div>
+  `;
+}
+
+function randomMarkDone(id) {
+  let curDay = getPlanDay();
+  let dayKey = 'day' + curDay;
+  let p = getPlanProgress();
+  if (!p[dayKey]) p[dayKey] = {};
+  p[dayKey][id] = true;
+  savePlanProgress(p);
+  randomNext();
+}
+
+function randomNext() {
+  planRandomIdx++;
+  if (planRandomIdx >= planRandomList.length) {
+    planRandomIdx = 0;
+    // Re-shuffle wrong ones
+  }
+  renderRandomCard();
+  document.getElementById('planRandomCount').textContent = (planRandomIdx) + '/' + planRandomList.length;
+}
+
+function randomAgain(id) {
+  planRandomList.push(planRandomList[planRandomIdx]);
+  randomNext();
+}
+
+// Quiz mode
+function initPlanQuizChapters() {
+  let sel = document.getElementById('planQuizChapter');
+  sel.innerHTML = '<option value="all">全部章节</option>' +
+    CHAPTER_ORDER.map(c => `<option value="${c}">${c}</option>`).join('');
+}
+
+function restartPlanQuiz() {
+  let level = document.getElementById('planQuizLevel').value;
+  let chapter = document.getElementById('planQuizChapter').value;
+  let herbs = TCM_HERBS;
+
+  if (level !== 'all') herbs = herbs.filter(h => h.level === level);
+  if (chapter !== 'all') herbs = herbs.filter(h => h.tags[0] === chapter);
+
+  // Shuffle
+  for (let i = herbs.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [herbs[i], herbs[j]] = [herbs[j], herbs[i]];
+  }
+
+  planQuizList = herbs;
+  planQuizIdx = 0;
+  planQuizCorrect = 0;
+  planQuizWrong = 0;
+
+  document.getElementById('planQuizTotal').textContent = '0';
+  document.getElementById('planQuizCorrect').textContent = '0';
+  document.getElementById('planQuizWrong').textContent = '0';
+  document.getElementById('planQuizRate').textContent = '0%';
+  document.getElementById('planQuizAnswer').style.display = 'none';
+
+  renderPlanQuiz();
+}
+
+function renderPlanQuiz() {
+  if (planQuizIdx >= planQuizList.length) {
+    document.getElementById('planQuizQuestion').textContent = '🎉 题目全部做完！';
+    document.getElementById('planQuizAnswer').style.display = 'none';
+    document.getElementById('planQuizAnswer').textContent = '';
+    return;
+  }
+
+  let h = planQuizList[planQuizIdx];
+  // Random question type
+  let qType = Math.floor(Math.random() * 3);
+
+  if (qType === 0) {
+    // 药名→功效
+    document.getElementById('planQuizQuestion').innerHTML = `<strong>${h.name}</strong> 的功效是？`;
+    document.getElementById('planQuizAnswer').innerHTML = `<div class="plan-answer-box">${h.summary}</div>
+      <div class="plan-answer-extra">四气：${h.siqi} · 五味：${h.wuwei} · 归经：${h.guijing || '—'} · 分类：${(h.tags || []).join('、')}</div>`;
+  } else if (qType === 1) {
+    // 功效→药名
+    document.getElementById('planQuizQuestion').innerHTML = `具有「<strong>${h.summary}</strong>」功效的药是？`;
+    document.getElementById('planQuizAnswer').innerHTML = `<div class="plan-answer-box">${h.name}</div>
+      <div class="plan-answer-extra">四气：${h.siqi} · 五味：${h.wuwei} · 等级：${h.level}</div>`;
+  } else {
+    // 归经匹配
+    document.getElementById('planQuizQuestion').innerHTML = `<strong>${h.name}</strong> 的归经是？`;
+    document.getElementById('planQuizAnswer').innerHTML = `<div class="plan-answer-box">${h.guijing || '—'}</div>
+      <div class="plan-answer-extra">功效：${h.summary} · 等级：${h.level}</div>`;
+  }
+  document.getElementById('planQuizAnswer').style.display = 'none';
+}
+
+function showPlanQuizAnswer() {
+  document.getElementById('planQuizAnswer').style.display = 'block';
+}
+
+function markPlanQuiz(correct) {
+  let total = planQuizCorrect + planQuizWrong + 1;
+  if (correct) {
+    planQuizCorrect++;
+  } else {
+    planQuizWrong++;
+    // Save to wrong list
+    let wrong = JSON.parse(localStorage.getItem('zhongyao-plan-wrong') || '[]');
+    let h = planQuizList[planQuizIdx];
+    if (!wrong.includes(h.name)) {
+      wrong.push(h.name);
+      localStorage.setItem('zhongyao-plan-wrong', JSON.stringify(wrong));
+    }
+  }
+
+  document.getElementById('planQuizTotal').textContent = total;
+  document.getElementById('planQuizCorrect').textContent = planQuizCorrect;
+  document.getElementById('planQuizWrong').textContent = planQuizWrong;
+  document.getElementById('planQuizRate').textContent = Math.round(planQuizCorrect/total*100) + '%';
+
+  planQuizIdx++;
+  renderPlanQuiz();
+}
+
+function nextPlanQuiz() {
+  if (planQuizIdx >= planQuizList.length) {
+    restartPlanQuiz();
+    return;
+  }
+  planQuizIdx++;
+  renderPlanQuiz();
+}
+
+// Init plan quiz chapters on load
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(initPlanQuizChapters, 500);
+});
 
 // ── 初始化大分类筛选 ──
 function initCateFilter() {

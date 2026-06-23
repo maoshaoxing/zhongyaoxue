@@ -1411,3 +1411,382 @@ body {
     box-shadow: none;
   }
 }
+
+/* ═══════════════════════════════════════
+   14天冲刺计划
+   ═══════════════════════════════════════ */
+.study-plan-section {
+  display: none;
+  padding: var(--space-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 倒计时 */
+.plan-countdown {
+  background: linear-gradient(135deg, var(--herb-green-700), var(--herb-green-600));
+  color: white;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+.countdown-badge {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.countdown-days {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+.countdown-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+.countdown-progress {
+  margin-top: 12px;
+  height: 6px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.countdown-bar {
+  height: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* 模式切换 */
+.plan-mode-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--space-lg);
+  background: var(--ink-50);
+  border-radius: var(--radius-md);
+  padding: 4px;
+}
+.plan-mode-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--ink-600);
+}
+.plan-mode-btn.active {
+  background: white;
+  color: var(--herb-green-600);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 日期选择器 */
+.plan-day-selector {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 8px 0;
+  margin-bottom: var(--space-md);
+  -webkit-overflow-scrolling: touch;
+}
+.plan-day-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--ink-200);
+  border-radius: 50%;
+  background: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.plan-day-btn.today {
+  border-color: var(--cinnabar-600);
+  background: var(--cinnabar-50);
+  color: var(--cinnabar-600);
+}
+.plan-day-btn.done {
+  border-color: var(--herb-green-600);
+  background: var(--herb-green-50);
+  color: var(--herb-green-600);
+}
+.plan-day-btn.active {
+  transform: scale(1.15);
+  border-color: var(--herb-green-600);
+  background: var(--herb-green-600);
+  color: white;
+}
+
+/* 章节网格 */
+.plan-chapter-block {
+  margin-bottom: var(--space-md);
+  background: white;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  border: 1px solid var(--ink-100);
+}
+.plan-chapter-name {
+  font-size: 16px;
+  color: var(--ink-700);
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan-chapter-stat {
+  font-size: 13px;
+  color: var(--ink-400);
+  font-weight: 400;
+}
+.plan-chapter-bar-wrap {
+  flex: 1;
+  height: 5px;
+  background: var(--ink-100);
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: 100px;
+  display: inline-block;
+}
+.plan-chapter-bar {
+  height: 100%;
+  background: var(--herb-green-600);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.plan-herb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.plan-herb-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  background: var(--ink-50);
+  border: 1px solid var(--ink-200);
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+.plan-herb-tag.done {
+  background: var(--herb-green-50);
+  border-color: var(--herb-green-400);
+  color: var(--herb-green-700);
+  text-decoration: line-through;
+}
+.plan-herb-tag:hover {
+  border-color: var(--herb-green-600);
+  transform: translateY(-1px);
+}
+
+.plan-herb-lv {
+  font-size: 10px;
+  padding: 1px 4px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+}
+.lv-master { background: var(--cinnabar-600); }
+.lv-familiar { background: var(--familiar, #E8A400); }
+.lv-understand { background: var(--herb-green-600); }
+
+.plan-chapter-progress {
+  text-align: center;
+  padding: var(--space-sm);
+  font-size: 15px;
+  color: var(--ink-600);
+}
+
+/* 乱序模式 */
+.plan-random-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+.plan-level-select {
+  padding: 8px 12px;
+  border: 1px solid var(--ink-200);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background: white;
+}
+.plan-random-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--herb-green-600);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+.plan-random-count {
+  font-size: 14px;
+  color: var(--ink-600);
+  margin-left: auto;
+}
+
+/* 乱序卡片 */
+.random-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: var(--space-md);
+}
+.random-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-md) var(--space-lg);
+  color: white;
+}
+.random-card-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+.random-card-level {
+  font-size: 13px;
+  background: rgba(255,255,255,0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+.random-card-done {
+  margin-left: auto;
+  font-size: 20px;
+}
+.random-card-body {
+  padding: var(--space-lg);
+}
+.random-card-section {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--ink-50);
+}
+.random-card-label {
+  width: 45px;
+  font-size: 13px;
+  color: var(--ink-400);
+  flex-shrink: 0;
+}
+.random-card-value {
+  font-size: 15px;
+  color: var(--ink-700);
+  line-height: 1.6;
+}
+
+.random-card-actions {
+  display: flex;
+  gap: 8px;
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--ink-50);
+}
+.random-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.random-btn-pass {
+  background: var(--herb-green-600);
+  color: white;
+}
+.random-btn-next {
+  background: var(--ink-100);
+  color: var(--ink-600);
+}
+.random-btn-again {
+  background: var(--cinnabar-50);
+  color: var(--cinnabar-600);
+}
+.random-progress {
+  margin-top: var(--space-sm);
+}
+.random-progress-bar {
+  height: 4px;
+  background: var(--herb-green-600);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+.random-progress span {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: var(--ink-400);
+  margin-top: 4px;
+}
+
+/* 刷题模式 */
+.plan-quiz-section {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--ink-100);
+}
+.plan-section-title {
+  font-size: 18px;
+  color: var(--ink-700);
+  margin: 0 0 var(--space-md) 0;
+}
+.plan-quiz-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.plan-quiz-card {
+  background: var(--ink-50);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  min-height: 100px;
+}
+.plan-quiz-question {
+  font-size: 18px;
+  color: var(--ink-700);
+  line-height: 1.8;
+}
+.plan-quiz-answer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--ink-200);
+}
+.plan-answer-box {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--herb-green-700);
+  padding: var(--space-md);
+  background: var(--herb-green-50);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--herb-green-600);
+}
+.plan-answer-extra {
+  font-size: 13px;
+  color: var(--ink-400);
+  margin-top: 8px;
+}
+
+.plan-quiz-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}

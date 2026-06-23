@@ -49,7 +49,7 @@
 <header class="site-header">
   <div class="site-header-inner">
     <h1>中药学备考全书</h1>
-    <p class="subtitle">基于第十版教材 · 283味中药 · 经典背诵歌诀</p>
+    <p class="subtitle">基于第十版教材 · 350味中药 · 14天冲刺计划</p>
 
     <div class="theme-toggle-wrap">
       <div class="theme-toggle">
@@ -61,7 +61,7 @@
     <!-- 导航 -->
     <nav class="site-nav">
       <button class="nav-tab active" data-tab="herbs">
-        中药大全 <span class="nav-tab-count">283</span>
+        中药大全 <span class="nav-tab-count">350</span>
       </button>
       <button class="nav-tab" data-tab="alias">
         别名大全 <span class="nav-tab-count">55</span>
@@ -74,6 +74,9 @@
       </button>
       <button class="nav-tab" data-tab="stats">
         学习统计
+      </button>
+      <button class="nav-tab" data-tab="plan">
+        14天计划 💪
       </button>
     </nav>
   </div>
@@ -165,6 +168,76 @@
   <!-- 学习统计 -->
   <div class="learn-stats-section" id="learnStatsSection">
     <div id="dashboardStats"></div>
+  </div>
+
+  <!-- 14天计划 -->
+  <div class="study-plan-section" id="studyPlanSection">
+    <!-- 倒计时 -->
+    <div class="plan-countdown" id="planCountdown"></div>
+
+    <!-- 模式切换 -->
+    <div class="plan-mode-bar">
+      <button class="plan-mode-btn active" data-mode="chapter" onclick="switchPlanMode('chapter')">
+        📖 按章节
+      </button>
+      <button class="plan-mode-btn" data-mode="random" onclick="switchPlanMode('random')">
+        🎲 乱序冲刺
+      </button>
+    </div>
+
+    <!-- 按章节模式 -->
+    <div class="plan-chapter-mode" id="planChapterMode">
+      <div class="plan-day-selector" id="planDaySelector"></div>
+      <div class="plan-chapter-grid" id="planChapterGrid"></div>
+    </div>
+
+    <!-- 乱序模式 -->
+    <div class="plan-random-mode" id="planRandomMode" style="display:none;">
+      <div class="plan-random-controls">
+        <select class="plan-level-select" id="planRandomLevel" onchange="startRandomStudy()">
+          <option value="all">全部药材</option>
+          <option value="掌握">仅掌握级(110味)</option>
+          <option value="熟悉">仅熟悉级(97味)</option>
+          <option value="了解">仅了解级(143味)</option>
+        </select>
+        <button class="plan-random-btn" onclick="startRandomStudy()">🔄 换一批</button>
+        <span class="plan-random-count" id="planRandomCount">0/0</span>
+      </div>
+      <div class="plan-random-cards" id="planRandomCards"></div>
+    </div>
+
+    <!-- 刷题模式 -->
+    <div class="plan-quiz-section" id="planQuizSection">
+      <h3 class="plan-section-title">📝 每日刷题（30分钟）</h3>
+      <div class="plan-quiz-controls">
+        <select class="plan-level-select" id="planQuizLevel" onchange="restartPlanQuiz()">
+          <option value="all">全部等级</option>
+          <option value="掌握">仅掌握</option>
+          <option value="熟悉">仅熟悉</option>
+          <option value="了解">仅了解</option>
+        </select>
+        <select class="plan-level-select" id="planQuizChapter" onchange="restartPlanQuiz()">
+          <option value="all">全部章节</option>
+        </select>
+        <button class="plan-random-btn" onclick="restartPlanQuiz()">🔄 重新出题</button>
+      </div>
+      <div class="plan-quiz-card" id="planQuizCard">
+        <div class="plan-quiz-question" id="planQuizQuestion">点击「重新出题」开始刷题</div>
+        <div class="plan-quiz-answer" id="planQuizAnswer" style="display:none;"></div>
+      </div>
+      <div class="plan-quiz-actions">
+        <button class="quiz-btn quiz-btn-primary" onclick="nextPlanQuiz()">下一题</button>
+        <button class="quiz-btn quiz-btn-secondary" onclick="showPlanQuizAnswer()">显示答案</button>
+        <button class="quiz-btn quiz-btn-secondary" onclick="markPlanQuiz(true)">✅ 答对了</button>
+        <button class="quiz-btn quiz-btn-secondary" onclick="markPlanQuiz(false)">❌ 答错了</button>
+      </div>
+      <div class="quiz-stats">
+        <div>今日题数：<span id="planQuizTotal">0</span></div>
+        <div>正确：<span id="planQuizCorrect" style="color:var(--herb-green-600);">0</span></div>
+        <div>错误：<span id="planQuizWrong" style="color:var(--cinnabar-600);">0</span></div>
+        <div>正确率：<span id="planQuizRate">0%</span></div>
+      </div>
+    </div>
   </div>
 
   <!-- 内容区域 -->
