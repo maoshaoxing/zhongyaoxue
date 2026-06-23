@@ -663,7 +663,7 @@ function renderChapterGridForDay(day) {
         let levelTag = h.level === '掌握' ? '<span class="plan-herb-lv lv-master">掌</span>' :
                        h.level === '熟悉' ? '<span class="plan-herb-lv lv-familiar">熟</span>' :
                        '<span class="plan-herb-lv lv-understand">了</span>';
-        html += `<span class="plan-herb-tag ${doneCls}" onclick="togglePlanHerb('day${day}','${h.id}')">${levelTag}${h.name}</span>`;
+        html += `<span class="plan-herb-tag ${doneCls}" onclick="togglePlanHerb('day${day}','${h.id}')" ondblclick="goToHerb('${h.name}')" title="双击查看详情">${levelTag}${h.name}</span>`;
       });
 
       html += '</div></div>';
@@ -672,6 +672,16 @@ function renderChapterGridForDay(day) {
   }
 
   grid.innerHTML = html;
+}
+
+function goToHerb(name) {
+  currentTab = 'herbs';
+  document.getElementById('search').value = name;
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.nav-tab[data-tab="herbs"]').classList.add('active');
+  document.getElementById('studyPlanSection').style.display = 'none';
+  document.getElementById('filterSection').style.display = 'block';
+  render();
 }
 
 function togglePlanHerb(dayKey, herbId) {
@@ -738,7 +748,7 @@ function renderRandomCard() {
   cards.innerHTML = `
     <div class="random-card">
       <div class="random-card-header" style="background:${levelStyle};">
-        <span class="random-card-name">${h.name}</span>
+        <span class="random-card-name" onclick="goToHerb('${h.name}')" style="cursor:pointer;" title="点击查看详情">${h.name}</span>
         <span class="random-card-level">${h.level}级</span>
         ${isDone ? '<span class="random-card-done">✅</span>' : ''}
       </div>

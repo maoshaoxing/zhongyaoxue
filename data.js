@@ -2,7 +2,7 @@ window.TCM_HERBS = [
   {
     "id": "mahuang",
     "name": "麻黄",
-    "summary": "发汗解表，宣肺平喘，利水消肿。",
+    "summary": "发汗散寒，宣肺平喘，利水消肿。",
     "siqi": "温",
     "wuwei": "辛、微苦",
     "tags": [
@@ -16,7 +16,7 @@ window.TCM_HERBS = [
   {
     "id": "guizhi",
     "name": "桂枝",
-    "summary": "发汗解肌，温通经脉，助阳化气，平冲降逆。",
+    "summary": "发汗解肌，温通经脉，助阳化气。",
     "siqi": "温",
     "wuwei": "辛、甘",
     "tags": [
@@ -25,63 +25,7 @@ window.TCM_HERBS = [
       "温通"
     ],
     "level": "掌握",
-    "guijing": "心、肺、膀胱经"
-  },
-  {
-    "id": "zisuye",
-    "name": "紫苏叶",
-    "summary": "解表散寒，行气宽中，解鱼蟹毒。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "解表",
-      "行气"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、脾经"
-  },
-  {
-    "id": "zisugeng",
-    "name": "紫苏梗",
-    "summary": "理气宽中，止痛安胎。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "解表",
-      "理气"
-    ],
-    "level": "掌握",
-    "guijing": "肺、脾、胃经"
-  },
-  {
-    "id": "jingjie",
-    "name": "荆芥",
-    "summary": "解表散风，透疹消疮；炒炭止血。",
-    "siqi": "微温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "解表",
-      "祛风"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、肝经"
-  },
-  {
-    "id": "jingjietan",
-    "name": "荆芥炭",
-    "summary": "收敛止血。",
-    "siqi": "微温",
-    "wuwei": "辛、涩",
-    "tags": [
-      "解表药",
-      "解表",
-      "止血"
-    ],
-    "level": "掌握",
-    "guijing": "肺、肝经"
+    "guijing": "肺、心、肾、肝经"
   },
   {
     "id": "qianghuo",
@@ -98,37 +42,9 @@ window.TCM_HERBS = [
     "guijing": "膀胱、肾经"
   },
   {
-    "id": "baizhi",
-    "name": "白芷",
-    "summary": "解表散寒，祛风止痛，宣通鼻窍，燥湿止带，消肿排脓。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "解表",
-      "止痛"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、胃、大肠经"
-  },
-  {
-    "id": "xixin",
-    "name": "细辛",
-    "summary": "解表散寒，祛风止痛，通窍，温肺化饮。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "解表",
-      "温肺"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、肾、心经"
-  },
-  {
     "id": "bohe",
     "name": "薄荷",
-    "summary": "疏散风热，清利头目，利咽，透疹，疏肝行气。",
+    "summary": "宣散风热，清利头目，利咽，透疹，疏肝行气。",
     "siqi": "凉",
     "wuwei": "辛",
     "tags": [
@@ -136,32 +52,6 @@ window.TCM_HERBS = [
       "辛凉解表"
     ],
     "level": "掌握",
-    "guijing": "肺、肝经"
-  },
-  {
-    "id": "niubangzi",
-    "name": "牛蒡子",
-    "summary": "疏散风热，宣肺祛痰，解毒透疹，消肿疗疮。",
-    "siqi": "寒",
-    "wuwei": "辛、苦",
-    "tags": [
-      "解表药",
-      "辛凉解表"
-    ],
-    "level": "了解",
-    "guijing": "肺、胃经"
-  },
-  {
-    "id": "sangye",
-    "name": "桑叶",
-    "summary": "疏散风热，清肺润燥，平抑肝阳，清肝明目。",
-    "siqi": "寒",
-    "wuwei": "甘、苦",
-    "tags": [
-      "解表药",
-      "辛凉解表"
-    ],
-    "level": "熟悉",
     "guijing": "肺、肝经"
   },
   {
@@ -192,19 +82,6 @@ window.TCM_HERBS = [
     "guijing": "脾、胃经"
   },
   {
-    "id": "gehua",
-    "name": "葛花",
-    "summary": "解酒醒脾，清热解毒。",
-    "siqi": "凉",
-    "wuwei": "甘",
-    "tags": [
-      "解表药",
-      "解酒"
-    ],
-    "level": "掌握",
-    "guijing": "脾、胃经"
-  },
-  {
     "id": "chaihu",
     "name": "柴胡",
     "summary": "解表退热，疏肝解郁，升举阳气。",
@@ -219,9 +96,78 @@ window.TCM_HERBS = [
     "guijing": "肝、胆经"
   },
   {
+    "id": "zisuye",
+    "name": "紫苏叶",
+    "summary": "发散风寒，行气宽中，安胎，解鱼蟹毒。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "解表药",
+      "解表",
+      "行气"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、脾、胃经"
+  },
+  {
+    "id": "jingjie",
+    "name": "荆芥",
+    "summary": "散风解表，透疹止痒，止血（炒炭）。",
+    "siqi": "微温",
+    "wuwei": "辛",
+    "tags": [
+      "解表药",
+      "解表",
+      "祛风"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、肝经"
+  },
+  {
+    "id": "baizhi",
+    "name": "白芷",
+    "summary": "发散风寒，通窍止痛，燥湿止带，消肿排脓。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "解表药",
+      "解表",
+      "止痛"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "xixin",
+    "name": "细辛",
+    "summary": "祛风散寒，通窍止痛，温肺化饮。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "解表药",
+      "解表",
+      "温肺"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、心、肾经"
+  },
+  {
+    "id": "sangye",
+    "name": "桑叶",
+    "summary": "疏散风热，清肺润燥，平抑肝阳，清肝明目。",
+    "siqi": "寒",
+    "wuwei": "甘、苦",
+    "tags": [
+      "解表药",
+      "辛凉解表"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、肝经"
+  },
+  {
     "id": "shengjiang",
     "name": "生姜",
-    "summary": "解表散寒，温中止呕，化痰止咳。",
+    "summary": "发汗解表，温中止呕，温肺止咳。",
     "siqi": "微温",
     "wuwei": "辛",
     "tags": [
@@ -230,47 +176,6 @@ window.TCM_HERBS = [
       "止呕"
     ],
     "level": "熟悉",
-    "guijing": "肺、脾、胃经"
-  },
-  {
-    "id": "shengjiangpi",
-    "name": "生姜皮",
-    "summary": "利水消肿。",
-    "siqi": "凉",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "利水"
-    ],
-    "level": "熟悉",
-    "guijing": "脾经"
-  },
-  {
-    "id": "shengjiangzhi",
-    "name": "生姜汁",
-    "summary": "温中止呕，化痰开窍。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "止呕",
-      "开窍"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、脾、胃经"
-  },
-  {
-    "id": "xiangru",
-    "name": "香薷",
-    "summary": "发汗解表，化湿和中，利水消肿。",
-    "siqi": "微温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "解表",
-      "化湿"
-    ],
-    "level": "了解",
     "guijing": "肺、脾、胃经"
   },
   {
@@ -288,20 +193,6 @@ window.TCM_HERBS = [
     "guijing": "膀胱、肝、脾经"
   },
   {
-    "id": "xinyi",
-    "name": "辛夷",
-    "summary": "散风寒，通鼻窍。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "解表药",
-      "解表",
-      "通窍"
-    ],
-    "level": "了解",
-    "guijing": "肺、胃经"
-  },
-  {
     "id": "shengma",
     "name": "升麻",
     "summary": "发表透疹，清热解毒，升举阳气。",
@@ -317,7 +208,7 @@ window.TCM_HERBS = [
   {
     "id": "chantui",
     "name": "蝉蜕",
-    "summary": "疏散风热，利咽开音，透疹，明目退翳，息风止痉。",
+    "summary": "疏散风热，利咽开音，透疹止痒，明目退翳，息风止痉。",
     "siqi": "寒",
     "wuwei": "甘",
     "tags": [
@@ -328,9 +219,50 @@ window.TCM_HERBS = [
     "guijing": "肺、肝经"
   },
   {
+    "id": "niubangzi",
+    "name": "牛蒡子",
+    "summary": "疏散风热，宣肺祛痰，解毒透疹，消肿疗疮。",
+    "siqi": "寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "解表药",
+      "辛凉解表"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "xiangru",
+    "name": "香薷",
+    "summary": "发汗解表，和中化湿，利水消肿。",
+    "siqi": "微温",
+    "wuwei": "辛",
+    "tags": [
+      "解表药",
+      "解表",
+      "化湿"
+    ],
+    "level": "了解",
+    "guijing": "肺、脾、胃经"
+  },
+  {
+    "id": "xinyi",
+    "name": "辛夷",
+    "summary": "散风寒，通鼻窍。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "解表药",
+      "解表",
+      "通窍"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃经"
+  },
+  {
     "id": "manjingzi",
     "name": "蔓荆子",
-    "summary": "疏散风热，清利头目。",
+    "summary": "疏散风热，清利头目，祛风止痛。",
     "siqi": "微寒",
     "wuwei": "辛、苦",
     "tags": [
@@ -343,7 +275,7 @@ window.TCM_HERBS = [
   {
     "id": "gaoben",
     "name": "藁本",
-    "summary": "祛风散寒，胜湿止痛。",
+    "summary": "发散风寒，祛风胜湿，止痛。",
     "siqi": "温",
     "wuwei": "辛",
     "tags": [
@@ -352,31 +284,18 @@ window.TCM_HERBS = [
       "止痛"
     ],
     "level": "了解",
-    "guijing": "膀胱经"
+    "guijing": "膀胱、肝经"
   },
   {
     "id": "cangerzi",
     "name": "苍耳子",
-    "summary": "散风寒，通鼻窍，祛风湿。",
+    "summary": "散风寒，通鼻窍，除湿止痛，止痒。",
     "siqi": "温",
     "wuwei": "辛、苦",
     "tags": [
       "解表药",
       "解表",
       "通窍"
-    ],
-    "level": "了解",
-    "guijing": "肺经"
-  },
-  {
-    "id": "cangercao",
-    "name": "苍耳草",
-    "summary": "祛风散热，解毒杀虫。",
-    "siqi": "微寒",
-    "wuwei": "苦、辛",
-    "tags": [
-      "解表药",
-      "解毒"
     ],
     "level": "了解",
     "guijing": "肺经"
@@ -393,19 +312,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肺、胃经"
-  },
-  {
-    "id": "dadouhuangjuan",
-    "name": "大豆黄卷",
-    "summary": "清热利湿，疏风解表。",
-    "siqi": "凉",
-    "wuwei": "甘",
-    "tags": [
-      "解表药",
-      "清热利湿"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃经"
   },
   {
     "id": "shigao",
@@ -445,7 +351,7 @@ window.TCM_HERBS = [
       "清热泻火"
     ],
     "level": "掌握",
-    "guijing": "心、肺、三焦经"
+    "guijing": "心、肺、胃、三焦经"
   },
   {
     "id": "huangqin",
@@ -476,7 +382,7 @@ window.TCM_HERBS = [
   {
     "id": "huangbai",
     "name": "黄柏",
-    "summary": "清热燥湿，泻火解毒，除骨蒸。",
+    "summary": "清热燥湿，泻火解毒，退虚热。",
     "siqi": "寒",
     "wuwei": "苦",
     "tags": [
@@ -513,32 +419,6 @@ window.TCM_HERBS = [
     "guijing": "肺、心、小肠经"
   },
   {
-    "id": "banlangen",
-    "name": "板蓝根",
-    "summary": "清热解毒，凉血利咽。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "熟悉",
-    "guijing": "心、胃经"
-  },
-  {
-    "id": "shengdi",
-    "name": "生地黄",
-    "summary": "清热凉血，养阴生津。",
-    "siqi": "寒",
-    "wuwei": "甘、苦",
-    "tags": [
-      "清热药",
-      "清热凉血"
-    ],
-    "level": "掌握",
-    "guijing": "心、肝、肾经"
-  },
-  {
     "id": "mudanpi",
     "name": "牡丹皮",
     "summary": "清热凉血，活血化瘀。",
@@ -568,7 +448,7 @@ window.TCM_HERBS = [
   {
     "id": "xiakucao",
     "name": "夏枯草",
-    "summary": "清肝泻火，明目，散结消肿。",
+    "summary": "清肝明目，散结消肿。",
     "siqi": "寒",
     "wuwei": "辛、苦",
     "tags": [
@@ -577,6 +457,43 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "肝、胆经"
+  },
+  {
+    "id": "地黄",
+    "name": "地黄",
+    "summary": "清热凉血，养阴生津。",
+    "siqi": "寒",
+    "wuwei": "甘、苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "掌握",
+    "guijing": "心、肝、肾经"
+  },
+  {
+    "id": "鱼腥草",
+    "name": "鱼腥草",
+    "summary": "清热解毒，消痈排脓，利尿通淋。",
+    "siqi": "微寒",
+    "wuwei": "辛",
+    "tags": [
+      "清热药"
+    ],
+    "level": "掌握",
+    "guijing": "肺经"
+  },
+  {
+    "id": "banlangen",
+    "name": "板蓝根",
+    "summary": "清热解毒，凉血利咽。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药",
+      "清热解毒"
+    ],
+    "level": "熟悉",
+    "guijing": "心、胃经"
   },
   {
     "id": "lugen",
@@ -616,20 +533,7 @@ window.TCM_HERBS = [
       "清热燥湿"
     ],
     "level": "熟悉",
-    "guijing": "肝、胆经"
-  },
-  {
-    "id": "kushen",
-    "name": "苦参",
-    "summary": "清热燥湿，杀虫止痒，利尿。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "清热药",
-      "清热燥湿"
-    ],
-    "level": "了解",
-    "guijing": "心、肝、胃、大肠、膀胱经"
+    "guijing": "肝、胆、膀胱经"
   },
   {
     "id": "daqingye",
@@ -656,32 +560,6 @@ window.TCM_HERBS = [
     ],
     "level": "熟悉",
     "guijing": "肝、胃经"
-  },
-  {
-    "id": "zihuadiding",
-    "name": "紫花地丁",
-    "summary": "清热解毒，凉血消肿。",
-    "siqi": "寒",
-    "wuwei": "苦、辛",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "了解",
-    "guijing": "心、肝经"
-  },
-  {
-    "id": "yejuhua",
-    "name": "野菊花",
-    "summary": "清热解毒，泻火平肝。",
-    "siqi": "微寒",
-    "wuwei": "苦、辛",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、心经"
   },
   {
     "id": "shegan",
@@ -712,7 +590,7 @@ window.TCM_HERBS = [
   {
     "id": "chishao",
     "name": "赤芍",
-    "summary": "清热凉血，散瘀止痛。",
+    "summary": "清热凉血，散瘀止痛，清肝火。",
     "siqi": "微寒",
     "wuwei": "苦",
     "tags": [
@@ -734,6 +612,44 @@ window.TCM_HERBS = [
     ],
     "level": "熟悉",
     "guijing": "肺、肝、肾经"
+  },
+  {
+    "id": "白头翁",
+    "name": "白头翁",
+    "summary": "清热解毒，凉血止痢。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "熟悉",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "kushen",
+    "name": "苦参",
+    "summary": "清热燥湿，杀虫止痒，利尿。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药",
+      "清热燥湿"
+    ],
+    "level": "了解",
+    "guijing": "心、肝、胃、大肠、膀胱经"
+  },
+  {
+    "id": "zihuadiding",
+    "name": "紫花地丁",
+    "summary": "清热解毒，凉血消肿。",
+    "siqi": "寒",
+    "wuwei": "苦、辛",
+    "tags": [
+      "清热药",
+      "清热解毒"
+    ],
+    "level": "了解",
+    "guijing": "心、肝经"
   },
   {
     "id": "zhuye",
@@ -775,19 +691,6 @@ window.TCM_HERBS = [
     "guijing": "肝、胆、大肠经"
   },
   {
-    "id": "baixianpi",
-    "name": "白鲜皮",
-    "summary": "清热燥湿，祛风解毒。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "清热药",
-      "清热燥湿"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃、膀胱经"
-  },
-  {
     "id": "qingdai",
     "name": "青黛",
     "summary": "清热解毒，凉血消斑，泻火定惊。",
@@ -814,19 +717,6 @@ window.TCM_HERBS = [
     "guijing": "肝经"
   },
   {
-    "id": "quanshen",
-    "name": "拳参",
-    "summary": "清热解毒，消肿止血，息风止痉。",
-    "siqi": "微寒",
-    "wuwei": "苦、涩",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "了解",
-    "guijing": "肺、肝、大肠经"
-  },
-  {
     "id": "tufuling",
     "name": "土茯苓",
     "summary": "解毒除湿，通利关节。",
@@ -838,19 +728,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肝、胃经"
-  },
-  {
-    "id": "mabo",
-    "name": "马勃",
-    "summary": "清肺利咽，止血。",
-    "siqi": "平",
-    "wuwei": "辛",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "了解",
-    "guijing": "肺经"
   },
   {
     "id": "machixian",
@@ -866,32 +743,6 @@ window.TCM_HERBS = [
     "guijing": "肝、大肠经"
   },
   {
-    "id": "yadanzi",
-    "name": "鸦胆子",
-    "summary": "清热解毒，截疟止痢，腐蚀赘疣。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "了解",
-    "guijing": "大肠、肝经"
-  },
-  {
-    "id": "hongteng",
-    "name": "红藤",
-    "summary": "清热解毒，活血止痛。",
-    "siqi": "平",
-    "wuwei": "苦",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "了解",
-    "guijing": "大肠、肝经"
-  },
-  {
     "id": "chuanxinlian",
     "name": "穿心莲",
     "summary": "清热解毒，凉血消肿，燥湿。",
@@ -903,19 +754,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "心、肺、大肠、膀胱经"
-  },
-  {
-    "id": "xiongdangfen",
-    "name": "熊胆粉",
-    "summary": "清热解毒，息风止痉，清肝明目。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "清热药",
-      "清热解毒"
-    ],
-    "level": "了解",
-    "guijing": "肝、胆、心经"
   },
   {
     "id": "shuinijiao",
@@ -970,6 +808,78 @@ window.TCM_HERBS = [
     "guijing": "心、肝经"
   },
   {
+    "id": "山豆根",
+    "name": "山豆根",
+    "summary": "清热解毒，利咽消肿。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "淡竹叶",
+    "name": "淡竹叶",
+    "summary": "清热泻火，除烦止渴，利尿通淋。",
+    "siqi": "寒",
+    "wuwei": "甘、淡",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "心、胃、小肠经"
+  },
+  {
+    "id": "白花蛇舌草",
+    "name": "白花蛇舌草",
+    "summary": "清热解毒，利湿通淋。",
+    "siqi": "寒",
+    "wuwei": "微苦、甘",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠、小肠经"
+  },
+  {
+    "id": "谷精草",
+    "name": "谷精草",
+    "summary": "疏散风热，明目退翳。",
+    "siqi": "平",
+    "wuwei": "辛、甘",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肺经"
+  },
+  {
+    "id": "败酱草",
+    "name": "败酱草",
+    "summary": "清热解毒，消痈排脓，祛瘀止痛。",
+    "siqi": "微寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠、肝经"
+  },
+  {
+    "id": "贯众",
+    "name": "贯众",
+    "summary": "清热解毒，凉血止血，杀虫。",
+    "siqi": "微寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "肝、胃经"
+  },
+  {
     "id": "dahuang",
     "name": "大黄",
     "summary": "泻下攻积，清热泻火，凉血解毒，逐瘀通经，利湿退黄。",
@@ -1009,14 +919,13 @@ window.TCM_HERBS = [
     "guijing": "肺、肾、大肠经"
   },
   {
-    "id": "badoushuang",
-    "name": "巴豆霜",
+    "id": "巴豆",
+    "name": "巴豆",
     "summary": "峻下冷积，逐水退肿，祛痰利咽。",
     "siqi": "热",
     "wuwei": "辛",
     "tags": [
-      "泻下药",
-      "峻下逐水"
+      "泻下药"
     ],
     "level": "熟悉",
     "guijing": "胃、大肠经"
@@ -1048,6 +957,42 @@ window.TCM_HERBS = [
     "guijing": "脾、大肠、小肠经"
   },
   {
+    "id": "牵牛子",
+    "name": "牵牛子",
+    "summary": "泻水通便，消痰涤饮，杀虫攻积。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "泻下药"
+    ],
+    "level": "了解",
+    "guijing": "肺、肾、大肠经"
+  },
+  {
+    "id": "番泻叶",
+    "name": "番泻叶",
+    "summary": "泻热行滞，通便利水。",
+    "siqi": "寒",
+    "wuwei": "甘、苦",
+    "tags": [
+      "泻下药"
+    ],
+    "level": "了解",
+    "guijing": "大肠经"
+  },
+  {
+    "id": "芦荟",
+    "name": "芦荟",
+    "summary": "泻下通便，清肝泻火，杀虫疗疳。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "泻下药"
+    ],
+    "level": "了解",
+    "guijing": "肝、胃、大肠经"
+  },
+  {
     "id": "duhuo",
     "name": "独活",
     "summary": "祛风除湿，通痹止痛。",
@@ -1072,19 +1017,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "肝、脾经"
-  },
-  {
-    "id": "weilingxian",
-    "name": "威灵仙",
-    "summary": "祛风湿，通络止痛，消骨鲠。",
-    "siqi": "温",
-    "wuwei": "辛、咸",
-    "tags": [
-      "祛风湿药",
-      "祛风湿散寒"
-    ],
-    "level": "熟悉",
-    "guijing": "膀胱经"
   },
   {
     "id": "qinjiao",
@@ -1126,6 +1058,32 @@ window.TCM_HERBS = [
     "guijing": "肝、肾经"
   },
   {
+    "id": "wujiapi",
+    "name": "五加皮",
+    "summary": "祛风湿，补肝肾，强筋骨，利水。",
+    "siqi": "温",
+    "wuwei": "辛、苦",
+    "tags": [
+      "祛风湿药",
+      "祛风湿强筋骨"
+    ],
+    "level": "掌握",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "weilingxian",
+    "name": "威灵仙",
+    "summary": "祛风湿，通络止痛，消骨鲠。",
+    "siqi": "温",
+    "wuwei": "辛、咸",
+    "tags": [
+      "祛风湿药",
+      "祛风湿散寒"
+    ],
+    "level": "熟悉",
+    "guijing": "膀胱经"
+  },
+  {
     "id": "chuanwu",
     "name": "川乌",
     "summary": "祛风除湿，温经止痛。",
@@ -1139,34 +1097,8 @@ window.TCM_HERBS = [
     "guijing": "心、肝、肾、脾经"
   },
   {
-    "id": "caowu",
-    "name": "草乌",
-    "summary": "祛风除湿，温经止痛，消肿化痰。",
-    "siqi": "热",
-    "wuwei": "辛、苦",
-    "tags": [
-      "祛风湿药",
-      "祛风湿散寒"
-    ],
-    "level": "熟悉",
-    "guijing": "心、肝、肾、脾经"
-  },
-  {
     "id": "qishe",
     "name": "蕲蛇",
-    "summary": "祛风通络，定惊止痉。",
-    "siqi": "温",
-    "wuwei": "甘、咸",
-    "tags": [
-      "祛风湿药",
-      "祛风湿散寒"
-    ],
-    "level": "熟悉",
-    "guijing": "肝经"
-  },
-  {
-    "id": "jinqianbaihuashe",
-    "name": "金钱白花蛇",
     "summary": "祛风通络，定惊止痉。",
     "siqi": "温",
     "wuwei": "甘、咸",
@@ -1191,19 +1123,6 @@ window.TCM_HERBS = [
     "guijing": "肝、胃经"
   },
   {
-    "id": "wujiapi",
-    "name": "五加皮",
-    "summary": "祛风湿，补肝肾，强筋骨，利水。",
-    "siqi": "温",
-    "wuwei": "辛、苦",
-    "tags": [
-      "祛风湿药",
-      "祛风湿强筋骨"
-    ],
-    "level": "掌握",
-    "guijing": "肝、肾经"
-  },
-  {
     "id": "wushaoshe",
     "name": "乌梢蛇",
     "summary": "祛风通络，定惊止痉。",
@@ -1215,32 +1134,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肝经"
-  },
-  {
-    "id": "shetui",
-    "name": "蛇蜕",
-    "summary": "祛风定惊，退翳解毒。",
-    "siqi": "平",
-    "wuwei": "甘、咸",
-    "tags": [
-      "祛风湿药",
-      "祛风定惊"
-    ],
-    "level": "了解",
-    "guijing": "肝经"
-  },
-  {
-    "id": "cansha",
-    "name": "蚕沙",
-    "summary": "祛风除湿，和胃化浊。",
-    "siqi": "温",
-    "wuwei": "甘、辛",
-    "tags": [
-      "祛风湿药",
-      "祛风湿散寒"
-    ],
-    "level": "了解",
-    "guijing": "肝、脾、胃经"
   },
   {
     "id": "luoshiteng",
@@ -1295,6 +1188,18 @@ window.TCM_HERBS = [
     "guijing": "肝、肾经"
   },
   {
+    "id": "臭梧桐",
+    "name": "臭梧桐",
+    "summary": "祛风湿，通经络，平肝。",
+    "siqi": "凉",
+    "wuwei": "辛、苦、甘",
+    "tags": [
+      "祛风湿药"
+    ],
+    "level": "了解",
+    "guijing": "肝经"
+  },
+  {
     "id": "guanghuoxiang",
     "name": "广藿香",
     "summary": "芳香化湿，和中止呕，发表解暑。",
@@ -1331,18 +1236,6 @@ window.TCM_HERBS = [
     "guijing": "脾、胃、肺、大肠经"
   },
   {
-    "id": "houpuahua",
-    "name": "厚朴花",
-    "summary": "芳香化湿，理气宽中。",
-    "siqi": "温",
-    "wuwei": "苦、辛",
-    "tags": [
-      "化湿药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃经"
-  },
-  {
     "id": "sharen",
     "name": "砂仁",
     "summary": "化湿开胃，温脾止泻，理气安胎。",
@@ -1355,33 +1248,9 @@ window.TCM_HERBS = [
     "guijing": "脾、胃、肾经"
   },
   {
-    "id": "sharenke",
-    "name": "砂仁壳",
-    "summary": "化湿行气，温中止泻。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "化湿药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃、肾经"
-  },
-  {
     "id": "doukou",
     "name": "豆蔻",
     "summary": "化湿行气，温中止呕，开胃消食。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "化湿药"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、脾、胃经"
-  },
-  {
-    "id": "doukouke",
-    "name": "豆蔻壳",
-    "summary": "化湿行气。",
     "siqi": "温",
     "wuwei": "辛",
     "tags": [
@@ -1415,97 +1284,13 @@ window.TCM_HERBS = [
     "guijing": "脾、胃经"
   },
   {
-    "id": "shanzha",
-    "name": "山楂",
-    "summary": "消食健胃，行气散瘀，化浊降脂。",
-    "siqi": "微温",
-    "wuwei": "酸、甘",
-    "tags": [
-      "消食药"
-    ],
-    "level": "掌握",
-    "guijing": "脾、胃、肝经"
-  },
-  {
-    "id": "shenqu",
-    "name": "六神曲",
-    "summary": "消食和胃，解表。",
+    "id": "草豆蔻",
+    "name": "草豆蔻",
+    "summary": "燥湿行气，温中止呕。",
     "siqi": "温",
-    "wuwei": "甘、辛",
+    "wuwei": "辛",
     "tags": [
-      "消食药"
-    ],
-    "level": "掌握",
-    "guijing": "脾、胃经"
-  },
-  {
-    "id": "jianshenqu",
-    "name": "建神曲",
-    "summary": "消食化积，健脾和胃，解表。",
-    "siqi": "温",
-    "wuwei": "甘、辛",
-    "tags": [
-      "消食药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃经"
-  },
-  {
-    "id": "maiya",
-    "name": "麦芽",
-    "summary": "行气消食，健脾开胃，回乳消胀。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "消食药"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃、肝经"
-  },
-  {
-    "id": "jineijin",
-    "name": "鸡内金",
-    "summary": "健胃消食，涩精止遗，通淋化石。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "消食药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃、小肠、膀胱经"
-  },
-  {
-    "id": "laifuzi",
-    "name": "莱菔子",
-    "summary": "消食除胀，降气化痰。",
-    "siqi": "平",
-    "wuwei": "辛、甘",
-    "tags": [
-      "消食药"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、脾、胃经"
-  },
-  {
-    "id": "guya",
-    "name": "谷芽",
-    "summary": "消食和中，健脾开胃。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "消食药"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃经"
-  },
-  {
-    "id": "daoya",
-    "name": "稻芽",
-    "summary": "消食和中，健脾开胃。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "消食药"
+      "化湿药"
     ],
     "level": "了解",
     "guijing": "脾、胃经"
@@ -1521,44 +1306,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "心、脾、肾经"
-  },
-  {
-    "id": "fulingpi",
-    "name": "茯苓皮",
-    "summary": "利水消肿。",
-    "siqi": "平",
-    "wuwei": "甘、淡",
-    "tags": [
-      "利水渗湿药",
-      "利水"
-    ],
-    "level": "掌握",
-    "guijing": "心、脾、肾经"
-  },
-  {
-    "id": "fushen",
-    "name": "茯神",
-    "summary": "宁心安神。",
-    "siqi": "平",
-    "wuwei": "甘、淡",
-    "tags": [
-      "利水渗湿药",
-      "安神"
-    ],
-    "level": "掌握",
-    "guijing": "心、脾经"
-  },
-  {
-    "id": "zexie",
-    "name": "泽泻",
-    "summary": "利水渗湿，泄热，化浊降脂。",
-    "siqi": "寒",
-    "wuwei": "甘、淡",
-    "tags": [
-      "利水渗湿药"
-    ],
-    "level": "熟悉",
-    "guijing": "肾、膀胱经"
   },
   {
     "id": "yiyiren",
@@ -1585,42 +1332,6 @@ window.TCM_HERBS = [
     "guijing": "肝、肾、肺、小肠经"
   },
   {
-    "id": "cheqiancao",
-    "name": "车前草",
-    "summary": "清热利尿，祛痰凉血解毒。",
-    "siqi": "寒",
-    "wuwei": "甘",
-    "tags": [
-      "利水渗湿药"
-    ],
-    "level": "掌握",
-    "guijing": "肝、肾、肺经"
-  },
-  {
-    "id": "mutong",
-    "name": "木通",
-    "summary": "利尿通淋，清心火，通经下乳。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "利水渗湿药"
-    ],
-    "level": "掌握",
-    "guijing": "心、小肠、膀胱经"
-  },
-  {
-    "id": "chuanmutong",
-    "name": "川木通",
-    "summary": "利尿通淋，清心除烦，通经下乳。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "利水渗湿药"
-    ],
-    "level": "熟悉",
-    "guijing": "心、肺、小肠、膀胱经"
-  },
-  {
     "id": "yinchen",
     "name": "茵陈",
     "summary": "清热利湿，利胆退黄。",
@@ -1645,28 +1356,28 @@ window.TCM_HERBS = [
     "guijing": "肝、胆、肾、膀胱经"
   },
   {
-    "id": "lianqiancao",
-    "name": "连钱草",
-    "summary": "利湿通淋，清热解毒，散瘀消肿。",
-    "siqi": "微寒",
-    "wuwei": "辛、苦",
-    "tags": [
-      "利水渗湿药"
-    ],
-    "level": "掌握",
-    "guijing": "肝、胆、肾、膀胱经"
-  },
-  {
-    "id": "guangjinqiancao",
-    "name": "广金钱草",
-    "summary": "清热利湿，通淋排石。",
-    "siqi": "凉",
+    "id": "zexie",
+    "name": "泽泻",
+    "summary": "利水渗湿，泄热，化浊降脂。",
+    "siqi": "寒",
     "wuwei": "甘、淡",
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握",
-    "guijing": "肝、胆、肾、膀胱经"
+    "level": "熟悉",
+    "guijing": "肾、膀胱经"
+  },
+  {
+    "id": "chuanmutong",
+    "name": "川木通",
+    "summary": "利尿通淋，清心除烦，通经下乳。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "利水渗湿药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、肺、小肠、膀胱经"
   },
   {
     "id": "zhuling",
@@ -1679,18 +1390,6 @@ window.TCM_HERBS = [
     ],
     "level": "熟悉",
     "guijing": "肾、膀胱经"
-  },
-  {
-    "id": "shiwei",
-    "name": "石韦",
-    "summary": "利尿通淋，清肺止咳，凉血止血。",
-    "siqi": "微寒",
-    "wuwei": "甘、苦",
-    "tags": [
-      "利水渗湿药"
-    ],
-    "level": "了解",
-    "guijing": "肺、膀胱经"
   },
   {
     "id": "huashi",
@@ -1715,6 +1414,18 @@ window.TCM_HERBS = [
     ],
     "level": "熟悉",
     "guijing": "肝、胆、肺经"
+  },
+  {
+    "id": "shiwei",
+    "name": "石韦",
+    "summary": "利尿通淋，清肺止咳，凉血止血。",
+    "siqi": "微寒",
+    "wuwei": "甘、苦",
+    "tags": [
+      "利水渗湿药"
+    ],
+    "level": "了解",
+    "guijing": "肺、膀胱经"
   },
   {
     "id": "xiangjiapi",
@@ -1765,18 +1476,6 @@ window.TCM_HERBS = [
     "guijing": "膀胱、小肠经"
   },
   {
-    "id": "haijinshateng",
-    "name": "海金沙藤",
-    "summary": "清热利尿，通淋排石。",
-    "siqi": "寒",
-    "wuwei": "甘",
-    "tags": [
-      "利水渗湿药"
-    ],
-    "level": "了解",
-    "guijing": "膀胱、小肠经"
-  },
-  {
     "id": "bianxu",
     "name": "萹蓄",
     "summary": "利尿通淋，杀虫止痒。",
@@ -1815,7 +1514,7 @@ window.TCM_HERBS = [
   {
     "id": "fuzi",
     "name": "附子",
-    "summary": "回阳救逆，补火助阳，散寒止痛。（有毒）",
+    "summary": "回阳救逆，补火助阳，散寒止痛。",
     "siqi": "大热",
     "wuwei": "辛、甘",
     "tags": [
@@ -1873,33 +1572,9 @@ window.TCM_HERBS = [
     "guijing": "脾、胃、肾经"
   },
   {
-    "id": "jiaomu",
-    "name": "椒目",
-    "summary": "利水渗湿，降气平喘。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "温里药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃、肾经"
-  },
-  {
     "id": "dingxiang",
     "name": "丁香",
     "summary": "温中降逆，补肾助阳。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "温里药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃、肺、肾经"
-  },
-  {
-    "id": "mudingxiang",
-    "name": "母丁香",
-    "summary": "温中降逆。",
     "siqi": "温",
     "wuwei": "辛",
     "tags": [
@@ -1921,18 +1596,6 @@ window.TCM_HERBS = [
     "guijing": "肝、肾、脾、胃经"
   },
   {
-    "id": "bajiaohuixiang",
-    "name": "八角茴香",
-    "summary": "温阳散寒，理气止痛。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "温里药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、肾、脾、胃经"
-  },
-  {
     "id": "gaoliangjiang",
     "name": "高良姜",
     "summary": "温胃止呕，散寒止痛。",
@@ -1945,16 +1608,40 @@ window.TCM_HERBS = [
     "guijing": "脾、胃经"
   },
   {
-    "id": "hongdoukou",
-    "name": "红豆蔻",
+    "id": "胡椒",
+    "name": "胡椒",
+    "summary": "温中散寒，下气消痰。",
+    "siqi": "热",
+    "wuwei": "辛",
+    "tags": [
+      "温里药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "荜澄茄",
+    "name": "荜澄茄",
     "summary": "温中散寒，行气止痛。",
     "siqi": "温",
     "wuwei": "辛",
     "tags": [
       "温里药"
     ],
-    "level": "熟悉",
-    "guijing": "脾、胃经"
+    "level": "了解",
+    "guijing": "脾、胃、肾、膀胱经"
+  },
+  {
+    "id": "荜茇",
+    "name": "荜茇",
+    "summary": "温中散寒，下气止痛。",
+    "siqi": "热",
+    "wuwei": "辛",
+    "tags": [
+      "温里药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
   },
   {
     "id": "chenpi",
@@ -1969,81 +1656,9 @@ window.TCM_HERBS = [
     "guijing": "脾、肺经"
   },
   {
-    "id": "juhong",
-    "name": "橘红",
-    "summary": "散寒燥湿，利气消痰。",
-    "siqi": "温",
-    "wuwei": "辛、苦",
-    "tags": [
-      "理气药"
-    ],
-    "level": "掌握",
-    "guijing": "肺、脾经"
-  },
-  {
-    "id": "juhe",
-    "name": "橘核",
-    "summary": "理气散结止痛。",
-    "siqi": "平",
-    "wuwei": "苦",
-    "tags": [
-      "理气药"
-    ],
-    "level": "掌握",
-    "guijing": "肝经"
-  },
-  {
-    "id": "juluo",
-    "name": "橘络",
-    "summary": "通络化痰，顺气活血。",
-    "siqi": "平",
-    "wuwei": "苦、甘",
-    "tags": [
-      "理气药"
-    ],
-    "level": "掌握",
-    "guijing": "肝、肺经"
-  },
-  {
-    "id": "juye",
-    "name": "橘叶",
-    "summary": "疏肝行气，散结消肿。",
-    "siqi": "平",
-    "wuwei": "苦、辛",
-    "tags": [
-      "理气药"
-    ],
-    "level": "掌握",
-    "guijing": "肝经"
-  },
-  {
-    "id": "huajuhong",
-    "name": "化橘红",
-    "summary": "散寒燥湿，利气消痰。",
-    "siqi": "温",
-    "wuwei": "辛、苦",
-    "tags": [
-      "理气药"
-    ],
-    "level": "掌握",
-    "guijing": "肺、脾经"
-  },
-  {
     "id": "zhishi",
     "name": "枳实",
     "summary": "破气消积，化痰散痞。",
-    "siqi": "微寒",
-    "wuwei": "苦、辛、酸",
-    "tags": [
-      "理气药"
-    ],
-    "level": "掌握",
-    "guijing": "脾、胃、大肠经"
-  },
-  {
-    "id": "zhike",
-    "name": "枳壳",
-    "summary": "理气宽中，行滞消胀。",
     "siqi": "微寒",
     "wuwei": "苦、辛、酸",
     "tags": [
@@ -2063,18 +1678,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "脾、胃、大肠、胆、三焦经"
-  },
-  {
-    "id": "weimuxiang",
-    "name": "煨木香",
-    "summary": "收涩止泻，行气止痛。",
-    "siqi": "温",
-    "wuwei": "辛、苦",
-    "tags": [
-      "理气药"
-    ],
-    "level": "掌握",
-    "guijing": "脾、胃、大肠经"
   },
   {
     "id": "xiangfu",
@@ -2113,18 +1716,6 @@ window.TCM_HERBS = [
     "guijing": "肝、胃、小肠、膀胱经"
   },
   {
-    "id": "chenxiang",
-    "name": "沉香",
-    "summary": "行气止痛，温中止呕，纳气平喘。",
-    "siqi": "温",
-    "wuwei": "辛、苦",
-    "tags": [
-      "理气药"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃、肾经"
-  },
-  {
     "id": "xiebai",
     "name": "薤白",
     "summary": "通阳散结，行气导滞。",
@@ -2137,6 +1728,30 @@ window.TCM_HERBS = [
     "guijing": "肺、胃、大肠经"
   },
   {
+    "id": "乌药",
+    "name": "乌药",
+    "summary": "行气止痛，温肾散寒。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "理气药"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、脾、肾、膀胱经"
+  },
+  {
+    "id": "chenxiang",
+    "name": "沉香",
+    "summary": "行气止痛，温中止呕，纳气平喘。",
+    "siqi": "温",
+    "wuwei": "辛、苦",
+    "tags": [
+      "理气药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃、肾经"
+  },
+  {
     "id": "foshou",
     "name": "佛手",
     "summary": "疏肝理气，和胃止痛，燥湿化痰。",
@@ -2147,6 +1762,186 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肝、脾、胃、肺经"
+  },
+  {
+    "id": "荔枝核",
+    "name": "荔枝核",
+    "summary": "行气散结，散寒止痛。",
+    "siqi": "温",
+    "wuwei": "甘、微苦",
+    "tags": [
+      "理气药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "青木香",
+    "name": "青木香",
+    "summary": "行气止痛，解毒消肿。",
+    "siqi": "寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "理气药"
+    ],
+    "level": "了解",
+    "guijing": "肝、胃经"
+  },
+  {
+    "id": "shanzha",
+    "name": "山楂",
+    "summary": "消食健胃，行气散瘀，化浊降脂。",
+    "siqi": "微温",
+    "wuwei": "酸、甘",
+    "tags": [
+      "消食药"
+    ],
+    "level": "掌握",
+    "guijing": "脾、胃、肝经"
+  },
+  {
+    "id": "shenqu",
+    "name": "六神曲",
+    "summary": "消食和胃，解表。",
+    "siqi": "温",
+    "wuwei": "甘、辛",
+    "tags": [
+      "消食药"
+    ],
+    "level": "掌握",
+    "guijing": "脾、胃经"
+  },
+  {
+    "id": "jineijin",
+    "name": "鸡内金",
+    "summary": "健胃消食，涩精止遗，通淋化石。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "消食药"
+    ],
+    "level": "熟悉",
+    "guijing": "脾、胃、小肠、膀胱经"
+  },
+  {
+    "id": "laifuzi",
+    "name": "莱菔子",
+    "summary": "消食除胀，降气化痰。",
+    "siqi": "平",
+    "wuwei": "辛、甘",
+    "tags": [
+      "消食药"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、脾、胃经"
+  },
+  {
+    "id": "maiya",
+    "name": "麦芽",
+    "summary": "行气消食，健脾开胃，回乳消胀。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "消食药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃、肝经"
+  },
+  {
+    "id": "guya",
+    "name": "谷芽",
+    "summary": "消食和中，健脾开胃。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "消食药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃经"
+  },
+  {
+    "id": "神曲",
+    "name": "神曲",
+    "summary": "消食和胃。",
+    "siqi": "温",
+    "wuwei": "甘、辛",
+    "tags": [
+      "消食药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃经"
+  },
+  {
+    "id": "槟榔",
+    "name": "槟榔",
+    "summary": "杀虫消积，行气利水，截疟。",
+    "siqi": "温",
+    "wuwei": "苦、辛",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "掌握",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "使君子",
+    "name": "使君子",
+    "summary": "杀虫消积。",
+    "siqi": "温",
+    "wuwei": "甘",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "熟悉",
+    "guijing": "脾、胃经"
+  },
+  {
+    "id": "南瓜子",
+    "name": "南瓜子",
+    "summary": "杀虫。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "榧子",
+    "name": "榧子",
+    "summary": "杀虫消积，润肺止咳，润肠通便。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃、大肠经"
+  },
+  {
+    "id": "苦楝皮",
+    "name": "苦楝皮",
+    "summary": "杀虫疗癣。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "肝、脾、胃经"
+  },
+  {
+    "id": "雷丸",
+    "name": "雷丸",
+    "summary": "杀虫消积。",
+    "siqi": "寒",
+    "wuwei": "微苦",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
   },
   {
     "id": "sanqi",
@@ -2185,19 +1980,6 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "掌握",
-    "guijing": "肝、大肠经"
-  },
-  {
-    "id": "huaimi",
-    "name": "槐花",
-    "summary": "凉血止血，清肝泻火。",
-    "siqi": "微寒",
-    "wuwei": "苦",
-    "tags": [
-      "止血药",
-      "凉血止血"
-    ],
-    "level": "了解",
     "guijing": "肝、大肠经"
   },
   {
@@ -2266,6 +2048,19 @@ window.TCM_HERBS = [
     "guijing": "肝、心包经"
   },
   {
+    "id": "huaimi",
+    "name": "槐花",
+    "summary": "凉血止血，清肝泻火。",
+    "siqi": "微寒",
+    "wuwei": "苦",
+    "tags": [
+      "止血药",
+      "凉血止血"
+    ],
+    "level": "了解",
+    "guijing": "肝、大肠经"
+  },
+  {
     "id": "daji",
     "name": "大蓟",
     "summary": "凉血止血，散瘀解毒消痈。",
@@ -2281,7 +2076,7 @@ window.TCM_HERBS = [
   {
     "id": "baimaogen",
     "name": "白茅根",
-    "summary": "凉血止血，清热利尿，清肺胃热。",
+    "summary": "凉血止血，清热利尿。",
     "siqi": "寒",
     "wuwei": "甘",
     "tags": [
@@ -2369,18 +2164,6 @@ window.TCM_HERBS = [
     "guijing": "肝、胆、心包经"
   },
   {
-    "id": "yanhusuo",
-    "name": "延胡索",
-    "summary": "活血行气止痛。",
-    "siqi": "温",
-    "wuwei": "辛、苦",
-    "tags": [
-      "活血化瘀药"
-    ],
-    "level": "熟悉",
-    "guijing": "心、肝、脾经"
-  },
-  {
     "id": "danshen",
     "name": "丹参",
     "summary": "活血祛瘀，通经止痛，清心除烦，凉血消痈。",
@@ -2403,30 +2186,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "肝、胆、心经"
-  },
-  {
-    "id": "honghua",
-    "name": "红花",
-    "summary": "活血通经，散瘀止痛。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "活血化瘀药"
-    ],
-    "level": "熟悉",
-    "guijing": "心、肝经"
-  },
-  {
-    "id": "taoren",
-    "name": "桃仁",
-    "summary": "活血祛瘀，润肠通便，止咳平喘。",
-    "siqi": "平",
-    "wuwei": "苦、甘",
-    "tags": [
-      "活血化瘀药"
-    ],
-    "level": "熟悉",
-    "guijing": "心、肝、大肠经"
   },
   {
     "id": "yimucao",
@@ -2453,17 +2212,40 @@ window.TCM_HERBS = [
     "guijing": "肝、肾经"
   },
   {
-    "id": "maqianzi",
-    "name": "马钱子",
-    "summary": "通络止痛，散结消肿。",
+    "id": "yanhusuo",
+    "name": "延胡索",
+    "summary": "活血行气止痛。",
     "siqi": "温",
-    "wuwei": "苦",
+    "wuwei": "辛、苦",
     "tags": [
-      "活血化瘀药",
-      "活血疗伤"
+      "活血化瘀药"
     ],
-    "level": "掌握",
-    "guijing": "肝、脾经"
+    "level": "熟悉",
+    "guijing": "心、肝、脾经"
+  },
+  {
+    "id": "honghua",
+    "name": "红花",
+    "summary": "活血通经，散瘀止痛。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "活血化瘀药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、肝经"
+  },
+  {
+    "id": "taoren",
+    "name": "桃仁",
+    "summary": "活血祛瘀，润肠通便，止咳平喘。",
+    "siqi": "平",
+    "wuwei": "苦、甘",
+    "tags": [
+      "活血化瘀药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、肝、大肠经"
   },
   {
     "id": "ezhu",
@@ -2570,58 +2352,6 @@ window.TCM_HERBS = [
     "guijing": "心、肝、脾经"
   },
   {
-    "id": "wulingzhi",
-    "name": "五灵脂",
-    "summary": "活血止痛，化瘀止血。",
-    "siqi": "温",
-    "wuwei": "苦、甘",
-    "tags": [
-      "活血化瘀药",
-      "活血止痛"
-    ],
-    "level": "了解",
-    "guijing": "肝经"
-  },
-  {
-    "id": "yuejihua",
-    "name": "月季花",
-    "summary": "活血调经，疏肝解郁，消肿解毒。",
-    "siqi": "温",
-    "wuwei": "甘",
-    "tags": [
-      "活血化瘀药",
-      "活血调经"
-    ],
-    "level": "了解",
-    "guijing": "肝经"
-  },
-  {
-    "id": "wangbuliuxing",
-    "name": "王不留行",
-    "summary": "活血通经，下乳消肿，利尿通淋。",
-    "siqi": "平",
-    "wuwei": "苦",
-    "tags": [
-      "活血化瘀药",
-      "活血调经"
-    ],
-    "level": "了解",
-    "guijing": "肝、胃经"
-  },
-  {
-    "id": "xuejie",
-    "name": "血竭",
-    "summary": "活血定痛，化瘀止血，敛疮生肌。",
-    "siqi": "平",
-    "wuwei": "甘、咸",
-    "tags": [
-      "活血化瘀药",
-      "活血疗伤"
-    ],
-    "level": "了解",
-    "guijing": "心、肝经"
-  },
-  {
     "id": "sumu",
     "name": "苏木",
     "summary": "活血祛瘀，消肿止痛。",
@@ -2635,43 +2365,16 @@ window.TCM_HERBS = [
     "guijing": "心、肝、脾经"
   },
   {
-    "id": "gusuibu",
-    "name": "骨碎补",
-    "summary": "活血续伤，补肾强骨。",
-    "siqi": "温",
-    "wuwei": "苦",
-    "tags": [
-      "活血化瘀药",
-      "活血疗伤"
-    ],
-    "level": "了解",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "chuanshanjia",
-    "name": "穿山甲",
-    "summary": "活血消癥，通经下乳，消肿排脓，搜风通络。",
-    "siqi": "微寒",
-    "wuwei": "咸",
-    "tags": [
-      "活血化瘀药",
-      "活血疗伤"
-    ],
-    "level": "了解",
-    "guijing": "肝、胃经"
-  },
-  {
-    "id": "banmao",
-    "name": "斑蝥",
-    "summary": "破血逐瘀，散结消癥，攻毒蚀疮。",
-    "siqi": "热",
+    "id": "自然铜",
+    "name": "自然铜",
+    "summary": "散瘀止痛，续筋接骨。",
+    "siqi": "平",
     "wuwei": "辛",
     "tags": [
-      "活血化瘀药",
-      "破血消癥"
+      "活血化瘀药"
     ],
     "level": "了解",
-    "guijing": "肝、胃、肾经"
+    "guijing": "肝经"
   },
   {
     "id": "banxia",
@@ -2685,19 +2388,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "脾、胃经"
-  },
-  {
-    "id": "nanxing",
-    "name": "天南星",
-    "summary": "燥湿化痰，祛风止痉；外用散结消肿。",
-    "siqi": "温",
-    "wuwei": "苦、辛",
-    "tags": [
-      "化痰止咳平喘药",
-      "温化寒痰"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、肝、脾经"
   },
   {
     "id": "chuanbei",
@@ -2752,6 +2442,45 @@ window.TCM_HERBS = [
     "guijing": "肺、大肠经"
   },
   {
+    "id": "tinglizi",
+    "name": "葶苈子",
+    "summary": "泻肺平喘，利水消肿。",
+    "siqi": "大寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "化痰止咳平喘药",
+      "止咳平喘"
+    ],
+    "level": "掌握",
+    "guijing": "肺、膀胱经"
+  },
+  {
+    "id": "jiegeng",
+    "name": "桔梗",
+    "summary": "宣肺祛痰，利咽排脓。",
+    "siqi": "平",
+    "wuwei": "苦、辛",
+    "tags": [
+      "化痰止咳平喘药",
+      "清化热痰"
+    ],
+    "level": "掌握",
+    "guijing": "肺经"
+  },
+  {
+    "id": "nanxing",
+    "name": "天南星",
+    "summary": "燥湿化痰，祛风止痉；外用散结消肿。",
+    "siqi": "温",
+    "wuwei": "苦、辛",
+    "tags": [
+      "化痰止咳平喘药",
+      "温化寒痰"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、肝、脾经"
+  },
+  {
     "id": "suzizi",
     "name": "紫苏子",
     "summary": "降气化痰，止咳平喘，润肠通便。",
@@ -2791,32 +2520,6 @@ window.TCM_HERBS = [
     "guijing": "肺经"
   },
   {
-    "id": "pipaye",
-    "name": "枇杷叶",
-    "summary": "清肺止咳，降逆止呕。",
-    "siqi": "微寒",
-    "wuwei": "苦",
-    "tags": [
-      "化痰止咳平喘药",
-      "止咳平喘"
-    ],
-    "level": "了解",
-    "guijing": "肺、胃经"
-  },
-  {
-    "id": "tinglizi",
-    "name": "葶苈子",
-    "summary": "泻肺平喘，利水消肿。",
-    "siqi": "大寒",
-    "wuwei": "辛、苦",
-    "tags": [
-      "化痰止咳平喘药",
-      "止咳平喘"
-    ],
-    "level": "掌握",
-    "guijing": "肺、膀胱经"
-  },
-  {
     "id": "kuandonghua",
     "name": "款冬花",
     "summary": "润肺下气，止咳化痰。",
@@ -2827,84 +2530,6 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "熟悉",
-    "guijing": "肺经"
-  },
-  {
-    "id": "ziwan",
-    "name": "紫菀",
-    "summary": "润肺下气，消痰止咳。",
-    "siqi": "温",
-    "wuwei": "辛、甘、苦",
-    "tags": [
-      "化痰止咳平喘药",
-      "止咳平喘"
-    ],
-    "level": "了解",
-    "guijing": "肺经"
-  },
-  {
-    "id": "madouling",
-    "name": "马兜铃",
-    "summary": "清肺降气，止咳平喘，清肠消痔。",
-    "siqi": "寒",
-    "wuwei": "苦、微辛",
-    "tags": [
-      "化痰止咳平喘药",
-      "止咳平喘"
-    ],
-    "level": "了解",
-    "guijing": "肺、大肠经"
-  },
-  {
-    "id": "baiguo",
-    "name": "白果",
-    "summary": "敛肺定喘，止带缩尿。",
-    "siqi": "平",
-    "wuwei": "甘、苦、涩",
-    "tags": [
-      "化痰止咳平喘药",
-      "止咳平喘"
-    ],
-    "level": "了解",
-    "guijing": "肺、肾经"
-  },
-  {
-    "id": "aidicha",
-    "name": "矮地茶",
-    "summary": "止咳平喘，清利湿热，活血化瘀。",
-    "siqi": "平",
-    "wuwei": "辛、微苦",
-    "tags": [
-      "化痰止咳平喘药",
-      "止咳平喘"
-    ],
-    "level": "了解",
-    "guijing": "肺、肝经"
-  },
-  {
-    "id": "yangjinhua",
-    "name": "洋金花",
-    "summary": "平喘止咳，麻醉镇痛，止痉。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "化痰止咳平喘药",
-      "止咳平喘"
-    ],
-    "level": "了解",
-    "guijing": "肺、肝经"
-  },
-  {
-    "id": "jiegeng",
-    "name": "桔梗",
-    "summary": "宣肺祛痰，利咽排脓。",
-    "siqi": "平",
-    "wuwei": "苦、辛",
-    "tags": [
-      "化痰止咳平喘药",
-      "清化热痰"
-    ],
-    "level": "掌握",
     "guijing": "肺经"
   },
   {
@@ -2934,17 +2559,43 @@ window.TCM_HERBS = [
     "guijing": "肺、胃、心、胆经"
   },
   {
-    "id": "yubaifu",
-    "name": "禹白附",
-    "summary": "燥湿化痰，祛风止痉，止痛；外用散结消肿。",
-    "siqi": "温",
-    "wuwei": "辛、甘",
+    "id": "pipaye",
+    "name": "枇杷叶",
+    "summary": "清肺止咳，降逆止呕。",
+    "siqi": "微寒",
+    "wuwei": "苦",
     "tags": [
       "化痰止咳平喘药",
-      "温化寒痰"
+      "止咳平喘"
     ],
     "level": "了解",
-    "guijing": "胃、肝经"
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "ziwan",
+    "name": "紫菀",
+    "summary": "润肺下气，消痰止咳。",
+    "siqi": "温",
+    "wuwei": "辛、甘、苦",
+    "tags": [
+      "化痰止咳平喘药",
+      "止咳平喘"
+    ],
+    "level": "了解",
+    "guijing": "肺经"
+  },
+  {
+    "id": "baiguo",
+    "name": "白果",
+    "summary": "敛肺定喘，止带缩尿。",
+    "siqi": "平",
+    "wuwei": "甘、苦、涩",
+    "tags": [
+      "化痰止咳平喘药",
+      "止咳平喘"
+    ],
+    "level": "了解",
+    "guijing": "肺、肾经"
   },
   {
     "id": "jiezi",
@@ -3038,19 +2689,6 @@ window.TCM_HERBS = [
     "guijing": "肝、胃、肾经"
   },
   {
-    "id": "huangyaozi",
-    "name": "黄药子",
-    "summary": "化痰散结消瘿，清热解毒。",
-    "siqi": "平",
-    "wuwei": "苦",
-    "tags": [
-      "化痰止咳平喘药",
-      "清化热痰"
-    ],
-    "level": "了解",
-    "guijing": "肺、肝经"
-  },
-  {
     "id": "haigeqiao",
     "name": "海蛤壳",
     "summary": "清热化痰，软坚散结，制酸止痛。",
@@ -3090,6 +2728,30 @@ window.TCM_HERBS = [
     "guijing": "心、肾、肺经"
   },
   {
+    "id": "朱砂",
+    "name": "朱砂",
+    "summary": "清心镇惊，安神解毒。",
+    "siqi": "微寒",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "熟悉",
+    "guijing": "心经"
+  },
+  {
+    "id": "柏子仁",
+    "name": "柏子仁",
+    "summary": "养心安神，润肠通便。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、肾、大肠经"
+  },
+  {
     "id": "longgu",
     "name": "龙骨",
     "summary": "镇惊安神，平肝潜阳，收敛固涩。",
@@ -3103,6 +2765,42 @@ window.TCM_HERBS = [
     "guijing": "心、肝、肾经"
   },
   {
+    "id": "合欢皮",
+    "name": "合欢皮",
+    "summary": "解郁安神，活血消肿。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "了解",
+    "guijing": "心、肝、肺经"
+  },
+  {
+    "id": "磁石",
+    "name": "磁石",
+    "summary": "镇惊安神，平肝潜阳，聪耳明目，纳气平喘。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "安神药"
+    ],
+    "level": "了解",
+    "guijing": "肝、心、肾经"
+  },
+  {
+    "id": "首乌藤",
+    "name": "首乌藤",
+    "summary": "养血安神，祛风通络。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "了解",
+    "guijing": "心、肝经"
+  },
+  {
     "id": "shijueming",
     "name": "石决明",
     "summary": "平肝潜阳，清肝明目。",
@@ -3114,19 +2812,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "肝经"
-  },
-  {
-    "id": "muli",
-    "name": "牡蛎",
-    "summary": "潜阳补阴，重镇安神，软坚散结，收敛固涩。",
-    "siqi": "微寒",
-    "wuwei": "咸、涩",
-    "tags": [
-      "平肝息风药",
-      "平抑肝阳"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、胆、肾经"
   },
   {
     "id": "tianma",
@@ -3155,9 +2840,130 @@ window.TCM_HERBS = [
     "guijing": "肝、心包经"
   },
   {
+    "id": "全蝎",
+    "name": "全蝎",
+    "summary": "息风镇痉，通络止痛，攻毒散结。",
+    "siqi": "平",
+    "wuwei": "辛",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "掌握",
+    "guijing": "肝经"
+  },
+  {
+    "id": "牛黄",
+    "name": "牛黄",
+    "summary": "清心豁痰，开窍凉肝，息风解毒。",
+    "siqi": "凉",
+    "wuwei": "甘",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "掌握",
+    "guijing": "心、肝经"
+  },
+  {
+    "id": "赭石",
+    "name": "赭石",
+    "summary": "平肝潜阳，重镇降逆，凉血止血。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "掌握",
+    "guijing": "肝、心经"
+  },
+  {
+    "id": "muli",
+    "name": "牡蛎",
+    "summary": "潜阳补阴，重镇安神，软坚散结，收敛固涩。",
+    "siqi": "微寒",
+    "wuwei": "咸、涩",
+    "tags": [
+      "平肝息风药",
+      "平抑肝阳"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、胆、肾经"
+  },
+  {
+    "id": "地龙",
+    "name": "地龙",
+    "summary": "清热定惊，通络平喘，利尿。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、脾、膀胱经"
+  },
+  {
+    "id": "羚羊角",
+    "name": "羚羊角",
+    "summary": "平肝息风，清肝明目，清热解毒。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、心经"
+  },
+  {
+    "id": "蒺藜",
+    "name": "蒺藜",
+    "summary": "平肝解郁，活血祛风，明目止痒。",
+    "siqi": "微温",
+    "wuwei": "辛、苦",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝经"
+  },
+  {
+    "id": "蜈蚣",
+    "name": "蜈蚣",
+    "summary": "息风镇痉，通络止痛，攻毒散结。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝经"
+  },
+  {
+    "id": "僵蚕",
+    "name": "僵蚕",
+    "summary": "息风止痉，祛风止痛，化痰散结。",
+    "siqi": "平",
+    "wuwei": "咸、辛",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肺、胃经"
+  },
+  {
+    "id": "珍珠母",
+    "name": "珍珠母",
+    "summary": "平肝潜阳，安神定惊，明目退翳。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "了解",
+    "guijing": "肝、心经"
+  },
+  {
     "id": "shexiang",
     "name": "麝香",
-    "summary": "开窍醒神，活血通经，消肿止痛。（孕妇禁用）",
+    "summary": "开窍醒神，活血通经，消肿止痛。",
     "siqi": "温",
     "wuwei": "辛",
     "tags": [
@@ -3177,6 +2983,42 @@ window.TCM_HERBS = [
     ],
     "level": "熟悉",
     "guijing": "心、胃经"
+  },
+  {
+    "id": "冰片",
+    "name": "冰片",
+    "summary": "开窍醒神，清热止痛。",
+    "siqi": "微寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "开窍药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、脾、肺经"
+  },
+  {
+    "id": "苏合香",
+    "name": "苏合香",
+    "summary": "开窍醒神，辟秽止痛。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "开窍药"
+    ],
+    "level": "了解",
+    "guijing": "心、脾经"
+  },
+  {
+    "id": "蟾酥",
+    "name": "蟾酥",
+    "summary": "解毒止痛，开窍醒神。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "开窍药"
+    ],
+    "level": "了解",
+    "guijing": "心经"
   },
   {
     "id": "renshen",
@@ -3216,19 +3058,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "脾、胃经"
-  },
-  {
-    "id": "shanyao",
-    "name": "山药",
-    "summary": "补脾养胃，生津益肺，补肾涩精。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "补虚药",
-      "补气药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、肺、肾经"
   },
   {
     "id": "gancao",
@@ -3309,32 +3138,6 @@ window.TCM_HERBS = [
     "guijing": "胃、肺、心经"
   },
   {
-    "id": "gouqi",
-    "name": "枸杞子",
-    "summary": "滋补肝肾，益精明目。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "补虚药",
-      "补阴药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "xiyangshen",
-    "name": "西洋参",
-    "summary": "补气养阴，清热生津。",
-    "siqi": "凉",
-    "wuwei": "甘、微苦",
-    "tags": [
-      "补虚药",
-      "补气药"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、心、肾、脾经"
-  },
-  {
     "id": "dangshen",
     "name": "党参",
     "summary": "健脾益肺，养血生津。",
@@ -3346,71 +3149,6 @@ window.TCM_HERBS = [
     ],
     "level": "掌握",
     "guijing": "脾、肺经"
-  },
-  {
-    "id": "dazao",
-    "name": "大枣",
-    "summary": "补中益气，养血安神。",
-    "siqi": "温",
-    "wuwei": "甘",
-    "tags": [
-      "补虚药",
-      "补气药"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃、心经"
-  },
-  {
-    "id": "heshouwu",
-    "name": "何首乌",
-    "summary": "制用补益精血；生用解毒消痈，截疟润肠。",
-    "siqi": "微温",
-    "wuwei": "苦、甘、涩",
-    "tags": [
-      "补虚药",
-      "补血药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "nanshashen",
-    "name": "南沙参",
-    "summary": "养阴清肺，益胃生津，化痰益气。",
-    "siqi": "微寒",
-    "wuwei": "甘",
-    "tags": [
-      "补虚药",
-      "补阴药"
-    ],
-    "level": "了解",
-    "guijing": "肺、胃经"
-  },
-  {
-    "id": "tiandong",
-    "name": "天冬",
-    "summary": "养阴润燥，清肺生津。",
-    "siqi": "寒",
-    "wuwei": "甘、苦",
-    "tags": [
-      "补虚药",
-      "补阴药"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、肾、胃经"
-  },
-  {
-    "id": "shihu",
-    "name": "石斛",
-    "summary": "益胃生津，滋阴清热。",
-    "siqi": "微寒",
-    "wuwei": "甘",
-    "tags": [
-      "补虚药",
-      "补阴药"
-    ],
-    "level": "熟悉",
-    "guijing": "胃、肾经"
   },
   {
     "id": "guijia",
@@ -3452,6 +3190,108 @@ window.TCM_HERBS = [
     "guijing": "肝、肾经"
   },
   {
+    "id": "北沙参",
+    "name": "北沙参",
+    "summary": "养阴清肺，益胃生津。",
+    "siqi": "微寒",
+    "wuwei": "甘、微苦",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "掌握",
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "淫羊藿",
+    "name": "淫羊藿",
+    "summary": "补肾壮阳，强筋健骨，祛风除湿。",
+    "siqi": "温",
+    "wuwei": "辛、甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "掌握",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "shanyao",
+    "name": "山药",
+    "summary": "补脾养胃，生津益肺，补肾涩精。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药",
+      "补气药"
+    ],
+    "level": "熟悉",
+    "guijing": "脾、肺、肾经"
+  },
+  {
+    "id": "gouqi",
+    "name": "枸杞子",
+    "summary": "滋补肝肾，益精明目。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药",
+      "补阴药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "xiyangshen",
+    "name": "西洋参",
+    "summary": "补气养阴，清热生津。",
+    "siqi": "凉",
+    "wuwei": "甘、微苦",
+    "tags": [
+      "补虚药",
+      "补气药"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、心、肾、脾经"
+  },
+  {
+    "id": "heshouwu",
+    "name": "何首乌",
+    "summary": "制用补益精血；生用解毒消痈，截疟润肠。",
+    "siqi": "微温",
+    "wuwei": "苦、甘、涩",
+    "tags": [
+      "补虚药",
+      "补血药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "tiandong",
+    "name": "天冬",
+    "summary": "养阴润燥，清肺生津。",
+    "siqi": "寒",
+    "wuwei": "甘、苦",
+    "tags": [
+      "补虚药",
+      "补阴药"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、肾、胃经"
+  },
+  {
+    "id": "shihu",
+    "name": "石斛",
+    "summary": "益胃生津，滋阴清热。",
+    "siqi": "微寒",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药",
+      "补阴药"
+    ],
+    "level": "熟悉",
+    "guijing": "胃、肾经"
+  },
+  {
     "id": "xuduan",
     "name": "续断",
     "summary": "补肝肾，续筋骨，止崩漏。",
@@ -3478,6 +3318,80 @@ window.TCM_HERBS = [
     "guijing": "肾、肝、脾经"
   },
   {
+    "id": "巴戟天",
+    "name": "巴戟天",
+    "summary": "补肾阳，强筋骨，祛风湿。",
+    "siqi": "微温",
+    "wuwei": "甘、辛",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "百合",
+    "name": "百合",
+    "summary": "养阴润肺，清心安神。",
+    "siqi": "微寒",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、肺经"
+  },
+  {
+    "id": "补骨脂",
+    "name": "补骨脂",
+    "summary": "温肾助阳，纳气平喘，温脾止泻。",
+    "siqi": "温",
+    "wuwei": "辛、苦",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "肾、脾经"
+  },
+  {
+    "id": "鳖甲",
+    "name": "鳖甲",
+    "summary": "滋阴潜阳，软坚散结，退热除蒸。",
+    "siqi": "微寒",
+    "wuwei": "咸",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "dazao",
+    "name": "大枣",
+    "summary": "补中益气，养血安神。",
+    "siqi": "温",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药",
+      "补气药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃、心经"
+  },
+  {
+    "id": "nanshashen",
+    "name": "南沙参",
+    "summary": "养阴清肺，益胃生津，化痰益气。",
+    "siqi": "微寒",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药",
+      "补阴药"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃经"
+  },
+  {
     "id": "dongchongxiacao",
     "name": "冬虫夏草",
     "summary": "补肾益肺，止血化痰。",
@@ -3489,234 +3403,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肾、肺经"
-  },
-  {
-    "id": "wuweizi",
-    "name": "五味子",
-    "summary": "收敛固涩，益气生津，补肾宁心。",
-    "siqi": "温",
-    "wuwei": "酸、甘",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "掌握",
-    "guijing": "肺、心、肾经"
-  },
-  {
-    "id": "wumei",
-    "name": "乌梅",
-    "summary": "敛肺止咳，涩肠止泻，生津止渴，安蛔止痛。",
-    "siqi": "平",
-    "wuwei": "酸、涩",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "掌握",
-    "guijing": "肝、脾、肺、大肠经"
-  },
-  {
-    "id": "shanzhuyu",
-    "name": "山茱萸",
-    "summary": "补益肝肾，收涩固脱。",
-    "siqi": "微温",
-    "wuwei": "酸、涩",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "掌握",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "lianzi",
-    "name": "莲子",
-    "summary": "补脾止泻，止带益肾，养心安神。",
-    "siqi": "平",
-    "wuwei": "甘、涩",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "了解",
-    "guijing": "脾、肾、心经"
-  },
-  {
-    "id": "地黄",
-    "name": "地黄",
-    "summary": "清热凉血，养阴生津。",
-    "siqi": "寒",
-    "wuwei": "甘、苦",
-    "tags": [
-      "清热药"
-    ],
-    "level": "掌握",
-    "guijing": "心、肝、肾经"
-  },
-  {
-    "id": "鱼腥草",
-    "name": "鱼腥草",
-    "summary": "清热解毒，消痈排脓，利尿通淋。",
-    "siqi": "微寒",
-    "wuwei": "辛",
-    "tags": [
-      "清热药"
-    ],
-    "level": "掌握",
-    "guijing": "肺经"
-  },
-  {
-    "id": "槟榔",
-    "name": "槟榔",
-    "summary": "杀虫消积，行气利水，截疟。",
-    "siqi": "温",
-    "wuwei": "苦、辛",
-    "tags": [
-      "驱虫药"
-    ],
-    "level": "掌握",
-    "guijing": "胃、大肠经"
-  },
-  {
-    "id": "全蝎",
-    "name": "全蝎",
-    "summary": "息风镇痉，通络止痛，攻毒散结。",
-    "siqi": "平",
-    "wuwei": "辛",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "掌握",
-    "guijing": "肝经"
-  },
-  {
-    "id": "牛黄",
-    "name": "牛黄",
-    "summary": "清心豁痰，开窍凉肝，息风解毒。",
-    "siqi": "凉",
-    "wuwei": "甘",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "掌握",
-    "guijing": "心、肝经"
-  },
-  {
-    "id": "赭石",
-    "name": "赭石",
-    "summary": "平肝潜阳，重镇降逆，凉血止血。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "掌握",
-    "guijing": "肝、心经"
-  },
-  {
-    "id": "北沙参",
-    "name": "北沙参",
-    "summary": "养阴清肺，益胃生津。",
-    "siqi": "微寒",
-    "wuwei": "甘、微苦",
-    "tags": [
-      "补虚药"
-    ],
-    "level": "掌握",
-    "guijing": "肺、胃经"
-  },
-  {
-    "id": "淫羊藿",
-    "name": "淫羊藿",
-    "summary": "补肾壮阳，强筋健骨，祛风除湿。",
-    "siqi": "温",
-    "wuwei": "辛、甘",
-    "tags": [
-      "补虚药"
-    ],
-    "level": "掌握",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "乌药",
-    "name": "乌药",
-    "summary": "行气止痛，温肾散寒。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "理气药"
-    ],
-    "level": "熟悉",
-    "guijing": "肺、脾、肾、膀胱经"
-  },
-  {
-    "id": "使君子",
-    "name": "使君子",
-    "summary": "杀虫消积。",
-    "siqi": "温",
-    "wuwei": "甘",
-    "tags": [
-      "驱虫药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃经"
-  },
-  {
-    "id": "僵蚕",
-    "name": "僵蚕",
-    "summary": "息风止痉，祛风止痛，化痰散结。",
-    "siqi": "平",
-    "wuwei": "咸、辛",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "了解",
-    "guijing": "肝、肺、胃经"
-  },
-  {
-    "id": "冰片",
-    "name": "冰片",
-    "summary": "开窍醒神，清热止痛。",
-    "siqi": "微寒",
-    "wuwei": "辛、苦",
-    "tags": [
-      "开窍药"
-    ],
-    "level": "熟悉",
-    "guijing": "心、脾、肺经"
-  },
-  {
-    "id": "南瓜子",
-    "name": "南瓜子",
-    "summary": "杀虫。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "驱虫药"
-    ],
-    "level": "了解",
-    "guijing": "胃、大肠经"
-  },
-  {
-    "id": "合欢皮",
-    "name": "合欢皮",
-    "summary": "解郁安神，活血消肿。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "安神药"
-    ],
-    "level": "了解",
-    "guijing": "心、肝、肺经"
-  },
-  {
-    "id": "地龙",
-    "name": "地龙",
-    "summary": "清热定惊，通络平喘，利尿。",
-    "siqi": "寒",
-    "wuwei": "咸",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、脾、膀胱经"
   },
   {
     "id": "墨旱莲",
@@ -3755,90 +3441,6 @@ window.TCM_HERBS = [
     "guijing": "肝、肾经"
   },
   {
-    "id": "山豆根",
-    "name": "山豆根",
-    "summary": "清热解毒，利咽消肿。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "清热药"
-    ],
-    "level": "了解",
-    "guijing": "肺、胃经"
-  },
-  {
-    "id": "巴戟天",
-    "name": "巴戟天",
-    "summary": "补肾阳，强筋骨，祛风湿。",
-    "siqi": "微温",
-    "wuwei": "甘、辛",
-    "tags": [
-      "补虚药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "巴豆",
-    "name": "巴豆",
-    "summary": "峻下冷积，逐水退肿，祛痰利咽。",
-    "siqi": "热",
-    "wuwei": "辛",
-    "tags": [
-      "泻下药"
-    ],
-    "level": "熟悉",
-    "guijing": "胃、大肠经"
-  },
-  {
-    "id": "朱砂",
-    "name": "朱砂",
-    "summary": "清心镇惊，安神解毒。",
-    "siqi": "微寒",
-    "wuwei": "甘",
-    "tags": [
-      "安神药"
-    ],
-    "level": "熟悉",
-    "guijing": "心经"
-  },
-  {
-    "id": "柏子仁",
-    "name": "柏子仁",
-    "summary": "养心安神，润肠通便。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "安神药"
-    ],
-    "level": "熟悉",
-    "guijing": "心、肾、大肠经"
-  },
-  {
-    "id": "桑螵蛸",
-    "name": "桑螵蛸",
-    "summary": "固精缩尿，补肾助阳。",
-    "siqi": "平",
-    "wuwei": "甘、咸",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "榧子",
-    "name": "榧子",
-    "summary": "杀虫消积，润肺止咳，润肠通便。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "驱虫药"
-    ],
-    "level": "了解",
-    "guijing": "肺、胃、大肠经"
-  },
-  {
     "id": "沙苑子",
     "name": "沙苑子",
     "summary": "补肾固精，养肝明目。",
@@ -3849,54 +3451,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肝、肾经"
-  },
-  {
-    "id": "浮小麦",
-    "name": "浮小麦",
-    "summary": "固表止汗，益气除热。",
-    "siqi": "凉",
-    "wuwei": "甘",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "了解",
-    "guijing": "心经"
-  },
-  {
-    "id": "海螵蛸",
-    "name": "海螵蛸",
-    "summary": "收敛止血，涩精止带，制酸止痛，收湿敛疮。",
-    "siqi": "微温",
-    "wuwei": "咸、涩",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "淡竹叶",
-    "name": "淡竹叶",
-    "summary": "清热泻火，除烦止渴，利尿通淋。",
-    "siqi": "寒",
-    "wuwei": "甘、淡",
-    "tags": [
-      "清热药"
-    ],
-    "level": "了解",
-    "guijing": "心、胃、小肠经"
-  },
-  {
-    "id": "牵牛子",
-    "name": "牵牛子",
-    "summary": "泻水通便，消痰涤饮，杀虫攻积。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "泻下药"
-    ],
-    "level": "了解",
-    "guijing": "肺、肾、大肠经"
   },
   {
     "id": "玉竹",
@@ -3911,66 +3465,6 @@ window.TCM_HERBS = [
     "guijing": "肺、胃经"
   },
   {
-    "id": "珍珠母",
-    "name": "珍珠母",
-    "summary": "平肝潜阳，安神定惊，明目退翳。",
-    "siqi": "寒",
-    "wuwei": "咸",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "了解",
-    "guijing": "肝、心经"
-  },
-  {
-    "id": "番泻叶",
-    "name": "番泻叶",
-    "summary": "泻热行滞，通便利水。",
-    "siqi": "寒",
-    "wuwei": "甘、苦",
-    "tags": [
-      "泻下药"
-    ],
-    "level": "了解",
-    "guijing": "大肠经"
-  },
-  {
-    "id": "白头翁",
-    "name": "白头翁",
-    "summary": "清热解毒，凉血止痢。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "清热药"
-    ],
-    "level": "熟悉",
-    "guijing": "胃、大肠经"
-  },
-  {
-    "id": "白花蛇舌草",
-    "name": "白花蛇舌草",
-    "summary": "清热解毒，利湿通淋。",
-    "siqi": "寒",
-    "wuwei": "微苦、甘",
-    "tags": [
-      "清热药"
-    ],
-    "level": "了解",
-    "guijing": "胃、大肠、小肠经"
-  },
-  {
-    "id": "百合",
-    "name": "百合",
-    "summary": "养阴润肺，清心安神。",
-    "siqi": "微寒",
-    "wuwei": "甘",
-    "tags": [
-      "补虚药"
-    ],
-    "level": "熟悉",
-    "guijing": "心、肺经"
-  },
-  {
     "id": "益智仁",
     "name": "益智仁",
     "summary": "暖肾固精缩尿，温脾止泻摄唾。",
@@ -3983,54 +3477,6 @@ window.TCM_HERBS = [
     "guijing": "脾、肾经"
   },
   {
-    "id": "石榴皮",
-    "name": "石榴皮",
-    "summary": "涩肠止泻，止血驱虫。",
-    "siqi": "温",
-    "wuwei": "酸、涩",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "了解",
-    "guijing": "大肠经"
-  },
-  {
-    "id": "磁石",
-    "name": "磁石",
-    "summary": "镇惊安神，平肝潜阳，聪耳明目，纳气平喘。",
-    "siqi": "寒",
-    "wuwei": "咸",
-    "tags": [
-      "安神药"
-    ],
-    "level": "了解",
-    "guijing": "肝、心、肾经"
-  },
-  {
-    "id": "神曲",
-    "name": "神曲",
-    "summary": "消食和胃。",
-    "siqi": "温",
-    "wuwei": "甘、辛",
-    "tags": [
-      "消食药"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃经"
-  },
-  {
-    "id": "羚羊角",
-    "name": "羚羊角",
-    "summary": "平肝息风，清肝明目，清热解毒。",
-    "siqi": "寒",
-    "wuwei": "咸",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、心经"
-  },
-  {
     "id": "肉苁蓉",
     "name": "肉苁蓉",
     "summary": "补肾阳，益精血，润肠通便。",
@@ -4041,162 +3487,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肾、大肠经"
-  },
-  {
-    "id": "肉豆蔻",
-    "name": "肉豆蔻",
-    "summary": "温中行气，涩肠止泻。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "熟悉",
-    "guijing": "脾、胃、大肠经"
-  },
-  {
-    "id": "胡椒",
-    "name": "胡椒",
-    "summary": "温中散寒，下气消痰。",
-    "siqi": "热",
-    "wuwei": "辛",
-    "tags": [
-      "温里药"
-    ],
-    "level": "了解",
-    "guijing": "胃、大肠经"
-  },
-  {
-    "id": "自然铜",
-    "name": "自然铜",
-    "summary": "散瘀止痛，续筋接骨。",
-    "siqi": "平",
-    "wuwei": "辛",
-    "tags": [
-      "活血化瘀药"
-    ],
-    "level": "了解",
-    "guijing": "肝经"
-  },
-  {
-    "id": "臭梧桐",
-    "name": "臭梧桐",
-    "summary": "祛风湿，通经络，平肝。",
-    "siqi": "凉",
-    "wuwei": "辛、苦、甘",
-    "tags": [
-      "祛风湿药"
-    ],
-    "level": "了解",
-    "guijing": "肝经"
-  },
-  {
-    "id": "芡实",
-    "name": "芡实",
-    "summary": "益肾固精，补脾止泻，除湿止带。",
-    "siqi": "平",
-    "wuwei": "甘、涩",
-    "tags": [
-      "收涩药"
-    ],
-    "level": "了解",
-    "guijing": "脾、肾经"
-  },
-  {
-    "id": "芦荟",
-    "name": "芦荟",
-    "summary": "泻下通便，清肝泻火，杀虫疗疳。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "泻下药"
-    ],
-    "level": "了解",
-    "guijing": "肝、胃、大肠经"
-  },
-  {
-    "id": "苏合香",
-    "name": "苏合香",
-    "summary": "开窍醒神，辟秽止痛。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "开窍药"
-    ],
-    "level": "了解",
-    "guijing": "心、脾经"
-  },
-  {
-    "id": "苦楝皮",
-    "name": "苦楝皮",
-    "summary": "杀虫疗癣。",
-    "siqi": "寒",
-    "wuwei": "苦",
-    "tags": [
-      "驱虫药"
-    ],
-    "level": "了解",
-    "guijing": "肝、脾、胃经"
-  },
-  {
-    "id": "草豆蔻",
-    "name": "草豆蔻",
-    "summary": "燥湿行气，温中止呕。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "化湿药"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃经"
-  },
-  {
-    "id": "荔枝核",
-    "name": "荔枝核",
-    "summary": "行气散结，散寒止痛。",
-    "siqi": "温",
-    "wuwei": "甘、微苦",
-    "tags": [
-      "理气药"
-    ],
-    "level": "了解",
-    "guijing": "肝、肾经"
-  },
-  {
-    "id": "荜澄茄",
-    "name": "荜澄茄",
-    "summary": "温中散寒，行气止痛。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "温里药"
-    ],
-    "level": "了解",
-    "guijing": "脾、胃、肾、膀胱经"
-  },
-  {
-    "id": "荜茇",
-    "name": "荜茇",
-    "summary": "温中散寒，下气止痛。",
-    "siqi": "热",
-    "wuwei": "辛",
-    "tags": [
-      "温里药"
-    ],
-    "level": "了解",
-    "guijing": "胃、大肠经"
-  },
-  {
-    "id": "蒺藜",
-    "name": "蒺藜",
-    "summary": "平肝解郁，活血祛风，明目止痒。",
-    "siqi": "微温",
-    "wuwei": "辛、苦",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝经"
   },
   {
     "id": "蛤蚧",
@@ -4223,52 +3513,88 @@ window.TCM_HERBS = [
     "guijing": "肺、脾、大肠经"
   },
   {
-    "id": "蜈蚣",
-    "name": "蜈蚣",
-    "summary": "息风镇痉，通络止痛，攻毒散结。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "平肝息风药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝经"
-  },
-  {
-    "id": "蟾酥",
-    "name": "蟾酥",
-    "summary": "解毒止痛，开窍醒神。",
-    "siqi": "温",
-    "wuwei": "辛",
-    "tags": [
-      "开窍药"
-    ],
-    "level": "了解",
-    "guijing": "心经"
-  },
-  {
-    "id": "补骨脂",
-    "name": "补骨脂",
-    "summary": "温肾助阳，纳气平喘，温脾止泻。",
-    "siqi": "温",
-    "wuwei": "辛、苦",
+    "id": "黄精",
+    "name": "黄精",
+    "summary": "补气养阴，健脾润肺，益肾。",
+    "siqi": "平",
+    "wuwei": "甘",
     "tags": [
       "补虚药"
     ],
-    "level": "熟悉",
-    "guijing": "肾、脾经"
+    "level": "了解",
+    "guijing": "脾、肺、肾经"
   },
   {
-    "id": "覆盆子",
-    "name": "覆盆子",
-    "summary": "益肾固精缩尿，养肝明目。",
+    "id": "wuweizi",
+    "name": "五味子",
+    "summary": "收敛固涩，益气生津，补肾宁心。",
     "siqi": "温",
-    "wuwei": "甘、酸",
+    "wuwei": "酸、甘",
     "tags": [
       "收涩药"
     ],
-    "level": "了解",
+    "level": "掌握",
+    "guijing": "肺、心、肾经"
+  },
+  {
+    "id": "wumei",
+    "name": "乌梅",
+    "summary": "敛肺止咳，涩肠止泻，生津止渴，安蛔止痛。",
+    "siqi": "平",
+    "wuwei": "酸、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "掌握",
+    "guijing": "肝、脾、肺、大肠经"
+  },
+  {
+    "id": "shanzhuyu",
+    "name": "山茱萸",
+    "summary": "补益肝肾，收涩固脱。",
+    "siqi": "微温",
+    "wuwei": "酸、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "掌握",
     "guijing": "肝、肾经"
+  },
+  {
+    "id": "桑螵蛸",
+    "name": "桑螵蛸",
+    "summary": "固精缩尿，补肾助阳。",
+    "siqi": "平",
+    "wuwei": "甘、咸",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "海螵蛸",
+    "name": "海螵蛸",
+    "summary": "收敛止血，涩精止带，制酸止痛，收湿敛疮。",
+    "siqi": "微温",
+    "wuwei": "咸、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "肉豆蔻",
+    "name": "肉豆蔻",
+    "summary": "温中行气，涩肠止泻。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "熟悉",
+    "guijing": "脾、胃、大肠经"
   },
   {
     "id": "诃子",
@@ -4283,40 +3609,64 @@ window.TCM_HERBS = [
     "guijing": "肺、大肠经"
   },
   {
-    "id": "谷精草",
-    "name": "谷精草",
-    "summary": "疏散风热，明目退翳。",
+    "id": "lianzi",
+    "name": "莲子",
+    "summary": "补脾止泻，止带益肾，养心安神。",
     "siqi": "平",
-    "wuwei": "辛、甘",
+    "wuwei": "甘、涩",
     "tags": [
-      "清热药"
+      "收涩药"
     ],
     "level": "了解",
-    "guijing": "肝、肺经"
+    "guijing": "脾、肾、心经"
   },
   {
-    "id": "败酱草",
-    "name": "败酱草",
-    "summary": "清热解毒，消痈排脓，祛瘀止痛。",
-    "siqi": "微寒",
-    "wuwei": "辛、苦",
+    "id": "浮小麦",
+    "name": "浮小麦",
+    "summary": "固表止汗，益气除热。",
+    "siqi": "凉",
+    "wuwei": "甘",
     "tags": [
-      "清热药"
+      "收涩药"
     ],
     "level": "了解",
-    "guijing": "胃、大肠、肝经"
+    "guijing": "心经"
   },
   {
-    "id": "贯众",
-    "name": "贯众",
-    "summary": "清热解毒，凉血止血，杀虫。",
-    "siqi": "微寒",
-    "wuwei": "苦",
+    "id": "石榴皮",
+    "name": "石榴皮",
+    "summary": "涩肠止泻，止血驱虫。",
+    "siqi": "温",
+    "wuwei": "酸、涩",
     "tags": [
-      "清热药"
+      "收涩药"
     ],
     "level": "了解",
-    "guijing": "肝、胃经"
+    "guijing": "大肠经"
+  },
+  {
+    "id": "芡实",
+    "name": "芡实",
+    "summary": "益肾固精，补脾止泻，除湿止带。",
+    "siqi": "平",
+    "wuwei": "甘、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "脾、肾经"
+  },
+  {
+    "id": "覆盆子",
+    "name": "覆盆子",
+    "summary": "益肾固精缩尿，养肝明目。",
+    "siqi": "温",
+    "wuwei": "甘、酸",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肾经"
   },
   {
     "id": "赤石脂",
@@ -4343,54 +3693,6 @@ window.TCM_HERBS = [
     "guijing": "肾、膀胱、大肠经"
   },
   {
-    "id": "雷丸",
-    "name": "雷丸",
-    "summary": "杀虫消积。",
-    "siqi": "寒",
-    "wuwei": "微苦",
-    "tags": [
-      "驱虫药"
-    ],
-    "level": "了解",
-    "guijing": "胃、大肠经"
-  },
-  {
-    "id": "青木香",
-    "name": "青木香",
-    "summary": "行气止痛，解毒消肿。",
-    "siqi": "寒",
-    "wuwei": "辛、苦",
-    "tags": [
-      "理气药"
-    ],
-    "level": "了解",
-    "guijing": "肝、胃经"
-  },
-  {
-    "id": "首乌藤",
-    "name": "首乌藤",
-    "summary": "养血安神，祛风通络。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "安神药"
-    ],
-    "level": "了解",
-    "guijing": "心、肝经"
-  },
-  {
-    "id": "鳖甲",
-    "name": "鳖甲",
-    "summary": "滋阴潜阳，软坚散结，退热除蒸。",
-    "siqi": "微寒",
-    "wuwei": "咸",
-    "tags": [
-      "补虚药"
-    ],
-    "level": "熟悉",
-    "guijing": "肝、肾经"
-  },
-  {
     "id": "麻黄根",
     "name": "麻黄根",
     "summary": "固表止汗。",
@@ -4401,18 +3703,6 @@ window.TCM_HERBS = [
     ],
     "level": "了解",
     "guijing": "肺经"
-  },
-  {
-    "id": "黄精",
-    "name": "黄精",
-    "summary": "补气养阴，健脾润肺，益肾。",
-    "siqi": "平",
-    "wuwei": "甘",
-    "tags": [
-      "补虚药"
-    ],
-    "level": "了解",
-    "guijing": "脾、肺、肾经"
   }
 ];
 
