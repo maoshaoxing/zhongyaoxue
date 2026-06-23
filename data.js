@@ -11,7 +11,7 @@ window.TCM_HERBS = [
       "发汗"
     ],
     "level": "掌握",
-      "guijing": "肺、膀胱经"
+    "guijing": "肺、膀胱经"
   },
   {
     "id": "guizhi",
@@ -25,7 +25,7 @@ window.TCM_HERBS = [
       "温通"
     ],
     "level": "掌握",
-      "guijing": "心、肺、膀胱经"
+    "guijing": "心、肺、膀胱经"
   },
   {
     "id": "zisuye",
@@ -38,8 +38,8 @@ window.TCM_HERBS = [
       "解表",
       "行气"
     ],
-    "level": "掌握",
-      "guijing": "肺、脾经"
+    "level": "熟悉",
+    "guijing": "肺、脾经"
   },
   {
     "id": "zisugeng",
@@ -53,7 +53,7 @@ window.TCM_HERBS = [
       "理气"
     ],
     "level": "掌握",
-      "guijing": "肺、脾、胃经"
+    "guijing": "肺、脾、胃经"
   },
   {
     "id": "jingjie",
@@ -66,8 +66,8 @@ window.TCM_HERBS = [
       "解表",
       "祛风"
     ],
-    "level": "掌握",
-      "guijing": "肺、肝经"
+    "level": "熟悉",
+    "guijing": "肺、肝经"
   },
   {
     "id": "jingjietan",
@@ -81,7 +81,7 @@ window.TCM_HERBS = [
       "止血"
     ],
     "level": "掌握",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "id": "qianghuo",
@@ -95,7 +95,7 @@ window.TCM_HERBS = [
       "止痛"
     ],
     "level": "掌握",
-      "guijing": "膀胱、肾经"
+    "guijing": "膀胱、肾经"
   },
   {
     "id": "baizhi",
@@ -108,8 +108,8 @@ window.TCM_HERBS = [
       "解表",
       "止痛"
     ],
-    "level": "掌握",
-      "guijing": "肺、胃、大肠经"
+    "level": "熟悉",
+    "guijing": "肺、胃、大肠经"
   },
   {
     "id": "xixin",
@@ -122,8 +122,8 @@ window.TCM_HERBS = [
       "解表",
       "温肺"
     ],
-    "level": "掌握",
-      "guijing": "肺、肾、心经"
+    "level": "熟悉",
+    "guijing": "肺、肾、心经"
   },
   {
     "id": "bohe",
@@ -136,7 +136,7 @@ window.TCM_HERBS = [
       "辛凉解表"
     ],
     "level": "掌握",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "id": "niubangzi",
@@ -148,8 +148,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "掌握",
-      "guijing": "肺、胃经"
+    "level": "了解",
+    "guijing": "肺、胃经"
   },
   {
     "id": "sangye",
@@ -161,8 +161,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "掌握",
-      "guijing": "肺、肝经"
+    "level": "熟悉",
+    "guijing": "肺、肝经"
   },
   {
     "id": "juhua",
@@ -175,7 +175,7 @@ window.TCM_HERBS = [
       "辛凉解表"
     ],
     "level": "掌握",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "id": "gegen",
@@ -189,7 +189,7 @@ window.TCM_HERBS = [
       "生津"
     ],
     "level": "掌握",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "gehua",
@@ -202,7 +202,7 @@ window.TCM_HERBS = [
       "解酒"
     ],
     "level": "掌握",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "chaihu",
@@ -216,7 +216,7 @@ window.TCM_HERBS = [
       "疏肝"
     ],
     "level": "掌握",
-      "guijing": "肝、胆经"
+    "guijing": "肝、胆经"
   },
   {
     "id": "shengjiang",
@@ -230,7 +230,7 @@ window.TCM_HERBS = [
       "止呕"
     ],
     "level": "熟悉",
-      "guijing": "肺、脾、胃经"
+    "guijing": "肺、脾、胃经"
   },
   {
     "id": "shengjiangpi",
@@ -243,7 +243,7 @@ window.TCM_HERBS = [
       "利水"
     ],
     "level": "熟悉",
-      "guijing": "脾经"
+    "guijing": "脾经"
   },
   {
     "id": "shengjiangzhi",
@@ -257,7 +257,7 @@ window.TCM_HERBS = [
       "开窍"
     ],
     "level": "熟悉",
-      "guijing": "肺、脾、胃经"
+    "guijing": "肺、脾、胃经"
   },
   {
     "id": "xiangru",
@@ -270,8 +270,8 @@ window.TCM_HERBS = [
       "解表",
       "化湿"
     ],
-    "level": "熟悉",
-      "guijing": "肺、脾、胃经"
+    "level": "了解",
+    "guijing": "肺、脾、胃经"
   },
   {
     "id": "fangfeng",
@@ -285,7 +285,7 @@ window.TCM_HERBS = [
       "祛风"
     ],
     "level": "熟悉",
-      "guijing": "膀胱、肝、脾经"
+    "guijing": "膀胱、肝、脾经"
   },
   {
     "id": "xinyi",
@@ -298,8 +298,8 @@ window.TCM_HERBS = [
       "解表",
       "通窍"
     ],
-    "level": "熟悉",
-      "guijing": "肺、胃经"
+    "level": "了解",
+    "guijing": "肺、胃经"
   },
   {
     "id": "shengma",
@@ -312,7 +312,7 @@ window.TCM_HERBS = [
       "辛凉解表"
     ],
     "level": "熟悉",
-      "guijing": "肺、脾、胃、大肠经"
+    "guijing": "肺、脾、胃、大肠经"
   },
   {
     "id": "chantui",
@@ -325,7 +325,7 @@ window.TCM_HERBS = [
       "辛凉解表"
     ],
     "level": "熟悉",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "id": "manjingzi",
@@ -337,8 +337,8 @@ window.TCM_HERBS = [
       "解表药",
       "辛凉解表"
     ],
-    "level": "熟悉",
-      "guijing": "膀胱、肝、胃经"
+    "level": "了解",
+    "guijing": "膀胱、肝、胃经"
   },
   {
     "id": "gaoben",
@@ -352,7 +352,7 @@ window.TCM_HERBS = [
       "止痛"
     ],
     "level": "了解",
-      "guijing": "膀胱经"
+    "guijing": "膀胱经"
   },
   {
     "id": "cangerzi",
@@ -366,7 +366,7 @@ window.TCM_HERBS = [
       "通窍"
     ],
     "level": "了解",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "cangercao",
@@ -379,7 +379,7 @@ window.TCM_HERBS = [
       "解毒"
     ],
     "level": "了解",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "dandouchi",
@@ -392,7 +392,7 @@ window.TCM_HERBS = [
       "辛凉解表"
     ],
     "level": "了解",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "id": "dadouhuangjuan",
@@ -405,7 +405,7 @@ window.TCM_HERBS = [
       "清热利湿"
     ],
     "level": "了解",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "shigao",
@@ -418,7 +418,7 @@ window.TCM_HERBS = [
       "清热泻火"
     ],
     "level": "掌握",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "id": "zhimu",
@@ -432,7 +432,7 @@ window.TCM_HERBS = [
       "滋阴"
     ],
     "level": "掌握",
-      "guijing": "肺、胃、肾经"
+    "guijing": "肺、胃、肾经"
   },
   {
     "id": "zhizi",
@@ -445,7 +445,7 @@ window.TCM_HERBS = [
       "清热泻火"
     ],
     "level": "掌握",
-      "guijing": "心、肺、三焦经"
+    "guijing": "心、肺、三焦经"
   },
   {
     "id": "huangqin",
@@ -458,7 +458,7 @@ window.TCM_HERBS = [
       "清热燥湿"
     ],
     "level": "掌握",
-      "guijing": "肺、胆、脾、胃、大肠、小肠经"
+    "guijing": "肺、胆、脾、胃、大肠、小肠经"
   },
   {
     "id": "huanglian",
@@ -471,7 +471,7 @@ window.TCM_HERBS = [
       "清热燥湿"
     ],
     "level": "掌握",
-      "guijing": "心、脾、胃、胆、大肠经"
+    "guijing": "心、脾、胃、胆、大肠经"
   },
   {
     "id": "huangbai",
@@ -484,7 +484,7 @@ window.TCM_HERBS = [
       "清热燥湿"
     ],
     "level": "掌握",
-      "guijing": "肾、膀胱、大肠经"
+    "guijing": "肾、膀胱、大肠经"
   },
   {
     "id": "jinyinhua",
@@ -497,7 +497,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "掌握",
-      "guijing": "肺、心、胃经"
+    "guijing": "肺、心、胃经"
   },
   {
     "id": "lianqiao",
@@ -510,7 +510,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "掌握",
-      "guijing": "肺、心、小肠经"
+    "guijing": "肺、心、小肠经"
   },
   {
     "id": "banlangen",
@@ -522,8 +522,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "掌握",
-      "guijing": "心、胃经"
+    "level": "熟悉",
+    "guijing": "心、胃经"
   },
   {
     "id": "shengdi",
@@ -536,7 +536,7 @@ window.TCM_HERBS = [
       "清热凉血"
     ],
     "level": "掌握",
-      "guijing": "心、肝、肾经"
+    "guijing": "心、肝、肾经"
   },
   {
     "id": "mudanpi",
@@ -550,7 +550,7 @@ window.TCM_HERBS = [
       "活血"
     ],
     "level": "掌握",
-      "guijing": "心、肝、肾经"
+    "guijing": "心、肝、肾经"
   },
   {
     "id": "qinghao",
@@ -563,7 +563,7 @@ window.TCM_HERBS = [
       "清虚热"
     ],
     "level": "掌握",
-      "guijing": "肝、胆经"
+    "guijing": "肝、胆经"
   },
   {
     "id": "xiakucao",
@@ -575,8 +575,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热泻火"
     ],
-    "level": "熟悉",
-      "guijing": "肝、胆经"
+    "level": "掌握",
+    "guijing": "肝、胆经"
   },
   {
     "id": "lugen",
@@ -590,7 +590,7 @@ window.TCM_HERBS = [
       "生津"
     ],
     "level": "熟悉",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "id": "tianhuafen",
@@ -603,7 +603,7 @@ window.TCM_HERBS = [
       "清热泻火"
     ],
     "level": "熟悉",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "id": "longdan",
@@ -616,7 +616,7 @@ window.TCM_HERBS = [
       "清热燥湿"
     ],
     "level": "熟悉",
-      "guijing": "肝、胆经"
+    "guijing": "肝、胆经"
   },
   {
     "id": "kushen",
@@ -628,8 +628,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热燥湿"
     ],
-    "level": "熟悉",
-      "guijing": "心、肝、胃、大肠、膀胱经"
+    "level": "了解",
+    "guijing": "心、肝、胃、大肠、膀胱经"
   },
   {
     "id": "daqingye",
@@ -642,7 +642,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "熟悉",
-      "guijing": "心、胃经"
+    "guijing": "心、胃经"
   },
   {
     "id": "pugongying",
@@ -655,7 +655,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "熟悉",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "id": "zihuadiding",
@@ -667,8 +667,8 @@ window.TCM_HERBS = [
       "清热药",
       "清热解毒"
     ],
-    "level": "掌握",
-      "guijing": "心、肝经"
+    "level": "了解",
+    "guijing": "心、肝经"
   },
   {
     "id": "yejuhua",
@@ -681,7 +681,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "熟悉",
-      "guijing": "肝、心经"
+    "guijing": "肝、心经"
   },
   {
     "id": "shegan",
@@ -694,7 +694,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "熟悉",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "xuanshen",
@@ -707,7 +707,7 @@ window.TCM_HERBS = [
       "清热凉血"
     ],
     "level": "熟悉",
-      "guijing": "肺、胃、肾经"
+    "guijing": "肺、胃、肾经"
   },
   {
     "id": "chishao",
@@ -720,7 +720,7 @@ window.TCM_HERBS = [
       "清热凉血"
     ],
     "level": "熟悉",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "digupi",
@@ -733,7 +733,7 @@ window.TCM_HERBS = [
       "清虚热"
     ],
     "level": "熟悉",
-      "guijing": "肺、肝、肾经"
+    "guijing": "肺、肝、肾经"
   },
   {
     "id": "zhuye",
@@ -746,7 +746,7 @@ window.TCM_HERBS = [
       "清热泻火"
     ],
     "level": "了解",
-      "guijing": "心、胃、小肠经"
+    "guijing": "心、胃、小肠经"
   },
   {
     "id": "juemingzi",
@@ -759,7 +759,7 @@ window.TCM_HERBS = [
       "清热泻火"
     ],
     "level": "了解",
-      "guijing": "肝、大肠经"
+    "guijing": "肝、大肠经"
   },
   {
     "id": "qinpi",
@@ -772,7 +772,7 @@ window.TCM_HERBS = [
       "清热燥湿"
     ],
     "level": "了解",
-      "guijing": "肝、胆、大肠经"
+    "guijing": "肝、胆、大肠经"
   },
   {
     "id": "baixianpi",
@@ -785,7 +785,7 @@ window.TCM_HERBS = [
       "清热燥湿"
     ],
     "level": "了解",
-      "guijing": "脾、胃、膀胱经"
+    "guijing": "脾、胃、膀胱经"
   },
   {
     "id": "qingdai",
@@ -798,7 +798,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "肝、肺经"
+    "guijing": "肝、肺经"
   },
   {
     "id": "zhonglou",
@@ -811,7 +811,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "quanshen",
@@ -824,7 +824,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "肺、肝、大肠经"
+    "guijing": "肺、肝、大肠经"
   },
   {
     "id": "tufuling",
@@ -837,7 +837,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "id": "mabo",
@@ -850,7 +850,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "machixian",
@@ -863,7 +863,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "肝、大肠经"
+    "guijing": "肝、大肠经"
   },
   {
     "id": "yadanzi",
@@ -876,7 +876,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "大肠、肝经"
+    "guijing": "大肠、肝经"
   },
   {
     "id": "hongteng",
@@ -889,7 +889,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "大肠、肝经"
+    "guijing": "大肠、肝经"
   },
   {
     "id": "chuanxinlian",
@@ -902,7 +902,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "心、肺、大肠、膀胱经"
+    "guijing": "心、肺、大肠、膀胱经"
   },
   {
     "id": "xiongdangfen",
@@ -915,7 +915,7 @@ window.TCM_HERBS = [
       "清热解毒"
     ],
     "level": "了解",
-      "guijing": "肝、胆、心经"
+    "guijing": "肝、胆、心经"
   },
   {
     "id": "shuinijiao",
@@ -928,7 +928,7 @@ window.TCM_HERBS = [
       "清热凉血"
     ],
     "level": "了解",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "baiwei",
@@ -941,7 +941,7 @@ window.TCM_HERBS = [
       "清虚热"
     ],
     "level": "了解",
-      "guijing": "胃、肝、肾经"
+    "guijing": "胃、肝、肾经"
   },
   {
     "id": "huhuanglian",
@@ -954,7 +954,7 @@ window.TCM_HERBS = [
       "清虚热"
     ],
     "level": "了解",
-      "guijing": "肝、胃、大肠经"
+    "guijing": "肝、胃、大肠经"
   },
   {
     "id": "zicao",
@@ -967,7 +967,7 @@ window.TCM_HERBS = [
       "清热凉血"
     ],
     "level": "了解",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "dahuang",
@@ -980,7 +980,7 @@ window.TCM_HERBS = [
       "攻下"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、大肠、肝、心包经"
+    "guijing": "脾、胃、大肠、肝、心包经"
   },
   {
     "id": "mangxiao",
@@ -993,7 +993,7 @@ window.TCM_HERBS = [
       "攻下"
     ],
     "level": "掌握",
-      "guijing": "胃、大肠经"
+    "guijing": "胃、大肠经"
   },
   {
     "id": "gansui",
@@ -1006,7 +1006,7 @@ window.TCM_HERBS = [
       "峻下逐水"
     ],
     "level": "熟悉",
-      "guijing": "肺、肾、大肠经"
+    "guijing": "肺、肾、大肠经"
   },
   {
     "id": "badoushuang",
@@ -1019,7 +1019,7 @@ window.TCM_HERBS = [
       "峻下逐水"
     ],
     "level": "熟悉",
-      "guijing": "胃、大肠经"
+    "guijing": "胃、大肠经"
   },
   {
     "id": "huomaren",
@@ -1031,8 +1031,8 @@ window.TCM_HERBS = [
       "泻下药",
       "润下"
     ],
-    "level": "掌握",
-      "guijing": "脾、胃、大肠经"
+    "level": "了解",
+    "guijing": "脾、胃、大肠经"
   },
   {
     "id": "yuliren",
@@ -1044,8 +1044,8 @@ window.TCM_HERBS = [
       "泻下药",
       "润下"
     ],
-    "level": "熟悉",
-      "guijing": "脾、大肠、小肠经"
+    "level": "了解",
+    "guijing": "脾、大肠、小肠经"
   },
   {
     "id": "duhuo",
@@ -1058,7 +1058,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "掌握",
-      "guijing": "肾、膀胱经"
+    "guijing": "肾、膀胱经"
   },
   {
     "id": "muigua",
@@ -1071,7 +1071,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "掌握",
-      "guijing": "肝、脾经"
+    "guijing": "肝、脾经"
   },
   {
     "id": "weilingxian",
@@ -1083,8 +1083,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿散寒"
     ],
-    "level": "掌握",
-      "guijing": "膀胱经"
+    "level": "熟悉",
+    "guijing": "膀胱经"
   },
   {
     "id": "qinjiao",
@@ -1097,7 +1097,7 @@ window.TCM_HERBS = [
       "祛风湿清热"
     ],
     "level": "掌握",
-      "guijing": "胃、肝、胆经"
+    "guijing": "胃、肝、胆经"
   },
   {
     "id": "fangji",
@@ -1110,7 +1110,7 @@ window.TCM_HERBS = [
       "祛风湿清热"
     ],
     "level": "掌握",
-      "guijing": "膀胱、肺经"
+    "guijing": "膀胱、肺经"
   },
   {
     "id": "sangjisheng",
@@ -1123,7 +1123,7 @@ window.TCM_HERBS = [
       "祛风湿强筋骨"
     ],
     "level": "掌握",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "chuanwu",
@@ -1136,7 +1136,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "熟悉",
-      "guijing": "心、肝、肾、脾经"
+    "guijing": "心、肝、肾、脾经"
   },
   {
     "id": "caowu",
@@ -1149,7 +1149,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "熟悉",
-      "guijing": "心、肝、肾、脾经"
+    "guijing": "心、肝、肾、脾经"
   },
   {
     "id": "qishe",
@@ -1162,7 +1162,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "熟悉",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "jinqianbaihuashe",
@@ -1175,7 +1175,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "熟悉",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "xuchangqing",
@@ -1188,7 +1188,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "熟悉",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "id": "wujiapi",
@@ -1200,8 +1200,8 @@ window.TCM_HERBS = [
       "祛风湿药",
       "祛风湿强筋骨"
     ],
-    "level": "熟悉",
-      "guijing": "肝、肾经"
+    "level": "掌握",
+    "guijing": "肝、肾经"
   },
   {
     "id": "wushaoshe",
@@ -1214,7 +1214,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "了解",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "shetui",
@@ -1227,7 +1227,7 @@ window.TCM_HERBS = [
       "祛风定惊"
     ],
     "level": "了解",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "cansha",
@@ -1240,7 +1240,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "了解",
-      "guijing": "肝、脾、胃经"
+    "guijing": "肝、脾、胃经"
   },
   {
     "id": "luoshiteng",
@@ -1253,7 +1253,7 @@ window.TCM_HERBS = [
       "祛风湿清热"
     ],
     "level": "了解",
-      "guijing": "心、肝、肾经"
+    "guijing": "心、肝、肾经"
   },
   {
     "id": "sangzhi",
@@ -1266,7 +1266,7 @@ window.TCM_HERBS = [
       "祛风湿散寒"
     ],
     "level": "了解",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "xixiancao",
@@ -1279,7 +1279,7 @@ window.TCM_HERBS = [
       "祛风湿清热"
     ],
     "level": "了解",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "gouji",
@@ -1292,7 +1292,7 @@ window.TCM_HERBS = [
       "祛风湿强筋骨"
     ],
     "level": "了解",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "guanghuoxiang",
@@ -1304,7 +1304,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、肺经"
+    "guijing": "脾、胃、肺经"
   },
   {
     "id": "cangzhu",
@@ -1316,7 +1316,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、肝经"
+    "guijing": "脾、胃、肝经"
   },
   {
     "id": "houpu",
@@ -1328,7 +1328,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、肺、大肠经"
+    "guijing": "脾、胃、肺、大肠经"
   },
   {
     "id": "houpuahua",
@@ -1340,7 +1340,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "sharen",
@@ -1352,7 +1352,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃、肾经"
+    "guijing": "脾、胃、肾经"
   },
   {
     "id": "sharenke",
@@ -1364,7 +1364,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃、肾经"
+    "guijing": "脾、胃、肾经"
   },
   {
     "id": "doukou",
@@ -1376,7 +1376,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "熟悉",
-      "guijing": "肺、脾、胃经"
+    "guijing": "肺、脾、胃经"
   },
   {
     "id": "doukouke",
@@ -1388,7 +1388,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "熟悉",
-      "guijing": "肺、脾、胃经"
+    "guijing": "肺、脾、胃经"
   },
   {
     "id": "peilan",
@@ -1400,7 +1400,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "了解",
-      "guijing": "脾、胃、肺经"
+    "guijing": "脾、胃、肺经"
   },
   {
     "id": "caoguo",
@@ -1412,7 +1412,7 @@ window.TCM_HERBS = [
       "化湿药"
     ],
     "level": "了解",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "shanzha",
@@ -1424,7 +1424,7 @@ window.TCM_HERBS = [
       "消食药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、肝经"
+    "guijing": "脾、胃、肝经"
   },
   {
     "id": "shenqu",
@@ -1436,7 +1436,7 @@ window.TCM_HERBS = [
       "消食药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "jianshenqu",
@@ -1448,7 +1448,7 @@ window.TCM_HERBS = [
       "消食药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "maiya",
@@ -1459,8 +1459,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "掌握",
-      "guijing": "脾、胃、肝经"
+    "level": "了解",
+    "guijing": "脾、胃、肝经"
   },
   {
     "id": "jineijin",
@@ -1471,8 +1471,8 @@ window.TCM_HERBS = [
     "tags": [
       "消食药"
     ],
-    "level": "掌握",
-      "guijing": "脾、胃、小肠、膀胱经"
+    "level": "熟悉",
+    "guijing": "脾、胃、小肠、膀胱经"
   },
   {
     "id": "laifuzi",
@@ -1484,7 +1484,7 @@ window.TCM_HERBS = [
       "消食药"
     ],
     "level": "熟悉",
-      "guijing": "肺、脾、胃经"
+    "guijing": "肺、脾、胃经"
   },
   {
     "id": "guya",
@@ -1496,7 +1496,7 @@ window.TCM_HERBS = [
       "消食药"
     ],
     "level": "了解",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "daoya",
@@ -1508,7 +1508,7 @@ window.TCM_HERBS = [
       "消食药"
     ],
     "level": "了解",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "fuling",
@@ -1520,7 +1520,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "心、脾、肾经"
+    "guijing": "心、脾、肾经"
   },
   {
     "id": "fulingpi",
@@ -1533,7 +1533,7 @@ window.TCM_HERBS = [
       "利水"
     ],
     "level": "掌握",
-      "guijing": "心、脾、肾经"
+    "guijing": "心、脾、肾经"
   },
   {
     "id": "fushen",
@@ -1546,7 +1546,7 @@ window.TCM_HERBS = [
       "安神"
     ],
     "level": "掌握",
-      "guijing": "心、脾经"
+    "guijing": "心、脾经"
   },
   {
     "id": "zexie",
@@ -1557,8 +1557,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握",
-      "guijing": "肾、膀胱经"
+    "level": "熟悉",
+    "guijing": "肾、膀胱经"
   },
   {
     "id": "yiyiren",
@@ -1570,7 +1570,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、肺经"
+    "guijing": "脾、胃、肺经"
   },
   {
     "id": "cheqianzi",
@@ -1582,7 +1582,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "肝、肾、肺、小肠经"
+    "guijing": "肝、肾、肺、小肠经"
   },
   {
     "id": "cheqiancao",
@@ -1594,7 +1594,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "肝、肾、肺经"
+    "guijing": "肝、肾、肺经"
   },
   {
     "id": "mutong",
@@ -1606,7 +1606,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "心、小肠、膀胱经"
+    "guijing": "心、小肠、膀胱经"
   },
   {
     "id": "chuanmutong",
@@ -1617,8 +1617,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "掌握",
-      "guijing": "心、肺、小肠、膀胱经"
+    "level": "熟悉",
+    "guijing": "心、肺、小肠、膀胱经"
   },
   {
     "id": "yinchen",
@@ -1630,7 +1630,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、肝、胆经"
+    "guijing": "脾、胃、肝、胆经"
   },
   {
     "id": "jinqiancao",
@@ -1642,7 +1642,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "肝、胆、肾、膀胱经"
+    "guijing": "肝、胆、肾、膀胱经"
   },
   {
     "id": "lianqiancao",
@@ -1654,7 +1654,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "肝、胆、肾、膀胱经"
+    "guijing": "肝、胆、肾、膀胱经"
   },
   {
     "id": "guangjinqiancao",
@@ -1666,7 +1666,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "掌握",
-      "guijing": "肝、胆、肾、膀胱经"
+    "guijing": "肝、胆、肾、膀胱经"
   },
   {
     "id": "zhuling",
@@ -1678,7 +1678,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "熟悉",
-      "guijing": "肾、膀胱经"
+    "guijing": "肾、膀胱经"
   },
   {
     "id": "shiwei",
@@ -1689,8 +1689,8 @@ window.TCM_HERBS = [
     "tags": [
       "利水渗湿药"
     ],
-    "level": "熟悉",
-      "guijing": "肺、膀胱经"
+    "level": "了解",
+    "guijing": "肺、膀胱经"
   },
   {
     "id": "huashi",
@@ -1702,7 +1702,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "熟悉",
-      "guijing": "膀胱、肺、胃经"
+    "guijing": "膀胱、肺、胃经"
   },
   {
     "id": "huzhang",
@@ -1714,7 +1714,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "熟悉",
-      "guijing": "肝、胆、肺经"
+    "guijing": "肝、胆、肺经"
   },
   {
     "id": "xiangjiapi",
@@ -1726,7 +1726,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "肝、肾、心经"
+    "guijing": "肝、肾、心经"
   },
   {
     "id": "tongcao",
@@ -1738,7 +1738,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "id": "qumai",
@@ -1750,7 +1750,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "心、小肠经"
+    "guijing": "心、小肠经"
   },
   {
     "id": "haijinsha",
@@ -1762,7 +1762,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "膀胱、小肠经"
+    "guijing": "膀胱、小肠经"
   },
   {
     "id": "haijinshateng",
@@ -1774,7 +1774,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "膀胱、小肠经"
+    "guijing": "膀胱、小肠经"
   },
   {
     "id": "bianxu",
@@ -1786,7 +1786,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "膀胱经"
+    "guijing": "膀胱经"
   },
   {
     "id": "difuzi",
@@ -1798,7 +1798,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "肾、膀胱经"
+    "guijing": "肾、膀胱经"
   },
   {
     "id": "bixie",
@@ -1810,7 +1810,7 @@ window.TCM_HERBS = [
       "利水渗湿药"
     ],
     "level": "了解",
-      "guijing": "肾、胃经"
+    "guijing": "肾、胃经"
   },
   {
     "id": "fuzi",
@@ -1822,7 +1822,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "掌握",
-      "guijing": "心、肾、脾经"
+    "guijing": "心、肾、脾经"
   },
   {
     "id": "ganjiang",
@@ -1834,7 +1834,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、肾、心、肺经"
+    "guijing": "脾、胃、肾、心、肺经"
   },
   {
     "id": "rougui",
@@ -1846,7 +1846,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "掌握",
-      "guijing": "肾、脾、心、肝经"
+    "guijing": "肾、脾、心、肝经"
   },
   {
     "id": "wuzhuyu",
@@ -1858,7 +1858,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "掌握",
-      "guijing": "肝、脾、胃、肾经"
+    "guijing": "肝、脾、胃、肾经"
   },
   {
     "id": "huajiao",
@@ -1870,7 +1870,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃、肾经"
+    "guijing": "脾、胃、肾经"
   },
   {
     "id": "jiaomu",
@@ -1882,7 +1882,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃、肾经"
+    "guijing": "脾、胃、肾经"
   },
   {
     "id": "dingxiang",
@@ -1894,7 +1894,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃、肺、肾经"
+    "guijing": "脾、胃、肺、肾经"
   },
   {
     "id": "mudingxiang",
@@ -1906,7 +1906,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃、肺、肾经"
+    "guijing": "脾、胃、肺、肾经"
   },
   {
     "id": "xiaohuixiang",
@@ -1918,7 +1918,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "熟悉",
-      "guijing": "肝、肾、脾、胃经"
+    "guijing": "肝、肾、脾、胃经"
   },
   {
     "id": "bajiaohuixiang",
@@ -1930,7 +1930,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "熟悉",
-      "guijing": "肝、肾、脾、胃经"
+    "guijing": "肝、肾、脾、胃经"
   },
   {
     "id": "gaoliangjiang",
@@ -1941,8 +1941,8 @@ window.TCM_HERBS = [
     "tags": [
       "温里药"
     ],
-    "level": "熟悉",
-      "guijing": "脾、胃经"
+    "level": "了解",
+    "guijing": "脾、胃经"
   },
   {
     "id": "hongdoukou",
@@ -1954,7 +1954,7 @@ window.TCM_HERBS = [
       "温里药"
     ],
     "level": "熟悉",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "chenpi",
@@ -1966,7 +1966,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "脾、肺经"
+    "guijing": "脾、肺经"
   },
   {
     "id": "juhong",
@@ -1978,7 +1978,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "肺、脾经"
+    "guijing": "肺、脾经"
   },
   {
     "id": "juhe",
@@ -1990,7 +1990,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "juluo",
@@ -2002,7 +2002,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "肝、肺经"
+    "guijing": "肝、肺经"
   },
   {
     "id": "juye",
@@ -2014,7 +2014,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "huajuhong",
@@ -2026,7 +2026,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "肺、脾经"
+    "guijing": "肺、脾经"
   },
   {
     "id": "zhishi",
@@ -2038,7 +2038,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、大肠经"
+    "guijing": "脾、胃、大肠经"
   },
   {
     "id": "zhike",
@@ -2050,7 +2050,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、大肠经"
+    "guijing": "脾、胃、大肠经"
   },
   {
     "id": "muxiang",
@@ -2062,7 +2062,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、大肠、胆、三焦经"
+    "guijing": "脾、胃、大肠、胆、三焦经"
   },
   {
     "id": "weimuxiang",
@@ -2074,7 +2074,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃、大肠经"
+    "guijing": "脾、胃、大肠经"
   },
   {
     "id": "xiangfu",
@@ -2086,7 +2086,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "掌握",
-      "guijing": "肝、脾、三焦经"
+    "guijing": "肝、脾、三焦经"
   },
   {
     "id": "qingpi",
@@ -2098,7 +2098,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "熟悉",
-      "guijing": "肝、胆、胃经"
+    "guijing": "肝、胆、胃经"
   },
   {
     "id": "chuanlianzi",
@@ -2110,7 +2110,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "熟悉",
-      "guijing": "肝、胃、小肠、膀胱经"
+    "guijing": "肝、胃、小肠、膀胱经"
   },
   {
     "id": "chenxiang",
@@ -2121,8 +2121,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "熟悉",
-      "guijing": "脾、胃、肾经"
+    "level": "了解",
+    "guijing": "脾、胃、肾经"
   },
   {
     "id": "xiebai",
@@ -2134,7 +2134,7 @@ window.TCM_HERBS = [
       "理气药"
     ],
     "level": "熟悉",
-      "guijing": "肺、胃、大肠经"
+    "guijing": "肺、胃、大肠经"
   },
   {
     "id": "foshou",
@@ -2145,8 +2145,8 @@ window.TCM_HERBS = [
     "tags": [
       "理气药"
     ],
-    "level": "熟悉",
-      "guijing": "肝、脾、胃、肺经"
+    "level": "了解",
+    "guijing": "肝、脾、胃、肺经"
   },
   {
     "id": "sanqi",
@@ -2159,7 +2159,7 @@ window.TCM_HERBS = [
       "化瘀止血"
     ],
     "level": "掌握",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "id": "xiaoji",
@@ -2172,7 +2172,7 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "掌握",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "diyu",
@@ -2185,7 +2185,7 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "掌握",
-      "guijing": "肝、大肠经"
+    "guijing": "肝、大肠经"
   },
   {
     "id": "huaimi",
@@ -2198,7 +2198,7 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "了解",
-      "guijing": "肝、大肠经"
+    "guijing": "肝、大肠经"
   },
   {
     "id": "aiye",
@@ -2211,7 +2211,7 @@ window.TCM_HERBS = [
       "温经止血"
     ],
     "level": "掌握",
-      "guijing": "肝、脾、肾经"
+    "guijing": "肝、脾、肾经"
   },
   {
     "id": "qiancao",
@@ -2224,7 +2224,7 @@ window.TCM_HERBS = [
       "化瘀止血"
     ],
     "level": "掌握",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "baiji",
@@ -2237,7 +2237,7 @@ window.TCM_HERBS = [
       "收敛止血"
     ],
     "level": "掌握",
-      "guijing": "肺、胃、肝经"
+    "guijing": "肺、胃、肝经"
   },
   {
     "id": "chaocaiye",
@@ -2250,7 +2250,7 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "熟悉",
-      "guijing": "肺、肝、大肠经"
+    "guijing": "肺、肝、大肠经"
   },
   {
     "id": "puhuang",
@@ -2263,7 +2263,7 @@ window.TCM_HERBS = [
       "化瘀止血"
     ],
     "level": "熟悉",
-      "guijing": "肝、心包经"
+    "guijing": "肝、心包经"
   },
   {
     "id": "daji",
@@ -2276,7 +2276,7 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "了解",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "baimaogen",
@@ -2289,7 +2289,7 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "了解",
-      "guijing": "肺、胃、膀胱经"
+    "guijing": "肺、胃、膀胱经"
   },
   {
     "id": "zhumagen",
@@ -2302,7 +2302,7 @@ window.TCM_HERBS = [
       "凉血止血"
     ],
     "level": "了解",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "xianhecao",
@@ -2315,7 +2315,7 @@ window.TCM_HERBS = [
       "收敛止血"
     ],
     "level": "了解",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "zonglutan",
@@ -2328,7 +2328,7 @@ window.TCM_HERBS = [
       "收敛止血"
     ],
     "level": "了解",
-      "guijing": "肝、肺、大肠经"
+    "guijing": "肝、肺、大肠经"
   },
   {
     "id": "xueyutan",
@@ -2341,7 +2341,7 @@ window.TCM_HERBS = [
       "收敛止血"
     ],
     "level": "了解",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "id": "paojiang",
@@ -2354,7 +2354,7 @@ window.TCM_HERBS = [
       "温经止血"
     ],
     "level": "了解",
-      "guijing": "脾、胃、肝经"
+    "guijing": "脾、胃、肝经"
   },
   {
     "id": "chuanxiong",
@@ -2366,7 +2366,7 @@ window.TCM_HERBS = [
       "活血化瘀药"
     ],
     "level": "掌握",
-      "guijing": "肝、胆、心包经"
+    "guijing": "肝、胆、心包经"
   },
   {
     "id": "yanhusuo",
@@ -2377,8 +2377,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "掌握",
-      "guijing": "心、肝、脾经"
+    "level": "熟悉",
+    "guijing": "心、肝、脾经"
   },
   {
     "id": "danshen",
@@ -2390,7 +2390,7 @@ window.TCM_HERBS = [
       "活血化瘀药"
     ],
     "level": "掌握",
-      "guijing": "心、心包、肝经"
+    "guijing": "心、心包、肝经"
   },
   {
     "id": "yujin",
@@ -2401,8 +2401,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "熟悉",
-      "guijing": "肝、胆、心经"
+    "level": "掌握",
+    "guijing": "肝、胆、心经"
   },
   {
     "id": "honghua",
@@ -2414,7 +2414,7 @@ window.TCM_HERBS = [
       "活血化瘀药"
     ],
     "level": "熟悉",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "taoren",
@@ -2426,7 +2426,7 @@ window.TCM_HERBS = [
       "活血化瘀药"
     ],
     "level": "熟悉",
-      "guijing": "心、肝、大肠经"
+    "guijing": "心、肝、大肠经"
   },
   {
     "id": "yimucao",
@@ -2437,8 +2437,8 @@ window.TCM_HERBS = [
     "tags": [
       "活血化瘀药"
     ],
-    "level": "熟悉",
-      "guijing": "心、肝、膀胱经"
+    "level": "掌握",
+    "guijing": "心、肝、膀胱经"
   },
   {
     "id": "niuxi",
@@ -2450,7 +2450,7 @@ window.TCM_HERBS = [
       "活血化瘀药"
     ],
     "level": "掌握",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "maqianzi",
@@ -2463,7 +2463,7 @@ window.TCM_HERBS = [
       "活血疗伤"
     ],
     "level": "掌握",
-      "guijing": "肝、脾经"
+    "guijing": "肝、脾经"
   },
   {
     "id": "ezhu",
@@ -2475,8 +2475,8 @@ window.TCM_HERBS = [
       "活血化瘀药",
       "破血消癥"
     ],
-    "level": "掌握",
-      "guijing": "肝、脾经"
+    "level": "熟悉",
+    "guijing": "肝、脾经"
   },
   {
     "id": "tubiechong",
@@ -2488,8 +2488,8 @@ window.TCM_HERBS = [
       "活血化瘀药",
       "活血疗伤"
     ],
-    "level": "掌握",
-      "guijing": "肝经"
+    "level": "熟悉",
+    "guijing": "肝经"
   },
   {
     "id": "ruxiang",
@@ -2502,7 +2502,7 @@ window.TCM_HERBS = [
       "活血止痛"
     ],
     "level": "熟悉",
-      "guijing": "心、肝、脾经"
+    "guijing": "心、肝、脾经"
   },
   {
     "id": "jianghuang",
@@ -2514,8 +2514,8 @@ window.TCM_HERBS = [
       "活血化瘀药",
       "活血止痛"
     ],
-    "level": "熟悉",
-      "guijing": "肝、脾经"
+    "level": "了解",
+    "guijing": "肝、脾经"
   },
   {
     "id": "jixueteng",
@@ -2527,8 +2527,8 @@ window.TCM_HERBS = [
       "活血化瘀药",
       "活血调经"
     ],
-    "level": "熟悉",
-      "guijing": "肝、肾经"
+    "level": "了解",
+    "guijing": "肝、肾经"
   },
   {
     "id": "sanleng",
@@ -2540,8 +2540,8 @@ window.TCM_HERBS = [
       "活血化瘀药",
       "破血消癥"
     ],
-    "level": "熟悉",
-      "guijing": "肝、脾经"
+    "level": "了解",
+    "guijing": "肝、脾经"
   },
   {
     "id": "shuizhi",
@@ -2553,8 +2553,8 @@ window.TCM_HERBS = [
       "活血化瘀药",
       "破血消癥"
     ],
-    "level": "熟悉",
-      "guijing": "肝经"
+    "level": "了解",
+    "guijing": "肝经"
   },
   {
     "id": "moyao",
@@ -2567,7 +2567,7 @@ window.TCM_HERBS = [
       "活血止痛"
     ],
     "level": "了解",
-      "guijing": "心、肝、脾经"
+    "guijing": "心、肝、脾经"
   },
   {
     "id": "wulingzhi",
@@ -2580,7 +2580,7 @@ window.TCM_HERBS = [
       "活血止痛"
     ],
     "level": "了解",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "yuejihua",
@@ -2593,7 +2593,7 @@ window.TCM_HERBS = [
       "活血调经"
     ],
     "level": "了解",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "wangbuliuxing",
@@ -2606,7 +2606,7 @@ window.TCM_HERBS = [
       "活血调经"
     ],
     "level": "了解",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "id": "xuejie",
@@ -2619,7 +2619,7 @@ window.TCM_HERBS = [
       "活血疗伤"
     ],
     "level": "了解",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "sumu",
@@ -2632,7 +2632,7 @@ window.TCM_HERBS = [
       "活血疗伤"
     ],
     "level": "了解",
-      "guijing": "心、肝、脾经"
+    "guijing": "心、肝、脾经"
   },
   {
     "id": "gusuibu",
@@ -2645,7 +2645,7 @@ window.TCM_HERBS = [
       "活血疗伤"
     ],
     "level": "了解",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "chuanshanjia",
@@ -2658,7 +2658,7 @@ window.TCM_HERBS = [
       "活血疗伤"
     ],
     "level": "了解",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "id": "banmao",
@@ -2671,7 +2671,7 @@ window.TCM_HERBS = [
       "破血消癥"
     ],
     "level": "了解",
-      "guijing": "肝、胃、肾经"
+    "guijing": "肝、胃、肾经"
   },
   {
     "id": "banxia",
@@ -2684,7 +2684,7 @@ window.TCM_HERBS = [
       "温化寒痰"
     ],
     "level": "掌握",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "nanxing",
@@ -2697,7 +2697,7 @@ window.TCM_HERBS = [
       "温化寒痰"
     ],
     "level": "熟悉",
-      "guijing": "肺、肝、脾经"
+    "guijing": "肺、肝、脾经"
   },
   {
     "id": "chuanbei",
@@ -2710,7 +2710,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "掌握",
-      "guijing": "肺、心经"
+    "guijing": "肺、心经"
   },
   {
     "id": "zhebei",
@@ -2722,8 +2722,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "清化热痰"
     ],
-    "level": "熟悉",
-      "guijing": "肺、心经"
+    "level": "掌握",
+    "guijing": "肺、心经"
   },
   {
     "id": "gualou",
@@ -2735,8 +2735,8 @@ window.TCM_HERBS = [
       "化痰止咳平喘药",
       "清化热痰"
     ],
-    "level": "熟悉",
-      "guijing": "肺、胃、大肠经"
+    "level": "掌握",
+    "guijing": "肺、胃、大肠经"
   },
   {
     "id": "xingren",
@@ -2749,7 +2749,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "掌握",
-      "guijing": "肺、大肠经"
+    "guijing": "肺、大肠经"
   },
   {
     "id": "suzizi",
@@ -2762,7 +2762,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "熟悉",
-      "guijing": "肺、大肠经"
+    "guijing": "肺、大肠经"
   },
   {
     "id": "baibu",
@@ -2775,7 +2775,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "熟悉",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "sangbaipi",
@@ -2788,7 +2788,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "熟悉",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "pipaye",
@@ -2801,7 +2801,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "了解",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "id": "tinglizi",
@@ -2814,7 +2814,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "掌握",
-      "guijing": "肺、膀胱经"
+    "guijing": "肺、膀胱经"
   },
   {
     "id": "kuandonghua",
@@ -2827,7 +2827,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "熟悉",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "ziwan",
@@ -2840,7 +2840,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "了解",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "madouling",
@@ -2853,7 +2853,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "了解",
-      "guijing": "肺、大肠经"
+    "guijing": "肺、大肠经"
   },
   {
     "id": "baiguo",
@@ -2866,7 +2866,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "了解",
-      "guijing": "肺、肾经"
+    "guijing": "肺、肾经"
   },
   {
     "id": "aidicha",
@@ -2879,7 +2879,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "了解",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "id": "yangjinhua",
@@ -2892,7 +2892,7 @@ window.TCM_HERBS = [
       "止咳平喘"
     ],
     "level": "了解",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "id": "jiegeng",
@@ -2905,7 +2905,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "掌握",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "xuanfuhua",
@@ -2918,7 +2918,7 @@ window.TCM_HERBS = [
       "温化寒痰"
     ],
     "level": "熟悉",
-      "guijing": "肺、脾、胃、大肠经"
+    "guijing": "肺、脾、胃、大肠经"
   },
   {
     "id": "zhuru",
@@ -2931,7 +2931,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "熟悉",
-      "guijing": "肺、胃、心、胆经"
+    "guijing": "肺、胃、心、胆经"
   },
   {
     "id": "yubaifu",
@@ -2944,7 +2944,7 @@ window.TCM_HERBS = [
       "温化寒痰"
     ],
     "level": "了解",
-      "guijing": "胃、肝经"
+    "guijing": "胃、肝经"
   },
   {
     "id": "jiezi",
@@ -2957,7 +2957,7 @@ window.TCM_HERBS = [
       "温化寒痰"
     ],
     "level": "了解",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "baiqian",
@@ -2970,7 +2970,7 @@ window.TCM_HERBS = [
       "温化寒痰"
     ],
     "level": "了解",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "qianhu",
@@ -2983,7 +2983,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "了解",
-      "guijing": "肺经"
+    "guijing": "肺经"
   },
   {
     "id": "tianzhuhuang",
@@ -2996,7 +2996,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "了解",
-      "guijing": "心、肝经"
+    "guijing": "心、肝经"
   },
   {
     "id": "zhuli",
@@ -3009,7 +3009,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "了解",
-      "guijing": "心、肺、肝经"
+    "guijing": "心、肺、肝经"
   },
   {
     "id": "haizao",
@@ -3022,7 +3022,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "了解",
-      "guijing": "肝、胃、肾经"
+    "guijing": "肝、胃、肾经"
   },
   {
     "id": "kunbu",
@@ -3035,7 +3035,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "了解",
-      "guijing": "肝、胃、肾经"
+    "guijing": "肝、胃、肾经"
   },
   {
     "id": "huangyaozi",
@@ -3048,7 +3048,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "了解",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "id": "haigeqiao",
@@ -3061,7 +3061,7 @@ window.TCM_HERBS = [
       "清化热痰"
     ],
     "level": "了解",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "id": "suanzaoren",
@@ -3074,7 +3074,7 @@ window.TCM_HERBS = [
       "养心安神"
     ],
     "level": "掌握",
-      "guijing": "心、肝、胆经"
+    "guijing": "心、肝、胆经"
   },
   {
     "id": "yuanzhi",
@@ -3086,8 +3086,8 @@ window.TCM_HERBS = [
       "安神药",
       "养心安神"
     ],
-    "level": "熟悉",
-      "guijing": "心、肾、肺经"
+    "level": "掌握",
+    "guijing": "心、肾、肺经"
   },
   {
     "id": "longgu",
@@ -3100,7 +3100,7 @@ window.TCM_HERBS = [
       "重镇安神"
     ],
     "level": "了解",
-      "guijing": "心、肝、肾经"
+    "guijing": "心、肝、肾经"
   },
   {
     "id": "shijueming",
@@ -3113,7 +3113,7 @@ window.TCM_HERBS = [
       "平抑肝阳"
     ],
     "level": "掌握",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "muli",
@@ -3125,8 +3125,8 @@ window.TCM_HERBS = [
       "平肝息风药",
       "平抑肝阳"
     ],
-    "level": "掌握",
-      "guijing": "肝、胆、肾经"
+    "level": "熟悉",
+    "guijing": "肝、胆、肾经"
   },
   {
     "id": "tianma",
@@ -3139,7 +3139,7 @@ window.TCM_HERBS = [
       "息风止痉"
     ],
     "level": "掌握",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "id": "gouteng",
@@ -3151,8 +3151,8 @@ window.TCM_HERBS = [
       "平肝息风药",
       "息风止痉"
     ],
-    "level": "熟悉",
-      "guijing": "肝、心包经"
+    "level": "掌握",
+    "guijing": "肝、心包经"
   },
   {
     "id": "shexiang",
@@ -3163,8 +3163,8 @@ window.TCM_HERBS = [
     "tags": [
       "开窍药"
     ],
-    "level": "了解",
-      "guijing": "心、脾经"
+    "level": "掌握",
+    "guijing": "心、脾经"
   },
   {
     "id": "shichangpu",
@@ -3176,7 +3176,7 @@ window.TCM_HERBS = [
       "开窍药"
     ],
     "level": "熟悉",
-      "guijing": "心、胃经"
+    "guijing": "心、胃经"
   },
   {
     "id": "renshen",
@@ -3189,7 +3189,7 @@ window.TCM_HERBS = [
       "补气药"
     ],
     "level": "掌握",
-      "guijing": "肺、脾、心经"
+    "guijing": "肺、脾、心经"
   },
   {
     "id": "huangqi",
@@ -3202,7 +3202,7 @@ window.TCM_HERBS = [
       "补气药"
     ],
     "level": "掌握",
-      "guijing": "脾、肺经"
+    "guijing": "脾、肺经"
   },
   {
     "id": "baishu",
@@ -3215,7 +3215,7 @@ window.TCM_HERBS = [
       "补气药"
     ],
     "level": "掌握",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "id": "shanyao",
@@ -3227,8 +3227,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "掌握",
-      "guijing": "脾、肺、肾经"
+    "level": "熟悉",
+    "guijing": "脾、肺、肾经"
   },
   {
     "id": "gancao",
@@ -3241,7 +3241,7 @@ window.TCM_HERBS = [
       "补气药"
     ],
     "level": "掌握",
-      "guijing": "心、肺、脾、胃经"
+    "guijing": "心、肺、脾、胃经"
   },
   {
     "id": "danggui",
@@ -3254,7 +3254,7 @@ window.TCM_HERBS = [
       "补血药"
     ],
     "level": "掌握",
-      "guijing": "肝、心、脾经"
+    "guijing": "肝、心、脾经"
   },
   {
     "id": "shudi",
@@ -3267,7 +3267,7 @@ window.TCM_HERBS = [
       "补血药"
     ],
     "level": "掌握",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "baishao",
@@ -3280,7 +3280,7 @@ window.TCM_HERBS = [
       "补血药"
     ],
     "level": "掌握",
-      "guijing": "肝、脾经"
+    "guijing": "肝、脾经"
   },
   {
     "id": "ejiao",
@@ -3293,7 +3293,7 @@ window.TCM_HERBS = [
       "补血药"
     ],
     "level": "掌握",
-      "guijing": "肺、肝、肾经"
+    "guijing": "肺、肝、肾经"
   },
   {
     "id": "maidong",
@@ -3306,7 +3306,7 @@ window.TCM_HERBS = [
       "补阴药"
     ],
     "level": "掌握",
-      "guijing": "胃、肺、心经"
+    "guijing": "胃、肺、心经"
   },
   {
     "id": "gouqi",
@@ -3318,8 +3318,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "掌握",
-      "guijing": "肝、肾经"
+    "level": "熟悉",
+    "guijing": "肝、肾经"
   },
   {
     "id": "xiyangshen",
@@ -3332,7 +3332,7 @@ window.TCM_HERBS = [
       "补气药"
     ],
     "level": "熟悉",
-      "guijing": "肺、心、肾、脾经"
+    "guijing": "肺、心、肾、脾经"
   },
   {
     "id": "dangshen",
@@ -3344,8 +3344,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "熟悉",
-      "guijing": "脾、肺经"
+    "level": "掌握",
+    "guijing": "脾、肺经"
   },
   {
     "id": "dazao",
@@ -3357,8 +3357,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补气药"
     ],
-    "level": "熟悉",
-      "guijing": "脾、胃、心经"
+    "level": "了解",
+    "guijing": "脾、胃、心经"
   },
   {
     "id": "heshouwu",
@@ -3371,7 +3371,7 @@ window.TCM_HERBS = [
       "补血药"
     ],
     "level": "熟悉",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "nanshashen",
@@ -3383,8 +3383,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "熟悉",
-      "guijing": "肺、胃经"
+    "level": "了解",
+    "guijing": "肺、胃经"
   },
   {
     "id": "tiandong",
@@ -3397,7 +3397,7 @@ window.TCM_HERBS = [
       "补阴药"
     ],
     "level": "熟悉",
-      "guijing": "肺、肾、胃经"
+    "guijing": "肺、肾、胃经"
   },
   {
     "id": "shihu",
@@ -3410,7 +3410,7 @@ window.TCM_HERBS = [
       "补阴药"
     ],
     "level": "熟悉",
-      "guijing": "胃、肾经"
+    "guijing": "胃、肾经"
   },
   {
     "id": "guijia",
@@ -3422,8 +3422,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阴药"
     ],
-    "level": "了解",
-      "guijing": "肾、肝、心经"
+    "level": "掌握",
+    "guijing": "肾、肝、心经"
   },
   {
     "id": "lurong",
@@ -3435,8 +3435,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阳药"
     ],
-    "level": "了解",
-      "guijing": "肾、肝经"
+    "level": "掌握",
+    "guijing": "肾、肝经"
   },
   {
     "id": "duzhong",
@@ -3448,8 +3448,8 @@ window.TCM_HERBS = [
       "补虚药",
       "补阳药"
     ],
-    "level": "熟悉",
-      "guijing": "肝、肾经"
+    "level": "掌握",
+    "guijing": "肝、肾经"
   },
   {
     "id": "xuduan",
@@ -3462,7 +3462,7 @@ window.TCM_HERBS = [
       "补阳药"
     ],
     "level": "熟悉",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "id": "tusizi",
@@ -3475,7 +3475,7 @@ window.TCM_HERBS = [
       "补阳药"
     ],
     "level": "熟悉",
-      "guijing": "肾、肝、脾经"
+    "guijing": "肾、肝、脾经"
   },
   {
     "id": "dongchongxiacao",
@@ -3488,7 +3488,7 @@ window.TCM_HERBS = [
       "补阳药"
     ],
     "level": "了解",
-      "guijing": "肾、肺经"
+    "guijing": "肾、肺经"
   },
   {
     "id": "wuweizi",
@@ -3500,7 +3500,7 @@ window.TCM_HERBS = [
       "收涩药"
     ],
     "level": "掌握",
-      "guijing": "肺、心、肾经"
+    "guijing": "肺、心、肾经"
   },
   {
     "id": "wumei",
@@ -3511,8 +3511,8 @@ window.TCM_HERBS = [
     "tags": [
       "收涩药"
     ],
-    "level": "熟悉",
-      "guijing": "肝、脾、肺、大肠经"
+    "level": "掌握",
+    "guijing": "肝、脾、肺、大肠经"
   },
   {
     "id": "shanzhuyu",
@@ -3523,8 +3523,8 @@ window.TCM_HERBS = [
     "tags": [
       "收涩药"
     ],
-    "level": "熟悉",
-      "guijing": "肝、肾经"
+    "level": "掌握",
+    "guijing": "肝、肾经"
   },
   {
     "id": "lianzi",
@@ -3535,8 +3535,884 @@ window.TCM_HERBS = [
     "tags": [
       "收涩药"
     ],
+    "level": "了解",
+    "guijing": "脾、肾、心经"
+  },
+  {
+    "id": "地黄",
+    "name": "地黄",
+    "summary": "清热凉血，养阴生津。",
+    "siqi": "寒",
+    "wuwei": "甘、苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "掌握",
+    "guijing": "心、肝、肾经"
+  },
+  {
+    "id": "鱼腥草",
+    "name": "鱼腥草",
+    "summary": "清热解毒，消痈排脓，利尿通淋。",
+    "siqi": "微寒",
+    "wuwei": "辛",
+    "tags": [
+      "清热药"
+    ],
+    "level": "掌握",
+    "guijing": "肺经"
+  },
+  {
+    "id": "槟榔",
+    "name": "槟榔",
+    "summary": "杀虫消积，行气利水，截疟。",
+    "siqi": "温",
+    "wuwei": "苦、辛",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "掌握",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "全蝎",
+    "name": "全蝎",
+    "summary": "息风镇痉，通络止痛，攻毒散结。",
+    "siqi": "平",
+    "wuwei": "辛",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "掌握",
+    "guijing": "肝经"
+  },
+  {
+    "id": "牛黄",
+    "name": "牛黄",
+    "summary": "清心豁痰，开窍凉肝，息风解毒。",
+    "siqi": "凉",
+    "wuwei": "甘",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "掌握",
+    "guijing": "心、肝经"
+  },
+  {
+    "id": "赭石",
+    "name": "赭石",
+    "summary": "平肝潜阳，重镇降逆，凉血止血。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "掌握",
+    "guijing": "肝、心经"
+  },
+  {
+    "id": "北沙参",
+    "name": "北沙参",
+    "summary": "养阴清肺，益胃生津。",
+    "siqi": "微寒",
+    "wuwei": "甘、微苦",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "掌握",
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "淫羊藿",
+    "name": "淫羊藿",
+    "summary": "补肾壮阳，强筋健骨，祛风除湿。",
+    "siqi": "温",
+    "wuwei": "辛、甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "掌握",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "乌药",
+    "name": "乌药",
+    "summary": "行气止痛，温肾散寒。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "理气药"
+    ],
     "level": "熟悉",
-      "guijing": "脾、肾、心经"
+    "guijing": "肺、脾、肾、膀胱经"
+  },
+  {
+    "id": "使君子",
+    "name": "使君子",
+    "summary": "杀虫消积。",
+    "siqi": "温",
+    "wuwei": "甘",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "熟悉",
+    "guijing": "脾、胃经"
+  },
+  {
+    "id": "僵蚕",
+    "name": "僵蚕",
+    "summary": "息风止痉，祛风止痛，化痰散结。",
+    "siqi": "平",
+    "wuwei": "咸、辛",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肺、胃经"
+  },
+  {
+    "id": "冰片",
+    "name": "冰片",
+    "summary": "开窍醒神，清热止痛。",
+    "siqi": "微寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "开窍药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、脾、肺经"
+  },
+  {
+    "id": "南瓜子",
+    "name": "南瓜子",
+    "summary": "杀虫。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "合欢皮",
+    "name": "合欢皮",
+    "summary": "解郁安神，活血消肿。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "了解",
+    "guijing": "心、肝、肺经"
+  },
+  {
+    "id": "地龙",
+    "name": "地龙",
+    "summary": "清热定惊，通络平喘，利尿。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、脾、膀胱经"
+  },
+  {
+    "id": "墨旱莲",
+    "name": "墨旱莲",
+    "summary": "滋补肝肾，凉血止血。",
+    "siqi": "寒",
+    "wuwei": "甘、酸",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "太子参",
+    "name": "太子参",
+    "summary": "益气健脾，生津润肺。",
+    "siqi": "平",
+    "wuwei": "甘、微苦",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "脾、肺经"
+  },
+  {
+    "id": "女贞子",
+    "name": "女贞子",
+    "summary": "滋补肝肾，明目乌发。",
+    "siqi": "凉",
+    "wuwei": "甘、苦",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "山豆根",
+    "name": "山豆根",
+    "summary": "清热解毒，利咽消肿。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "巴戟天",
+    "name": "巴戟天",
+    "summary": "补肾阳，强筋骨，祛风湿。",
+    "siqi": "微温",
+    "wuwei": "甘、辛",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "巴豆",
+    "name": "巴豆",
+    "summary": "峻下冷积，逐水退肿，祛痰利咽。",
+    "siqi": "热",
+    "wuwei": "辛",
+    "tags": [
+      "泻下药"
+    ],
+    "level": "熟悉",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "朱砂",
+    "name": "朱砂",
+    "summary": "清心镇惊，安神解毒。",
+    "siqi": "微寒",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "熟悉",
+    "guijing": "心经"
+  },
+  {
+    "id": "柏子仁",
+    "name": "柏子仁",
+    "summary": "养心安神，润肠通便。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、肾、大肠经"
+  },
+  {
+    "id": "桑螵蛸",
+    "name": "桑螵蛸",
+    "summary": "固精缩尿，补肾助阳。",
+    "siqi": "平",
+    "wuwei": "甘、咸",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "榧子",
+    "name": "榧子",
+    "summary": "杀虫消积，润肺止咳，润肠通便。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃、大肠经"
+  },
+  {
+    "id": "沙苑子",
+    "name": "沙苑子",
+    "summary": "补肾固精，养肝明目。",
+    "siqi": "温",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "浮小麦",
+    "name": "浮小麦",
+    "summary": "固表止汗，益气除热。",
+    "siqi": "凉",
+    "wuwei": "甘",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "心经"
+  },
+  {
+    "id": "海螵蛸",
+    "name": "海螵蛸",
+    "summary": "收敛止血，涩精止带，制酸止痛，收湿敛疮。",
+    "siqi": "微温",
+    "wuwei": "咸、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "淡竹叶",
+    "name": "淡竹叶",
+    "summary": "清热泻火，除烦止渴，利尿通淋。",
+    "siqi": "寒",
+    "wuwei": "甘、淡",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "心、胃、小肠经"
+  },
+  {
+    "id": "牵牛子",
+    "name": "牵牛子",
+    "summary": "泻水通便，消痰涤饮，杀虫攻积。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "泻下药"
+    ],
+    "level": "了解",
+    "guijing": "肺、肾、大肠经"
+  },
+  {
+    "id": "玉竹",
+    "name": "玉竹",
+    "summary": "养阴润燥，生津止渴。",
+    "siqi": "微寒",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "肺、胃经"
+  },
+  {
+    "id": "珍珠母",
+    "name": "珍珠母",
+    "summary": "平肝潜阳，安神定惊，明目退翳。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "了解",
+    "guijing": "肝、心经"
+  },
+  {
+    "id": "番泻叶",
+    "name": "番泻叶",
+    "summary": "泻热行滞，通便利水。",
+    "siqi": "寒",
+    "wuwei": "甘、苦",
+    "tags": [
+      "泻下药"
+    ],
+    "level": "了解",
+    "guijing": "大肠经"
+  },
+  {
+    "id": "白头翁",
+    "name": "白头翁",
+    "summary": "清热解毒，凉血止痢。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "熟悉",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "白花蛇舌草",
+    "name": "白花蛇舌草",
+    "summary": "清热解毒，利湿通淋。",
+    "siqi": "寒",
+    "wuwei": "微苦、甘",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠、小肠经"
+  },
+  {
+    "id": "百合",
+    "name": "百合",
+    "summary": "养阴润肺，清心安神。",
+    "siqi": "微寒",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "心、肺经"
+  },
+  {
+    "id": "益智仁",
+    "name": "益智仁",
+    "summary": "暖肾固精缩尿，温脾止泻摄唾。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "脾、肾经"
+  },
+  {
+    "id": "石榴皮",
+    "name": "石榴皮",
+    "summary": "涩肠止泻，止血驱虫。",
+    "siqi": "温",
+    "wuwei": "酸、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "大肠经"
+  },
+  {
+    "id": "磁石",
+    "name": "磁石",
+    "summary": "镇惊安神，平肝潜阳，聪耳明目，纳气平喘。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "安神药"
+    ],
+    "level": "了解",
+    "guijing": "肝、心、肾经"
+  },
+  {
+    "id": "神曲",
+    "name": "神曲",
+    "summary": "消食和胃。",
+    "siqi": "温",
+    "wuwei": "甘、辛",
+    "tags": [
+      "消食药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃经"
+  },
+  {
+    "id": "羚羊角",
+    "name": "羚羊角",
+    "summary": "平肝息风，清肝明目，清热解毒。",
+    "siqi": "寒",
+    "wuwei": "咸",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、心经"
+  },
+  {
+    "id": "肉苁蓉",
+    "name": "肉苁蓉",
+    "summary": "补肾阳，益精血，润肠通便。",
+    "siqi": "温",
+    "wuwei": "甘、咸",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "肾、大肠经"
+  },
+  {
+    "id": "肉豆蔻",
+    "name": "肉豆蔻",
+    "summary": "温中行气，涩肠止泻。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "熟悉",
+    "guijing": "脾、胃、大肠经"
+  },
+  {
+    "id": "胡椒",
+    "name": "胡椒",
+    "summary": "温中散寒，下气消痰。",
+    "siqi": "热",
+    "wuwei": "辛",
+    "tags": [
+      "温里药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "自然铜",
+    "name": "自然铜",
+    "summary": "散瘀止痛，续筋接骨。",
+    "siqi": "平",
+    "wuwei": "辛",
+    "tags": [
+      "活血化瘀药"
+    ],
+    "level": "了解",
+    "guijing": "肝经"
+  },
+  {
+    "id": "臭梧桐",
+    "name": "臭梧桐",
+    "summary": "祛风湿，通经络，平肝。",
+    "siqi": "凉",
+    "wuwei": "辛、苦、甘",
+    "tags": [
+      "祛风湿药"
+    ],
+    "level": "了解",
+    "guijing": "肝经"
+  },
+  {
+    "id": "芡实",
+    "name": "芡实",
+    "summary": "益肾固精，补脾止泻，除湿止带。",
+    "siqi": "平",
+    "wuwei": "甘、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "脾、肾经"
+  },
+  {
+    "id": "芦荟",
+    "name": "芦荟",
+    "summary": "泻下通便，清肝泻火，杀虫疗疳。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "泻下药"
+    ],
+    "level": "了解",
+    "guijing": "肝、胃、大肠经"
+  },
+  {
+    "id": "苏合香",
+    "name": "苏合香",
+    "summary": "开窍醒神，辟秽止痛。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "开窍药"
+    ],
+    "level": "了解",
+    "guijing": "心、脾经"
+  },
+  {
+    "id": "苦楝皮",
+    "name": "苦楝皮",
+    "summary": "杀虫疗癣。",
+    "siqi": "寒",
+    "wuwei": "苦",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "肝、脾、胃经"
+  },
+  {
+    "id": "草豆蔻",
+    "name": "草豆蔻",
+    "summary": "燥湿行气，温中止呕。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "化湿药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃经"
+  },
+  {
+    "id": "荔枝核",
+    "name": "荔枝核",
+    "summary": "行气散结，散寒止痛。",
+    "siqi": "温",
+    "wuwei": "甘、微苦",
+    "tags": [
+      "理气药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "荜澄茄",
+    "name": "荜澄茄",
+    "summary": "温中散寒，行气止痛。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "温里药"
+    ],
+    "level": "了解",
+    "guijing": "脾、胃、肾、膀胱经"
+  },
+  {
+    "id": "荜茇",
+    "name": "荜茇",
+    "summary": "温中散寒，下气止痛。",
+    "siqi": "热",
+    "wuwei": "辛",
+    "tags": [
+      "温里药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "蒺藜",
+    "name": "蒺藜",
+    "summary": "平肝解郁，活血祛风，明目止痒。",
+    "siqi": "微温",
+    "wuwei": "辛、苦",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝经"
+  },
+  {
+    "id": "蛤蚧",
+    "name": "蛤蚧",
+    "summary": "补肺益肾，纳气定喘，助阳益精。",
+    "siqi": "平",
+    "wuwei": "咸",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "肺、肾经"
+  },
+  {
+    "id": "蜂蜜",
+    "name": "蜂蜜",
+    "summary": "补中润燥，止痛解毒。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "肺、脾、大肠经"
+  },
+  {
+    "id": "蜈蚣",
+    "name": "蜈蚣",
+    "summary": "息风镇痉，通络止痛，攻毒散结。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "平肝息风药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝经"
+  },
+  {
+    "id": "蟾酥",
+    "name": "蟾酥",
+    "summary": "解毒止痛，开窍醒神。",
+    "siqi": "温",
+    "wuwei": "辛",
+    "tags": [
+      "开窍药"
+    ],
+    "level": "了解",
+    "guijing": "心经"
+  },
+  {
+    "id": "补骨脂",
+    "name": "补骨脂",
+    "summary": "温肾助阳，纳气平喘，温脾止泻。",
+    "siqi": "温",
+    "wuwei": "辛、苦",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "肾、脾经"
+  },
+  {
+    "id": "覆盆子",
+    "name": "覆盆子",
+    "summary": "益肾固精缩尿，养肝明目。",
+    "siqi": "温",
+    "wuwei": "甘、酸",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "诃子",
+    "name": "诃子",
+    "summary": "涩肠止泻，敛肺止咳，降火利咽。",
+    "siqi": "平",
+    "wuwei": "苦、酸、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "熟悉",
+    "guijing": "肺、大肠经"
+  },
+  {
+    "id": "谷精草",
+    "name": "谷精草",
+    "summary": "疏散风热，明目退翳。",
+    "siqi": "平",
+    "wuwei": "辛、甘",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "肝、肺经"
+  },
+  {
+    "id": "败酱草",
+    "name": "败酱草",
+    "summary": "清热解毒，消痈排脓，祛瘀止痛。",
+    "siqi": "微寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠、肝经"
+  },
+  {
+    "id": "贯众",
+    "name": "贯众",
+    "summary": "清热解毒，凉血止血，杀虫。",
+    "siqi": "微寒",
+    "wuwei": "苦",
+    "tags": [
+      "清热药"
+    ],
+    "level": "了解",
+    "guijing": "肝、胃经"
+  },
+  {
+    "id": "赤石脂",
+    "name": "赤石脂",
+    "summary": "涩肠止泻，收敛止血，敛疮生肌。",
+    "siqi": "温",
+    "wuwei": "甘、酸、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "金樱子",
+    "name": "金樱子",
+    "summary": "固精缩尿，固崩止带，涩肠止泻。",
+    "siqi": "平",
+    "wuwei": "酸、甘、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "肾、膀胱、大肠经"
+  },
+  {
+    "id": "雷丸",
+    "name": "雷丸",
+    "summary": "杀虫消积。",
+    "siqi": "寒",
+    "wuwei": "微苦",
+    "tags": [
+      "驱虫药"
+    ],
+    "level": "了解",
+    "guijing": "胃、大肠经"
+  },
+  {
+    "id": "青木香",
+    "name": "青木香",
+    "summary": "行气止痛，解毒消肿。",
+    "siqi": "寒",
+    "wuwei": "辛、苦",
+    "tags": [
+      "理气药"
+    ],
+    "level": "了解",
+    "guijing": "肝、胃经"
+  },
+  {
+    "id": "首乌藤",
+    "name": "首乌藤",
+    "summary": "养血安神，祛风通络。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "安神药"
+    ],
+    "level": "了解",
+    "guijing": "心、肝经"
+  },
+  {
+    "id": "鳖甲",
+    "name": "鳖甲",
+    "summary": "滋阴潜阳，软坚散结，退热除蒸。",
+    "siqi": "微寒",
+    "wuwei": "咸",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "熟悉",
+    "guijing": "肝、肾经"
+  },
+  {
+    "id": "麻黄根",
+    "name": "麻黄根",
+    "summary": "固表止汗。",
+    "siqi": "平",
+    "wuwei": "甘、涩",
+    "tags": [
+      "收涩药"
+    ],
+    "level": "了解",
+    "guijing": "肺经"
+  },
+  {
+    "id": "黄精",
+    "name": "黄精",
+    "summary": "补气养阴，健脾润肺，益肾。",
+    "siqi": "平",
+    "wuwei": "甘",
+    "tags": [
+      "补虚药"
+    ],
+    "level": "了解",
+    "guijing": "脾、肺、肾经"
   }
 ];
 
@@ -3545,447 +4421,324 @@ window.ALIAS_DATA = [
     "alias": "土元",
     "name": "地鳖虫",
     "func": "破血逐瘀",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "alias": "坤草",
     "name": "益母草",
     "func": "调经利水",
-      "guijing": "心、肝、膀胱经"
+    "guijing": "心、肝、膀胱经"
   },
   {
     "alias": "国老",
     "name": "甘草",
     "func": "调和诸药",
-      "guijing": "心、肺、脾、胃经"
+    "guijing": "心、肺、脾、胃经"
   },
   {
     "alias": "大力子",
     "name": "牛蒡子",
     "func": "疏风利咽",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "alias": "金铃子",
     "name": "川楝子",
     "func": "行气止痛",
-      "guijing": "肝、胃、小肠、膀胱经"
+    "guijing": "肝、胃、小肠、膀胱经"
   },
   {
     "alias": "破故纸",
     "name": "补骨脂",
     "func": "温肾纳气",
-      "guijing": "肾、脾经"
+    "guijing": "肾、脾经"
   },
   {
     "alias": "仙灵脾",
     "name": "淫羊藿",
     "func": "补肾壮阳",
-      "guijing": "肾、肝经"
+    "guijing": "肾、肝经"
   },
   {
     "alias": "将军",
     "name": "大黄",
     "func": "泻下攻积",
-      "guijing": "脾、胃、大肠、肝、心包经"
+    "guijing": "脾、胃、大肠、肝、心包经"
   },
   {
     "alias": "二丑",
     "name": "牵牛子",
     "func": "逐水消肿",
-      "guijing": "肺、肾、大肠经"
+    "guijing": "肺、肾、大肠经"
   },
   {
     "alias": "玉蝴蝶",
     "name": "木蝴蝶",
     "func": "清肺利咽",
-      "guijing": "肺、肝、胃经"
+    "guijing": "肺、肝、胃经"
   },
   {
     "alias": "忍冬花",
     "name": "金银花",
     "func": "清热解毒",
-      "guijing": "肺、心、胃经"
+    "guijing": "肺、心、胃经"
   },
   {
     "alias": "双花",
     "name": "金银花",
     "func": "清热解毒",
-      "guijing": "肺、心、胃经"
+    "guijing": "肺、心、胃经"
   },
   {
     "alias": "川贝",
     "name": "川贝母",
     "func": "清热润肺，化痰止咳",
-      "guijing": "肺、心经"
+    "guijing": "肺、心经"
   },
   {
     "alias": "浙贝",
     "name": "浙贝母",
     "func": "清热化痰，散结消肿",
-      "guijing": "肺、心经"
+    "guijing": "肺、心经"
   },
   {
     "alias": "象贝",
     "name": "浙贝母",
     "func": "清热化痰，散结消肿",
-      "guijing": "肺、心经"
+    "guijing": "肺、心经"
   },
   {
     "alias": "杭菊花",
     "name": "菊花",
     "func": "疏散风热，平肝明目",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "alias": "滁菊花",
     "name": "菊花",
     "func": "平肝明目力胜",
-      "guijing": "肺、肝经"
+    "guijing": "肺、肝经"
   },
   {
     "alias": "怀牛膝",
     "name": "牛膝",
     "func": "逐瘀通经，补肝肾",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "alias": "川牛膝",
     "name": "牛膝",
     "func": "逐瘀通经，引血下行",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "alias": "杭白芍",
     "name": "白芍",
     "func": "养血调经，敛阴止汗",
-      "guijing": "肝、脾经"
+    "guijing": "肝、脾经"
   },
   {
     "alias": "云茯苓",
     "name": "茯苓",
     "func": "利水渗湿，健脾宁心",
-      "guijing": "心、脾、肾经"
+    "guijing": "心、脾、肾经"
   },
   {
     "alias": "赤茯苓",
     "name": "茯苓",
     "func": "利水渗湿，兼能清热",
-      "guijing": "心、脾、肾经"
+    "guijing": "心、脾、肾经"
   },
   {
     "alias": "建泽泻",
     "name": "泽泻",
     "func": "利水渗湿，泄热",
-      "guijing": "肾、膀胱经"
+    "guijing": "肾、膀胱经"
   },
   {
     "alias": "粉葛根",
     "name": "葛根",
     "func": "解肌退热，生津止渴",
-      "guijing": "脾、胃经"
+    "guijing": "脾、胃经"
   },
   {
     "alias": "天花粉",
     "name": "瓜蒌根",
     "func": "清热泻火，生津止渴",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "alias": "栝楼根",
     "name": "瓜蒌根",
     "func": "清热泻火，消肿排脓",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "alias": "北沙参",
     "name": "沙参",
     "func": "养阴清肺，益胃生津",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "alias": "辽沙参",
     "name": "沙参",
     "func": "养阴清肺，祛痰止咳",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "alias": "南沙参",
     "name": "沙参",
     "func": "养阴清肺，益气化痰",
-      "guijing": "肺、胃经"
+    "guijing": "肺、胃经"
   },
   {
     "alias": "杭麦冬",
     "name": "麦冬",
     "func": "养阴生津，润肺清心",
-      "guijing": "胃、肺、心经"
+    "guijing": "胃、肺、心经"
   },
   {
     "alias": "寸冬",
     "name": "麦冬",
     "func": "养阴生津，清心除烦",
-      "guijing": "胃、肺、心经"
+    "guijing": "胃、肺、心经"
   },
   {
     "alias": "明天冬",
     "name": "天冬",
     "func": "养阴润燥，滋肾阴力强",
-      "guijing": "肺、肾、胃经"
+    "guijing": "肺、肾、胃经"
   },
   {
     "alias": "全蝎",
     "name": "全虫",
     "func": "息风镇痉，通络止痛",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "alias": "全虫",
     "name": "全蝎",
     "func": "攻毒散结，通络止痛",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "alias": "僵蚕",
     "name": "白僵蚕",
     "func": "息风止痉，祛风止痛",
-      "guijing": "肝、肺、胃经"
+    "guijing": "肝、肺、胃经"
   },
   {
     "alias": "姜蚕",
     "name": "白僵蚕",
     "func": "化痰散结，祛风止痒",
-      "guijing": "肝、肺、胃经"
+    "guijing": "肝、肺、胃经"
   },
   {
     "alias": "乌梢蛇",
     "name": "乌蛇",
     "func": "祛风，通络，止痉",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "alias": "蕲蛇",
     "name": "白花蛇",
     "func": "祛风，通络，止痉",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "alias": "地龙",
     "name": "蚯蚓",
     "func": "清热定惊，通络，平喘",
-      "guijing": "肝、脾、膀胱经"
+    "guijing": "肝、脾、膀胱经"
   },
   {
     "alias": "石决明",
     "name": "鲍鱼壳",
     "func": "平肝潜阳，清肝明目",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "alias": "九孔石决明",
     "name": "鲍鱼壳",
     "func": "平肝潜阳，明目退翳",
-      "guijing": "肝经"
+    "guijing": "肝经"
   },
   {
     "alias": "珍珠母",
     "name": "珠母",
     "func": "平肝潜阳，安神定惊",
-      "guijing": "肝、心经"
+    "guijing": "肝、心经"
   },
   {
     "alias": "生龙齿",
     "name": "龙骨",
     "func": "镇惊安神，平肝潜阳",
-      "guijing": "心、肝、肾经"
+    "guijing": "心、肝、肾经"
   },
   {
     "alias": "煅龙齿",
     "name": "龙骨",
     "func": "收敛固涩，收湿敛疮",
-      "guijing": "心、肝、肾经"
+    "guijing": "心、肝、肾经"
   },
   {
     "alias": "龟板",
     "name": "龟甲",
     "func": "滋阴潜阳，益肾健骨",
-      "guijing": "肾、肝、心经"
+    "guijing": "肾、肝、心经"
   },
   {
     "alias": "龟甲",
     "name": "龟板",
     "func": "养血补心，固经止崩",
-      "guijing": "肾、肝、心经"
+    "guijing": "肾、肝、心经"
   },
   {
     "alias": "鳖甲",
     "name": "团鱼甲",
     "func": "滋阴潜阳，退热除蒸",
-      "guijing": "肝、肾经"
+    "guijing": "肝、肾经"
   },
   {
     "alias": "鸡内金",
     "name": "鸡肫皮",
     "func": "消食健胃，涩精止遗",
-      "guijing": "脾、胃、小肠、膀胱经"
+    "guijing": "脾、胃、小肠、膀胱经"
   },
   {
     "alias": "三七",
     "name": "田七",
     "func": "散瘀止血，消肿定痛",
-      "guijing": "肝、胃经"
+    "guijing": "肝、胃经"
   },
   {
     "alias": "元胡",
     "name": "延胡索",
     "func": "活血行气止痛",
-      "guijing": "心、肝、脾经"
+    "guijing": "心、肝、脾经"
   },
   {
     "alias": "姜黄",
     "name": "片姜黄",
     "func": "破血行气",
-      "guijing": "肝、脾经"
+    "guijing": "肝、脾经"
   },
   {
     "alias": "茵陈蒿",
     "name": "茵陈",
     "func": "清热利湿退黄",
-      "guijing": "脾、胃、肝、胆经"
+    "guijing": "脾、胃、肝、胆经"
   },
   {
     "alias": "制附子",
     "name": "附子",
     "func": "回阳救逆，补火助阳",
-      "guijing": "心、肾、脾经"
+    "guijing": "心、肾、脾经"
   },
   {
     "alias": "白僵蚕",
     "name": "僵蚕",
     "func": "息风止痉，化痰散结",
-      "guijing": "肝、肺、胃经"
-  }
-];
-
-window.SONGS_DATA = [
-    {
-        title:"泻下药",
-        content:`大黄芒硝番泻叶，芦荟泻下各有别。
-大黄泻火又凉血，芒硝软坚能清热，
-番泻行水消胀满，芦荟清肝把虫灭。`
-    },
-    {
-        title:"祛风湿药",
-        content:`独活寄生秦艽防，风湿痹痛它来帮。
-防己利水兼止痛，寄生安胎补肝肾，
-秦艽除蒸清湿热，独活通痹下焦强。`
-    },
-    {
-        title:"化湿药",
-        content:`藿香佩兰化湿强，苍术厚朴砂仁良。
-藿香止呕又解暑，佩兰脾瘴功效彰，
-苍术健脾能明目，厚朴平喘消胀满，
-砂仁止泻又安胎，白蔻止呕行气温。`
-    },
-    {
-        title:"利水渗湿药",
-        content:`茯苓薏苡泽泻前，滑石木通通草全。
-茯苓健脾又宁心，薏苡除痹排脓先，
-泽泻泄热利水道，车前明目化痰涎，
-滑石解暑收湿疮，木通下乳清心炎，
-通草通气能下乳，利水清热不一般。`
-    },
-    {
-        title:"理气药",
-        content:`枳实青皮木香行，香附沉香川楝情。
-枳实破气消积快，青皮疏肝化滞灵，
-木香健脾消食好，香附调经女科兴，
-沉香纳气平喘妙，川楝止痛又杀虫。`
-    },
-    {
-        title:"消食药",
-        content:`山楂神曲麦芽全，莱菔内金功效显。
-山楂散瘀肉食消，神曲外感食滞安，
-麦芽回乳米面化，莱菔化痰除胀满，
-内金通淋化石强，健胃消食作用全。`
-    },
-    {
-        title:"驱虫药",
-        content:`使君苦楝槟榔南，南瓜鹤草雷丸团。
-使君消积小儿健，苦楝杀虫兼疗癣，
-槟榔行气利水便，南瓜绦虫它来歼，
-鹤草芽药专杀虫，雷丸不宜入煎餐。`
-    },
-    {
-        title:"止血药",
-        content:`大蓟小蓟地榆槐，侧柏茅根苎麻排。
-大蓟小蓟消痈毒，地榆敛疮下焦爱，
-槐花清肝又止血，侧柏止咳生发在，
-茅根利尿清肺胃，苎麻安胎解毒来。`
-    },
-    {
-        title:"活血化瘀药",
-        content:`川芎郁金延胡索，丹参桃红益母牛。
-川芎行气祛风痛，延胡止痛效最佳，
-郁金凉血又利胆，丹参清心祛瘀佳，
-桃仁润肠止咳喘，红花通经散瘀佳，
-益母调经利水用，牛膝引血把骨加。
-乳没姜黄鸡血藤，马钱土鳖莪三棱。
-乳香没药消肿痛，姜黄通经肢臂强，
-鸡血补血又通络，马钱散结把毒攻，
-土鳖接骨能续筋，莪术三棱破积通，
-水蛭逐瘀通经好，血竭生肌定痛良，
-苏木祛瘀消肿痛，骨碎补肾续骨强，
-五灵活血能止血，月季调经把郁畅，
-王不留行能下乳，斑蝥攻毒蚀疮疡，
-穿山下乳排脓好。`
-    },
-    {
-        title:"温里药",
-        content:`附子干姜肉桂齐，吴萸小茴丁香依。
-附子回阳又救逆，干姜温肺化饮宜，
-肉桂引火能归元，吴萸止泻呕逆医，
-小茴理气和胃妙，丁香温肾助阳奇。`
-    },
-    {
-        title:"止血药",
-        content:`三七茜草地榆蓟，白及艾叶侧柏蒲。
-三七化瘀能定痛，茜草凉血通经宜，
-地榆解毒疮可敛，小蓟散瘀消痈奇，
-白及消肿能生肌，艾叶温经暖宫宜，
-侧柏凉血又止咳，蒲黄化瘀通淋随。
-槐花凉血又清肝，大蓟散瘀消痈强，
-茅根利尿清肺胃，苎麻安胎解毒良，
-仙鹤收敛止痢好，棕榈血余炭固涩，
-炮姜温中能止痛。`
-    },
-    {
-        title:"开窍药",
-        content:`石菖蒲合冰片香，开窍醒神各擅场。
-石菖豁痰又益智，苏合辟秽止痛良，
-冰片清热能止痛，开窍醒神作用强。`
-    },
-    {
-        title:"止咳平喘药",
-        content:`杏仁葶苈子苏子，百部款冬桑白皮。
-苦杏仁降气平喘，葶苈子泻肺利水，
-苏子降气又润肠，百部杀虫把咳止，
-款冬润肺化痰好，桑皮泻肺又消肿，
-紫菀润肺咳痰消，兜铃清肺平喘良，
-枇杷降逆呕可止，白果定喘带缩停，
-矮地茶活血利湿，洋金花麻镇痛痉。`
-    }
-];
-
-window.CHAPTER_OVERVIEWS = [
-  {
-    "chapter": "清热药",
-    "title": "清热药章概述（第十章）",
-    "content": "共有功效主治：清解里热——治疗里热证\n\n分类及主治：\n1. 清热泻火药：清气分实热、清脏腑实热——主治温病气分证、脏腑实热证。\n2. 清热燥湿药：清热燥湿——主治湿+热病证。\n3. 清热解毒药：清热解毒——主治热毒壅盛证。\n4. 清热凉血药：清热凉血——主治营分、血分热证。\n5. 清虚热药：清虚热、退骨蒸——主治阴虚内热证。",
-    "warnings": [
-      "寒凉伤阳：清热药多寒凉，易损伤人体阳气",
-      "苦寒败胃：苦寒之品易伤脾胃功能",
-      "苦燥伤津：苦燥之性易耗伤津液"
-    ]
+    "guijing": "肝、肺、胃经"
   }
 ];
