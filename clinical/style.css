@@ -74,7 +74,8 @@ button {
   background: linear-gradient(180deg, var(--background) 72%, transparent);
 }
 
-#search {
+#search,
+#med-input {
   width: 100%;
   height: 60px;
   padding: 0 24px;
@@ -86,7 +87,8 @@ button {
   outline: none;
 }
 
-#search:focus {
+#search:focus,
+#med-input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 5px var(--accent-soft);
 }
@@ -403,4 +405,19 @@ mark {
 .teaching-list dd {
   margin: 0;
   color: var(--text);
+}
+
+.header-nav {
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+
+.header-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
 }

@@ -1,7 +1,7 @@
 // 中药学备考全书 - Service Worker
 // v5：修复 cache-first 导致数据/页面永久不更新的问题，并把 clinical 子应用纳入缓存
-const CACHE_NAME = 'zhongyaoxue-v5-20261115';
-const RUNTIME_CACHE = 'zhongyaoxue-runtime-v5';
+const CACHE_NAME = 'zhongyaoxue-v6-20261115';
+const RUNTIME_CACHE = 'zhongyaoxue-runtime-v6';
 
 const PRECACHE_URLS = [
   '/zhongyaoxue/',
@@ -24,6 +24,9 @@ const PRECACHE_URLS = [
   '/zhongyaoxue/clinical/style.css',
   '/zhongyaoxue/clinical/app.js',
   '/zhongyaoxue/clinical/search-worker.js',
+  '/zhongyaoxue/clinical/bench.html',
+  '/zhongyaoxue/clinical/bench.css',
+  '/zhongyaoxue/clinical/bench.js',
 ];
 
 // 安装：预缓存核心文件。单个失败不应让整个安装失败
