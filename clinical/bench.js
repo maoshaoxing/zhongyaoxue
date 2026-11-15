@@ -465,7 +465,16 @@ document.addEventListener("click", (event) => {
   if (!event.target.closest(".search-panel")) el.suggest.classList.remove("open");
 });
 
-load().catch((error) => {
-  el.status.textContent = "加载失败";
-  el.board.innerHTML = `<div class="panel panel-warn"><p>${escapeHtml(error.message)}</p></div>`;
-});
+// file:// 下 fetch 会被拦截（APK 离线壳），直接给提示而不是报「Failed to fetch」
+if (location.protocol === "file:") {
+  el.status.textContent = "离线版不可用";
+  el.board.innerHTML = `<div class="panel panel-warn"><p>
+    方药研习需要联网加载药典数据。请打开
+    <a href="https://maoshaoxing.github.io/zhongyaoxue/clinical/bench.html">在线版</a>。
+  </p></div>`;
+} else {
+  load().catch((error) => {
+    el.status.textContent = "加载失败";
+    el.board.innerHTML = `<div class="panel panel-warn"><p>${escapeHtml(error.message)}</p></div>`;
+  });
+}

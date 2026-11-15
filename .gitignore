@@ -18,3 +18,6 @@ package.json
 # 本地测试产物
 dom.html
 shot-*.png
+
+# 构建产物（由 scripts/build-site.mjs 生成）
+dist/

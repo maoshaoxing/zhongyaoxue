@@ -2,6 +2,11 @@ plugins {
     id 'com.android.application'
 }
 
+// 正式签名密钥由 CI Secrets 通过 -P 传入，或本地放一个 app.keystore 并自行传参。
+// 没有密钥时退化为 debug 签名——能出包自用，但不能覆盖升级已发布的正式包。
+def releaseStoreFile = project.findProperty('storeFile')
+def hasReleaseKey = releaseStoreFile != null && file(releaseStoreFile).exists()
+
 android {
     namespace 'com.zhongyao.app'
     compileSdk 34
@@ -15,18 +20,20 @@ android {
     }
 
     signingConfigs {
-        release {
-            storeFile file(project.findProperty('storeFile') ?: '../app.keystore')
-            storePassword project.findProperty('storePassword') ?: 'zhongyao2024'
-            keyAlias project.findProperty('keyAlias') ?: 'zhongyao'
-            keyPassword project.findProperty('keyPassword') ?: 'zhongyao2024'
+        if (hasReleaseKey) {
+            release {
+                storeFile file(releaseStoreFile)
+                storePassword project.findProperty('storePassword') ?: ''
+                keyAlias project.findProperty('keyAlias') ?: ''
+                keyPassword project.findProperty('keyPassword') ?: ''
+            }
         }
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            signingConfig signingConfigs.release
+            signingConfig hasReleaseKey ? signingConfigs.release : signingConfigs.debug
         }
     }
 }

@@ -15,7 +15,17 @@ const detailTitle = document.getElementById("detail-title");
 const detailMeta = document.getElementById("detail-meta");
 const detailBody = document.getElementById("detail-body");
 
-const worker = new Worker("search-worker.js");
+// file:// 下 Web Worker 与 fetch 会被浏览器拦截（APK 离线壳走的正是这条路），
+// 这里退化成一个空壳，避免直接抛异常导致白屏。
+const OFFLINE = location.protocol === "file:";
+const offlineStub = { postMessage() {}, onmessage: null };
+
+let worker;
+try {
+  worker = OFFLINE ? offlineStub : new Worker("search-worker.js");
+} catch (error) {
+  worker = offlineStub;
+}
 
 /* ---------------- 基础工具 ---------------- */
 
@@ -261,4 +271,12 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeDetail();
 });
 
-worker.postMessage({ type: "load" });
+if (OFFLINE) {
+  statusElement.textContent = "离线版不支持全文检索";
+  resultsElement.innerHTML = `<div class="empty">
+    APK 离线包内只带教材背诵模块。药典全文检索与方药研习需要联网，
+    请打开 <a href="https://maoshaoxing.github.io/zhongyaoxue/clinical/index.html">在线版</a>。
+  </div>`;
+} else {
+  worker.postMessage({ type: "load" });
+}
