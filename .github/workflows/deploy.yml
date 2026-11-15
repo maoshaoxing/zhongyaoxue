@@ -1,4 +1,3 @@
-.github/workflows/deploy.yml
 name: Auto Deploy to GitHub Pages
 on:
   push:
