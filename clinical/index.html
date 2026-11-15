@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>药典检索</title>
+  <link rel="icon" href="../icons/icon-96x96.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,12 +18,13 @@
     </header>
 
     <section class="search-panel">
-      <input id="search" type="search" placeholder="搜索药名、拼音、拉丁名、功能主治或正文" autocomplete="off">
+      <input id="search" type="search" placeholder="搜索药名、拼音、俗名、拉丁名、功能主治或正文" autocomplete="off">
       <div class="filters" id="filters">
         <button class="filter active" data-filter="all">全部</button>
         <button class="filter" data-filter="herb">药材饮片</button>
         <button class="filter" data-filter="extract">提取物</button>
         <button class="filter" data-filter="formula">成方制剂</button>
+        <button class="filter" data-filter="mastery">教材掌握</button>
       </div>
     </section>
 

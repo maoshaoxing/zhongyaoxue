@@ -10,3 +10,11 @@ app.keystore
 # Python build scripts
 *.py
 guijing_data.json
+
+# Node 工具链（仅本地测试用）
+node_modules/
+package-lock.json
+package.json
+# 本地测试产物
+dom.html
+shot-*.png

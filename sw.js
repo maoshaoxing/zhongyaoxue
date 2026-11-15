@@ -1,5 +1,7 @@
-// 中药学备考全书 - Service Worker v4
-const CACHE_NAME = 'zhongyaoxue-v4-20260608';
+// 中药学备考全书 - Service Worker
+// v5：修复 cache-first 导致数据/页面永久不更新的问题，并把 clinical 子应用纳入缓存
+const CACHE_NAME = 'zhongyaoxue-v5-20261115';
+const RUNTIME_CACHE = 'zhongyaoxue-runtime-v5';
 
 const PRECACHE_URLS = [
   '/zhongyaoxue/',
@@ -15,56 +17,127 @@ const PRECACHE_URLS = [
   '/zhongyaoxue/icons/icon-152x152.png',
   '/zhongyaoxue/icons/icon-192x192.png',
   '/zhongyaoxue/icons/icon-384x384.png',
-  '/zhongyaoxue/icons/icon-512x512.png'
+  '/zhongyaoxue/icons/icon-512x512.png',
+  // 药典检索子应用
+  '/zhongyaoxue/clinical/',
+  '/zhongyaoxue/clinical/index.html',
+  '/zhongyaoxue/clinical/style.css',
+  '/zhongyaoxue/clinical/app.js',
+  '/zhongyaoxue/clinical/search-worker.js',
 ];
 
-// 安装：预缓存核心文件
-self.addEventListener('install', event => {
+// 安装：预缓存核心文件。单个失败不应让整个安装失败
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(PRECACHE_URLS))
+    caches
+      .open(CACHE_NAME)
+      .then((cache) =>
+        Promise.all(
+          PRECACHE_URLS.map((url) =>
+            cache.add(url).catch(() => {
+              /* 忽略个别资源失败，例如子应用尚未发布 */
+            })
+          )
+        )
+      )
       .then(() => self.skipWaiting())
   );
 });
 
-// 激活：清理旧缓存
-self.addEventListener('activate', event => {
+// 激活：清理旧版本缓存
+self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys.filter(key => key !== CACHE_NAME)
-        .map(key => caches.delete(key))
-    )).then(() => self.clients.claim())
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(
+          keys
+            .filter((key) => key !== CACHE_NAME && key !== RUNTIME_CACHE)
+            .map((key) => caches.delete(key))
+        )
+      )
+      .then(() => self.clients.claim())
   );
 });
 
-// 请求：缓存优先，网络回退
-self.addEventListener('fetch', event => {
-  // 跳过非GET请求
-  if (event.request.method !== 'GET') return;
-  
-  event.respondWith(
-    caches.match(event.request).then(cached => {
-      // 缓存命中直接返回
-      if (cached) return cached;
-      
-      // 网络请求并缓存
-      return fetch(event.request).then(response => {
-        if (!response || response.status !== 200) return response;
-        const clone = response.clone();
-        caches.open(CACHE_NAME).then(cache => {
-          cache.put(event.request, clone);
-        });
-        return response;
-      }).catch(() => {
-        // 离线时返回缓存首页
-        if (event.request.mode === 'navigate') {
-          return caches.match('/zhongyaoxue/');
-        }
-        return new Response('离线状态，请连接网络后重试', {
-          status: 503,
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' }
-        });
-      });
+function isDataRequest(url) {
+  return /\.(json|jsonl)$/i.test(url.pathname);
+}
+
+async function staleWhileRevalidate(request) {
+  const cache = await caches.open(RUNTIME_CACHE);
+  const cached = await cache.match(request);
+  const network = fetch(request)
+    .then((response) => {
+      if (response && response.status === 200) cache.put(request, response.clone());
+      return response;
     })
-  );
+    .catch(() => null);
+  // 有缓存立刻返回，同时后台更新
+  return cached || (await network) || new Response('离线状态，请连接网络后重试', {
+    status: 503,
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+  });
+}
+
+async function networkFirst(request) {
+  try {
+    const response = await fetch(request);
+    if (response && response.status === 200) {
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached =
+      (await caches.match(request)) || (await caches.match('/zhongyaoxue/'));
+    return (
+      cached ||
+      new Response('离线状态，请连接网络后重试', {
+        status: 503,
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      })
+    );
+  }
+}
+
+async function cacheFirst(request) {
+  const cached = await caches.match(request);
+  if (cached) return cached;
+  try {
+    const response = await fetch(request);
+    if (response && response.status === 200) {
+      const cache = await caches.open(RUNTIME_CACHE);
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (error) {
+    return new Response('离线状态，请连接网络后重试', {
+      status: 503,
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    });
+  }
+}
+
+self.addEventListener('fetch', (event) => {
+  const request = event.request;
+  if (request.method !== 'GET') return;
+
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) return;
+
+  // 页面导航：网络优先，避免部署后仍看到旧页面
+  if (request.mode === 'navigate') {
+    event.respondWith(networkFirst(request));
+    return;
+  }
+
+  // 数据文件：先给缓存，后台静默更新，保证数据改了能看到
+  if (isDataRequest(url)) {
+    event.respondWith(staleWhileRevalidate(request));
+    return;
+  }
+
+  // 静态资源：缓存优先
+  event.respondWith(cacheFirst(request));
 });
