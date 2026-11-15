@@ -18,8 +18,12 @@
 </head>
 <body>
 
-<div style="padding: 12px 20px; background: #0f766e; color: #fff; text-align: center; font-size: 16px; font-weight: 600;">
-  <a href="./clinical/" style="color: #fff; text-decoration: none;">进入新版药典临床检索 →</a>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;padding:12px 18px;background:#0f766e;color:#fff;font-size:15px;">
+  <a href="../clinical/index.html" style="display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:600;">
+    <span style="padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.2);font-size:12px;letter-spacing:.04em;">新版</span>
+    药典全文检索 · 方药研习台 →
+  </a>
+  <a href="../index.html" style="color:rgba(255,255,255,.82);text-decoration:none;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.45);">返回首页</a>
 </div>
 
 <!-- 免责声明弹窗 -->
@@ -39,6 +43,9 @@
       无需联网，无任何收费。
     </p>
     <button class="popup-btn" id="disclaimerBtn">我知道了，开始学习</button>
+    <a href="../clinical/index.html" onclick="localStorage.setItem('zhongyao-disclaimer','1')" style="display:block;margin-top:12px;padding:10px 0;color:#0f766e;font-size:14.5px;font-weight:600;text-decoration:none;border-top:1px solid #e8e2d8;">
+      去新版：药典全文检索 · 方药研习台 →
+    </a>
   </div>
 </div>
 

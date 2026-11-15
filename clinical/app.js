@@ -84,6 +84,40 @@ function levelBadge(teaching) {
   return `<span class="badge level ${cls}">教材·${escapeHtml(teaching.level)}</span>`;
 }
 
+// 安全性单独成块：毒性 / 妊娠禁忌 用色块标出，【注意】原文折叠两行
+function safetyFlags(safety) {
+  if (!safety) return [];
+  const flags = [];
+  if (safety.toxic) {
+    flags.push(
+      `<span class="sflag sflag-toxic">${escapeHtml(safety.toxicity || "有毒")}</span>`
+    );
+  }
+  if (safety.pregnancy) {
+    flags.push(`<span class="sflag sflag-preg">孕妇${escapeHtml(safety.pregnancy)}</span>`);
+  }
+  return flags;
+}
+
+function safetyBlock(entry, tokens) {
+  const flags = safetyFlags(entry.safety);
+  const caution = entry.clinical && entry.clinical["注意"];
+  if (!flags.length && !caution) return "";
+  return `
+    <div class="safety">
+      ${flags.length ? `<div class="sflag-row">${flags.join("")}</div>` : ""}
+      ${
+        caution
+          ? `<div class="safety-note"><span class="safety-label">注意</span><span class="safety-text">${highlight(
+              caution,
+              tokens || []
+            )}</span></div>`
+          : ""
+      }
+    </div>
+  `;
+}
+
 /* ---------------- 检索 ---------------- */
 
 function runSearch() {
@@ -117,7 +151,14 @@ function scheduleSearch() {
 worker.onmessage = (event) => {
   const message = event.data;
 
+  if (message.type === "progress") {
+    const mb = (message.loaded / 1048576).toFixed(1);
+    statusElement.textContent = `正在加载药典数据 ${mb} MB`;
+    statusElement.classList.add("is-loading");
+  }
+
   if (message.type === "loaded") {
+    statusElement.classList.remove("is-loading");
     statusElement.textContent = `${message.total.toLocaleString("zh-CN")} 条药典条目`;
     runSearch();
   }
@@ -153,12 +194,8 @@ function renderResults(message) {
         : "";
       const page = entry.page ? ` · 第 ${entry.page} 页` : "";
       const effect = entry.clinical["功能与主治"];
-      const caution = entry.clinical["注意"];
       const effectLine = effect
         ? `<div class="clinical-line"><span class="clinical-label">主治</span><span>${highlight(effect, tokens)}</span></div>`
-        : "";
-      const cautionLine = caution
-        ? `<div class="clinical-line"><span class="clinical-label">注意</span><span>${highlight(caution, tokens)}</span></div>`
         : "";
       return `
         <article class="card" data-id="${entry.id}" tabindex="0" role="button" aria-label="查看 ${escapeHtml(entry.title)} 详情">
@@ -170,7 +207,7 @@ function renderResults(message) {
           </div>
           <div class="snippet">${highlight(entry.snippet, tokens)}</div>
           ${effectLine}
-          ${cautionLine}
+          ${safetyBlock(entry, tokens)}
           <div class="meta">${escapeHtml(entry.section)}${page}</div>
         </article>
       `;
@@ -183,6 +220,11 @@ function renderResults(message) {
       `<div class="empty">显示前 ${message.results.length} 条，共 ${message.total.toLocaleString("zh-CN")} 条</div>`
     );
   }
+
+  resultsElement.insertAdjacentHTML(
+    "beforeend",
+    `<p class="results-disclaimer">以上为药典法定条文摘录，仅供学习与复习参考，<strong>不构成诊断、不构成处方</strong>。用药须由执业医师决定。</p>`
+  );
 }
 
 function openDetail(id) {
@@ -216,6 +258,27 @@ function teachingBlock(teaching) {
   `;
 }
 
+function fieldTextOf(entry, name) {
+  return (entry.fields || [])
+    .filter((f) => f.name === name)
+    .map((f) => f.text)
+    .join("\n");
+}
+
+// 抽屉里的安全块：色标 + 【注意】全文（不折叠）
+function detailSafetyBlock(entry) {
+  const flags = safetyFlags(entry.safety);
+  const caution = fieldTextOf(entry, "注意");
+  if (!flags.length && !caution) return "";
+  return `
+    <section class="field safety-detail">
+      <h3>安全提示</h3>
+      ${flags.length ? `<div class="sflag-row">${flags.join("")}</div>` : ""}
+      ${caution ? `<p class="safety-full">${escapeHtml(caution)}</p>` : ""}
+    </section>
+  `;
+}
+
 function renderDetail(entry) {
   if (!entry) return;
 
@@ -226,6 +289,7 @@ function renderDetail(entry) {
 
   detailBody.innerHTML =
     teachingBlock(entry.teaching) +
+    detailSafetyBlock(entry) +
     entry.fields
       .map((field) => {
         if (!field.text) return "";
@@ -236,7 +300,8 @@ function renderDetail(entry) {
         </section>
       `;
       })
-      .join("");
+      .join("") +
+    `<p class="drawer-disclaimer">以上为药典法定条文原文，仅供学习与复习参考，<strong>不构成诊断、不构成处方、不构成用药建议</strong>。剂量与配伍受个体、证候影响，实际用药须由执业医师决定。</p>`;
 
   detailBody.scrollTop = 0;
   detailElement.classList.add("open");

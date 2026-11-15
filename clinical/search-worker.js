@@ -15,6 +15,7 @@
 let entries = [];
 let aliasMap = {}; // fold(别名) -> fold(药典正名)
 let teaching = {}; // 药典正名 -> 教材信息
+let safety = {}; // 药典正名 -> 毒性 / 妊娠禁忌 / 【注意】原文
 let loaded = false;
 
 /* ---------------- 文本归一化 ---------------- */
@@ -48,10 +49,17 @@ function buildIndex(list) {
     reverse.get(key).push(fold(alias));
   }
 
+  // 安全信息兜底索引：炮制名归一后也能找到（炒牵牛子 → 牵牛子）
+  const safetyByNorm = new Map();
+  for (const info of Object.values(safety)) {
+    if (info && info.norm && !safetyByNorm.has(info.norm)) safetyByNorm.set(info.norm, info);
+  }
+
   return list.map((entry) => {
     const base = stripParen(entry.title);
     const baseKey = fold(base);
     const fields = entry.fields || [];
+    const safe = safety[base] || safetyByNorm.get(baseKey) || null;
     return {
       id: entry.id,
       title: entry.title,
@@ -63,6 +71,10 @@ function buildIndex(list) {
       path: entry.path || [],
       fields,
       teaching: teaching[base] || null,
+      // 只透出检索页要展示的三项，避免把整条安全记录塞进结果里
+      safety: safe
+        ? { toxic: safe.toxic, toxicity: safe.toxicity, pregnancy: safe.pregnancy }
+        : null,
       _: {
         title: fold(entry.title),
         base: baseKey,
@@ -83,11 +95,55 @@ async function loadJSON(url) {
   return res;
 }
 
+// 边下边报进度：11.8MB 语料 gzip 后约 2MB，没有反馈会让人以为卡住。
+// 注意 gzip 传输时 content-length 是压缩后大小，解压后字节会超过它，
+// 所以这里只上传「已加载字节数」，不换算百分比。
+async function readTextWithProgress(url, onProgress) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.body || typeof res.body.getReader !== "function") return res.text();
+
+  const reader = res.body.getReader();
+  const chunks = [];
+  let loaded = 0;
+  let lastReport = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    loaded += value.length;
+    if (loaded - lastReport > 512 * 1024) {
+      lastReport = loaded;
+      onProgress(loaded);
+    }
+  }
+  const buffer = new Uint8Array(loaded);
+  let offset = 0;
+  for (const chunk of chunks) {
+    buffer.set(chunk, offset);
+    offset += chunk.length;
+  }
+  onProgress(loaded);
+  return new TextDecoder().decode(buffer);
+}
+
 async function loadAll() {
-  const [corpusRes, teachingRes] = await Promise.all([
-    loadJSON("../data/pharmacopoeia.jsonl"),
+  const [corpusText, teachingRes, safetyRes] = await Promise.all([
+    readTextWithProgress("../data/pharmacopoeia.jsonl", (loaded) => {
+      self.postMessage({ type: "progress", loaded });
+    }),
     loadJSON("../data/teaching.json").catch(() => null),
+    loadJSON("../data/safety.json").catch(() => null),
   ]);
+
+  if (safetyRes) {
+    try {
+      const s = await safetyRes.json();
+      safety = s.safety || {};
+    } catch (error) {
+      safety = {};
+    }
+  }
 
   if (teachingRes) {
     try {
@@ -101,7 +157,7 @@ async function loadAll() {
     }
   }
 
-  const source = await corpusRes.text();
+  const source = corpusText;
   const raw = source
     .split(/\r?\n/)
     .filter(Boolean)
@@ -239,6 +295,7 @@ function search(query, filter) {
       section: entry.section,
       type: entry.type,
       snippet: makeSnippet(entry, tokens),
+      safety: entry.safety,
       teaching: entry.teaching
         ? {
             level: entry.teaching.level,
@@ -278,6 +335,7 @@ function detail(id) {
     type: entry.type,
     path: entry.path,
     teaching: entry.teaching,
+    safety: entry.safety,
     fields: entry.fields,
   };
 }
