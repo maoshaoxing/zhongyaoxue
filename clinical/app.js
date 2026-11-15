@@ -15,6 +15,13 @@ const detailTitle = document.getElementById("detail-title");
 const detailMeta = document.getElementById("detail-meta");
 const detailBody = document.getElementById("detail-body");
 
+// 从封面页带过来的 ?q= 直接填进搜索框
+const initialQuery = new URLSearchParams(location.search).get("q");
+if (initialQuery) {
+  searchInput.value = initialQuery;
+  state.query = initialQuery.trim();
+}
+
 // file:// 下 Web Worker 与 fetch 会被浏览器拦截（APK 离线壳走的正是这条路），
 // 这里退化成一个空壳，避免直接抛异常导致白屏。
 const OFFLINE = location.protocol === "file:";
@@ -87,6 +94,19 @@ function runSearch() {
     query: state.query,
     filter: state.filter,
   });
+  syncUrl();
+}
+
+// 查询词同步到地址栏，刷新/分享都能复原；file:// 下 replaceState 会抛，忽略即可
+function syncUrl() {
+  try {
+    const url = new URL(location.href);
+    if (state.query) url.searchParams.set("q", state.query);
+    else url.searchParams.delete("q");
+    history.replaceState(null, "", url);
+  } catch (error) {
+    /* 忽略 */
+  }
 }
 
 function scheduleSearch() {

@@ -1,14 +1,11 @@
 // 中药学备考全书 - Service Worker
-// v5：修复 cache-first 导致数据/页面永久不更新的问题，并把 clinical 子应用纳入缓存
-const CACHE_NAME = 'zhongyaoxue-v6-20261115';
-const RUNTIME_CACHE = 'zhongyaoxue-runtime-v6';
+// v7：站点改为「根目录门户 + herbs/ 旧版 + clinical/ 检索」，预缓存列表随之调整
+const CACHE_NAME = 'zhongyaoxue-v7-20261115';
+const RUNTIME_CACHE = 'zhongyaoxue-runtime-v7';
 
 const PRECACHE_URLS = [
   '/zhongyaoxue/',
   '/zhongyaoxue/index.html',
-  '/zhongyaoxue/style.css',
-  '/zhongyaoxue/app.js',
-  '/zhongyaoxue/data.js',
   '/zhongyaoxue/manifest.json',
   '/zhongyaoxue/icons/icon-72x72.png',
   '/zhongyaoxue/icons/icon-96x96.png',
@@ -18,7 +15,7 @@ const PRECACHE_URLS = [
   '/zhongyaoxue/icons/icon-192x192.png',
   '/zhongyaoxue/icons/icon-384x384.png',
   '/zhongyaoxue/icons/icon-512x512.png',
-  // 药典检索子应用
+  // 药典检索 + 方药研习
   '/zhongyaoxue/clinical/',
   '/zhongyaoxue/clinical/index.html',
   '/zhongyaoxue/clinical/style.css',
@@ -27,6 +24,12 @@ const PRECACHE_URLS = [
   '/zhongyaoxue/clinical/bench.html',
   '/zhongyaoxue/clinical/bench.css',
   '/zhongyaoxue/clinical/bench.js',
+  // 教材背诵（旧版，已移入 herbs/）
+  '/zhongyaoxue/herbs/index.html',
+  '/zhongyaoxue/herbs/style.css',
+  '/zhongyaoxue/herbs/app.js',
+  '/zhongyaoxue/herbs/data.js',
+  '/zhongyaoxue/herbs/songs.js',
 ];
 
 // 安装：预缓存核心文件。单个失败不应让整个安装失败

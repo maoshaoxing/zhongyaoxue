@@ -5,10 +5,8 @@ on:
     branches: [master]
     paths:
       - 'index.html'
-      - 'app.js'
-      - 'data.js'
-      - 'songs.js'
-      - 'style.css'
+      - 'herbs/**'
+      - '_config.yml'
       - 'manifest.json'
       - 'sw.js'
       - 'clinical/**'

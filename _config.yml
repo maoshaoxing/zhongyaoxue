@@ -1,0 +1,16 @@
+# GitHub Pages 当前使用「Deploy from a branch」(master /) + Jekyll 构建。
+# Jekyll 默认只排除 . 开头的文件，其余全部发布，所以这里显式挡掉非站点内容，
+# 避免 android/、scripts/、docs/ 等被当成静态文件公开。
+# 注意：一旦切到「GitHub Actions」部署（workflow 上传 dist/），这个文件就不起作用了。
+
+exclude:
+  - android
+  - scripts
+  - docs
+  - dist
+  - node_modules
+  - package.json
+  - package-lock.json
+  - "中药学1.1.html"
+  - "中药学1.1.txt"
+  - README.md
