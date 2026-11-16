@@ -19,6 +19,10 @@
     </header>
 
     <section class="search-panel">
+      <div class="mode-tabs" id="mode-tabs">
+        <button class="mode-tab active" data-mode="text">药名 / 全文检索</button>
+        <button class="mode-tab" data-mode="symptom">病症找药</button>
+      </div>
       <input id="search" type="search" placeholder="搜索药名、拼音、俗名、拉丁名、功能主治或正文" autocomplete="off">
       <div class="filters" id="filters">
         <button class="filter active" data-filter="all">全部</button>
@@ -26,6 +30,11 @@
         <button class="filter" data-filter="extract">提取物</button>
         <button class="filter" data-filter="formula">成方制剂</button>
         <button class="filter" data-filter="mastery">教材掌握</button>
+      </div>
+      <div class="filters hidden" id="symptom-filters">
+        <button class="filter active" data-filter="all">全部</button>
+        <button class="filter" data-filter="herb">单味药</button>
+        <button class="filter" data-filter="formula">成方制剂</button>
       </div>
     </section>
 
@@ -50,6 +59,8 @@
     </div>
   </aside>
 
+  <script src="rpc.js"></script>
   <script src="app.js"></script>
+  <script src="agent.js"></script>
 </body>
 </html>

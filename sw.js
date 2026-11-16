@@ -1,7 +1,7 @@
 // 中药学备考全书 - Service Worker
-// v7：站点改为「根目录门户 + herbs/ 旧版 + clinical/ 检索」，预缓存列表随之调整
-const CACHE_NAME = 'zhongyaoxue-v7-20261115';
-const RUNTIME_CACHE = 'zhongyaoxue-runtime-v7';
+// v8：新增病症找药模式（rpc.js）与页面内嵌学习助手（agent.js），预缓存列表随之调整
+const CACHE_NAME = 'zhongyaoxue-v8-20261116';
+const RUNTIME_CACHE = 'zhongyaoxue-runtime-v8';
 
 const PRECACHE_URLS = [
   '/zhongyaoxue/',
@@ -24,6 +24,8 @@ const PRECACHE_URLS = [
   '/zhongyaoxue/clinical/bench.html',
   '/zhongyaoxue/clinical/bench.css',
   '/zhongyaoxue/clinical/bench.js',
+  '/zhongyaoxue/clinical/rpc.js',
+  '/zhongyaoxue/clinical/agent.js',
   // 教材背诵（旧版，已移入 herbs/）
   '/zhongyaoxue/herbs/index.html',
   '/zhongyaoxue/herbs/style.css',
